@@ -1,0 +1,30 @@
+{
+  "cloudantNoSQLDB": [{
+    "credentials": {
+      "username": "cbbee339-3971-495c-8d78-dfec2439dc4b-bluemix",
+      "password": "21cb054a6d28ba516caa6258b50593620f20b8d94ff6b592cde082faa16d7be8",
+      "host": "cbbee339-3971-495c-8d78-dfec2439dc4b-bluemix.cloudant.com",
+      "port": 443,
+      "url": "https://cbbee339-3971-495c-8d78-dfec2439dc4b-bluemix:21cb054a6d28ba516caa6258b50593620f20b8d94ff6b592cde082faa16d7be8@cbbee339-3971-495c-8d78-dfec2439dc4b-bluemix.cloudant.com"
+    },
+    "syslog_drain_url": null,
+    "label": "cloudantNoSQLDB",
+    "provider": null,
+    "plan": "Lite",
+    "name": "Cloudant NoSQL DB-o9",
+    "tags": [
+      "data_management",
+      "ibm_created",
+      "lite",
+      "ibm_dedicated_public"
+    ]
+  }],
+  "nlu_api": [{
+    "credentials": {
+      "url": "https://gateway.watsonplatform.net/natural-language-understanding/api",
+      "username": "c808dd2b-fa2e-4b17-ba99-2fc8237722e6",
+      "password": "4B1RT82vhRfN"
+    },
+    "name": "SmartEmail-NLU"
+    }]
+}
