@@ -106,13 +106,13 @@ export class SmartEmailEntitiesComponent implements OnInit {
     this.emails = this.transactions.filter((email) => {
       //      console.log(`Searching ${email.topTransactionActual} & ${email.topTransactionPredicted}`)
       if (email.toc.length > 0) {
-        console.log('filterTransactions:  We have TOC data... ' + email.source_id)
+//        console.log('filterTransactions:  We have TOC data... ' + email.source_id)
         let found = email.toc.findIndex((entity) => {
-          console.log(`Checking ${entity.type} for ${selector.entity_type}`)
+ //         console.log(`Checking ${entity.type} for ${selector.entity_type}`)
           if (entity.type === selector.entity_type) {
-            console.log(`Matched Entity: ${selector.entity_type}`)
+  //          console.log(`Matched Entity: ${selector.entity_type}`)
             if (entity.toc_type === tocType) {
-              console.log(`Matched toc: ${tocType}`)
+   //           console.log(`Matched toc: ${tocType}`)
               return true
             }
           }

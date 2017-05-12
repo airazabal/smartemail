@@ -18,7 +18,6 @@ import { LoopbackLoginComponent } from './auth/loopback/lb-login.component';
 
 import { HomeComponent } from './home.component'
 import { DashboardComponent } from './dashboard'
-import { ProductDetailsComponent } from './product'
 
 // Tese are the tabs for routing...
 import {

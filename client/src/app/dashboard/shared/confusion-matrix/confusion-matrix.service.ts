@@ -6,8 +6,10 @@ export class ConfusionMatrixService {
 
   private GTTransactionMap: any = {
     'Vehicle Change': 'Vehicle_Change',
+    'Vehicle': 'Vehicle_Change',
     'Request for Certificate': 'Request_for_CERT',
     'Request for CERT': 'Request_for_CERT',
+    'cert': 'Request_for_CERT',
     'COI': 'Request_for_CERT',
     'Cancellation': 'Cancellation',
     'cancel': 'Cancellation',
@@ -68,7 +70,7 @@ export class ConfusionMatrixService {
         // We will remove spaces/lowercase & trim
         let left = text1.replace(/\s+/g, '').toLowerCase()
         let right = text2.replace(/\s+/g, '').toLowerCase()
-        console.log(`Comparing ${left} && ${right} ${left === right}`)
+    //    console.log(`Comparing ${left} && ${right} ${left === right}`)
         return (left === right)
       }
     } else {
@@ -226,7 +228,7 @@ export class ConfusionMatrixService {
         }
       }
       confusionMatrix.increment(longform.toc)
-      console.log(`longform.toc ${longform.source_id} `, longform.toc)
+     // console.log(`longform.toc ${longform.source_id} `, longform.toc)
     })
     //    console.log('ActualEntityList', actualEntityList)
     return confusionMatrix

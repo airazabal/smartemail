@@ -60,10 +60,10 @@ export class TableOfConfusionComponent implements OnInit {
     if (!this.confusion) {
       return
     }
-    console.log('confusion.toc: ', this.confusion.toc)
+    //console.log('confusion.toc: ', this.confusion.toc)
     //console.log('confusion.matrix: ', this.confusion.matrix)
-    console.log('confusion', this.confusion)
-    console.log('confusion', JSON.stringify(this.confusion))
+    //console.log('confusion', this.confusion)
+    //console.log('confusion', JSON.stringify(this.confusion))
     // this.confusion.toc is on obj of objects...
     let toc = this.confusion.toc
     let tp:any[]=['True Positives']
@@ -79,7 +79,7 @@ export class TableOfConfusionComponent implements OnInit {
       categories.push(actual)
     })
     this.graphData = [categories, tp, fp, fn]
-    console.log('graphData', this.graphData)
+    //console.log('graphData', this.graphData)
   }
 
   ngOnChanges(changes: { [propKey: string]: SimpleChange }) {

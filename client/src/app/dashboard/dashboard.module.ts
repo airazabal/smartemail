@@ -24,9 +24,6 @@ import { SmartEmailSummaryComponent} from './smart-email-summary/smart-email-sum
 import { SmartEmailClassificationsComponent} from './smart-email-classifications/smart-email-classifications.component';
 import { SmartEmailEntitiesComponent} from './smart-email-entities/smart-email-entities.component';
 
-import { DiscoveryService } from '../shared/discovery/discovery.service';
-import { SampleDataService } from '../shared/discovery/sample-data.service';
-
 import { WslEmailModule } from '../shared/wsl-email/wsl-email.module';
 
 import { DashboardCtxService } from './shared/dashboard-ctx.service';
@@ -62,8 +59,7 @@ import { HelpComponent } from './shared/help/help.component';
     HelpComponent,
     ConfusionMatrixComponent
   ],
-  providers: [ DiscoveryService,
-    SampleDataService,
+  providers: [
     ConfusionMatrixService,
     DashboardCtxService ]
 })

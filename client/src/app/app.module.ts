@@ -13,7 +13,6 @@ import { HomeComponent } from './home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
 import { DashboardModule, DashboardComponent } from './dashboard';
-import { ProductModule } from './product/product.module';
 
 import { FromComponentService } from './shared/utils/from-component.service';
 import { SettingsComponent } from './shared/settings/settings.component'
@@ -33,7 +32,6 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     AuthModule,
     DashboardModule,
-    ProductModule,
     CoreModule,
     DropdownModule.forRoot(),
     ModalModule.forRoot()

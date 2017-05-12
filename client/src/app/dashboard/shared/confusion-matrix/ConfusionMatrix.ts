@@ -41,7 +41,7 @@ export class ConfusionMatrix {
   }
 
   increment(actual: any, predicted?: string) {
-    console.log(`increment: ${typeof actual}`, actual)
+//    console.log(`increment: ${typeof actual}`, actual)
     if (actual) {
       if (typeof actual === 'string') {
         this._incrementMatrix(actual, predicted)
@@ -108,7 +108,7 @@ export class ConfusionMatrix {
       if (this.toc.hasOwnProperty(toc_item.type)) {
         // Note, adding an s to these...
         if (toc_item.type === 'Policy_Number') {
-          console.log('_incrementTOC ' + toc_item.source_id, toc_item)
+        //  console.log('_incrementTOC ' + toc_item.source_id, toc_item)
         }
         this.toc[toc_item.type][toc_item.toc_type + 's']++
       } else {
