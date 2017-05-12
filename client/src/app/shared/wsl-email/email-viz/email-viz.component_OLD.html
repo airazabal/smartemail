@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div>
+        <div *ngIf="loading" class="text-center">
+          <div class="loader-container">
+            <svg viewBox="25 25 50 50" class="loader">
+              <circle cx="50" cy="50" r="20" class="loader--path"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 entity-viz">
+      <h4>Transaction (Found: {{visualizationSource.transactionPercentage|percent}})</h4>
+      <div *ngIf="visualizationSource">
+        <div class="transaction" *ngFor="let transaction of visualizationSource.transaction_types">
+          <span >{{transaction.transaction_type}} {{transaction.confidence_level | percent}}</span>
+        </div>
+        <br>
+      <h4>Entities -- Success Rate ({{visualizationSource.entityPercentage|percent}})</h4>
+      <div class="row ibm-text--small ibm-text--dark">
+        <div class="col-md-4">
+          Text
+        </div>
+        <div class="col-md-4">
+          Type
+        </div>
+        <div class="col-md-2">
+          GroundTruth
+        </div>
+        <div class="col-md-2">
+          Missed
+        </div>
+      </div>
+        <div *ngFor="let entity of entities" class="ibm-text--small">
+          <div class="row" [ngClass]="{'object':entity.found, 'action':entity.is_ground_truth && !entity.found }">
+            <div class="col-md-4">
+             <span>{{entity.text}}</span>
+           </div>
+            <div class="col-md-4">
+             <span>{{entity.type}}</span>
+           </div>
+            <div class="col-md-2">
+              {{entity.is_ground_truth}}
+            </div>
+            <div class="col-md-2">
+              {{entity.found}}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

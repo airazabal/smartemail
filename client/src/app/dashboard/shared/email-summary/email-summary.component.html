@@ -1,0 +1,44 @@
+<div class="col-sm-1 center">
+   <a class="ibm-link" (click)="selectEmail($event)">{{sourceId}}</a>
+</div>
+<!-- Display the Transaction Types -->
+<div class="col-sm-1" [ngClass]="transactionClass">
+  {{email.topTransactionActual}}
+</div>
+<div class="col-sm-1" [ngClass]="transactionClass">
+  {{email.topTransactionPredicted}}
+</div>
+<div *ngFor="let toc of email.toc">
+  <div class="col-sm-1 entity" [ngClass]="toc.toc_type">
+    {{toc.type}}
+  </div>
+</div>
+
+
+
+  <!--
+  <ng-template #elseBlock>
+    <div class="col-md-1">
+      Not Found
+    </div>
+    <div class="col-md-1">
+      Not Found
+    </div>
+  </ng-template>
+
+
+<div *ngFor="let t of email.transaction_types">
+  <div class="col-sm-3">
+    {{t.transaction_type}}({{t.confidence_level | percent}})
+  </div>
+-->
+  <!--
+  <ng-template #elseBlock>
+    <div class="col-md-1">
+      Not Found
+    </div>
+    <div class="col-md-1">
+      Not Found
+    </div>
+  </ng-template>
+-->

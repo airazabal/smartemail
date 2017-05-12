@@ -1,0 +1,58 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory",
+    "file": "mem_db.json"
+  },
+  "settings": {
+    "name": "settings",
+    "connector": "memory",
+    "file": "settings_db.json"
+  },
+  "cloudant": {
+    "url": "${CLOUDANT_CONNECTION_URL}",
+    "database": "${CLOUDANT_DB_NAME}",
+    "name": "cloudant",
+    "connector": "cloudant"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./files"
+  },
+  "watson-nlu": {
+    "name": "watson-nlu",
+    "crud": false,
+    "debug": true,
+    "connector": "rest",
+    "options": {
+      "headers": {
+        "accept": "application/json",
+        "content-type": "application/json"
+      }
+    },
+    "operations": [
+      {
+        "template": {
+          "method": "POST",
+          "url": "https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze",
+          "query": {
+            "version": "{version=2017-02-27:string}"
+          },
+          "body": "{parameters:object}"
+        },
+        "responsePath": "$",
+        "functions": {
+          "analyze": [
+            "parameters"
+          ]
+        }
+      }
+    ],
+    "auth": {
+      "user": "${NLU_API_USER}",
+      "password": "${NLU_API_PASSWORD}"
+    }
+  }
+}

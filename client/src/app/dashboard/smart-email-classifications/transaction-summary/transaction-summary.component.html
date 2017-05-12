@@ -1,0 +1,12 @@
+<div class="panel panel-default ibm-panel">
+  <div class="panel-heading ibm-panel__heading">
+    <h3>{{title}}</h3>
+    <p class="ibm-text--small">{{description}}</p>
+  </div>
+  <div class="panel-body ibm-panel__body">
+    <div id="transaction-summary-chart"></div>
+    <div *ngIf="details">
+      {{details.name}} {{details.value}}/{{details.total}}  -- {{details.ratio | percent}}
+    </div>
+  </div>
+</div>

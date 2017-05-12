@@ -1,0 +1,21 @@
+<a class="ibm-icon" (click)="helpModal.show()"><span class="ibm-icon--help_24" aria-hidden="true"></span></a>
+
+<!--
+<button type="button" class="btn btn-primary" (click)="settingsModal.show()">Static modal</button>
+-->
+
+<div class="modal fade" bsModal #helpModal="bs-modal" [config]="{backdrop: 'static'}" (onShow)="onModalShow()" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content ibm-modal-content">
+      <div class="modal-header ibm-modal__header">
+        <h4 class="modal-title pull-left">{{helpContent.title}}</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="helpModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body ibm-modal__body">
+        <div [innerHtml]="helpContent.content">
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,21 @@
+<div class="dashboard-container">
+  <div class="dashboard-title">
+    <h1><span>{{title}}</span></h1>
+    <span class="h1-text--right">{{lastUpdated}}</span>
+    <hr style="clear:both;"/>
+  </div>
+  <div class="loader"></div>
+  <div class="ibm-tabs">
+    <!-- Nav tabs -->
+    <ul class="ibm-tabs__tabs" role="tablist">
+      <li role="presentation" class="ibm-tabs__tab" routerLinkActive="ibm-tabs__tab--active"><a routerLink="/home/dashboard/summary" aria-controls="summary" role="tab" data-toggle="tab">Summary</a></li>
+      <li role="presentation" class="ibm-tabs__tab" routerLinkActive="ibm-tabs__tab--active"><a routerLink="/home/dashboard/classifications" aria-controls="smart-email-classifications" role="tab" data-toggle="tab">Classifications</a></li>
+      <li role="presentation" class="ibm-tabs__tab" routerLinkActive="ibm-tabs__tab--active"><a routerLink="/home/dashboard/entities" aria-controls="smart-email-entities" role="tab" data-toggle="tab">Entities</a></li>
+      <li role="presentation" class="ibm-tabs__tab" routerLinkActive="ibm-tabs__tab--active"><a routerLink="/home/dashboard/test" aria-controls="smart-email-test" role="tab" data-toggle="tab">Smart Email Test</a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content ibm-tabs__content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

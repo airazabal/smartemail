@@ -1,0 +1,113 @@
+<div class="container-fluid">
+  <div *ngIf="loading" class="row">
+    <div class="col-md-12">
+      <div class="text-center">
+        <div class="loader-container">
+          <svg viewBox="25 25 50 50" class="loader">
+              <circle cx="50" cy="50" r="20" class="loader--path"></circle>
+            </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!loading">
+    <div class="row">
+      <div class="ibm-wrapper--gray10">
+        Source Email
+        <a type="button" class="pull-right" (click)="isEmailCollapsed=!isEmailCollapsed">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 entity-viz" (collapsed)="collapsed($event)" (expanded)="expanded($event)" [collapse]="isEmailCollapsed">
+        <div *ngIf="visualizationSource">
+          <pre>
+        {{visualizationSource.source_email.body}}
+        </pre>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="ibm-wrapper--gray10">
+        Transaction <span *ngIf="visualizationSource">Found[{{visualizationSource.transactionPercentage|percent}}]</span>
+        <a type="button" class="pull-right" (click)="isCollapsed=!isCollapsed">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 entity-viz" (collapsed)="collapsed($event)" (expanded)="expanded($event)" [collapse]="isCollapsed">
+        <div *ngIf="visualizationSource">
+          <div class="row">
+            <div class="transaction" [ngClass]="transaction.toc_type" *ngFor="let transaction of transactions">
+              <div class="col-md-6">
+                {{transaction.transaction_type}}
+              </div>
+              <div class="col-md-6">
+                {{transaction.confidence_level | percent}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="ibm-wrapper--gray10">
+        Entities
+        <span *ngIf="visualizationSource && visualizationSource.hasGroundTruthEntities()">Found[{{visualizationSource.entityPercentage|percent}}]</span>
+        <a type="button" class="pull-right" (click)="isEntitiesCollapsed=!isEntitiesCollapsed">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 entity-viz" (collapsed)="collapsed($event)" (expanded)="expanded($event)" [collapse]="isEntitiesCollapsed">
+        <div class="row ibm-text--small ibm-text--dark">
+          <div class="col-md-4">
+            <h3>
+            Predicted Text
+          </h3>
+          </div>
+          <div class="col-md-2">
+            <h3>Predicted Type</h3>
+          </div>
+          <div class="col-md-2">
+            <h3> Result</h3>
+          </div>
+          <div class="col-md-4">
+              <h3>Actual Text</h3>
+          </div>
+        </div>
+        <div *ngFor="let entity of entities" class="ibm-text--small">
+          <div class="row entity" [ngClass]="entity.toc_type">
+            <div class="col-md-4">
+              <span>{{entity.text}}</span>
+            </div>
+            <div class="col-md-2">
+              <span>{{entity.type}}</span>
+            </div>
+            <div class="col-md-2">
+              {{entity.toc_type}}
+            </div>
+            <div class="col-md-4">
+              <div *ngIf="entity.actual">
+                {{entity.actual.text}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="hasExceptions" class="row ibm-text--error">
+      <div class="ibm-wrapper">
+        Exception
+      </div>
+      <div *ngFor="let exception of visualizationSource.exception">
+        {{exception | json}}
+    </div>
+  </div>
+</div>

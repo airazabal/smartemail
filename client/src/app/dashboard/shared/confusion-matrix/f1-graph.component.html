@@ -1,0 +1,21 @@
+<div class="panel panel-default ibm-panel">
+  <div class="panel-heading ibm-panel__heading">
+    <div class="row">
+      <div class="col-sm-11">
+        <h3>F1 Score, Precision & Recall</h3>
+        <p class="ibm-text--small">This chart shows the statistics </p>
+      </div>
+      <div class="col-sm-1">
+        <div class="ibm-icon" style="color:black">
+          <app-help [helpContent]="helpContent"></app-help>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="panel-body ibm-panel__body">
+      <div id="f1-graph-chart"></div>
+      <div *ngIf="summary">
+        Overall F1 Score (Precision/Recall) {{summary.F1|number:'1.0-2'}} ({{summary.Precision|number:'1.0-2'}}/{{summary.Recall|number:'1.0-2'}})
+      </div>
+    </div>
+  </div>

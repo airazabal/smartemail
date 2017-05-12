@@ -1,0 +1,64 @@
+{
+  "name": "SmartEmail",
+  "plural": "SmartEmails",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true
+    },
+    "start_date_time": {
+      "type": "string"
+    },
+    "end_date_time": {
+      "type": "string"
+    },
+    "wks_model_id": {
+      "type": "string"
+    },
+    "wks_date_time": {
+      "type": "string"
+    },
+    "successfully_processed": {
+      "type": "boolean"
+    },
+    "source_email": {
+      "type": "object"
+    },
+    "transaction_types": {
+      "type": [
+        "object"
+      ]
+    },
+    "entities_extracted": {
+      "type": [
+        "object"
+      ]
+    },
+    "transaction_api_message_input": {
+      "type": [
+        "object"
+      ]
+    },
+    "exception": {
+      "type": [
+        "object"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "*"
+    }
+  ],
+  "methods": {}
+}

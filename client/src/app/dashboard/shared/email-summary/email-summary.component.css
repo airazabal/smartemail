@@ -1,0 +1,72 @@
+
+*, *:before, *:after {
+box-sizing: inherit; }
+
+/* loader size */
+.loader-container {
+display: inline-block;
+width: 5.625rem;
+height: 5.625rem;
+}
+
+.loader-container_small {
+  width: 2.8125rem;
+  height: 2.8125rem;
+}
+
+
+svg:not(:root) {
+overflow: hidden; }
+
+.loader {
+  height: 100%;
+  width: 100%;
+  transform: translateZ(0) rotate(300deg);
+  transform-origin: 25px 25px;
+  transform-origin: center center;
+  animation: b 4s ease-out infinite;
+}
+
+.loader--path {
+  stroke-dasharray: 125px;
+  stroke-dashoffset: 9.7px;
+  r: 20px;
+  cx: 50px;
+  cy: 50px;
+  fill: transparent;
+  stroke: #9855d4;
+  stroke-width: 4.65116px;
+  stroke-linecap: butt;
+  transition: stroke-dashoffset 1s cubic-bezier(0.5, 0.08, 0, 1);
+  animation: a 4s ease-out infinite;
+}
+
+.true_positive {
+  background-color: #164D56;
+  color:white;
+}
+
+.false_positive {
+  background-color: #D1F0F7;
+  color:black;
+}
+
+.false_negative {
+  background-color: #71CDDD;
+  color:black;
+}
+
+.entity.true_positive {
+  background-color: #116639;
+  color:white;
+}
+
+.entity.false_positive {
+  background-color: #57d785;
+  color:black;
+}
+
+.entity.false_negative {
+  background-color: #cdf3d1;
+  color:black;
+}

@@ -1,0 +1,17 @@
+.cfdark{
+  background-color: #164D56;
+  color:white;
+  cursor:pointer;
+}
+
+.cflight{
+  background-color: #D1F0F7;
+  color:black;
+  cursor:pointer;
+}
+
+.cfmedium {
+  background-color: #71CDDD;
+  color:black;
+  cursor:pointer;
+}

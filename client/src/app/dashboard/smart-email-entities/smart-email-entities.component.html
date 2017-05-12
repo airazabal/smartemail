@@ -1,0 +1,62 @@
+<div role="tabpanel" class="tab-pane active ibm-tabs__content-panel ibm-tabs__content-panel--active" id="forum-channels">
+  <div class="ibm-alert ibm-alert--warning">
+    Please Note -- The statistics here depend HEAVILY on the quality of the Actual/Expected definition since we can only determine a match on
+    exact text.  We make an effort to 'lowercase' everything for text comparison, but cannot handle missed formatting.
+
+    5/4/2017 This is still a work in progress -- I'm working on the Email List display.
+  </div>
+  <div *ngIf="loading" class="row">
+    <div class="text-center">
+      <div class="loader-container">
+        <svg viewBox="25 25 50 50" class="loader">
+          <circle cx="50" cy="50" r="20" class="loader--path"></circle>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!loading">
+    <div class="row ibm-text--small">
+      <div class="col-md-6 col-sm-6">
+        <app-table-of-confusion [confusion]="confusionMatrix" (selected)="filterTransactions($event)"></app-table-of-confusion>
+        <app-f1-graph [confusion]="confusionMatrix"></app-f1-graph>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="panel panel-default ibm-panel">
+          <div class="panel-heading ibm-panel__heading">
+            <h3>Email Display</h3>
+            <p class="ibm-text--small">{{filterMessage}}</p>
+          </div>
+          <div class="panel-body ibm-panel__body">
+            <div class="ibm-text--small pre-scrollable">
+              <div *ngFor="let email of emails">
+                <div class="row">
+                  <app-email-summary [email]="email" (emailSelected)="showDetails($event)"></app-email-summary>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div bsModal #detailsModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Details modal -- {{emailToVizId}}</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="detailsModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!--
+        <app-email-viz [emailId]="emailToVizId"></app-email-viz>
+      -->
+        <app-email-viz [docToViz]="emailToViz"></app-email-viz>
+      </div>
+    </div>
+  </div>
+</div>
