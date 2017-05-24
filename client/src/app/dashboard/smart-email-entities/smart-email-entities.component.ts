@@ -68,7 +68,7 @@ export class SmartEmailEntitiesComponent implements OnInit {
         //        console.log('Transactions...', response)
         this.transactions = response
         //        this.summary = this.summarize(response)
-        this.confusionMatrix = this.confusionMatrixService.generate('entity',this.transactions)
+        this.confusionMatrix = this.confusionMatrixService.generate('entity', this.transactions)
         this.loading = false
       })
     /*
@@ -104,8 +104,9 @@ export class SmartEmailEntitiesComponent implements OnInit {
     const tocType:string = tocMap[selector.toc_type];
 
     this.emails = this.transactions.filter((email) => {
-      //      console.log(`Searching ${email.topTransactionActual} & ${email.topTransactionPredicted}`)
-      if (email.toc.length > 0) {
+      console.log('EMAIL: ', email)
+      console.log(`Searching ${email.topTransactionActual} & ${email.topTransactionPredicted}`)
+      if (email.toc && email.toc.length > 0) {
 //        console.log('filterTransactions:  We have TOC data... ' + email.source_id)
         let found = email.toc.findIndex((entity) => {
  //         console.log(`Checking ${entity.type} for ${selector.entity_type}`)

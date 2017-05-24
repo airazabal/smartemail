@@ -1,6 +1,8 @@
-'use strict';
+'use strict'
 
 const request = require('request')
+  const confusionMatrix = require('./utils/confusion-matrix')
+const Envelope = require('envelope')
 
 let _discMessage = {
   id: '',
@@ -14,6 +16,9 @@ let _discMessage = {
   end_date_time: '',
   successfully_processed: false,
   transaction_types: [],
+  toc: [],
+  topTransactionActual: '',
+  topTransactionPredicted: '',
   ground_truth: {},
   entities_extracted: []
 }
@@ -52,11 +57,42 @@ const _categorize = (message) => {
         // if there was an exception, add it to the message
         console.log('SmartEmail._categorize() ERROR: ', res.statusCode)
         console.log('SmartEmail._categorize() ERROR: ', body)
-        message.exception = ['Categorize '+ body]
+        message.exception = ['Categorize ' + body]
       }
       resolve(message)
     })
   })
+}
+
+
+const findClosing = (text) => {
+  let closings = ['Thanks', 'Thank you', 'Regards', 'Best Wishes', 'Have a great day']
+  let pattern = '^'+closings.join('|^')
+  let regex = new RegExp(pattern, 'i')
+  return text.split('\r\n').findIndex((element) => {
+    return (regex.exec(element) !== null)
+  })
+}
+const getBody = (text) => {
+  let remainderStart = findClosing(text)
+  let body = text.split('\r\n').slice(0,remainderStart).join('\r\n')
+  let remainder = text.split('\r\n').slice(remainderStart).join('\r\n')
+  return [body, remainder]
+}
+
+// Read email into a buffer
+//
+// Construct envelope
+const cleanupEmail = (emailText) => {
+//  console.log(d.source_email.body)
+// make sure we have \r\n everyhwere -- needed for Envelope parser
+  let modified = emailText.toString().replace(/\n/g, '\r\n')
+  var email = new Envelope(modified)
+  // Remove all CR/LF type things -- replace w/ spaces.
+  console.log(email)
+  let body = getBody(email['0'])[0].replace(/\r?\n|\r/g, ' ')
+  //console.log( email )
+  return ['Subject: '+email.header.subject, body].join('\r\n')
 }
 
 module.exports = function(Smartemail) {
@@ -83,8 +119,11 @@ module.exports = function(Smartemail) {
     const NLU = Smartemail.app.models.NLU
 
     // Replace CRLF/LF w/ Spaces...
-    parameters.text = text.replace(/\r?\n|\r/g, ' ')
+//    parameters.text = text.replace(/\r?\n|\r/g, ' ')
+     parameters.text = cleanupEmail(text)
     // Return a promise
+    let modelId = null;
+    let modelDate = null;
     return new Promise((resolve, reject) => {
       Settings.load((settingserr, settings) => {
         // If settings returned, we have a modelid, use it.
@@ -94,14 +133,16 @@ module.exports = function(Smartemail) {
         }
         console.log('Settings! : ', settings)
         if (settings && settings.wksModelId && settings.wksModelId !== '') {
-          parameters.features.entities.model = settings.wksModelId
-          parameters.features.relations.model = settings.wksModelId
+          modelId = settings.wksModelId
+          modelDate = settings.wksModelDateTime
+          parameters.features.entities.model = modelId
+          parameters.features.relations.model = modelId
         }
         NLU.analyze(parameters, (err, response) => {
           //   console.log('Response from NLU!', response)
           let return_obj = {
-            wks_model_id: settings.wksModelId,
-            wks_date_time: settings.wksModelDateTime
+            wks_model_id: modelId,
+            wks_date_time: modelDate
           }
           if (err) {
             console.error('SmartEmail._enrichWithNLU() FAILED', err)
@@ -114,6 +155,7 @@ module.exports = function(Smartemail) {
           } else {
             console.log('SmartEmail._enrichWithNLU() SUCCEEDED')
             return_obj.entities = response.entities
+            return_obj.relations = response.relations
             return_obj._text = parameters.text
             resolve(return_obj)
           }
@@ -149,7 +191,7 @@ module.exports = function(Smartemail) {
       .then(responses => {
         console.log('SmartEmail.categorize() Enrichment SUCCESS ' + newMessage.id)
         // Set the end_date_time
-        //        console.log('response[0]', responses[0])
+//        console.log('response[0]', responses[0])
         Object.assign(newMessage, responses[0])
 
         // Assing the the entities
@@ -160,6 +202,7 @@ module.exports = function(Smartemail) {
           newMessage.wks_date_time = responses[1].wks_date_time
         } else {
           newMessage.entities_extracted = responses[1].entities
+          newMessage.relations_extracted = responses[1].relations
           newMessage.wks_model_id = responses[1].wks_model_id
           newMessage.wks_date_time = responses[1].wks_date_time
           newMessage.text_for_enrichment = responses[1]._text
@@ -168,7 +211,9 @@ module.exports = function(Smartemail) {
         if (newMessage.exception.length === 0) {
           newMessage.successfully_processed = true
         }
+        newMessage = confusionMatrix.populateConfusion(newMessage)
         newMessage.end_date_time = Date.now()
+        // Add confusion info to it.
         console.log('SmartEmail.categorize() Message to store:' + newMessage.id)
         // Save the message in Cloudant
         //Smartemail.replaceOrCreate(newMessage, (err, createmsg) => {
@@ -232,7 +277,6 @@ module.exports = function(Smartemail) {
     }
   }
 
-
   Smartemail.save = function(msg, cb) {
     console.log('SmartEmail.save() Inbound message:  ', msg)
     // Now we need to normalize msg.
@@ -269,6 +313,218 @@ module.exports = function(Smartemail) {
           console.log('Adding to discovery response: : ', createmsg)
           cb(err, createmsg)
         })
+      })
+  }
+
+  Smartemail.flatten = function(modelId) {
+//    console.log('ModelID? ', modelId)
+    return new Promise((resolve, reject) => {
+      let filter = null;
+      // It comes in this way when not set...
+      if (modelId !== '{modelId}') {
+        filter = {
+          where: {
+            wks_model_id: modelId
+          }
+        }
+      }
+      Smartemail.find(filter, (err, found) => {
+        // calculate an object of ALL ENTITIES possible
+        if (err) {
+          reject(err)
+        }
+        console.log('Found: ', found.length)
+        let entities = found.reduce((_entities, o) => {
+          o.entities_extracted.forEach((e) => {
+            _entities[e.type] = ''
+          })
+          if (o.ground_truth.extracted_entities) {
+            o.ground_truth.extracted_entities.forEach((e) => {
+              _entities[e.type] = ''
+            })
+          }
+          return _entities
+        }, {})
+        // calculate an object of ALL Transaction Types possible
+        let transaction_types = found.reduce((_tt, o) => {
+          o.transaction_types.forEach((t) => {
+            _tt[t.transaction_type] = ''
+          })
+          return _tt
+        }, {})
+        // relations
+
+        let relation = found.reduce((_r, o) => {
+          if (o.relations_extracted) {
+            o.relations_extracted.forEach((r) => {
+              let type = r.type
+              let entity1 = r.arguments[0].entities[0].type
+              let entity2 = r.arguments[1].entities[0].type
+              _r[`${entity1},${type},${entity2}`] = ''
+            })
+          }
+          return _r
+        }, {})
+
+        // Return a list in correct format
+        let tt_array = Object.keys(transaction_types).sort()
+        let e_array = Object.keys(entities).sort()
+        let r_array = Object.keys(relation).reduce((r, c) => {
+          r = r.concat(c.split(','))
+          return r
+        },[])
+        // Build the header...
+        let header = '"ID",' + tt_array.map(tt => `"${tt}"`).join() + ',' + e_array.map(e => `"${e}"`).join(',') + ',' + r_array.map(r => `"${r}"`).join(',')
+        let flatList = found.map((item) => {
+          let csv = [item.source_id]
+          tt_array.forEach((tt) => {
+            csv.push('"' + item.transaction_types.filter((t) => {
+              return (t.transaction_type === tt)
+            }).map((t) => {
+              // The list of matches
+              return t.confidence_level
+            }).join(':::') + '"')
+          })
+          e_array.forEach((entity) => {
+            csv.push('"' + item.entities_extracted.filter((e) => {
+              return (e.type === entity)
+            }).map((e) => {
+              // The list of matches
+              return e.text
+            }).join(':::') + '"')
+          })
+          Object.keys(relation).forEach((rel) => {
+            let [left, type, right] = rel.split(',')
+            console.log(`Searching for ${left} - ${type} - ${right}`)
+            if (item.relations_extracted) {
+              item.relations_extracted.filter((_rel) => {
+                return ( _rel.type === type &&
+                  _rel.arguments[0].entities[0].type === left &&
+                  _rel.arguments[1].entities[0].type === right )
+              }).map((_r) => {
+                // The list of matches
+                console.log(`Found ${_r.arguments[0].entities[0].text} -  ${_r.type} -  ${_r.arguments[1].entities[0].text}`)
+                csv.push(_r.arguments[0].entities[0].text)
+                csv.push(_r.type)
+                csv.push( _r.arguments[1].entities[0].text)
+              })
+            } else {
+              console.log('!!!!!!!!!! No Relationships Found !!!!!!!!!!!!!!!')
+              csv.push('')
+              csv.push('')
+              csv.push('')
+            }
+          })
+          return csv.join(',')
+        })
+        flatList.unshift(header)
+        resolve(flatList)
+      })
+    })
+  }
+
+    Smartemail.flattentoc = function(modelId) {
+      console.log('ModelID? ', modelId)
+
+      return new Promise((resolve, reject) => {
+        let filter = null;
+        // It comes in this way when not set...
+        if (modelId !== '{modelId}') {
+          filter = {
+            where: {
+              wks_model_id: modelId
+            }
+          }
+        }
+
+        Smartemail.find(filter, (err, found) => {
+          // calculate an object of ALL ENTITIES possible
+          if (err) {
+            reject(err)
+          }
+          console.log('Found: ', found.length)
+          let entities = found.reduce((_entities, o) => {
+            o.entities_extracted.forEach((e) => {
+              _entities[e.type] = ''
+            })
+            if (o.ground_truth.extracted_entities) {
+              o.ground_truth.extracted_entities.forEach((e) => {
+                _entities[e.type] = ''
+              })
+            }
+            return _entities
+          }, {})
+
+          // calculate an object of ALL Transaction Types possible
+          let transaction_types = found.reduce((_tt, o) => {
+            o.transaction_types.forEach((t) => {
+              _tt[t.transaction_type] = ''
+            })
+            return _tt
+          }, {})
+          // Return a list in correct format
+          let tt_array = Object.keys(transaction_types).sort()
+          let e_array = Object.keys(entities).sort()
+          let header = '"ID",' + tt_array.map(tt => `"${tt}"`).join() + ',' + e_array.map(e => `"${e}"`).join(',')
+          let flatList = found.map((r) => {
+            let csv = [r.source_id]
+            tt_array.forEach((tt) => {
+              csv.push('"' + r.transaction_types.filter((t) => {
+                return (t.transaction_type === tt)
+              }).map((t) => {
+                // The list of matches
+                return t.confidence_level
+              }).join(':::') + '"')
+            })
+            e_array.forEach((entity) => {
+              csv.push('"' + r.entities_extracted.filter((e) => {
+                return (e.type === entity)
+              }).map((e) => {
+                // The list of matches
+                return e.text
+              }).join(':::') + '"')
+            })
+            return csv.join(',')
+          })
+          flatList.unshift(header)
+          resolve(flatList)
+        })
+      })
+    }
+
+  Smartemail.flattoc = function(modelId, res, cb) {
+    console.log('flattoc: ', modelId)
+    Smartemail.flattentoc(modelId)
+      .then((list) => {
+//        console.log('Flatten returned list: ', list)
+        var datetime = new Date();
+        res.set('Expires', 'Tue, 03 Jul 2001 06:00:00 GMT');
+        res.set('Cache-Control', 'max-age=0, no-cache, must-revalidate, proxy-revalidate');
+        res.set('Last-Modified', datetime + 'GMT');
+        res.set('Content-Type', 'application/force-download');
+        res.set('Content-Type', 'application/octet-stream');
+        res.set('Content-Type', 'application/download');
+        res.set('Content-Disposition', 'attachment;filename=Data.csv');
+        res.set('Content-Transfer-Encoding', 'binary');
+        res.send(list.join('\r\n')); //@todo: insert your CSV data here.
+      })
+  }
+
+  Smartemail.flatList = function(modelId, res, cb) {
+    console.log('flatList: ', modelId)
+    Smartemail.flatten(modelId)
+      .then((list) => {
+//        console.log('Flatten returned list: ', list)
+        var datetime = new Date();
+        res.set('Expires', 'Tue, 03 Jul 2001 06:00:00 GMT');
+        res.set('Cache-Control', 'max-age=0, no-cache, must-revalidate, proxy-revalidate');
+        res.set('Last-Modified', datetime + 'GMT');
+        res.set('Content-Type', 'application/force-download');
+        res.set('Content-Type', 'application/octet-stream');
+        res.set('Content-Type', 'application/download');
+        res.set('Content-Disposition', 'attachment;filename=Data.csv');
+        res.set('Content-Transfer-Encoding', 'binary');
+        res.send(list.join('\r\n')); //@todo: insert your CSV data here.
       })
   }
 
@@ -314,5 +570,25 @@ module.exports = function(Smartemail) {
       root: true,
       type: 'object'
     }
+  })
+
+  Smartemail.remoteMethod('flatList', {
+    accepts: [{
+        arg: 'modelId',
+        type: 'string'
+      },
+      {
+        arg: 'res',
+        type: 'object',
+        'http': {
+          source: 'res'
+        }
+      }
+    ],
+    http: {
+      path: '/flatList/:modelId',
+      verb: 'get'
+    },
+    returns: {}
   })
 };

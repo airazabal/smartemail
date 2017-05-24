@@ -73,6 +73,7 @@
           "*": false,
           "categorize": true,
           "wslReplaceOrCreate": true,
+          "flatList": true,
           "find":true,
           "findById": true,
           "count": true,
@@ -80,9 +81,5 @@
         }
       }
     }
-  },
-  "testfiles": {
-    "dataSource": "storage",
-    "public": true
   }
 }

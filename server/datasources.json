@@ -15,12 +15,6 @@
     "name": "cloudant",
     "connector": "cloudant"
   },
-  "storage": {
-    "name": "storage",
-    "connector": "loopback-component-storage",
-    "provider": "filesystem",
-    "root": "./files"
-  },
   "watson-nlu": {
     "name": "watson-nlu",
     "crud": false,

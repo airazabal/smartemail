@@ -76,7 +76,7 @@ export class SmartEmailClassificationsComponent implements OnInit {
 //      console.log(`Searching ${email.topTransactionActual} & ${email.topTransactionPredicted}`)
       return (
          email.topTransactionActual === selector.actual &&
-         email.topTransactionPredicted === selector.predicted)
+         email.topTransactionPredicted === (selector.predicted === 'not_found' ? null: selector.predicted))
     })
     this.filterMessage = `Filtered by: [Actual -> ${selector.actual} Predicted -> ${selector.predicted}]`
     console.log('filterTransactions found :', this.emails.length)

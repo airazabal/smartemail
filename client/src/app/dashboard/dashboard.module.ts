@@ -36,6 +36,7 @@ import { F1GraphComponent } from './shared/confusion-matrix/f1-graph.component'
 import { TableOfConfusionComponent } from './shared/confusion-matrix/table-of-confusion.component'
 import { EmailSummaryComponent } from './shared/email-summary/email-summary.component';
 import { HelpComponent } from './shared/help/help.component';
+import { MvpCalcComponent } from './shared/mvp-calc/mvp-calc.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { HelpComponent } from './shared/help/help.component';
     F1GraphComponent,
     TableOfConfusionComponent,
     HelpComponent,
-    ConfusionMatrixComponent
+    ConfusionMatrixComponent,
+    MvpCalcComponent
   ],
   providers: [
     ConfusionMatrixService,
