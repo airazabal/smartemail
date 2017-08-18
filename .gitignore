@@ -23,3 +23,4 @@ dist
 mem_db.json
 vcap-local.json
 env-vars.json
+*.spec*

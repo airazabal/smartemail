@@ -86,7 +86,7 @@ var CloudantInitializer = function (_connection, _config) {
   this.connection = _connection
   this.config = _config
 }
-
+console.log("About to initialize cloudant")
 CloudantInitializer.prototype.checkCloudant = function () {
   var self = this
   var dbDefinitions = this.config['db-definitions']

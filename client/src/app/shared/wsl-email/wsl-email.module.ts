@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { DiscoveryQueryService } from './discovery-query.service';
-import { BackendService} from './backend.service';
+//import { DiscoveryQueryService } from './discovery-query.service'; -> might no longer be needed
+import { BackendService} from '../../core/backend.service';
 import { SmartEmailService } from './smart-email.service';
 import { UtilService } from './util.service';
 
@@ -19,6 +19,6 @@ import { EmailInputComponent } from './email-input/email-input.component';
   ],
   declarations: [EmailVizComponent, EmailInputComponent],
   exports:[EmailVizComponent, EmailInputComponent],
-  providers: [DiscoveryQueryService, UtilService, SmartEmailService, BackendService ]
+  providers: [UtilService, SmartEmailService, BackendService ]
 })
 export class WslEmailModule { }

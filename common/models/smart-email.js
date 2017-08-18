@@ -1,7 +1,7 @@
 'use strict'
 
 const request = require('request')
-  const confusionMatrix = require('./utils/confusion-matrix')
+const confusionMatrix = require('./utils/confusion-matrix')
 const Envelope = require('envelope')
 
 let _discMessage = {
@@ -48,6 +48,7 @@ const _categorize = (message) => {
         console.error('SmartEmail._categorize() -- FAILED ', err)
         reject(err)
       }
+      console.log("trying to  categorize email")
       //      console.log('SmartEmail._categorize() RESPONSE: ', res.statusCode)
       if (res.statusCode === 200) {
         // combine the objects
@@ -330,12 +331,24 @@ module.exports = function(Smartemail) {
       }
       Smartemail.find(filter, (err, found) => {
         // calculate an object of ALL ENTITIES possible
+        // look at the entities extracted, as well as the ground truth entities
+        // this is accross ALL emails in database
         if (err) {
           reject(err)
         }
         console.log('Found: ', found.length)
-        let entities = found.reduce((_entities, o) => {
-          o.entities_extracted.forEach((e) => {
+        // log the JSON result of the search to better understand the find mechanism
+        var fs = require('fs');
+        fs.writeFile(".found.json", JSON.stringify(found), function(err) {
+          if(err) {
+            return console.log(err);
+          }
+          console.log("The file was saved!");
+        });
+        // found returns an array of each of the emails stored in the cloudant
+
+        let entities = found.reduce((_entities, o) => { // reduce = fold
+          o.entities_extracted.forEach((e) => { //
             _entities[e.type] = ''
           })
           if (o.ground_truth.extracted_entities) {
@@ -346,13 +359,14 @@ module.exports = function(Smartemail) {
           return _entities
         }, {})
         // calculate an object of ALL Transaction Types possible
+        // question - why do you not look at ground truth as well??
+        // answer: categorize service returns confidences on all no matter what.
         let transaction_types = found.reduce((_tt, o) => {
           o.transaction_types.forEach((t) => {
             _tt[t.transaction_type] = ''
           })
           return _tt
         }, {})
-        // relations
 
         let relation = found.reduce((_r, o) => {
           if (o.relations_extracted) {
@@ -375,16 +389,18 @@ module.exports = function(Smartemail) {
         },[])
         // Build the header...
         let header = '"ID",' + tt_array.map(tt => `"${tt}"`).join() + ',' + e_array.map(e => `"${e}"`).join(',') + ',' + r_array.map(r => `"${r}"`).join(',')
+
+        // build the rows, item is the email object
         let flatList = found.map((item) => {
-          let csv = [item.source_id]
+          let csv = [item.source_id] // first element of
           tt_array.forEach((tt) => {
             csv.push('"' + item.transaction_types.filter((t) => {
               return (t.transaction_type === tt)
             }).map((t) => {
               // The list of matches
               return t.confidence_level
-            }).join(':::') + '"')
-          })
+            }).join(':::') + '"') // add the confidence level for each transaction type.
+          })                      // only one instance for each transaction type returned, so the join(':::') is never actuall called
           e_array.forEach((entity) => {
             csv.push('"' + item.entities_extracted.filter((e) => {
               return (e.type === entity)
@@ -394,7 +410,7 @@ module.exports = function(Smartemail) {
             }).join(':::') + '"')
           })
           Object.keys(relation).forEach((rel) => {
-            let [left, type, right] = rel.split(',')
+            let [left, type, right] = rel.split(',') // parse relation back out
             console.log(`Searching for ${left} - ${type} - ${right}`)
             if (item.relations_extracted) {
               item.relations_extracted.filter((_rel) => {
@@ -417,7 +433,7 @@ module.exports = function(Smartemail) {
           })
           return csv.join(',')
         })
-        flatList.unshift(header)
+        flatList.unshift(header) // put the header at the top of the flat list
         resolve(flatList)
       })
     })
@@ -591,4 +607,5 @@ module.exports = function(Smartemail) {
     },
     returns: {}
   })
+
 };

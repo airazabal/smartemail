@@ -30,7 +30,8 @@ export class F1GraphComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
+    console.log("ngOnInit, getting Input of ConfusionMatrix type");
+    console.log(this.confusion);
   }
 
   averageNonZero(a:any[]):number {
@@ -52,7 +53,8 @@ export class F1GraphComponent implements OnInit {
     }
 
     this.stats = this.confusion.statistics()
-
+    console.log(this.confusion)
+    console.log(this.stats)
     let f1:any[] = ['f1'];
     let precision:any[] = ['precision'];
     let recall:any[] = ['recall']

@@ -1,8 +1,8 @@
 {
-  "CLOUDANT_CONNECTION_URL": {"expr": "Cloudant.*", "field": "credentials.url"},
+  "CLOUDANT_CONNECTION_URL": {"expr": "cloudant-hartford-ep.*", "field": "credentials.url"},
   "CLOUDANT_DB_NAME": "wsl-hig-app-db",
-  "NLU_API_USER": {"expr": "SmartEmail-NLU.*", "field": "credentials.username"},
-  "NLU_API_PASSWORD": {"expr": "SmartEmail-NLU.*", "field": "credentials.password"},
-  "NLU_API_URL": { "expr": "SmartEmail-NLU.*", "field": "credentials.url"},
-  "MSG_CLASSIFIER_URL": "https://Message-Classifier.mybluemix.net/api/classify"
+  "NLU_API_USER": {"expr": "nlu-hartford-ep", "field": "credentials.username"},
+  "NLU_API_PASSWORD": {"expr": "nlu-hartford-ep", "field": "credentials.password"},
+  "NLU_API_URL": { "expr": "nlu-hartford-ep", "field": "credentials.url"},
+  "MSG_CLASSIFIER_URL": "http://localhost:5001/api/classify"
 }

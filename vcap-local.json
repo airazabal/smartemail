@@ -1,17 +1,17 @@
 {
   "cloudantNoSQLDB": [{
     "credentials": {
-      "username": "cbbee339-3971-495c-8d78-dfec2439dc4b-bluemix",
-      "password": "21cb054a6d28ba516caa6258b50593620f20b8d94ff6b592cde082faa16d7be8",
-      "host": "cbbee339-3971-495c-8d78-dfec2439dc4b-bluemix.cloudant.com",
+      "username": "cb7e10a7-1298-4550-a792-28016d6be7b1-bluemix",
+      "password": "2fb9cf448ce24db58dffc4ee79ca52f2f9520b8543558a20ebd2b39da136a94d",
+      "host": "cb7e10a7-1298-4550-a792-28016d6be7b1-bluemix.cloudant.com",
       "port": 443,
-      "url": "https://cbbee339-3971-495c-8d78-dfec2439dc4b-bluemix:21cb054a6d28ba516caa6258b50593620f20b8d94ff6b592cde082faa16d7be8@cbbee339-3971-495c-8d78-dfec2439dc4b-bluemix.cloudant.com"
+      "url": "https://cb7e10a7-1298-4550-a792-28016d6be7b1-bluemix:2fb9cf448ce24db58dffc4ee79ca52f2f9520b8543558a20ebd2b39da136a94d@cb7e10a7-1298-4550-a792-28016d6be7b1-bluemix.cloudant.com"
     },
     "syslog_drain_url": null,
     "label": "cloudantNoSQLDB",
     "provider": null,
     "plan": "Lite",
-    "name": "Cloudant NoSQL DB-o9",
+    "name": "cloudant-hartford-ep",
     "tags": [
       "data_management",
       "ibm_created",
@@ -22,9 +22,9 @@
   "nlu_api": [{
     "credentials": {
       "url": "https://gateway.watsonplatform.net/natural-language-understanding/api",
-      "username": "c808dd2b-fa2e-4b17-ba99-2fc8237722e6",
-      "password": "4B1RT82vhRfN"
+      "username": "6339d7c4-4e6b-423e-b7a5-741f9854e1dc",
+      "password": "yWSHygituDs3"
     },
-    "name": "SmartEmail-NLU"
+    "name": "nlu-hartford-ep"
     }]
 }

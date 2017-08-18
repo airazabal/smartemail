@@ -11,7 +11,7 @@ import 'rxjs/add/operator/catch'
 /* Store my Entity Data here.  We want to store the Input and
 the result in the Service */
 
-import { BackendService } from './backend.service'
+import { BackendService } from '../../core/backend.service'
 
 @Injectable()
 export class SmartEmailService {
