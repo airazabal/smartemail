@@ -1,0 +1,265 @@
+Email ID: 1657 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Workman's Comp Certificate of Insurance needed I need a certificate of insurance for: Aqua Construction, Inc 236 Central St Inman, KS 67546 Please send to me at this email address Our policy number is 76WEGGG1591  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Certificate of Insurance ",
+    "dataString": "COI_FormType_COI: Certificate of Insurance =>\n",
+    "elements": [
+      {
+        "text": "Certificate of Insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate of insurance Aqua Construction, Inc 236 Central St Inman KS 67546 ",
+    "dataString": "COI_FormType_COI: certificate of insurance =>\nCompany_Name: Aqua Construction, Inc =>\nAddress_StreetNumber: 236 Central St =>\nAddress_City: Inman =>\nAddress_State: KS =>\nAddress_ZIP: 67546 =>\n",
+    "elements": [
+      {
+        "text": "certificate of insurance",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Aqua Construction, Inc",
+        "type": "Company_Name"
+      },
+      {
+        "text": "236 Central St",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Inman",
+        "type": "Address_City"
+      },
+      {
+        "text": "KS",
+        "type": "Address_State"
+      },
+      {
+        "text": "67546",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Aqua Construction, Inc 236 Central St Inman KS 67546 ",
+    "dataString": "Company_Name: Aqua Construction, Inc =>\nAddress_StreetNumber: 236 Central St =>\nAddress_City: Inman =>\nAddress_State: KS =>\nAddress_ZIP: 67546 =>\n",
+    "elements": [
+      {
+        "text": "Aqua Construction, Inc",
+        "type": "Company_Name"
+      },
+      {
+        "text": "236 Central St",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Inman",
+        "type": "Address_City"
+      },
+      {
+        "text": "KS",
+        "type": "Address_State"
+      },
+      {
+        "text": "67546",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "236 Central St Inman KS 67546 ",
+    "dataString": "Address_StreetNumber: 236 Central St =>\nAddress_City: Inman =>\nAddress_State: KS =>\nAddress_ZIP: 67546 =>\n",
+    "elements": [
+      {
+        "text": "236 Central St",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Inman",
+        "type": "Address_City"
+      },
+      {
+        "text": "KS",
+        "type": "Address_State"
+      },
+      {
+        "text": "67546",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate of Insurance"
+  },
+  "1": {
+    "type": "COI_FormType_COI",
+    "text": "certificate of insurance"
+  },
+  "2": {
+    "type": "Company_Name",
+    "text": "Aqua Construction, Inc",
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_StreetNumber",
+    "text": "236 Central St",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_City",
+    "text": "Inman",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_State",
+    "text": "KS",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_ZIP",
+    "text": "67546",
+    "visited_as_target": true
+  },
+  "7": {
+    "type": "Delivery_Method",
+    "text": "send"
+  },
+  "8": {
+    "type": "Policy_Number",
+    "text": "76WEGGG1591"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "1",
+      "type": "COI_FormType_COI",
+      "text": "certificate of insurance"
+    },
+    "target": {
+      "id": "2",
+      "type": "Company_Name",
+      "text": "Aqua Construction, Inc",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "2",
+      "type": "Company_Name",
+      "text": "Aqua Construction, Inc",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_StreetNumber",
+      "text": "236 Central St",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Address_StreetNumber",
+      "text": "236 Central St",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_City",
+      "text": "Inman",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_City",
+      "text": "Inman",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_State",
+      "text": "KS",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_State",
+      "text": "KS",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_ZIP",
+      "text": "67546",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Todd Tocker [mailto:todd@securitymonitoring.com] 
+Sent: Wednesday, August 23, 2017 3:57 PM
+To: 'Agency.Services@TheHartford.com' <Agency.Services@TheHartford.com>
+Subject: Workman's Comp Certificate of Insurance needed
+
+I need a certificate of insurance for:
+
+Aqua Construction, Inc.
+236 Central St
+Inman, KS 67546
+
+Please send to me at this email address. Our policy number is 76WEGGG1591
+
+Thanks,
+
+Todd Tocker  |  Chief Executive Officer
+
+
+
+
+security MONITORING TECHNOLOGIES, L.L.C. | 450 South Island | Wichita, KS 67211
+Tel (316) 263-2829 | Cell (316) 841-2021 | Fax (316) 264-2427 | http://www.securitymonitoring.com
+
+Oklahoma License #2250
+CONFIDENTIALITY NOTICE: This e-mail, including any attached files, is covered by the Electronic Communications Privacy Act, 18 U.S.C. 2510-2521, is intended only for the person to whom or the entity to which it is addressed and may contain confidential and/or privileged material. Any review, retransmission, dissemination or other use of, or taking of any action in reliance upon, this information by persons or entities other than the intended recipient is prohibited. If you received this in error, please contact the sender and delete the material from any computer.
+ 
+----------------End Source ---------------------------------:: 
+

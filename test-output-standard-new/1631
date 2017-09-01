@@ -1,0 +1,293 @@
+Email ID: 1631 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Certificate Request Please email a certificate of insurance to: Mr Nolan Chauncy Charm Construction Company 16400 Elizabeth Drive, Suite 300 Atlanta, GA 30350 Email: CERTIFICATES@CHARMCO.COM My policy number is 20 WEC ZR3030 Natural Services, Inc Dana Hart, Jr, P G www.naturalservices.com Cell: 770-364-1810 ""Improving the search for ground water with modern technology and scientific data, not guess work""  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Certificate Request ",
+    "dataString": "COI_FormType_COI: Certificate Request =>\n",
+    "elements": [
+      {
+        "text": "Certificate Request",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate of insurance Mr Nolan Chauncy Charm Construction Company 16400 Elizabeth Drive, Suite 300 Atlanta GA 30350 ",
+    "dataString": "COI_FormType_COI: certificate of insurance =>\nCompany_Name: Mr Nolan Chauncy Charm Construction Company =>\nAddress_StreetNumber: 16400 Elizabeth Drive, Suite 300 =>\nAddress_City: Atlanta =>\nAddress_State: GA =>\nAddress_ZIP: 30350 =>\n",
+    "elements": [
+      {
+        "text": "certificate of insurance",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Mr Nolan Chauncy Charm Construction Company",
+        "type": "Company_Name"
+      },
+      {
+        "text": "16400 Elizabeth Drive, Suite 300",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Atlanta",
+        "type": "Address_City"
+      },
+      {
+        "text": "GA",
+        "type": "Address_State"
+      },
+      {
+        "text": "30350",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Natural Services, Inc ",
+    "dataString": "Company_Name: Natural Services, Inc =>\n",
+    "elements": [
+      {
+        "text": "Natural Services, Inc",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Mr Nolan Chauncy Charm Construction Company 16400 Elizabeth Drive, Suite 300 Atlanta GA 30350 ",
+    "dataString": "Company_Name: Mr Nolan Chauncy Charm Construction Company =>\nAddress_StreetNumber: 16400 Elizabeth Drive, Suite 300 =>\nAddress_City: Atlanta =>\nAddress_State: GA =>\nAddress_ZIP: 30350 =>\n",
+    "elements": [
+      {
+        "text": "Mr Nolan Chauncy Charm Construction Company",
+        "type": "Company_Name"
+      },
+      {
+        "text": "16400 Elizabeth Drive, Suite 300",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Atlanta",
+        "type": "Address_City"
+      },
+      {
+        "text": "GA",
+        "type": "Address_State"
+      },
+      {
+        "text": "30350",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "16400 Elizabeth Drive, Suite 300 Atlanta GA 30350 ",
+    "dataString": "Address_StreetNumber: 16400 Elizabeth Drive, Suite 300 =>\nAddress_City: Atlanta =>\nAddress_State: GA =>\nAddress_ZIP: 30350 =>\n",
+    "elements": [
+      {
+        "text": "16400 Elizabeth Drive, Suite 300",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Atlanta",
+        "type": "Address_City"
+      },
+      {
+        "text": "GA",
+        "type": "Address_State"
+      },
+      {
+        "text": "30350",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Request"
+  },
+  "1": {
+    "type": "Delivery_Method",
+    "text": "email"
+  },
+  "2": {
+    "type": "Policy_Number",
+    "text": "20 WEC ZR3030"
+  },
+  "3": {
+    "type": "Company_Name",
+    "text": "Natural Services, Inc"
+  },
+  "4": {
+    "type": "Email",
+    "text": "www.naturalservices.com"
+  },
+  "5": {
+    "type": "Phone_Number",
+    "text": "770-364-1810"
+  },
+  "6": {
+    "type": "COI_FormType_COI",
+    "text": "certificate of insurance"
+  },
+  "7": {
+    "type": "Company_Name",
+    "text": "Mr Nolan Chauncy Charm Construction Company",
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_StreetNumber",
+    "text": "16400 Elizabeth Drive, Suite 300",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_City",
+    "text": "Atlanta",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_State",
+    "text": "GA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "11": {
+    "type": "Address_ZIP",
+    "text": "30350",
+    "visited_as_target": true
+  },
+  "12": {
+    "type": "Delivery_Method",
+    "text": "Email"
+  },
+  "13": {
+    "type": "Email",
+    "text": "CERTIFICATES@CHARMCO.COM"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "6",
+      "type": "COI_FormType_COI",
+      "text": "certificate of insurance"
+    },
+    "target": {
+      "id": "7",
+      "type": "Company_Name",
+      "text": "Mr Nolan Chauncy Charm Construction Company",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Company_Name",
+      "text": "Mr Nolan Chauncy Charm Construction Company",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_StreetNumber",
+      "text": "16400 Elizabeth Drive, Suite 300",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Address_StreetNumber",
+      "text": "16400 Elizabeth Drive, Suite 300",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_City",
+      "text": "Atlanta",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Address_City",
+      "text": "Atlanta",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_State",
+      "text": "GA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_State",
+      "text": "GA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "11",
+      "type": "Address_ZIP",
+      "text": "30350",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Dana Hart [mailto:support@naturalservices.com] 
+Sent: Wednesday, August 16, 2017 12:51 PM
+To: Agency.Services@TheHartford.com
+Subject: Certificate Request
+
+                Please email a certificate of insurance to:
+                                Mr. Nolan Chauncy
+                                Charm Construction Company
+                                16400 Elizabeth Drive, Suite 300
+                                Atlanta, GA  30350
+
+                Email:    CERTIFICATES@CHARMCO.COM
+
+                My policy number is 20 WEC ZR3030
+                Natural Services, Inc.
+
+
+Dana Hart, Jr., P. G.
+www.naturalservices.com
+Cell: 770-364-1810
+""Improving the search for ground water
+with modern technology and scientific data,
+not guess work""
+ 
+----------------End Source ---------------------------------:: 
+

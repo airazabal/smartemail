@@ -1,0 +1,263 @@
+Email ID: 1566 
+----------------Begin Cleansed ---------------------------------: 
+Subject: COI 76WBGIO1313 Good morning I need COI for Property Repairs 2044 W Ivy Valley Dr Fuquay Varina, NC 27526 Email: terza@apr-nc.com  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI Property Repairs 2044 W Ivy Valley Dr Fuquay Varina NC 27526 ",
+    "dataString": "COI_FormType_COI: COI =>\nCompany_Name: Property Repairs =>\nAddress_StreetNumber: 2044 W Ivy Valley Dr =>\nAddress_City: Fuquay Varina =>\nAddress_State: NC =>\nAddress_ZIP: 27526 =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Property Repairs",
+        "type": "Company_Name"
+      },
+      {
+        "text": "2044 W Ivy Valley Dr",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Fuquay Varina",
+        "type": "Address_City"
+      },
+      {
+        "text": "NC",
+        "type": "Address_State"
+      },
+      {
+        "text": "27526",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Property Repairs 2044 W Ivy Valley Dr Fuquay Varina NC 27526 ",
+    "dataString": "Company_Name: Property Repairs =>\nAddress_StreetNumber: 2044 W Ivy Valley Dr =>\nAddress_City: Fuquay Varina =>\nAddress_State: NC =>\nAddress_ZIP: 27526 =>\n",
+    "elements": [
+      {
+        "text": "Property Repairs",
+        "type": "Company_Name"
+      },
+      {
+        "text": "2044 W Ivy Valley Dr",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Fuquay Varina",
+        "type": "Address_City"
+      },
+      {
+        "text": "NC",
+        "type": "Address_State"
+      },
+      {
+        "text": "27526",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "2044 W Ivy Valley Dr Fuquay Varina NC 27526 ",
+    "dataString": "Address_StreetNumber: 2044 W Ivy Valley Dr =>\nAddress_City: Fuquay Varina =>\nAddress_State: NC =>\nAddress_ZIP: 27526 =>\n",
+    "elements": [
+      {
+        "text": "2044 W Ivy Valley Dr",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Fuquay Varina",
+        "type": "Address_City"
+      },
+      {
+        "text": "NC",
+        "type": "Address_State"
+      },
+      {
+        "text": "27526",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "76WBGIO1313"
+  },
+  "2": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "3": {
+    "type": "Company_Name",
+    "text": "Property Repairs",
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_StreetNumber",
+    "text": "2044 W Ivy Valley Dr",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_City",
+    "text": "Fuquay Varina",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_State",
+    "text": "NC",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_ZIP",
+    "text": "27526",
+    "visited_as_target": true
+  },
+  "8": {
+    "type": "Delivery_Method",
+    "text": "Email"
+  },
+  "9": {
+    "type": "Email",
+    "text": "terza@apr-nc.com"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "0",
+      "type": "COI_FormType_COI",
+      "text": "COI"
+    },
+    "target": {
+      "id": "3",
+      "type": "Company_Name",
+      "text": "Property Repairs",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Company_Name",
+      "text": "Property Repairs",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_StreetNumber",
+      "text": "2044 W Ivy Valley Dr",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_StreetNumber",
+      "text": "2044 W Ivy Valley Dr",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_City",
+      "text": "Fuquay Varina",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_City",
+      "text": "Fuquay Varina",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_State",
+      "text": "NC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_State",
+      "text": "NC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_ZIP",
+      "text": "27526",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Ola Garcia [mailto:olga@deningcontracts.com] 
+Sent: Tuesday, August 08, 2017 11:07 AM
+To: Kym Bird; agency.services@thehartford.com
+Subject: COI 76WBGIO1313
+
+Good morning I need COI for
+
+
+Property Repairs
+2044 W. Ivy Valley Dr.
+Fuquay Varina, NC 27526
+
+Email: terza@apr-nc.com
+
+
+Thanks
+Oga Garcia
+Office Manager
+919-894-6776
+ 
+----------------End Source ---------------------------------:: 
+

@@ -77,7 +77,8 @@
           "find":true,
           "findById": true,
           "count": true,
-          "exists": true
+          "exists": true,
+          "pocOutputCsv": true
         }
       }
     }

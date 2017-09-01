@@ -1,0 +1,275 @@
+Email ID: 1498 
+----------------Begin Cleansed ---------------------------------: 
+Subject: THE HARTFORD #01SBMAR7812 - Town Lock & Key To whom it may concern, Please add additional insured below and forward coi as soon as possible: Table Safe Co 1548 W Liberty Ave Orange, Ca 92865  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "coi Table Safe Co 1548 W Liberty Ave Orange Ca 92865 ",
+    "dataString": "COI_FormType_COI: coi =>\nCompany_Name: Table Safe Co =>\nAddress_StreetNumber: 1548 W Liberty Ave =>\nAddress_City: Orange =>\nAddress_State: Ca =>\nAddress_ZIP: 92865 =>\n",
+    "elements": [
+      {
+        "text": "coi",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Table Safe Co",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1548 W Liberty Ave",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Orange",
+        "type": "Address_City"
+      },
+      {
+        "text": "Ca",
+        "type": "Address_State"
+      },
+      {
+        "text": "92865",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "THE HARTFORD ",
+    "dataString": "Company_Name: THE HARTFORD =>\n",
+    "elements": [
+      {
+        "text": "THE HARTFORD",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Town Lock & Key ",
+    "dataString": "Company_Name: Town Lock & Key =>\n",
+    "elements": [
+      {
+        "text": "Town Lock & Key",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Table Safe Co 1548 W Liberty Ave Orange Ca 92865 ",
+    "dataString": "Company_Name: Table Safe Co =>\nAddress_StreetNumber: 1548 W Liberty Ave =>\nAddress_City: Orange =>\nAddress_State: Ca =>\nAddress_ZIP: 92865 =>\n",
+    "elements": [
+      {
+        "text": "Table Safe Co",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1548 W Liberty Ave",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Orange",
+        "type": "Address_City"
+      },
+      {
+        "text": "Ca",
+        "type": "Address_State"
+      },
+      {
+        "text": "92865",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "1548 W Liberty Ave Orange Ca 92865 ",
+    "dataString": "Address_StreetNumber: 1548 W Liberty Ave =>\nAddress_City: Orange =>\nAddress_State: Ca =>\nAddress_ZIP: 92865 =>\n",
+    "elements": [
+      {
+        "text": "1548 W Liberty Ave",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Orange",
+        "type": "Address_City"
+      },
+      {
+        "text": "Ca",
+        "type": "Address_State"
+      },
+      {
+        "text": "92865",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "THE HARTFORD"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "#01SBMAR7812"
+  },
+  "2": {
+    "type": "Address_ZIP",
+    "text": "92865",
+    "visited_as_target": true
+  },
+  "3": {
+    "type": "Company_Name",
+    "text": "Town Lock & Key"
+  },
+  "4": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "additional insured"
+  },
+  "5": {
+    "type": "Delivery_Method",
+    "text": "forward"
+  },
+  "6": {
+    "type": "COI_FormType_COI",
+    "text": "coi"
+  },
+  "7": {
+    "type": "Company_Name",
+    "text": "Table Safe Co",
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_StreetNumber",
+    "text": "1548 W Liberty Ave",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_City",
+    "text": "Orange",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_State",
+    "text": "Ca",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "6",
+      "type": "COI_FormType_COI",
+      "text": "coi"
+    },
+    "target": {
+      "id": "7",
+      "type": "Company_Name",
+      "text": "Table Safe Co",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Company_Name",
+      "text": "Table Safe Co",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_StreetNumber",
+      "text": "1548 W Liberty Ave",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Address_StreetNumber",
+      "text": "1548 W Liberty Ave",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_City",
+      "text": "Orange",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Address_City",
+      "text": "Orange",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_State",
+      "text": "Ca",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_State",
+      "text": "Ca",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_ZIP",
+      "text": "92865",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: FARO, MURIE [mailto:MURIEARO@ALLSTATE.COM]
+Sent: Monday, August 07, 2017 2:12 PM
+To: Agency.Services@TheHartford.com
+Subject: THE HARTFORD #01SBMAR7812 - Town Lock & Key
+
+To whom it may concern,
+
+Please add additional insured below and forward coi as soon as possible:
+
+Table Safe Co.
+1548 W Liberty Ave.
+Orange, Ca. 92865
+
+
+Best Regards,
+
+Murie Faro Customer Service T: 954-977-1515 x-523 F: 954-656-1414 Allstate Hall of Fame Allstate Agency of the Year
+ 
+----------------End Source ---------------------------------:: 
+

@@ -1,0 +1,486 @@
+Email ID: 1610 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Updated Certificates needed for 2 Projects Account for New Bender, Inc # 65 SBA PY2222 We are needing updated certificates for Projects Retama Park and La Palmilla Please see attached sample of the renewal for La Palma I will be needing a similar certificate for Retama Park Project I wasn’t sure if it’s been done before see info below VDC Tom Bett Reserve I GP, LLC; Attn: Misha Verma; 8544 School Park, Suite 100 San Antonio, TX 78249 misha@visavco.com Description of Operations: RE: Building Project #875-199, Willoe Park Apartments at 250 Clare Bett Dr, Olmito, TX 78575 This Certificate is issued in respects to above referenced And add Visavco Development,LLC as an additional insured to both  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Certificates New Bender, Inc ",
+    "dataString": "COI_FormType_COI: Certificates =>\nCompany_Name: New Bender, Inc =>\n",
+    "elements": [
+      {
+        "text": "Certificates",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "New Bender, Inc",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate Visavco Development,LLC ",
+    "dataString": "COI_FormType_COI: Certificate =>\nCompany_Name: Visavco Development,LLC =>\n",
+    "elements": [
+      {
+        "text": "Certificate",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Visavco Development,LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificates Projects Retama Park and La Palmilla ",
+    "dataString": "COI_FormType_COI: certificates =>\nCompany_Name: Projects Retama Park and La Palmilla =>\n",
+    "elements": [
+      {
+        "text": "certificates",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Projects Retama Park and La Palmilla",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate Retama Park Project ",
+    "dataString": "COI_FormType_COI: certificate =>\nCompany_Name: Retama Park Project =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Retama Park Project",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "New Bender, Inc ",
+    "dataString": "Company_Name: New Bender, Inc =>\n",
+    "elements": [
+      {
+        "text": "New Bender, Inc",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Visavco Development,LLC ",
+    "dataString": "Company_Name: Visavco Development,LLC =>\n",
+    "elements": [
+      {
+        "text": "Visavco Development,LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Projects Retama Park and La Palmilla ",
+    "dataString": "Company_Name: Projects Retama Park and La Palmilla =>\n",
+    "elements": [
+      {
+        "text": "Projects Retama Park and La Palmilla",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Retama Park Project ",
+    "dataString": "Company_Name: Retama Park Project =>\n",
+    "elements": [
+      {
+        "text": "Retama Park Project",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "VDC Tom Bett Reserve I GP, LLC ",
+    "dataString": "Company_Name: VDC Tom Bett Reserve I GP, LLC =>\n",
+    "elements": [
+      {
+        "text": "VDC Tom Bett Reserve I GP, LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Attn: Misha Verma; 8544 School Park, Suite 100 San Antonio TX 78575 ",
+    "dataString": "Company_Name: Attn: Misha Verma; =>\nAddress_StreetNumber: 8544 School Park, Suite 100 =>\nAddress_City: San Antonio =>\nAddress_State: TX =>\nAddress_ZIP: 78575 =>\n",
+    "elements": [
+      {
+        "text": "Attn: Misha Verma;",
+        "type": "Company_Name"
+      },
+      {
+        "text": "8544 School Park, Suite 100",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "San Antonio",
+        "type": "Address_City"
+      },
+      {
+        "text": "TX",
+        "type": "Address_State"
+      },
+      {
+        "text": "78575",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "250 Clare Bett Dr Olmito TX 78249 ",
+    "dataString": "Address_StreetNumber: 250 Clare Bett Dr =>\nAddress_City: Olmito =>\nAddress_State: TX =>\nAddress_ZIP: 78249 =>\n",
+    "elements": [
+      {
+        "text": "250 Clare Bett Dr",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Olmito",
+        "type": "Address_City"
+      },
+      {
+        "text": "TX",
+        "type": "Address_State"
+      },
+      {
+        "text": "78249",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "8544 School Park, Suite 100 San Antonio TX 78575 ",
+    "dataString": "Address_StreetNumber: 8544 School Park, Suite 100 =>\nAddress_City: San Antonio =>\nAddress_State: TX =>\nAddress_ZIP: 78575 =>\n",
+    "elements": [
+      {
+        "text": "8544 School Park, Suite 100",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "San Antonio",
+        "type": "Address_City"
+      },
+      {
+        "text": "TX",
+        "type": "Address_State"
+      },
+      {
+        "text": "78575",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "Certificates"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "New Bender, Inc"
+  },
+  "2": {
+    "type": "Address_City",
+    "text": "San Antonio",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_State",
+    "text": "TX",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_ZIP",
+    "text": "78249",
+    "visited_as_target": true
+  },
+  "5": {
+    "type": "Email",
+    "text": "misha@visavco.com"
+  },
+  "6": {
+    "type": "Address_StreetNumber",
+    "text": "250 Clare Bett Dr",
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_City",
+    "text": "Olmito",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_State",
+    "text": "TX",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_ZIP",
+    "text": "78575",
+    "visited_as_target": true
+  },
+  "10": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate"
+  },
+  "11": {
+    "type": "Company_Name",
+    "text": "Visavco Development,LLC"
+  },
+  "12": {
+    "type": "Policy_Number",
+    "text": "65 SBA PY2222"
+  },
+  "13": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "additional insured"
+  },
+  "14": {
+    "type": "COI_FormType_COI",
+    "text": "certificates"
+  },
+  "15": {
+    "type": "Company_Name",
+    "text": "Projects Retama Park and La Palmilla"
+  },
+  "16": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "17": {
+    "type": "Company_Name",
+    "text": "Retama Park Project"
+  },
+  "18": {
+    "type": "Company_Name",
+    "text": "VDC Tom Bett Reserve I GP, LLC"
+  },
+  "19": {
+    "type": "Company_Name",
+    "text": "Attn: Misha Verma;",
+    "visited_as_source": true
+  },
+  "20": {
+    "type": "Address_StreetNumber",
+    "text": "8544 School Park, Suite 100",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "0",
+      "type": "COI_FormType_COI",
+      "text": "Certificates"
+    },
+    "target": {
+      "id": "1",
+      "type": "Company_Name",
+      "text": "New Bender, Inc"
+    }
+  },
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_City",
+      "text": "San Antonio",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_State",
+      "text": "TX",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Address_State",
+      "text": "TX",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_ZIP",
+      "text": "78575",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_StreetNumber",
+      "text": "250 Clare Bett Dr",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_City",
+      "text": "Olmito",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Address_City",
+      "text": "Olmito",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_State",
+      "text": "TX",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Address_State",
+      "text": "TX",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_ZIP",
+      "text": "78249",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "COI_FormType_COI",
+      "text": "Certificate"
+    },
+    "target": {
+      "id": "11",
+      "type": "Company_Name",
+      "text": "Visavco Development,LLC"
+    }
+  },
+  {
+    "source": {
+      "id": "14",
+      "type": "COI_FormType_COI",
+      "text": "certificates"
+    },
+    "target": {
+      "id": "15",
+      "type": "Company_Name",
+      "text": "Projects Retama Park and La Palmilla"
+    }
+  },
+  {
+    "source": {
+      "id": "16",
+      "type": "COI_FormType_COI",
+      "text": "certificate"
+    },
+    "target": {
+      "id": "17",
+      "type": "Company_Name",
+      "text": "Retama Park Project"
+    }
+  },
+  {
+    "source": {
+      "id": "19",
+      "type": "Company_Name",
+      "text": "Attn: Misha Verma;",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "20",
+      "type": "Address_StreetNumber",
+      "text": "8544 School Park, Suite 100",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "20",
+      "type": "Address_StreetNumber",
+      "text": "8544 School Park, Suite 100",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_City",
+      "text": "San Antonio",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Alexa Romero [mailto:alexa@gnbranch.com] 
+Sent: Thursday, August 17, 2017 11:49 AM
+To: Agency.Services@thehartford.com
+Subject: Updated Certificates needed for 2 Projects
+
+Account for New Bender, Inc. # 65 SBA PY2222
+
+We are needing updated certificates for Projects Retama Park and La Palmilla. Please see attached sample of the renewal for La Palma. I will be needing a similar certificate for Retama Park Project. I wasn’t sure if it’s been done before see info below.
+
+VDC Tom Bett Reserve I GP, LLC;
+Attn: Misha Verma;
+8544 School Park, Suite 100
+San Antonio, TX 78249
+misha@visavco.com
+Description of Operations:
+RE: Building Project #875-199, Willoe Park Apartments at 250 Clare Bett
+Dr., Olmito, TX 78575. This Certificate is issued in respects to above
+referenced.
+
+And add Visavco Development,LLC as an additional insured to both.
+
+
+Thanks,
+ 
+----------------End Source ---------------------------------:: 
+

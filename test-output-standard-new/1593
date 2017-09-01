@@ -1,0 +1,451 @@
+Email ID: 1593 
+----------------Begin Cleansed ---------------------------------: 
+Subject: 12SBMBZ1234 COI AI ENDORSEMENT Please add the following additional insured and certificate holder: Corrigin Charter Schools, ABCDE, CA 1234 Trick Rd Mink, CA 95648 Please issue certificate Please rush Lisez Nani Trulystate Insurance 1234 Eight Star Blvd, Ste E lin, CA 12345 916-315-1234 916-315-5678 fax MA License #0D01234 http://www.youtube.com/watch v=E7-LOUis5M4 If you are happy with the service we provide, please...tell a friend  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate ",
+    "dataString": "COI_FormType_COI: certificate =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate holder ABCDE, 1234 Trick Rd Mink CA 12345 Corrigin Charter Schools ",
+    "dataString": "COI_FormType_COI: certificate holder =>\nCompany_Name: ABCDE, =>\nAddress_StreetNumber: 1234 Trick Rd =>\nAddress_City: Mink =>\nAddress_State: CA =>\nAddress_ZIP: 12345 =>\nCompany_Name: Corrigin Charter Schools =>\n",
+    "elements": [
+      {
+        "text": "certificate holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "ABCDE,",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1234 Trick Rd",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Mink",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "12345",
+        "type": "Address_ZIP"
+      },
+      {
+        "text": "Corrigin Charter Schools",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Nani Trulystate Insurance 1234 Eight Star Blvd, Ste E lin CA 95648 ",
+    "dataString": "Company_Name: Nani Trulystate Insurance =>\nAddress_StreetNumber: 1234 Eight Star Blvd, Ste E =>\nAddress_City: lin =>\nAddress_State: CA =>\nAddress_ZIP: 95648 =>\n",
+    "elements": [
+      {
+        "text": "Nani Trulystate Insurance",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1234 Eight Star Blvd, Ste E",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "lin",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "95648",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "Corrigin Charter Schools ",
+    "dataString": "Company_Name: Corrigin Charter Schools =>\n",
+    "elements": [
+      {
+        "text": "Corrigin Charter Schools",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "ABCDE, 1234 Trick Rd Mink CA 12345 ",
+    "dataString": "Company_Name: ABCDE, =>\nAddress_StreetNumber: 1234 Trick Rd =>\nAddress_City: Mink =>\nAddress_State: CA =>\nAddress_ZIP: 12345 =>\n",
+    "elements": [
+      {
+        "text": "ABCDE,",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1234 Trick Rd",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Mink",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "12345",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "1234 Eight Star Blvd, Ste E lin CA 95648 ",
+    "dataString": "Address_StreetNumber: 1234 Eight Star Blvd, Ste E =>\nAddress_City: lin =>\nAddress_State: CA =>\nAddress_ZIP: 95648 =>\n",
+    "elements": [
+      {
+        "text": "1234 Eight Star Blvd, Ste E",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "lin",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "95648",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "1234 Trick Rd Mink CA 12345 ",
+    "dataString": "Address_StreetNumber: 1234 Trick Rd =>\nAddress_City: Mink =>\nAddress_State: CA =>\nAddress_ZIP: 12345 =>\n",
+    "elements": [
+      {
+        "text": "1234 Trick Rd",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Mink",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "12345",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Policy_Number",
+    "text": "12SBMBZ1234"
+  },
+  "1": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "2": {
+    "type": "Address_ZIP",
+    "text": "95648",
+    "visited_as_target": true
+  },
+  "3": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "4": {
+    "type": "Company_Name",
+    "text": "Nani Trulystate Insurance",
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_StreetNumber",
+    "text": "1234 Eight Star Blvd, Ste E",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_City",
+    "text": "lin",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_State",
+    "text": "CA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_ZIP",
+    "text": "12345",
+    "visited_as_target": true
+  },
+  "9": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "additional insured"
+  },
+  "10": {
+    "type": "COI_FormType_COI",
+    "text": "certificate holder"
+  },
+  "11": {
+    "type": "Company_Name",
+    "text": "Corrigin Charter Schools"
+  },
+  "12": {
+    "type": "Company_Name",
+    "text": "ABCDE,",
+    "visited_as_source": true
+  },
+  "13": {
+    "type": "Address_State",
+    "text": "CA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "14": {
+    "type": "Address_StreetNumber",
+    "text": "1234 Trick Rd",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "15": {
+    "type": "Address_City",
+    "text": "Mink",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "16": {
+    "type": "Address_State",
+    "text": "CA"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "4",
+      "type": "Company_Name",
+      "text": "Nani Trulystate Insurance",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_StreetNumber",
+      "text": "1234 Eight Star Blvd, Ste E",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_StreetNumber",
+      "text": "1234 Eight Star Blvd, Ste E",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_City",
+      "text": "lin",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_City",
+      "text": "lin",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "13",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_ZIP",
+      "text": "12345",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "COI_FormType_COI",
+      "text": "certificate holder"
+    },
+    "target": {
+      "id": "11",
+      "type": "Company_Name",
+      "text": "Corrigin Charter Schools"
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "COI_FormType_COI",
+      "text": "certificate holder"
+    },
+    "target": {
+      "id": "12",
+      "type": "Company_Name",
+      "text": "ABCDE,",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "12",
+      "type": "Company_Name",
+      "text": "ABCDE,",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "14",
+      "type": "Address_StreetNumber",
+      "text": "1234 Trick Rd",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "13",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_ZIP",
+      "text": "95648",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "14",
+      "type": "Address_StreetNumber",
+      "text": "1234 Trick Rd",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "15",
+      "type": "Address_City",
+      "text": "Mink",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "15",
+      "type": "Address_City",
+      "text": "Mink",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Nani, Lisez (TRAIN-Rockbind) [mailto:LisezNani@trulystate.com] 
+Sent: Thursday, August 17, 2017 7:13 PM
+To: AGENCY.SERVICES@THEHARTFORD.COM
+Subject: 12SBMBZ1234 COI AI ENDORSEMENT
+
+ Please add the following additional insured and certificate holder:
+
+Corrigin Charter Schools, ABCDE, CA
+1234 Trick Rd.
+Mink, CA  95648
+
+Please issue certificate! Please rush!
+
+
+Lisez Nani
+Trulystate Insurance
+1234 Eight Star Blvd., Ste. E
+lin, CA  12345
+916-315-1234
+916-315-5678 fax
+MA License #0D01234
+
+http://www.youtube.com/watch?v=E7-LOUis5M4
+
+If you are happy with the service we provide, please...tell a friend!
+ 
+----------------End Source ---------------------------------:: 
+

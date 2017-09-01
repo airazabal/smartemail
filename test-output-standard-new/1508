@@ -1,0 +1,367 @@
+Email ID: 1508 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Policy # 16 SBM PP7879 / Rush additional insured for COI Hi Desi : KMS Appliance is in need of a COI with the following information: We are repairing a dishwasher on the 20th Floor ******There is a contract in place******** Certificate Holder: 404 Manhattan NY LLC c/o Vanbarlo Group LLC P.O Box 24000-EE Insurance Compliance Hemet, CA 92546 Additional Insured needs to specifically read as: 404 Manhattan NY LLC, Vanbarlo Group LLC, Vanbarlo Services LLC, Deutsche Bank AG, NY Branch are included as additional insured Please let me know if you need anything else Thank you  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate Holder 404 Manhattan NY LLC c/o Vanbarlo Group LLC P.O Box 24000-EE Insurance Compliance Hemet CA 92546 ",
+    "dataString": "COI_FormType_COI: Certificate Holder =>\nCompany_Name: 404 Manhattan NY LLC c/o Vanbarlo Group LLC =>\nAddress_StreetNumber: P.O Box 24000-EE Insurance Compliance =>\nAddress_City: Hemet =>\nAddress_State: CA =>\nAddress_ZIP: 92546 =>\n",
+    "elements": [
+      {
+        "text": "Certificate Holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "404 Manhattan NY LLC c/o Vanbarlo Group LLC",
+        "type": "Company_Name"
+      },
+      {
+        "text": "P.O Box 24000-EE Insurance Compliance",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Hemet",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "92546",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "404 Manhattan NY LLC ",
+    "dataString": "Company_Name: 404 Manhattan NY LLC =>\n",
+    "elements": [
+      {
+        "text": "404 Manhattan NY LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Vanbarlo Group LLC ",
+    "dataString": "Company_Name: Vanbarlo Group LLC =>\n",
+    "elements": [
+      {
+        "text": "Vanbarlo Group LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Vanbarlo Services LLC ",
+    "dataString": "Company_Name: Vanbarlo Services LLC =>\n",
+    "elements": [
+      {
+        "text": "Vanbarlo Services LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Deutsche Bank AG, NY Branch ",
+    "dataString": "Company_Name: Deutsche Bank AG, NY Branch =>\n",
+    "elements": [
+      {
+        "text": "Deutsche Bank AG, NY Branch",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "KMS Appliance ",
+    "dataString": "Company_Name: KMS Appliance =>\n",
+    "elements": [
+      {
+        "text": "KMS Appliance",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "404 Manhattan NY LLC c/o Vanbarlo Group LLC P.O Box 24000-EE Insurance Compliance Hemet CA 92546 ",
+    "dataString": "Company_Name: 404 Manhattan NY LLC c/o Vanbarlo Group LLC =>\nAddress_StreetNumber: P.O Box 24000-EE Insurance Compliance =>\nAddress_City: Hemet =>\nAddress_State: CA =>\nAddress_ZIP: 92546 =>\n",
+    "elements": [
+      {
+        "text": "404 Manhattan NY LLC c/o Vanbarlo Group LLC",
+        "type": "Company_Name"
+      },
+      {
+        "text": "P.O Box 24000-EE Insurance Compliance",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Hemet",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "92546",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "P.O Box 24000-EE Insurance Compliance Hemet CA 92546 ",
+    "dataString": "Address_StreetNumber: P.O Box 24000-EE Insurance Compliance =>\nAddress_City: Hemet =>\nAddress_State: CA =>\nAddress_ZIP: 92546 =>\n",
+    "elements": [
+      {
+        "text": "P.O Box 24000-EE Insurance Compliance",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Hemet",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "92546",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Policy_Number",
+    "text": "16 SBM PP7879"
+  },
+  "1": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "additional insured"
+  },
+  "2": {
+    "type": "Address_ZIP",
+    "text": "92546",
+    "visited_as_target": true
+  },
+  "3": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "Additional Insured"
+  },
+  "4": {
+    "type": "Company_Name",
+    "text": "404 Manhattan NY LLC"
+  },
+  "5": {
+    "type": "Company_Name",
+    "text": "Vanbarlo Group LLC"
+  },
+  "6": {
+    "type": "Company_Name",
+    "text": "Vanbarlo Services LLC"
+  },
+  "7": {
+    "type": "Company_Name",
+    "text": "Deutsche Bank AG, NY Branch"
+  },
+  "8": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "additional insured"
+  },
+  "9": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "10": {
+    "type": "Company_Name",
+    "text": "KMS Appliance"
+  },
+  "11": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "12": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Holder"
+  },
+  "13": {
+    "type": "Company_Name",
+    "text": "404 Manhattan NY LLC c/o Vanbarlo Group LLC",
+    "visited_as_source": true
+  },
+  "14": {
+    "type": "Address_StreetNumber",
+    "text": "P.O Box 24000-EE Insurance Compliance",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "15": {
+    "type": "Address_City",
+    "text": "Hemet",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "16": {
+    "type": "Address_State",
+    "text": "CA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "12",
+      "type": "COI_FormType_COI",
+      "text": "Certificate Holder"
+    },
+    "target": {
+      "id": "13",
+      "type": "Company_Name",
+      "text": "404 Manhattan NY LLC c/o Vanbarlo Group LLC",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "13",
+      "type": "Company_Name",
+      "text": "404 Manhattan NY LLC c/o Vanbarlo Group LLC",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "14",
+      "type": "Address_StreetNumber",
+      "text": "P.O Box 24000-EE Insurance Compliance",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "14",
+      "type": "Address_StreetNumber",
+      "text": "P.O Box 24000-EE Insurance Compliance",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "15",
+      "type": "Address_City",
+      "text": "Hemet",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "15",
+      "type": "Address_City",
+      "text": "Hemet",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "16",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "16",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_ZIP",
+      "text": "92546",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: YahooŒ¬ [mailto:kmsa@yahoo.com] 
+Sent: Thursday, August 10, 2017 9:20 AM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Cc: Marlo, Desi L (Small Commercial Operations)
+Subject: Policy # 16 SBM PP7879 / Rush additional insured for COI
+
+Hi Desi
+:
+KMS Appliance is in need of a COI with the following information:
+
+We are repairing a dishwasher on the 20th Floor
+******There is a contract in place********
+
+Certificate Holder:
+
+404 Manhattan NY LLC
+c/o Vanbarlo Group LLC
+P.O. Box 24000-EE
+Insurance Compliance
+Hemet, CA 92546
+
+Additional Insured needs to specifically read as:
+
+404 Manhattan NY LLC, Vanbarlo Group LLC, Vanbarlo Services LLC, Deutsche Bank AG, NY Branch are included as additional insured
+
+Please let me know if you need anything else.  Thank you
+
+Best Regards,
+
+
+Kenneth Scanlon
+KMSA Repair, Inc.
+kmsa@yahoo.com
+p 914-813-6064
+f  914-813-4606
+ 
+----------------End Source ---------------------------------:: 
+

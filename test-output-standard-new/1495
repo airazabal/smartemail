@@ -1,0 +1,120 @@
+Email ID: 1495 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Re: Important information regarding your recent service request to The Hartford for policy 76WEGZI1492 [CONFIDENTIAL] Dear Alie, It was a pleasure speaking with you today I have attached the Certificate of Insurance and Waiver of Subrogation you requested Please feel free to contact us if you have any questions Thank you for choosing to do business with The Hartford  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Certificate of Insurance ",
+    "dataString": "COI_FormType_COI: Certificate of Insurance =>\n",
+    "elements": [
+      {
+        "text": "Certificate of Insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "The Hartford ",
+    "dataString": "Company_Name: The Hartford =>\n",
+    "elements": [
+      {
+        "text": "The Hartford",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "The Hartford ",
+    "dataString": "Company_Name: The Hartford =>\n",
+    "elements": [
+      {
+        "text": "The Hartford",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "The Hartford"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "76WEGZI1492"
+  },
+  "2": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate of Insurance"
+  },
+  "3": {
+    "type": "Company_Name",
+    "text": "The Hartford"
+  }
+}
+
+Relations Found found 
+[] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: ALie [mailto:alie@yradio.org] 
+Sent: Monday, August 07, 2017 1:32 PM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Subject: Re: Important information regarding your recent service request to The Hartford for policy 76WEGZI1492 [CONFIDENTIAL]
+
+Many thanks, Aliza!
+
+Would you be able to generate another COI and WOS. This is a renewal to one that already exists per our phone conversation:
+
+City of Oakland, Its Council Members, Directors, Officers,
+Agents, Employees & Volunteers
+100 Agawam Plaza
+Oakland, CA 94612
+
+On Mon, Aug 7, 2017 at 9:29 AM, Services, Agency (Comm Lines, San Antonio/SCIC) <Agency.Service@thehartford.com> wrote:
+Dear Alie,
+
+It was a pleasure speaking with you today. I have attached the Certificate of Insurance and Waiver of Subrogation you requested. Please feel free to contact us if you have any questions. Thank you for choosing to do business with The Hartford.
+
+Thank you,
+
+
+Analiza Tavel
+Business Insurance Service Operations
+1-877-853-2582 (Agents)
+1-866-467-8730 (Policyholders)
+1-888-443-6112 (Fax)
+Email: agency.services@thehartford.com
+We care about meeting your service expectations. Did I provide you with a great Hartford Experience? Please feel free to send any feedback on my service to Susan.Bateson@thehartford.com.
+
+
+************************************************************
+This communication, including attachments, is for the exclusive use of addressee and may contain proprietary, confidential and/or privileged information.  If you are not the intended recipient, any use, copying, disclosure, dissemination or distribution is strictly prohibited.  If you are not the intended recipient, please notify the sender immediately by return e-mail, delete this communication and destroy all copies.
+************************************************************
+
+
+
+
+--
+
+Alie | Finance Director | alie@yradio.org
+
+ Young Radio | 3400 Broadway, Oakland CA 94612 | P: 510-251-2202
+ 
+----------------End Source ---------------------------------:: 
+

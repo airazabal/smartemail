@@ -1,0 +1,273 @@
+Email ID: 1572 
+----------------Begin Cleansed ---------------------------------: 
+Subject: COI Hello can you please email a COI to the following customer Our policy no is WEG TU1234 Kell Maintenance LLC 123 From Road Suite 898 Parm, NJ 07652 email: VENTRANS@KELL365.COM  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI Kell Maintenance LLC 123 From Road Suite 898 Parm NJ 07652 ",
+    "dataString": "COI_FormType_COI: COI =>\nCompany_Name: Kell Maintenance LLC =>\nAddress_StreetNumber: 123 From Road Suite 898 =>\nAddress_City: Parm =>\nAddress_State: NJ =>\nAddress_ZIP: 07652 =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Kell Maintenance LLC",
+        "type": "Company_Name"
+      },
+      {
+        "text": "123 From Road Suite 898",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Parm",
+        "type": "Address_City"
+      },
+      {
+        "text": "NJ",
+        "type": "Address_State"
+      },
+      {
+        "text": "07652",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Kell Maintenance LLC 123 From Road Suite 898 Parm NJ 07652 ",
+    "dataString": "Company_Name: Kell Maintenance LLC =>\nAddress_StreetNumber: 123 From Road Suite 898 =>\nAddress_City: Parm =>\nAddress_State: NJ =>\nAddress_ZIP: 07652 =>\n",
+    "elements": [
+      {
+        "text": "Kell Maintenance LLC",
+        "type": "Company_Name"
+      },
+      {
+        "text": "123 From Road Suite 898",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Parm",
+        "type": "Address_City"
+      },
+      {
+        "text": "NJ",
+        "type": "Address_State"
+      },
+      {
+        "text": "07652",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "123 From Road Suite 898 Parm NJ 07652 ",
+    "dataString": "Address_StreetNumber: 123 From Road Suite 898 =>\nAddress_City: Parm =>\nAddress_State: NJ =>\nAddress_ZIP: 07652 =>\n",
+    "elements": [
+      {
+        "text": "123 From Road Suite 898",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Parm",
+        "type": "Address_City"
+      },
+      {
+        "text": "NJ",
+        "type": "Address_State"
+      },
+      {
+        "text": "07652",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "1": {
+    "type": "Delivery_Method",
+    "text": "email"
+  },
+  "2": {
+    "type": "Email",
+    "text": "VENTRANS@KELL365.COM"
+  },
+  "3": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "4": {
+    "type": "Policy_Number",
+    "text": "WEG TU1234"
+  },
+  "5": {
+    "type": "Company_Name",
+    "text": "Kell Maintenance LLC",
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_StreetNumber",
+    "text": "123 From Road Suite 898",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_City",
+    "text": "Parm",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_State",
+    "text": "NJ",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_ZIP",
+    "text": "07652",
+    "visited_as_target": true
+  },
+  "10": {
+    "type": "Delivery_Method",
+    "text": "email"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "0",
+      "type": "COI_FormType_COI",
+      "text": "COI"
+    },
+    "target": {
+      "id": "5",
+      "type": "Company_Name",
+      "text": "Kell Maintenance LLC",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Company_Name",
+      "text": "Kell Maintenance LLC",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_StreetNumber",
+      "text": "123 From Road Suite 898",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_StreetNumber",
+      "text": "123 From Road Suite 898",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_City",
+      "text": "Parm",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Address_City",
+      "text": "Parm",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_State",
+      "text": "NJ",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Address_State",
+      "text": "NJ",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_ZIP",
+      "text": "07652",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Donald McDonald [mailto:scooter01@yahoo.com] 
+Sent: Tuesday, August 08, 2017 9:01 AM
+To: WORKERS COMP; Certificate Request; Workers Compensation
+Subject: COI
+
+Hello can you please email a COI to the following customer. Our policy no is WEG TU1234.
+
+
+Kell Maintenance LLC.
+123 From Road
+Suite 898
+Parm, NJ 07652
+
+email: VENTRANS@KELL365.COM
+
+
+Thank you,
+Don
+
+Scooter
+P.O. Box 991
+Billions, MA  01888
+978 671 1234 - accounting office
+978 671 5678 - fax
+www.scooter.com
+ 
+----------------End Source ---------------------------------:: 
+

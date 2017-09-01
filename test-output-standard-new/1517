@@ -1,0 +1,295 @@
+Email ID: 1517 
+----------------Begin Cleansed ---------------------------------: 
+Subject: POL#35SBAII7654 Koko Implant and Oral Surgery LLC Change Request Eff 7/1/2017 POL#35SBAII7654 Koko Implant and Oral Surgery LLC Change Request Eff 7/1/2017 Amend address for Lenders Loss Payable to read: Stock Bank & Trust Company % L & M Financial Services Inc P.O Box 5640 Reston, VA 20195 Please issue a revised Evidence of Insurance to the bank  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Evidence of Insurance ",
+    "dataString": "COI_FormType_COI: Evidence of Insurance =>\n",
+    "elements": [
+      {
+        "text": "Evidence of Insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Lenders Loss Payable Stock Bank & Trust Company % L & M Financial Services Inc P.O Box 5640 Reston VA 20195 ",
+    "dataString": "COI_FormType_COI: Lenders Loss Payable =>\nCompany_Name: Stock Bank & Trust Company % L & M Financial Services Inc =>\nAddress_StreetNumber: P.O Box 5640 =>\nAddress_City: Reston =>\nAddress_State: VA =>\nAddress_ZIP: 20195 =>\n",
+    "elements": [
+      {
+        "text": "Lenders Loss Payable",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Stock Bank & Trust Company % L & M Financial Services Inc",
+        "type": "Company_Name"
+      },
+      {
+        "text": "P.O Box 5640",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Reston",
+        "type": "Address_City"
+      },
+      {
+        "text": "VA",
+        "type": "Address_State"
+      },
+      {
+        "text": "20195",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Koko Implant and Oral Surgery LLC ",
+    "dataString": "Company_Name: Koko Implant and Oral Surgery LLC =>\n",
+    "elements": [
+      {
+        "text": "Koko Implant and Oral Surgery LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Koko Implant and Oral Surgery LLC ",
+    "dataString": "Company_Name: Koko Implant and Oral Surgery LLC =>\n",
+    "elements": [
+      {
+        "text": "Koko Implant and Oral Surgery LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Stock Bank & Trust Company % L & M Financial Services Inc P.O Box 5640 Reston VA 20195 ",
+    "dataString": "Company_Name: Stock Bank & Trust Company % L & M Financial Services Inc =>\nAddress_StreetNumber: P.O Box 5640 =>\nAddress_City: Reston =>\nAddress_State: VA =>\nAddress_ZIP: 20195 =>\n",
+    "elements": [
+      {
+        "text": "Stock Bank & Trust Company % L & M Financial Services Inc",
+        "type": "Company_Name"
+      },
+      {
+        "text": "P.O Box 5640",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Reston",
+        "type": "Address_City"
+      },
+      {
+        "text": "VA",
+        "type": "Address_State"
+      },
+      {
+        "text": "20195",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "P.O Box 5640 Reston VA 20195 ",
+    "dataString": "Address_StreetNumber: P.O Box 5640 =>\nAddress_City: Reston =>\nAddress_State: VA =>\nAddress_ZIP: 20195 =>\n",
+    "elements": [
+      {
+        "text": "P.O Box 5640",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Reston",
+        "type": "Address_City"
+      },
+      {
+        "text": "VA",
+        "type": "Address_State"
+      },
+      {
+        "text": "20195",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Policy_Number",
+    "text": "POL#35SBAII7654"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "Koko Implant and Oral Surgery LLC"
+  },
+  "2": {
+    "type": "COI_FormType_COI",
+    "text": "Evidence of Insurance"
+  },
+  "3": {
+    "type": "Policy_Number",
+    "text": "POL#35SBAII7654"
+  },
+  "4": {
+    "type": "Company_Name",
+    "text": "Koko Implant and Oral Surgery LLC"
+  },
+  "5": {
+    "type": "COI_FormType_COI",
+    "text": "Lenders Loss Payable"
+  },
+  "6": {
+    "type": "Company_Name",
+    "text": "Stock Bank & Trust Company % L & M Financial Services Inc",
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_StreetNumber",
+    "text": "P.O Box 5640",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_City",
+    "text": "Reston",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_State",
+    "text": "VA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_ZIP",
+    "text": "20195",
+    "visited_as_target": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "5",
+      "type": "COI_FormType_COI",
+      "text": "Lenders Loss Payable"
+    },
+    "target": {
+      "id": "6",
+      "type": "Company_Name",
+      "text": "Stock Bank & Trust Company % L & M Financial Services Inc",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Company_Name",
+      "text": "Stock Bank & Trust Company % L & M Financial Services Inc",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_StreetNumber",
+      "text": "P.O Box 5640",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Address_StreetNumber",
+      "text": "P.O Box 5640",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_City",
+      "text": "Reston",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Address_City",
+      "text": "Reston",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_State",
+      "text": "VA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Address_State",
+      "text": "VA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_ZIP",
+      "text": "20195",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Dan Braun [mailto:danb@rsagency.com] 
+Sent: Monday, August 07, 2017 2:22 PM
+To: agency.services@thehartford.com
+Subject: POL#35SBAII7654 Koko Implant and Oral Surgery LLC Change Request Eff 7/1/2017
+
+POL#35SBAII7654 Koko Implant and Oral Surgery LLC
+Change Request Eff 7/1/2017
+
+Amend address for Lenders Loss Payable to read:
+Stock Bank & Trust Company
+% L & M Financial Services Inc
+P.O. Box 5640
+Reston,  VA  20195
+
+Please issue a revised Evidence of Insurance to the bank
+
+Thanks
+Dan
+
+Dan Braun – Account Representative
+Annie hart – Office Assistant
+The RS Agency Inc
+248-646-9988 Phone
+248-646-7766 Fax
+
+
+'
+ 
+----------------End Source ---------------------------------:: 
+

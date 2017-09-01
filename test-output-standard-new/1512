@@ -1,0 +1,273 @@
+Email ID: 1512 
+----------------Begin Cleansed ---------------------------------: 
+Subject: 76WEGZU1234 A1 PLUMs & APPLES CERTIFICATE REQUEST WOULD YOU PLEASE SEND ME A CERTIFICATE FOR THIS POLICY FOR: LEWMAN CONSTRUCTION INC 88 SOUTH MAIN ST SUITE 109 Macala, NJ 14501  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "CERTIFICATE LEWMAN CONSTRUCTION INC 88 SOUTH MAIN ST SUITE 109 Macala NJ 14501 ",
+    "dataString": "COI_FormType_COI: CERTIFICATE =>\nCompany_Name: LEWMAN CONSTRUCTION INC =>\nAddress_StreetNumber: 88 SOUTH MAIN ST SUITE 109 =>\nAddress_City: Macala =>\nAddress_State: NJ =>\nAddress_ZIP: 14501 =>\n",
+    "elements": [
+      {
+        "text": "CERTIFICATE",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "LEWMAN CONSTRUCTION INC",
+        "type": "Company_Name"
+      },
+      {
+        "text": "88 SOUTH MAIN ST SUITE 109",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Macala",
+        "type": "Address_City"
+      },
+      {
+        "text": "NJ",
+        "type": "Address_State"
+      },
+      {
+        "text": "14501",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "CERTIFICATE ",
+    "dataString": "COI_FormType_COI: CERTIFICATE =>\n",
+    "elements": [
+      {
+        "text": "CERTIFICATE",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "A1 PLUMs & APPLES ",
+    "dataString": "Company_Name: A1 PLUMs & APPLES =>\n",
+    "elements": [
+      {
+        "text": "A1 PLUMs & APPLES",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "LEWMAN CONSTRUCTION INC 88 SOUTH MAIN ST SUITE 109 Macala NJ 14501 ",
+    "dataString": "Company_Name: LEWMAN CONSTRUCTION INC =>\nAddress_StreetNumber: 88 SOUTH MAIN ST SUITE 109 =>\nAddress_City: Macala =>\nAddress_State: NJ =>\nAddress_ZIP: 14501 =>\n",
+    "elements": [
+      {
+        "text": "LEWMAN CONSTRUCTION INC",
+        "type": "Company_Name"
+      },
+      {
+        "text": "88 SOUTH MAIN ST SUITE 109",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Macala",
+        "type": "Address_City"
+      },
+      {
+        "text": "NJ",
+        "type": "Address_State"
+      },
+      {
+        "text": "14501",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "88 SOUTH MAIN ST SUITE 109 Macala NJ 14501 ",
+    "dataString": "Address_StreetNumber: 88 SOUTH MAIN ST SUITE 109 =>\nAddress_City: Macala =>\nAddress_State: NJ =>\nAddress_ZIP: 14501 =>\n",
+    "elements": [
+      {
+        "text": "88 SOUTH MAIN ST SUITE 109",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Macala",
+        "type": "Address_City"
+      },
+      {
+        "text": "NJ",
+        "type": "Address_State"
+      },
+      {
+        "text": "14501",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Policy_Number",
+    "text": "76WEGZU1234"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "A1 PLUMs & APPLES"
+  },
+  "2": {
+    "type": "COI_FormType_COI",
+    "text": "CERTIFICATE"
+  },
+  "3": {
+    "type": "COI_FormType_COI",
+    "text": "CERTIFICATE"
+  },
+  "4": {
+    "type": "Company_Name",
+    "text": "LEWMAN CONSTRUCTION INC",
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_StreetNumber",
+    "text": "88 SOUTH MAIN ST SUITE 109",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_City",
+    "text": "Macala",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_State",
+    "text": "NJ",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_ZIP",
+    "text": "14501",
+    "visited_as_target": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "COI_FormType_COI",
+      "text": "CERTIFICATE"
+    },
+    "target": {
+      "id": "4",
+      "type": "Company_Name",
+      "text": "LEWMAN CONSTRUCTION INC",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Company_Name",
+      "text": "LEWMAN CONSTRUCTION INC",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_StreetNumber",
+      "text": "88 SOUTH MAIN ST SUITE 109",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_StreetNumber",
+      "text": "88 SOUTH MAIN ST SUITE 109",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_City",
+      "text": "Macala",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_City",
+      "text": "Macala",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_State",
+      "text": "NJ",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Address_State",
+      "text": "NJ",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_ZIP",
+      "text": "14501",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Tommie Tullek [mailto:ttullek@sandhorne.com] 
+Sent: Thursday, August 10, 2017 10:59 AM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Subject: 76WEGZU1234 A1 PLUMs & APPLES CERTIFICATE REQUEST
+
+WOULD YOU PLEASE SEND ME A CERTIFICATE FOR THIS POLICY FOR:
+
+LEWMAN CONSTRUCTION INC.
+88 SOUTH MAIN ST   SUITE 109
+Macala, NJ 14501
+
+THANK YOU,
+
+Tommie Tullek
+315-462-1234  ext: 106
+ttullek@sandhorne.com
+
+
+
+
+“Please be advised that e-mail is not effective to bind coverage or report a claim unless you receive an affirmative response from us that this has been done.”
+ Think Green. Please don’t print this message unless it’s really necessary. Thank you.
+Confidentiality Notice: The pages comprising this e-mail transmission contain confidential information from Tullek Sandhorne Associates Inc. and it's affiliated companies.  This information is intended solely for use by the individual named as recipient.  If you are not the intended recipient, be aware that any disclosure, copying, distribution or use of the contents of this e-mail is prohibited.  If you have received this transmission in error, please notify the sender immediately by reply e-mail and delete the message.
+ 
+----------------End Source ---------------------------------:: 
+

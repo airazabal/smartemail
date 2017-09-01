@@ -1,0 +1,400 @@
+Email ID: 1541 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Special TOUCH CLEANING SERVICE LLC PLEASE ADD THIS TO THE INSUREDS POLICY SHE NEEDS A CERTIFICATE FOR HER NEW JOB : URGENT : World FURNITURE GROUP 1001 N BARRE RD SUITE 402 METAIRIE, LA 70001 PLEASE FORWARD WORLDFURNITUREGROUP.COM ATTN: LIA RANDOLPH Robin LaBran Office Manager for ECJ 7500 Willis Blvd Ste 120 Kenner, La 70065 (504) 469-2002 fax(504) 469-4444 sla89@Allstate.com We will not be satisfied until you are COMPLETELY satisfied Please take a minute to rate our agency by emailing me (sla89@Allstate.com) your response to the following questions: 1) Overall, how satisfied are you with Our Agency 2) How likely will you be to renew your policies (very, somewhat, not very, not at all) 3) In the past few months, have you recommended our Agency to anyone ""Like what I'm doing We offer a reward for referrals."" Click HERE to recommend me  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "CERTIFICATE World FURNITURE GROUP 1001 N BARRE RD SUITE 402 METAIRIE LA 70001 ",
+    "dataString": "COI_FormType_COI: CERTIFICATE =>\nCompany_Name: World FURNITURE GROUP =>\nAddress_StreetNumber: 1001 N BARRE RD SUITE 402 =>\nAddress_City: METAIRIE =>\nAddress_State: LA =>\nAddress_ZIP: 70001 =>\n",
+    "elements": [
+      {
+        "text": "CERTIFICATE",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "World FURNITURE GROUP",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1001 N BARRE RD SUITE 402",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "METAIRIE",
+        "type": "Address_City"
+      },
+      {
+        "text": "LA",
+        "type": "Address_State"
+      },
+      {
+        "text": "70001",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "TOUCH CLEANING SERVICE LLC ",
+    "dataString": "Company_Name: TOUCH CLEANING SERVICE LLC =>\n",
+    "elements": [
+      {
+        "text": "TOUCH CLEANING SERVICE LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "World FURNITURE GROUP 1001 N BARRE RD SUITE 402 METAIRIE LA 70001 ",
+    "dataString": "Company_Name: World FURNITURE GROUP =>\nAddress_StreetNumber: 1001 N BARRE RD SUITE 402 =>\nAddress_City: METAIRIE =>\nAddress_State: LA =>\nAddress_ZIP: 70001 =>\n",
+    "elements": [
+      {
+        "text": "World FURNITURE GROUP",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1001 N BARRE RD SUITE 402",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "METAIRIE",
+        "type": "Address_City"
+      },
+      {
+        "text": "LA",
+        "type": "Address_State"
+      },
+      {
+        "text": "70001",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "ECJ 7500 Willis Blvd Ste 120 Kenner La 70065 ",
+    "dataString": "Company_Name: ECJ =>\nAddress_StreetNumber: 7500 Willis Blvd Ste 120 =>\nAddress_City: Kenner =>\nAddress_State: La =>\nAddress_ZIP: 70065 =>\n",
+    "elements": [
+      {
+        "text": "ECJ",
+        "type": "Company_Name"
+      },
+      {
+        "text": "7500 Willis Blvd Ste 120",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Kenner",
+        "type": "Address_City"
+      },
+      {
+        "text": "La",
+        "type": "Address_State"
+      },
+      {
+        "text": "70065",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "7500 Willis Blvd Ste 120 Kenner La 70065 ",
+    "dataString": "Address_StreetNumber: 7500 Willis Blvd Ste 120 =>\nAddress_City: Kenner =>\nAddress_State: La =>\nAddress_ZIP: 70065 =>\n",
+    "elements": [
+      {
+        "text": "7500 Willis Blvd Ste 120",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Kenner",
+        "type": "Address_City"
+      },
+      {
+        "text": "La",
+        "type": "Address_State"
+      },
+      {
+        "text": "70065",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "1001 N BARRE RD SUITE 402 METAIRIE LA 70001 ",
+    "dataString": "Address_StreetNumber: 1001 N BARRE RD SUITE 402 =>\nAddress_City: METAIRIE =>\nAddress_State: LA =>\nAddress_ZIP: 70001 =>\n",
+    "elements": [
+      {
+        "text": "1001 N BARRE RD SUITE 402",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "METAIRIE",
+        "type": "Address_City"
+      },
+      {
+        "text": "LA",
+        "type": "Address_State"
+      },
+      {
+        "text": "70001",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "TOUCH CLEANING SERVICE LLC"
+  },
+  "1": {
+    "type": "COI_FormType_COI",
+    "text": "CERTIFICATE"
+  },
+  "2": {
+    "type": "Address_StreetNumber",
+    "text": "7500 Willis Blvd Ste 120",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_City",
+    "text": "Kenner",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_State",
+    "text": "La",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_ZIP",
+    "text": "70065",
+    "visited_as_target": true
+  },
+  "6": {
+    "type": "Phone_Number",
+    "text": "(504) 469-2002"
+  },
+  "7": {
+    "type": "Company_Name",
+    "text": "World FURNITURE GROUP",
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_StreetNumber",
+    "text": "1001 N BARRE RD SUITE 402",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_City",
+    "text": "METAIRIE",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_State",
+    "text": "LA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "11": {
+    "type": "Address_ZIP",
+    "text": "70001",
+    "visited_as_target": true
+  },
+  "12": {
+    "type": "Delivery_Method",
+    "text": "FORWARD"
+  },
+  "13": {
+    "type": "Email",
+    "text": "WORLDFURNITUREGROUP.COM"
+  },
+  "14": {
+    "type": "Company_Name",
+    "text": "ECJ",
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "1",
+      "type": "COI_FormType_COI",
+      "text": "CERTIFICATE"
+    },
+    "target": {
+      "id": "7",
+      "type": "Company_Name",
+      "text": "World FURNITURE GROUP",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_StreetNumber",
+      "text": "7500 Willis Blvd Ste 120",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_City",
+      "text": "Kenner",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Address_City",
+      "text": "Kenner",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_State",
+      "text": "La",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_State",
+      "text": "La",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_ZIP",
+      "text": "70065",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Company_Name",
+      "text": "World FURNITURE GROUP",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_StreetNumber",
+      "text": "1001 N BARRE RD SUITE 402",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Address_StreetNumber",
+      "text": "1001 N BARRE RD SUITE 402",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_City",
+      "text": "METAIRIE",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Address_City",
+      "text": "METAIRIE",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_State",
+      "text": "LA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_State",
+      "text": "LA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "11",
+      "type": "Address_ZIP",
+      "text": "70001",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "14",
+      "type": "Company_Name",
+      "text": "ECJ",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_StreetNumber",
+      "text": "7500 Willis Blvd Ste 120",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: LABRAN, ROBIN [mailto:RLabran@allstate.com] 
+Sent: Tuesday, August 08, 2017 10:40 AM
+To: Agency.Services@thehartford.com
+Subject: Special TOUCH CLEANING SERVICE LLC
+
+PLEASE ADD THIS TO THE INSUREDS POLICY .  SHE NEEDS A CERTIFICATE FOR HER NEW JOB : URGENT :  World FURNITURE GROUP  1001 N BARRE RD SUITE 402 METAIRIE, LA 70001.  PLEASE FORWARD WORLDFURNITUREGROUP.COM ATTN:  LIA RANDOLPH
+
+
+Robin LaBran
+Office Manager for ECJ
+7500 Willis Blvd.  Ste. 120 Kenner, La. 70065
+(504) 469-2002 fax(504) 469-4444
+sla89@Allstate.com
+We will not be satisfied until you are COMPLETELY satisfied.  Please take a minute to rate our agency by emailing me (sla89@Allstate.com) your response to the following questions:
+1) Overall, how satisfied are you with Our Agency?
+2) How likely will you be to renew your policies? (very, somewhat, not very, not at all)
+3) In the past few months, have you recommended our Agency to anyone?
+""Like what I'm doing? We offer a reward for referrals.""  Click HERE to recommend me!
+ 
+----------------End Source ---------------------------------:: 
+

@@ -1,15 +1,17 @@
 'use strict'
-
+const fs = require('fs');
 const request = require('request')
 const confusionMatrix = require('./utils/confusion-matrix')
 const Envelope = require('envelope')
+const certholderUtils = require('./utils/certholderUtils.js')
 
 let _discMessage = {
   id: '',
   source_id: '',
   source_email: {
     body: '',
-    subject: ''
+    subject: '',
+    cleansed: ''
   },
   exception: [],
   start_date_time: '',
@@ -65,7 +67,7 @@ const _categorize = (message) => {
   })
 }
 
-
+///******** SHOULD BE ABLE TO REMOVE - refactored into ./utils/email-cleanup-utils.js ****** //
 const findClosing = (text) => {
   let closings = ['Thanks', 'Thank you', 'Regards', 'Best Wishes', 'Have a great day']
   let pattern = '^'+closings.join('|^')
@@ -95,7 +97,7 @@ const cleanupEmail = (emailText) => {
   //console.log( email )
   return ['Subject: '+email.header.subject, body].join('\r\n')
 }
-
+///******** SHOULD BE ABLE TO REMOVE ABOVE - refactored into ./utils/email-cleanup-utils.js ****** //
 module.exports = function(Smartemail) {
 
   /** @param text Text to pass to NLU */
@@ -121,7 +123,8 @@ module.exports = function(Smartemail) {
 
     // Replace CRLF/LF w/ Spaces...
 //    parameters.text = text.replace(/\r?\n|\r/g, ' ')
-     parameters.text = cleanupEmail(text)
+     //parameters.text = cleanupEmail(text)
+     parameters.text = text;
     // Return a promise
     let modelId = null;
     let modelDate = null;
@@ -175,8 +178,8 @@ module.exports = function(Smartemail) {
 
     // Create a new message
     let newMessage = Object.assign({}, _discMessage)
-    let text = msg.source_email.body
-
+    let text = msg.source_email.cleansed
+    console.log(text)
     if (msg.ground_truth) {
       newMessage.ground_truth = msg.ground_truth
     }
@@ -185,28 +188,73 @@ module.exports = function(Smartemail) {
       newMessage.id = msg.id
       newMessage.source_id = msg.id
     }
+    if (msg.is_blind_email) {
+      newMessage.is_blind_email = msg.is_blind_email;
+    }
 
     newMessage.start_date_time = Date.now()
 
-    Promise.all([_categorize(msg), _enrichWithNLU(text)])
+    // TODO: put _categorize back in. not necessary now bc only using COI
+    Promise.all([_enrichWithNLU(text)/*,_categorize(msg)*/ ])
       .then(responses => {
-        console.log('SmartEmail.categorize() Enrichment SUCCESS ' + newMessage.id)
+        console.log('SmartEmail.categorize() NLU and _categorize completed ' + newMessage.id)
         // Set the end_date_time
 //        console.log('response[0]', responses[0])
-        Object.assign(newMessage, responses[0])
+
+        // TODO: set this back to 0 when adding _categorize back in
+        //Object.assign(newMessage, responses[1])
 
         // Assing the the entities
-        if (responses[1].error) {
+        if (responses[0].error) {
           // It failed add the exceptions...
-          newMessage.exception.push(responses[1].exception)
-          newMessage.wks_model_id = responses[1].wks_model_id
-          newMessage.wks_date_time = responses[1].wks_date_time
+          newMessage.exception.push(responses[0].exception)
+          newMessage.wks_model_id = responses[0].wks_model_id
+          newMessage.wks_date_time = responses[0].wks_date_time
         } else {
-          newMessage.entities_extracted = responses[1].entities
-          newMessage.relations_extracted = responses[1].relations
-          newMessage.wks_model_id = responses[1].wks_model_id
-          newMessage.wks_date_time = responses[1].wks_date_time
-          newMessage.text_for_enrichment = responses[1]._text
+          newMessage.source_email = msg.source_email
+          console.log("NEW MESSAGE SOURCE EMAIL")
+          console.log(newMessage.source_email)
+          newMessage.entities_extracted = responses[0].entities
+          console.log("NEW MESSAGE ENTITIES")
+          console.log(newMessage.entities_extracted)
+          newMessage.relations_extracted = responses[0].relations
+          console.log("NEW MESSAGE RELATIONS")
+          console.log(newMessage.relations_extracted)
+          newMessage.wks_model_id = responses[0].wks_model_id
+          newMessage.wks_date_time = responses[0].wks_date_time
+          newMessage.text_for_enrichment = responses[0]._text
+          let relation_data= certholderUtils.create_entities_relations(newMessage.entities_extracted, newMessage.relations_extracted, newMessage.source_id)
+          newMessage.relation_data = relation_data
+
+          // begin writing to output
+          let testOutputString = "";
+          testOutputString += "Email ID: " + newMessage.id + " \n";
+          testOutputString += "----------------Begin Cleansed ---------------------------------: \n" + newMessage.source_email.cleansed + " \n----------------End Cleansed ---------------------------------:: \n\n";
+
+          testOutputString += "----------------Begin Relation Info ---------------------------------: \n"
+          testOutputString += "\n\nRelations chains starting from COI_FormType_COI \n"
+          testOutputString += JSON.stringify(newMessage.relation_data.certholder_dfs, null, 2)
+          testOutputString += "\n\nRelations chains starting from Company_Name \n"
+          testOutputString += JSON.stringify(newMessage.relation_data.companies_dfs, null, 2)
+          testOutputString += "\n\nRelations chains starting from Street Address \n"
+          testOutputString += JSON.stringify(newMessage.relation_data.street_addresses_dfs, null, 2)
+          testOutputString += "\n\nEntities found \n"
+          testOutputString += JSON.stringify(newMessage.relation_data.entities, null, 2)
+          testOutputString += "\n\nRelations Found found \n"
+          testOutputString += JSON.stringify(newMessage.relation_data.relations, null, 2)
+          testOutputString += " \n----------------End Relation Info ---------------------------------:: \n\n";
+          // testOutputString += "Relations with types structured ******>>>>>: \n " + newMessage.structured_entities_relations.join("\n") +" \n\n\n";
+
+
+          testOutputString += "----------------Begin Source ---------------------------------: \n" + newMessage.source_email.body + " \n----------------End Source ---------------------------------:: \n\n";
+
+          fs.writeFile("./test-output-standard-new/"+newMessage.id, testOutputString, function(err) {
+              if(err) {
+                  return console.log(err);
+              }
+
+              console.log("Saved file to " + "./test-output-standard-new/"+newMessage.id);
+          });
         }
         newMessage.end_date_time = Date.now()
         if (newMessage.exception.length === 0) {
@@ -233,22 +281,7 @@ module.exports = function(Smartemail) {
         cb(err)
       })
 
-    // Save it in Discovery...
-    /*
-    app.models.Discovery.add(newMessage, (err, createmsg) => {
-      console.log('SmartEmail.categorize() Successfully Stored? ', createmsg)
-      cb(err, createmsg)
-    })
-    */
 
-    // Store in cloudant...
-    /*
-        Smartemail.create(response, (err, createmsg) => {
-          console.log('Create finished, msg: ', createmsg)
-          cb(err, response)
-        })
-      })
-    */
   }
 
   Smartemail.wslReplaceOrCreate = function(msg, cb) {
@@ -544,6 +577,204 @@ module.exports = function(Smartemail) {
       })
   }
 
+  Smartemail.pocOutput = function(modelId) {
+  //    console.log('ModelID? ', modelId)
+    return new Promise((resolve, reject) => {
+      let filter = null;
+      // It comes in this way when not set...
+      if (modelId !== '{modelId}') {
+        filter = {
+          //where: {and: [{wks_model_id: modelId}, {is_blind_email: true}]}
+          // where: {
+          //   wks_model_id: modelId,
+          // }
+          where: {
+            "is_blind_email": true,
+          }
+        }
+      }
+
+      Smartemail.find(filter, (err, found) => {
+
+      // uncomment following two lines when looking at specific emails
+      // Smartemail.findById(1553,filter, (err, object) => {
+      //   let found = [object]
+        // calculate an object of ALL ENTITIES possible
+        // look at the entities extracted, as well as the ground truth entities
+        // this is accross ALL emails in database
+        if (err) {
+          reject(err)
+        }
+
+        console.log('Found records: ', found.length)
+        // found returns an array of each of the emails stored in the cloudant
+        const removePunctuation = (s) => {
+          // let punctuationless = s.replace(/[.,\/!$%\^&\*;:{}=\-_`~()]/g,"");
+          let punctuationless = s.replace(/[,]/g,"");
+          punctuationless = punctuationless.replace("\n","");
+          let finalString = punctuationless.replace(/\s{2,}/g," ");
+          return finalString;
+        }
+
+        const isCompleteFullAddress = (elements) => {
+          if (elements.length == 5) {
+            return (elements[0].type == 'Company_Name' && elements[1].type == 'Address_StreetNumber'
+                    && elements[2].type == 'Address_City' && elements[3].type == 'Address_State'
+                    && elements[4].type == 'Address_ZIP')
+          }
+          return false;
+        }
+
+        const buildCompanyAddressString = (elements) => { // TODO: make this more elegant
+          let string_builder = ""
+          for (let el of elements) {
+            // console.log(el)
+            string_builder += el.text + " "
+          }
+          return string_builder;
+        }
+        // Return a list in correct format
+        let header = '"ID", OUTPUT_STRING'
+        let csv_rows = []
+        csv_rows.push(header)
+        let best_string = ""
+        for (let found_email of found) {
+          let strings = []
+          let relation_data = found_email.relation_data
+          //console.log(relation_data)
+          //console.log('just tried to find ID' + id)
+          // first, go for the "easy scenario" - certholder chain of length = 6
+          if (relation_data && relation_data.hasOwnProperty('certholder_dfs')) {
+            for (let certholder_dfs_element of relation_data['certholder_dfs']) {
+              // console.log(certholder_dfs_element['simpleString'])
+              if (certholder_dfs_element['elements'].length == 6) {
+
+                let first_six_elems = certholder_dfs_element['elements'].slice(1,6)
+                // console.log(JSON.stringify(first_six_elems, null, 4))
+                let sb = buildCompanyAddressString(first_six_elems)
+                // let string_builder = ""
+                // for (let el of first_six_elems) {
+                //   // console.log(el)
+                //   string_builder += el.text + " "
+                // }
+                // console.log("found one of length 6 or greated")
+                strings.push(removePunctuation(sb))
+              }
+              //TODO: code will break if element chain such as cert -> company with incomplete_address -> company with complete address
+              //      should fix.
+              if (certholder_dfs_element['elements'].length > 6) {
+                console.log("email id: " + found_email.source_id + " found with length greater than 6")
+                console.log(certholder_dfs_element['elements'].length + " elements")
+                console.log(found_email.source_id + "\n" + certholder_dfs_element['simpleString'])
+                for(let i = 0; i < (certholder_dfs_element['elements'].length - 1)/5; i++) {
+                  console.log("i is: " + i)
+                  let sub_elements = certholder_dfs_element['elements'].slice(1+i*5, (i+1)*5 + 1)
+                  if (isCompleteFullAddress(sub_elements)) {
+                    strings.push(removePunctuation(buildCompanyAddressString(sub_elements)))
+                  }
+                }
+              }
+            }
+          }
+
+          // medium scenario - in one spot indicated certholder. in another, indicated the address of the certholder
+          // let's test if we can merge certholder - company with address - company
+          // first, let's find all certholder-company relations. assuming if they went longer than two
+          // that there would have been a complete address chain
+          if (strings.length > 0) {
+            let certholder_companies = []
+            if (relation_data && relation_data.hasOwnProperty('certholder_dfs')) {
+              for (let pot_certholder_company_pair of relation_data['certholder_dfs']) {
+                if (pot_certholder_company_pair['elements'].length == 2) {
+                  // console.log("found a pair of length 2")
+                  // console.log(JSON.stringify(pot_certholder_company_pair, null, 2));
+                  // console.log(pot_certholder_company_pair['elements'][1]['type'] == 'Company_Name')
+                  if (pot_certholder_company_pair['elements'][1]['type'] == 'Company_Name') {
+                    // console.log('evaluated to true')
+                    //console.log(pot_certholder_company_pair['elements'][1]['text'])
+                    certholder_companies.push(pot_certholder_company_pair['elements'][1]['text'])
+                  }
+                }
+              }
+            }
+            // console.log("CERTHOLDER COMPANIES ARE: \n")
+            // console.log(certholder_companies)
+              // now, we need to find company-address chains of length 5
+            if (strings.length == 0) {
+              if (certholder_companies.length > 0 && relation_data && relation_data.hasOwnProperty('companies_dfs')) {
+                // console.log("now going to search for a compatible company chain")
+                // console.log(JSON.stringify(relation_data['companies_dfs'], null, 2))
+                for (let company_dfs_element of relation_data['companies_dfs']) { // each of the companies dfs
+                  // console.log("company_dfs_element")
+                  //TODO: substitute function `isCompleteFullAddress` for the length
+                  if (company_dfs_element['elements'].length == 5)  {// need complete from company
+                    // console.log("found a company chain of length 5")
+                    // console.log(company_dfs_element['elements'])
+                    for (let certholder_company of certholder_companies) {
+                      let company_name_cleaned = certholder_company.toLowerCase().trim()
+                      let company_chain_name_cleaned = company_dfs_element['elements'][0]['text'].toLowerCase().trim()
+                      // console.log("COmpany name " + company_name_cleaned)
+                      // console.log("compared to " + company_chain_name_cleaned)
+                      if (company_chain_name_cleaned.indexOf(company_name_cleaned) >= 0) {
+                        // if the "certholder company" matches the company in the complete relationship
+                        console.log("think we have found a merger")
+                        console.log("company name is: " + company_name_cleaned)
+                        console.log("company chain from DFS is: " + company_dfs_element['simpleString'])
+                        strings.push("__Certholder: " + removePunctuation(company_dfs_element['simpleString']))
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          // still no string - going to go for greedy approach
+          if (strings.length == 0) {
+            if (relation_data && relation_data.hasOwnProperty('companies_dfs')) {
+              for (let company_dfs_element of relation_data['companies_dfs']) {
+                if (company_dfs_element['elements'].length == 5) {
+                  // console.log("greedy method - assuming a company with full address is the certholder")
+                  // console.log(found_email.source_id + ": "+ company_dfs_element['simpleString'])
+                  strings.push(company_dfs_element['simpleString'])
+                }
+              }
+            }
+          }
+          if (strings.length > 0) { // if we found
+            strings = [ ...new Set(strings) ]
+            best_string = strings.join(" | ")
+          } else {
+            best_string = "--"
+          }
+          // console.log(best_string)
+          let csv_row = [found_email.source_id,'"'+best_string+'"']
+          // console.log(csv_row)
+          csv_rows.push(csv_row)
+        }
+        console.log(csv_rows.length)
+        resolve(csv_rows)
+      })
+    })
+  }
+  Smartemail.pocOutputCsv = function(modelId, res, cb) {
+    console.log('pocOutputCsv for model_id: ', modelId)
+    Smartemail.pocOutput(modelId)
+      .then((list) => {
+  //        console.log('Flatten returned list: ', list)
+        var datetime = new Date();
+        res.set('Expires', 'Tue, 03 Jul 2001 06:00:00 GMT');
+        res.set('Cache-Control', 'max-age=0, no-cache, must-revalidate, proxy-revalidate');
+        res.set('Last-Modified', datetime + 'GMT');
+        res.set('Content-Type', 'application/force-download');
+        res.set('Content-Type', 'application/octet-stream');
+        res.set('Content-Type', 'application/download');
+        res.set('Content-Disposition', 'attachment;filename=Data.csv');
+        res.set('Content-Transfer-Encoding', 'binary');
+        res.send(list.join('\r\n')); //@todo: insert your CSV data here.
+      })
+  }
+
+
   Smartemail.remoteMethod('categorize', {
     accepts: [{
       arg: 'data',
@@ -607,5 +838,25 @@ module.exports = function(Smartemail) {
     },
     returns: {}
   })
+  Smartemail.remoteMethod('pocOutputCsv', {
+    accepts: [{
+        arg: 'modelId',
+        type: 'string'
+      },
+      {
+        arg: 'res',
+        type: 'object',
+        'http': {
+          source: 'res'
+        }
+      }
+    ],
+    description: 'Given a model id, returns a CSV of the final output',
+    http: {
+      path: '/pocOutputCsv/:modelId',
+      verb: 'get'
+    },
+    returns: {}
+  });
 
 };

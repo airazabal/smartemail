@@ -18,7 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'ng2-bootstrap/dropdown';
 import { ModalModule } from 'ng2-bootstrap/modal';
 
-import { SmartEmailDetailsComponent } from './smart-email-details/smart-email-details.component';
+import { SmartEmailViewerComponent } from './smart-email-viewer/smart-email-viewer.component';
 import { SmartEmailTestComponent } from './smart-email-test/smart-email-test.component';
 import { SmartEmailSummaryComponent} from './smart-email-summary/smart-email-summary.component';
 import { SmartEmailClassificationsComponent} from './smart-email-classifications/smart-email-classifications.component';
@@ -48,7 +48,7 @@ import { MvpCalcComponent } from './shared/mvp-calc/mvp-calc.component';
     ModalModule.forRoot() ],
   declarations: [
     SmartEmailTestComponent,
-    SmartEmailDetailsComponent,
+    SmartEmailViewerComponent,
     SmartEmailSummaryComponent,
     SmartEmailClassificationsComponent,
     SmartEmailEntitiesComponent,

@@ -1,0 +1,255 @@
+Email ID: 1587 
+----------------Begin Cleansed ---------------------------------: 
+Subject: COI Please issue a one time certificate to the following: Policy # 76WEGZW4535 Card Property Management LLC d/b/a Red Healthcare Real Estate (Property Manager) 880 College Blvd, Suite 200 Juniper, FL 33458 Attn: President  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate Card Property Management LLC d/b/a Red Healthcare Real Estate (Property Manager) 880 College Blvd, Suite 200 Juniper FL 33458 ",
+    "dataString": "COI_FormType_COI: certificate =>\nCompany_Name: Card Property Management LLC d/b/a Red Healthcare Real Estate (Property Manager) =>\nAddress_StreetNumber: 880 College Blvd, Suite 200 =>\nAddress_City: Juniper =>\nAddress_State: FL =>\nAddress_ZIP: 33458 =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Card Property Management LLC d/b/a Red Healthcare Real Estate (Property Manager)",
+        "type": "Company_Name"
+      },
+      {
+        "text": "880 College Blvd, Suite 200",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Juniper",
+        "type": "Address_City"
+      },
+      {
+        "text": "FL",
+        "type": "Address_State"
+      },
+      {
+        "text": "33458",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Card Property Management LLC d/b/a Red Healthcare Real Estate (Property Manager) 880 College Blvd, Suite 200 Juniper FL 33458 ",
+    "dataString": "Company_Name: Card Property Management LLC d/b/a Red Healthcare Real Estate (Property Manager) =>\nAddress_StreetNumber: 880 College Blvd, Suite 200 =>\nAddress_City: Juniper =>\nAddress_State: FL =>\nAddress_ZIP: 33458 =>\n",
+    "elements": [
+      {
+        "text": "Card Property Management LLC d/b/a Red Healthcare Real Estate (Property Manager)",
+        "type": "Company_Name"
+      },
+      {
+        "text": "880 College Blvd, Suite 200",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Juniper",
+        "type": "Address_City"
+      },
+      {
+        "text": "FL",
+        "type": "Address_State"
+      },
+      {
+        "text": "33458",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "880 College Blvd, Suite 200 Juniper FL 33458 ",
+    "dataString": "Address_StreetNumber: 880 College Blvd, Suite 200 =>\nAddress_City: Juniper =>\nAddress_State: FL =>\nAddress_ZIP: 33458 =>\n",
+    "elements": [
+      {
+        "text": "880 College Blvd, Suite 200",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Juniper",
+        "type": "Address_City"
+      },
+      {
+        "text": "FL",
+        "type": "Address_State"
+      },
+      {
+        "text": "33458",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "1": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "2": {
+    "type": "Policy_Number",
+    "text": "76WEGZW4535"
+  },
+  "3": {
+    "type": "Company_Name",
+    "text": "Card Property Management LLC d/b/a Red Healthcare Real Estate (Property Manager)",
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_StreetNumber",
+    "text": "880 College Blvd, Suite 200",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_City",
+    "text": "Juniper",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_State",
+    "text": "FL",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_ZIP",
+    "text": "33458",
+    "visited_as_target": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "1",
+      "type": "COI_FormType_COI",
+      "text": "certificate"
+    },
+    "target": {
+      "id": "3",
+      "type": "Company_Name",
+      "text": "Card Property Management LLC d/b/a Red Healthcare Real Estate (Property Manager)",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Company_Name",
+      "text": "Card Property Management LLC d/b/a Red Healthcare Real Estate (Property Manager)",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_StreetNumber",
+      "text": "880 College Blvd, Suite 200",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_StreetNumber",
+      "text": "880 College Blvd, Suite 200",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_City",
+      "text": "Juniper",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_City",
+      "text": "Juniper",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_State",
+      "text": "FL",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_State",
+      "text": "FL",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_ZIP",
+      "text": "33458",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Paul Plumber mailto:paul@yahoo.com] 
+Sent: Thursday, August 10, 2017 4:19 PM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Subject: COI
+
+Please issue a one time certificate to the following:
+
+Policy # 76WEGZW4535
+
+Card Property Management LLC
+d/b/a Red Healthcare Real Estate (Property Manager)
+880 College Blvd., Suite 200
+Juniper, FL 33458
+Attn: President
+
+Thank you,
+Jane
+Paul Plumber
+(520) 378-2345
+ 
+----------------End Source ---------------------------------:: 
+

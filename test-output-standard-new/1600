@@ -1,0 +1,407 @@
+Email ID: 1600 
+----------------Begin Cleansed ---------------------------------: 
+Subject: certificate of insurance CC and L Consultants Policy 91 SBA KI2700 91 UEC IP1990 91 WEC BJ8008 Please issue a certificate of insurance to: D-Nice Development 62077 75th Street Waukee, IA 50263 Requirements: -General Liability Limits: $1,000,000 per occurrence, $2,000,000 in aggregate -Additional Insured status in favor of D-Nice Development – requiring the CG 2010(on site) and CG 2037(products and completed operations) endorsement Please attach these endorsements to the certificate -Work Comp: statutory limits of $500,000 per accident, $500,000 disease limit $500,000 policy limit Employer Liability Limits CC and L only has one business location at 3500 7th St Unit 13 Des Moines, IA 50322  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "certificate of insurance D-Nice Development 62077 75th Street Waukee IA 50263 ",
+    "dataString": "COI_FormType_COI: certificate of insurance =>\nCompany_Name: D-Nice Development =>\nAddress_StreetNumber: 62077 75th Street =>\nAddress_City: Waukee =>\nAddress_State: IA =>\nAddress_ZIP: 50263 =>\n",
+    "elements": [
+      {
+        "text": "certificate of insurance",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "D-Nice Development",
+        "type": "Company_Name"
+      },
+      {
+        "text": "62077 75th Street",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Waukee",
+        "type": "Address_City"
+      },
+      {
+        "text": "IA",
+        "type": "Address_State"
+      },
+      {
+        "text": "50263",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate of insurance ",
+    "dataString": "COI_FormType_COI: certificate of insurance =>\n",
+    "elements": [
+      {
+        "text": "certificate of insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate ",
+    "dataString": "COI_FormType_COI: certificate =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "D-Nice Development 62077 75th Street Waukee IA 50263 ",
+    "dataString": "Company_Name: D-Nice Development =>\nAddress_StreetNumber: 62077 75th Street =>\nAddress_City: Waukee =>\nAddress_State: IA =>\nAddress_ZIP: 50263 =>\n",
+    "elements": [
+      {
+        "text": "D-Nice Development",
+        "type": "Company_Name"
+      },
+      {
+        "text": "62077 75th Street",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Waukee",
+        "type": "Address_City"
+      },
+      {
+        "text": "IA",
+        "type": "Address_State"
+      },
+      {
+        "text": "50263",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "13 Des Moines ",
+    "dataString": "Address_StreetNumber: 13 =>\nAddress_City: Des Moines =>\n",
+    "elements": [
+      {
+        "text": "13",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Des Moines",
+        "type": "Address_City"
+      }
+    ]
+  },
+  {
+    "simpleString": "62077 75th Street Waukee IA 50263 ",
+    "dataString": "Address_StreetNumber: 62077 75th Street =>\nAddress_City: Waukee =>\nAddress_State: IA =>\nAddress_ZIP: 50263 =>\n",
+    "elements": [
+      {
+        "text": "62077 75th Street",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Waukee",
+        "type": "Address_City"
+      },
+      {
+        "text": "IA",
+        "type": "Address_State"
+      },
+      {
+        "text": "50263",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "3500 7th St Unit Des Moines IA 50322 ",
+    "dataString": "Address_StreetNumber: 3500 7th St Unit =>\nAddress_City: Des Moines =>\nAddress_State: IA =>\nAddress_ZIP: 50322 =>\n",
+    "elements": [
+      {
+        "text": "3500 7th St Unit",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Des Moines",
+        "type": "Address_City"
+      },
+      {
+        "text": "IA",
+        "type": "Address_State"
+      },
+      {
+        "text": "50322",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "certificate of insurance"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "91 SBA KI2700 91 UEC IP1990 91 WEC BJ8008"
+  },
+  "2": {
+    "type": "Address_StreetNumber",
+    "text": "13",
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_City",
+    "text": "Des Moines",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_State",
+    "text": "IA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_ZIP",
+    "text": "50322",
+    "visited_as_target": true
+  },
+  "6": {
+    "type": "COI_FormType_COI",
+    "text": "certificate of insurance"
+  },
+  "7": {
+    "type": "Company_Name",
+    "text": "D-Nice Development",
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_StreetNumber",
+    "text": "62077 75th Street",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_City",
+    "text": "Waukee",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_State",
+    "text": "IA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "11": {
+    "type": "Address_ZIP",
+    "text": "50263",
+    "visited_as_target": true
+  },
+  "12": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "13": {
+    "type": "Address_StreetNumber",
+    "text": "3500 7th St Unit",
+    "visited_as_source": true
+  },
+  "14": {
+    "text": "Des Moines",
+    "type": "Address_City",
+    "visited_as_target": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "0",
+      "type": "COI_FormType_COI",
+      "text": "certificate of insurance"
+    },
+    "target": {
+      "id": "7",
+      "type": "Company_Name",
+      "text": "D-Nice Development",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_StreetNumber",
+      "text": "13",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "14",
+      "text": "Des Moines",
+      "type": "Address_City",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Address_City",
+      "text": "Des Moines",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_State",
+      "text": "IA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_State",
+      "text": "IA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "11",
+      "type": "Address_ZIP",
+      "text": "50263",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Company_Name",
+      "text": "D-Nice Development",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_StreetNumber",
+      "text": "62077 75th Street",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Address_StreetNumber",
+      "text": "62077 75th Street",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_City",
+      "text": "Waukee",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Address_City",
+      "text": "Waukee",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_State",
+      "text": "IA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_State",
+      "text": "IA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_ZIP",
+      "text": "50322",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "13",
+      "type": "Address_StreetNumber",
+      "text": "3500 7th St Unit",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_City",
+      "text": "Des Moines",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Shar meier [mailto:meier@cclc.com] 
+Sent: Friday, August 18, 2017 3:39 PM
+To: agency.services@TheHartford.com
+Subject: certificate of insurance
+
+CC and L Consultants
+
+Policy 91 SBA KI2700  91 UEC IP1990  91 WEC BJ8008
+
+Please issue a certificate of insurance to:
+
+D-Nice Development
+62077 75th Street
+Waukee, IA   50263
+
+Requirements:
+
+-General Liability Limits: $1,000,000 per occurrence, $2,000,000 in aggregate
+-Additional Insured status in favor of D-Nice Development – requiring the CG 2010(on site) and CG 2037(products and completed operations) endorsement. Please attach these endorsements to the certificate
+-Work Comp: statutory limits of $500,000 per accident, $500,000 disease limit $500,000 policy limit Employer Liability Limits.
+
+CC and L only has one business location at 3500 7th St.  Unit 13 Des Moines, IA  50322.
+
+Thank you-
+Shar meier
+
+
+CC and L Consultants, Inc. | 3500 7th St.| Suite 13 | Des Moines, Iowa 50322
+Phone: 515-276-1001  | Fax: 515-276-0110
+ 
+----------------End Source ---------------------------------:: 
+

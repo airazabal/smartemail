@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.lastUpdated = moment().format('MMMM Do, YYYY')
+    this.lastUpdated = moment().format('MM Do, YYYY')
   }
 
   routeToTab(tab) {
@@ -46,9 +46,9 @@ export class DashboardComponent implements OnInit {
         this.title = 'Smart Email Test'
         //this.router.navigate(['home/dashboard/chats'])
         break
-      case 'forums':
-        this.title = 'Forum Highlights'
-        //this.router.navigate(['home/dashboard/forums'])
+      case 'viewer':
+        this.title = 'Smart Email Viewer'
+        //this.router.navigate(['home/dashboard/chats'])
         break
     }
   }

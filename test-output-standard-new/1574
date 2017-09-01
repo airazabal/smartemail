@@ -1,0 +1,448 @@
+Email ID: 1574 
+----------------Begin Cleansed ---------------------------------: 
+Subject: New Cert of Insurance Good Morning – Our building was recently sold and the new owners are asking for new COIs: The Certificate Holder must be made out to: 360 Whole Owner, LLC 360WhldMgmt@harvestproper.net c/o Harvest Proper 678 14th Street, Suite 1300 Oakland, CA 94612 Also as ADDITIONAL insured the following must be included verbatim: 360 Whole Owner, LLC, KRE 360 Big Venture, LLC, KRE 360 Whole Owner, LLC, Harvest 360 Whole Investors, LLC, and Harvest Proper, Inc, as Property Manager with respects to the property located at 360 Whole Avenue, Oakland, CA 94612 If you email them directly, please CC me so that I will know it has been done  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Cert of Insurance ",
+    "dataString": "COI_FormType_COI: Cert of Insurance =>\n",
+    "elements": [
+      {
+        "text": "Cert of Insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "COIs ",
+    "dataString": "COI_FormType_COI: COIs =>\n",
+    "elements": [
+      {
+        "text": "COIs",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate Holder 360 Whole Owner, LLC 360WhldMgmt@harvestproper.net c/o Harvest Proper 678 14th Street, Suite 1300 Oakland CA 94612 ",
+    "dataString": "COI_FormType_COI: Certificate Holder =>\nCompany_Name: 360 Whole Owner, LLC 360WhldMgmt@harvestproper.net c/o Harvest Proper =>\nAddress_StreetNumber: 678 14th Street, Suite 1300 =>\nAddress_City: Oakland =>\nAddress_State: CA =>\nAddress_ZIP: 94612 =>\n",
+    "elements": [
+      {
+        "text": "Certificate Holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "360 Whole Owner, LLC 360WhldMgmt@harvestproper.net c/o Harvest Proper",
+        "type": "Company_Name"
+      },
+      {
+        "text": "678 14th Street, Suite 1300",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Oakland",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "94612",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "360 Big Venture, LLC, KRE ",
+    "dataString": "Company_Name: 360 Big Venture, LLC, KRE =>\n",
+    "elements": [
+      {
+        "text": "360 Big Venture, LLC, KRE",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "360 Whole Owner, LLC ",
+    "dataString": "Company_Name: 360 Whole Owner, LLC =>\n",
+    "elements": [
+      {
+        "text": "360 Whole Owner, LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Harvest 360 Whole Investors, LLC ",
+    "dataString": "Company_Name: Harvest 360 Whole Investors, LLC =>\n",
+    "elements": [
+      {
+        "text": "Harvest 360 Whole Investors, LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Harvest Proper, Inc ",
+    "dataString": "Company_Name: Harvest Proper, Inc =>\n",
+    "elements": [
+      {
+        "text": "Harvest Proper, Inc",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "360 Whole Owner, LLC 360WhldMgmt@harvestproper.net c/o Harvest Proper 678 14th Street, Suite 1300 Oakland CA 94612 ",
+    "dataString": "Company_Name: 360 Whole Owner, LLC 360WhldMgmt@harvestproper.net c/o Harvest Proper =>\nAddress_StreetNumber: 678 14th Street, Suite 1300 =>\nAddress_City: Oakland =>\nAddress_State: CA =>\nAddress_ZIP: 94612 =>\n",
+    "elements": [
+      {
+        "text": "360 Whole Owner, LLC 360WhldMgmt@harvestproper.net c/o Harvest Proper",
+        "type": "Company_Name"
+      },
+      {
+        "text": "678 14th Street, Suite 1300",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Oakland",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "94612",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "360 Whole Owner, LLC, KRE ",
+    "dataString": "Company_Name: 360 Whole Owner, LLC, KRE =>\n",
+    "elements": [
+      {
+        "text": "360 Whole Owner, LLC, KRE",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "360 Whole Avenue Oakland CA 94612 ",
+    "dataString": "Address_StreetNumber: 360 Whole Avenue =>\nAddress_City: Oakland =>\nAddress_State: CA =>\nAddress_ZIP: 94612 =>\n",
+    "elements": [
+      {
+        "text": "360 Whole Avenue",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Oakland",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "94612",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "678 14th Street, Suite 1300 Oakland CA 94612 ",
+    "dataString": "Address_StreetNumber: 678 14th Street, Suite 1300 =>\nAddress_City: Oakland =>\nAddress_State: CA =>\nAddress_ZIP: 94612 =>\n",
+    "elements": [
+      {
+        "text": "678 14th Street, Suite 1300",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Oakland",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "94612",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "Cert of Insurance"
+  },
+  "1": {
+    "type": "COI_FormType_COI",
+    "text": "COIs"
+  },
+  "2": {
+    "type": "Company_Name",
+    "text": "360 Big Venture, LLC, KRE"
+  },
+  "3": {
+    "type": "Company_Name",
+    "text": "360 Whole Owner, LLC"
+  },
+  "4": {
+    "type": "Company_Name",
+    "text": "Harvest 360 Whole Investors, LLC"
+  },
+  "5": {
+    "type": "Company_Name",
+    "text": "Harvest Proper, Inc"
+  },
+  "6": {
+    "type": "Address_StreetNumber",
+    "text": "360 Whole Avenue",
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_City",
+    "text": "Oakland",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_State",
+    "text": "CA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_ZIP",
+    "text": "94612",
+    "visited_as_target": true
+  },
+  "10": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Holder"
+  },
+  "11": {
+    "type": "Company_Name",
+    "text": "360 Whole Owner, LLC 360WhldMgmt@harvestproper.net c/o Harvest Proper",
+    "visited_as_source": true
+  },
+  "12": {
+    "type": "Address_StreetNumber",
+    "text": "678 14th Street, Suite 1300",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "13": {
+    "type": "Address_City",
+    "text": "Oakland",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "14": {
+    "type": "Address_State",
+    "text": "CA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "15": {
+    "type": "Address_ZIP",
+    "text": "94612",
+    "visited_as_target": true
+  },
+  "16": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "ADDITIONAL insured"
+  },
+  "17": {
+    "type": "Company_Name",
+    "text": "360 Whole Owner, LLC, KRE"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_StreetNumber",
+      "text": "360 Whole Avenue",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_City",
+      "text": "Oakland",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Address_City",
+      "text": "Oakland",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_ZIP",
+      "text": "94612",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "COI_FormType_COI",
+      "text": "Certificate Holder"
+    },
+    "target": {
+      "id": "11",
+      "type": "Company_Name",
+      "text": "360 Whole Owner, LLC 360WhldMgmt@harvestproper.net c/o Harvest Proper",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "11",
+      "type": "Company_Name",
+      "text": "360 Whole Owner, LLC 360WhldMgmt@harvestproper.net c/o Harvest Proper",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "12",
+      "type": "Address_StreetNumber",
+      "text": "678 14th Street, Suite 1300",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "12",
+      "type": "Address_StreetNumber",
+      "text": "678 14th Street, Suite 1300",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "13",
+      "type": "Address_City",
+      "text": "Oakland",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "13",
+      "type": "Address_City",
+      "text": "Oakland",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "14",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "14",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "15",
+      "type": "Address_ZIP",
+      "text": "94612",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Tanya Gonza [mailto:tanya@rtgrl.com] 
+Sent: Thursday, August 10, 2017 3:36 PM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Subject: New Cert of Insurance
+Importance: High
+
+Good Morning –
+
+Our building was recently sold and the new owners are asking for new COIs:
+
+The Certificate Holder must be made out to:
+
+360 Whole Owner, LLC
+360WhldMgmt@harvestproper.net
+c/o Harvest Proper
+678 14th Street, Suite 1300
+Oakland, CA 94612
+
+Also as ADDITIONAL insured the following must be included verbatim:
+
+360 Whole Owner, LLC, KRE 360 Big Venture, LLC, KRE 360 Whole Owner, LLC, Harvest 360 Whole Investors, LLC, and Harvest Proper, Inc., as Property Manager with respects to the property located at 360 Whole Avenue, Oakland, CA 94612
+
+
+If you email them directly, please CC me so that I will know it has been done.
+
+Thank you.
+Hanya Gonzales
+Firm Administrator
+RTGR Law
+Rich | Thor | Gray | Roy | LLP
+360 Whole Avenue, Suite 300 | Oakland, CA 94612
+TEL 510.338.3456 |FAX 510.338.3167
+
+Website | Brochure (PDF) |
+
+Be advised that this email is unencrypted, not a secure means of communicating with us.  There is a risk that these emails could be intercepted and read by a third party.  By corresponding with us via email, you acknowledge that you understand and agree to assume this risk.
+
+Privileged and Confidential: The information contained in this e-mail message, including any attachments, is intended only for the personal and confidential use of the intended recipient(s) and may contain confidential and privileged information as well as information protected by privacy laws. If the reader of this message is not the intended recipient or an agent responsible for delivering it to the intended recipient, you are hereby notified that you have received this document in error and that any review, dissemination, distribution, or copying of this message is strictly prohibited. If you have received this communication in error, please immediately contact the sender by reply e-mail and delete all copies of the original message.
+ 
+----------------End Source ---------------------------------:: 
+

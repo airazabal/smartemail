@@ -1,0 +1,212 @@
+Email ID: 1537 
+----------------Begin Cleansed ---------------------------------: 
+Subject: COI Request - Bathroom Restoration Need current & signed workers' comp COI for holder: 123 E 32nd St Menance Corp C/O Second Residential New York, Inc 123 Fourth Ave, 18th Floor ATTN: Ins Coordinator New York, NY 12345 Description: Tub painting: 123 E 32nd St,Unit 15K, Lar Turk 1 Please email COI to: Viv@gmail.com 2 Please email COI to: mtb@residents.com 3 Please email COI to: sscampi@yahoo.com  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+{
+  "strings": [
+    "COI ",
+    "COI ",
+    "COI ",
+    "COI ",
+    "COI ",
+    "holder "
+  ],
+  "data": [
+    "COI_FormType_COI: COI =>\n",
+    "COI_FormType_COI: COI =>\n",
+    "COI_FormType_COI: COI =>\n",
+    "COI_FormType_COI: COI =>\n",
+    "COI_FormType_COI: COI =>\n",
+    "COI_FormType_COI: holder =>\n"
+  ]
+}
+
+Relations chains starting from Company_Name 
+{
+  "strings": [
+    "Bathroom Restoration ",
+    "Corp C/O Second Residential New York, Inc 123 Fourth Ave, 18th Floor New York NY 12345 123 E 32nd St Menance "
+  ],
+  "data": [
+    "Company_Name: Bathroom Restoration =>\n",
+    "Company_Name: Corp C/O Second Residential New York, Inc =>\nAddress_StreetNumber: 123 Fourth Ave, 18th Floor =>\nAddress_City: New York =>\nAddress_State: NY =>\nAddress_ZIP: 12345 =>\nAddress_StreetNumber: 123 E 32nd St Menance =>\n"
+  ]
+}
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "Bathroom Restoration"
+  },
+  "2": {
+    "type": "Address_StreetNumber",
+    "text": "123 E 32nd St,Unit 15K"
+  },
+  "3": {
+    "type": "Address_City",
+    "text": "Lar"
+  },
+  "4": {
+    "type": "Delivery_Method",
+    "text": "email"
+  },
+  "5": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "6": {
+    "type": "Email",
+    "text": "Viv@gmail.com"
+  },
+  "7": {
+    "type": "Delivery_Method",
+    "text": "email"
+  },
+  "8": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "9": {
+    "type": "Email",
+    "text": "mtb@residents.com"
+  },
+  "10": {
+    "type": "Delivery_Method",
+    "text": "email"
+  },
+  "11": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "12": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "13": {
+    "type": "Email",
+    "text": "sscampi@yahoo.com"
+  },
+  "14": {
+    "type": "COI_FormType_COI",
+    "text": "holder"
+  },
+  "15": {
+    "type": "Address_StreetNumber",
+    "text": "123 E 32nd St Menance"
+  },
+  "16": {
+    "type": "Company_Name",
+    "text": "Corp C/O Second Residential New York, Inc"
+  },
+  "17": {
+    "type": "Address_StreetNumber",
+    "text": "123 Fourth Ave, 18th Floor"
+  },
+  "18": {
+    "type": "Address_City",
+    "text": "New York"
+  },
+  "19": {
+    "type": "Address_State",
+    "text": "NY"
+  },
+  "20": {
+    "type": "Address_ZIP",
+    "text": "12345"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": "2",
+    "target": "3"
+  },
+  {
+    "source": "6",
+    "target": "4"
+  },
+  {
+    "source": "9",
+    "target": "4"
+  },
+  {
+    "source": "9",
+    "target": "4"
+  },
+  {
+    "source": "13",
+    "target": "4"
+  },
+  {
+    "source": "13",
+    "target": "4"
+  },
+  {
+    "source": "13",
+    "target": "4"
+  },
+  {
+    "source": "16",
+    "target": "15"
+  },
+  {
+    "source": "16",
+    "target": "17"
+  },
+  {
+    "source": "17",
+    "target": "18"
+  },
+  {
+    "source": "18",
+    "target": "19"
+  },
+  {
+    "source": "19",
+    "target": "20"
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Shrimp Scampi [mailto:SScampi@yahoo.com]
+Sent: Tuesday, August 08, 2017 11:15 AM
+To: COI Requests-The Hartford
+Subject: COI Request - Bathroom Restoration
+
+Need current & signed workers' comp. COI for holder:
+
+123 E. 32nd St. Menance Corp.
+C/O Second Residential New York, Inc.
+123 Fourth Ave., 18th Floor
+ATTN:  Ins. Coordinator
+New York, NY  12345
+
+Description:    Tub painting:  123 E. 32nd St.,Unit 15K, Lar Turk
+
+1.    Please email COI to:    Viv@gmail.com
+2.    Please email COI to:    mtb@residents.com
+3.    Please email COI to:    sscampi@yahoo.com
+
+
+Thank you,
+
+Bathroom Restoration Specialists, Inc.
+123 Townies Place
+Kickoff, NJ  07481
+201-447-1234
+POL.# 76WEGFY1234
+ 
+----------------End Source ---------------------------------:: 
+

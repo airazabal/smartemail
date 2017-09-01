@@ -1,0 +1,264 @@
+Email ID: 1521 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Dish Services 59SBMIW6554 Please issue a certificate to: LM 1447 N Mansion Blvd Littleton, CO 80125  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "certificate LM 1447 N Mansion Blvd Littleton CO 80125 ",
+    "dataString": "COI_FormType_COI: certificate =>\nCompany_Name: LM =>\nAddress_StreetNumber: 1447 N Mansion Blvd =>\nAddress_City: Littleton =>\nAddress_State: CO =>\nAddress_ZIP: 80125 =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "LM",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1447 N Mansion Blvd",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Littleton",
+        "type": "Address_City"
+      },
+      {
+        "text": "CO",
+        "type": "Address_State"
+      },
+      {
+        "text": "80125",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Dish Services ",
+    "dataString": "Company_Name: Dish Services =>\n",
+    "elements": [
+      {
+        "text": "Dish Services",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "LM 1447 N Mansion Blvd Littleton CO 80125 ",
+    "dataString": "Company_Name: LM =>\nAddress_StreetNumber: 1447 N Mansion Blvd =>\nAddress_City: Littleton =>\nAddress_State: CO =>\nAddress_ZIP: 80125 =>\n",
+    "elements": [
+      {
+        "text": "LM",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1447 N Mansion Blvd",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Littleton",
+        "type": "Address_City"
+      },
+      {
+        "text": "CO",
+        "type": "Address_State"
+      },
+      {
+        "text": "80125",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "1447 N Mansion Blvd Littleton CO 80125 ",
+    "dataString": "Address_StreetNumber: 1447 N Mansion Blvd =>\nAddress_City: Littleton =>\nAddress_State: CO =>\nAddress_ZIP: 80125 =>\n",
+    "elements": [
+      {
+        "text": "1447 N Mansion Blvd",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Littleton",
+        "type": "Address_City"
+      },
+      {
+        "text": "CO",
+        "type": "Address_State"
+      },
+      {
+        "text": "80125",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "Dish Services"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "59SBMIW6554"
+  },
+  "2": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "3": {
+    "type": "Company_Name",
+    "text": "LM",
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_StreetNumber",
+    "text": "1447 N Mansion Blvd",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_City",
+    "text": "Littleton",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_State",
+    "text": "CO",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_ZIP",
+    "text": "80125",
+    "visited_as_target": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "COI_FormType_COI",
+      "text": "certificate"
+    },
+    "target": {
+      "id": "3",
+      "type": "Company_Name",
+      "text": "LM",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Company_Name",
+      "text": "LM",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_StreetNumber",
+      "text": "1447 N Mansion Blvd",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_StreetNumber",
+      "text": "1447 N Mansion Blvd",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_City",
+      "text": "Littleton",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_City",
+      "text": "Littleton",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_State",
+      "text": "CO",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_State",
+      "text": "CO",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_ZIP",
+      "text": "80125",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Paul Pello [mailto:paul.pello@amcheck.com] 
+Sent: Monday, August 07, 2017 7:40 PM
+To: 'agency.services@thehartford.com'
+Subject: Dish Services 59SBMIW6554
+
+Please issue a certificate to:
+
+ LM
+ 1447 N Mansion Blvd
+ Littleton, CO  80125
+
+
+Thanks
+
+Paul Pello
+Insurance Customer Service Representative
+
+
+1559 W Sunset Drive | Phoenix, AZ 85044-5201
+(541) 997-1221 | phone
+website | vCard | map | email
+
+
+
+
+
+Your Human Capital TM
+This email may contain confidential and/or private information. If you received this email in error please delete and notify sender.
+ 
+----------------End Source ---------------------------------:: 
+

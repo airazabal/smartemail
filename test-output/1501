@@ -1,0 +1,166 @@
+Email ID: 1501 
+----------------Begin Cleansed ---------------------------------: 
+Subject: COI for Trackstar SYSTEMS Inc 76 SBW UH1234 Hi, Please provide the Accord form for below Let me know if you have any questions Lotech Inc 1234 North Alley Parkway, Suite 81, Alphabet, GA 30022 Certificate Holder Address: BAYNET SYSTEMS Inc 98765 Drove Dr Suite 234 Ashturn, VA 20147  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+{
+  "strings": [
+    "COI ",
+    "Certificate Holder BAYNET SYSTEMS Inc 98765 Drove Dr Suite 234 Ashturn VA 20147 "
+  ],
+  "data": [
+    "COI_FormType_COI: COI =>\n",
+    "COI_FormType_COI: Certificate Holder =>\nCompany_Name: BAYNET SYSTEMS Inc =>\nAddress_StreetNumber: 98765 Drove Dr Suite 234 =>\nAddress_City: Ashturn =>\nAddress_State: VA =>\nAddress_ZIP: 20147 =>\n"
+  ]
+}
+
+Relations chains starting from Company_Name 
+{
+  "strings": [
+    "Trackstar SYSTEMS Inc ",
+    "Lotech Inc 1234 North Alley Parkway, Suite 81 Alphabet GA 30022 ",
+    "BAYNET SYSTEMS Inc 98765 Drove Dr Suite 234 Ashturn VA 20147 "
+  ],
+  "data": [
+    "Company_Name: Trackstar SYSTEMS Inc =>\n",
+    "Company_Name: Lotech Inc =>\nAddress_StreetNumber: 1234 North Alley Parkway, Suite 81 =>\nAddress_City: Alphabet =>\nAddress_State: GA =>\nAddress_ZIP: 30022 =>\n",
+    "Company_Name: BAYNET SYSTEMS Inc =>\nAddress_StreetNumber: 98765 Drove Dr Suite 234 =>\nAddress_City: Ashturn =>\nAddress_State: VA =>\nAddress_ZIP: 20147 =>\n"
+  ]
+}
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "Trackstar SYSTEMS Inc"
+  },
+  "2": {
+    "type": "Address_StreetNumber",
+    "text": "98765 Drove Dr Suite 234"
+  },
+  "3": {
+    "type": "Address_City",
+    "text": "Ashturn"
+  },
+  "4": {
+    "type": "Address_State",
+    "text": "VA"
+  },
+  "5": {
+    "type": "Address_ZIP",
+    "text": "20147"
+  },
+  "6": {
+    "type": "Policy_Number",
+    "text": "76 SBW UH1234"
+  },
+  "7": {
+    "type": "Company_Name",
+    "text": "Lotech Inc"
+  },
+  "8": {
+    "type": "Address_StreetNumber",
+    "text": "1234 North Alley Parkway, Suite 81"
+  },
+  "9": {
+    "type": "Address_City",
+    "text": "Alphabet"
+  },
+  "10": {
+    "type": "Address_State",
+    "text": "GA"
+  },
+  "11": {
+    "type": "Address_ZIP",
+    "text": "30022"
+  },
+  "12": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Holder"
+  },
+  "13": {
+    "type": "Company_Name",
+    "text": "BAYNET SYSTEMS Inc"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": "2",
+    "target": "3"
+  },
+  {
+    "source": "3",
+    "target": "4"
+  },
+  {
+    "source": "4",
+    "target": "5"
+  },
+  {
+    "source": "7",
+    "target": "8"
+  },
+  {
+    "source": "8",
+    "target": "9"
+  },
+  {
+    "source": "9",
+    "target": "10"
+  },
+  {
+    "source": "10",
+    "target": "11"
+  },
+  {
+    "source": "12",
+    "target": "13"
+  },
+  {
+    "source": "13",
+    "target": "2"
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: CM [mailto:CM@LoTech.com]
+Sent: Thursday, August 10, 2017 11:16 AM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Cc: Palla Ray
+Subject: COI for Trackstar SYSTEMS Inc 76 SBW UH1234
+
+Hi,
+
+Please provide the Accord form for below
+
+Let me know if you have any questions
+
+Lotech Inc
+1234 North Alley Parkway, Suite 81,
+Alphabet, GA 30022
+
+Certificate Holder Address:
+
+BAYNET SYSTEMS Inc
+98765 Drove Dr. Suite 234
+Ashturn, VA 20147
+
+Warm Regards,
+
+CM, HR
+Off : 770.709.1234 | Fax : 770.604.5678  | CM@LoTech.com | www.LoTech.com
+LoTech Inc  1234 North Alley Parkway, Suite 81, Alphabet, GA 30022
+ 
+----------------End Source ---------------------------------:: 
+

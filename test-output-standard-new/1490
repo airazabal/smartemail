@@ -1,0 +1,110 @@
+Email ID: 1490 
+----------------Begin Cleansed ---------------------------------: 
+Subject: FW: Elope, LLC, Account #0010747491234 [CONFIDENTIAL] Hello EKD & Kellis, The insurance criteria are attached for your review If we can do anything else for you, please don’t hesitate to contact us Thank you  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Elope, LLC ",
+    "dataString": "Company_Name: Elope, LLC =>\n",
+    "elements": [
+      {
+        "text": "Elope, LLC",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "Elope, LLC"
+  }
+}
+
+Relations Found found 
+[] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Ways, Kellis L (Small Commercial Operations) 
+Sent: Thursday, August 10, 2017 7:20 AM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Subject: FW: Elope, LLC, Account #0010747491234 [CONFIDENTIAL]
+
+
+
+From: EKD [mailto:EKD@elope.com]
+Sent: Wednesday, August 09, 2017 5:08 PM
+To: Ways, Kellis L (Small Commercial Operations)
+Subject: Fwd: Elope, LLC, Account #0010747491234
+
+Kellis -
+
+Regarding our Business Liability Policy:  40 SBA VR1234,...
+
+Our leaseholder, Spam Financial Services, needs a COI with itself named as Loss Payee.  Here is the exact info.:
+
+Spam Financial Services, Inc. named as Loss Payee
+PO Box 1234
+Bellevmount, WA 98009
+
+As well as the regular information, It should include
+
+Contents or Property coverage
+
+""Special Form"" coverage including theft.
+
+Can you email that to me so that I can look it over and I will send it to them.  Thanks much.
+
+EKD
+
+
+
+
+EKD
+Office Manager
+elope Environment::Architecture
+1234 Mode Street
+Twichville, PA 15206
+412-362-1234
+
+www.Elope.com
+elope is a Carbon Neutral, Certified Just, LLT and B-Corporation.
+Winner of the PA Sustainable Business Award and the Orange Workplace Challenge
+
+
+
+
+On Tue, Jun 13, 2017 at 4:32 PM, CS-Michigan Inbox <cs-michigan@lalo.com> wrote:
+Hello EKD & Kellis,
+
+The insurance criteria are attached for your review.
+
+If we can do anything else for you, please don’t hesitate to contact us. Thank you.
+
+Sincerely,
+Mee Ill
+
+Mee Ill, Senior Customer Service Specialist | cs-michigan@lalo.com
+________________________________________
+  Specialty Equipment Services | www.MAIM.com/EBGInsurance | 1234 SE 35th Pl, Suite 123 Bellevmount, WA 98007
+
+
+________________________________________
+The content of this e-mail message and any attachments are confidential and may be legally privileged, intended solely for the addressee. If you are not the intended recipient, be advised that any use, dissemination, distribution, or copying of this e-mail is strictly prohibited. If you receive this message in error, please notify the sender immediately by reply email and destroy the message and its attachments.
+ 
+----------------End Source ---------------------------------:: 
+

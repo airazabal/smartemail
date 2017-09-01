@@ -1,0 +1,284 @@
+Email ID: 1588 
+----------------Begin Cleansed ---------------------------------: 
+Subject: S & S Carpet- Policy #:s 13SBAIX4544 & 13WBCPU1615 Insurance Certificate/ AI CG 2010 & Completed OPS (CG 2037) Hi All, Please add the following as additional insured for ongoing and completed operations: Cammys Management Co LLC, JC Management LLC, Apartment Associates LLC and their Affiliates, successors and assignees, and the ownership entities of their owned or managed properties as additional insured for ongoing and completed operations A Waiver of Subrogation on the WC policy in favor of the above as permitted by law All coverage is primary and non-contributory Address: c/o Group Vendor 8008 NE Indian St Tualatin, OR 97062  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Insurance Certificate/ ",
+    "dataString": "COI_FormType_COI: Insurance Certificate/ =>\n",
+    "elements": [
+      {
+        "text": "Insurance Certificate/",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "S & S Carpet ",
+    "dataString": "Company_Name: S & S Carpet =>\n",
+    "elements": [
+      {
+        "text": "S & S Carpet",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Cammys Management Co LLC ",
+    "dataString": "Company_Name: Cammys Management Co LLC =>\n",
+    "elements": [
+      {
+        "text": "Cammys Management Co LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "JC Management LLC ",
+    "dataString": "Company_Name: JC Management LLC =>\n",
+    "elements": [
+      {
+        "text": "JC Management LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Apartment Associates LLC ",
+    "dataString": "Company_Name: Apartment Associates LLC =>\n",
+    "elements": [
+      {
+        "text": "Apartment Associates LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "c/o Group Vendor 8008 NE Indian St Tualatin OR 97062 ",
+    "dataString": "Company_Name: c/o Group Vendor =>\nAddress_StreetNumber: 8008 NE Indian St =>\nAddress_City: Tualatin =>\nAddress_State: OR =>\nAddress_ZIP: 97062 =>\n",
+    "elements": [
+      {
+        "text": "c/o Group Vendor",
+        "type": "Company_Name"
+      },
+      {
+        "text": "8008 NE Indian St",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Tualatin",
+        "type": "Address_City"
+      },
+      {
+        "text": "OR",
+        "type": "Address_State"
+      },
+      {
+        "text": "97062",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "8008 NE Indian St Tualatin OR 97062 ",
+    "dataString": "Address_StreetNumber: 8008 NE Indian St =>\nAddress_City: Tualatin =>\nAddress_State: OR =>\nAddress_ZIP: 97062 =>\n",
+    "elements": [
+      {
+        "text": "8008 NE Indian St",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Tualatin",
+        "type": "Address_City"
+      },
+      {
+        "text": "OR",
+        "type": "Address_State"
+      },
+      {
+        "text": "97062",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "S & S Carpet"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "13SBAIX4544"
+  },
+  "2": {
+    "type": "Address_StreetNumber",
+    "text": "8008 NE Indian St",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_City",
+    "text": "Tualatin",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_State",
+    "text": "OR",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_ZIP",
+    "text": "97062",
+    "visited_as_target": true
+  },
+  "6": {
+    "type": "Policy_Number",
+    "text": "13WBCPU1615"
+  },
+  "7": {
+    "type": "COI_FormType_COI",
+    "text": "Insurance Certificate/"
+  },
+  "8": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "additional insured"
+  },
+  "9": {
+    "type": "Company_Name",
+    "text": "Cammys Management Co LLC"
+  },
+  "10": {
+    "type": "Company_Name",
+    "text": "JC Management LLC"
+  },
+  "11": {
+    "type": "Company_Name",
+    "text": "Apartment Associates LLC"
+  },
+  "12": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "additional insured"
+  },
+  "13": {
+    "type": "Company_Name",
+    "text": "c/o Group Vendor",
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_StreetNumber",
+      "text": "8008 NE Indian St",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_City",
+      "text": "Tualatin",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Address_City",
+      "text": "Tualatin",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_State",
+      "text": "OR",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_State",
+      "text": "OR",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_ZIP",
+      "text": "97062",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "13",
+      "type": "Company_Name",
+      "text": "c/o Group Vendor",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_StreetNumber",
+      "text": "8008 NE Indian St",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Pam Longo [mailto:pam.l@cup.com]
+Sent: Thursday, August 10, 2017 4:09 PM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Subject: S & S Carpet- Policy #:s 13SBAIX4544 & 13WBCPU1615 Insurance Certificate/ AI CG 2010 & Completed OPS (CG 2037)
+Importance: High
+
+Hi All,
+Please add the following as additional  insured for ongoing and completed operations:
+
+Cammys Management Co LLC, JC Management LLC, Apartment Associates LLC and their
+Affiliates, successors and assignees, and the ownership entities of their owned or managed properties as additional insured for ongoing and completed operations.
+
+A Waiver of Subrogation on the WC policy in favor of the above as permitted by law.
+
+All coverage is primary and non-contributory.
+
+Address:
+c/o Group Vendor
+8008 NE Indian St.
+Tualatin, OR  97062
+
+Thank you.
+
+Pat Longo
+Cup  Insurance Agency
+Pam.l@cup.com
+973 778-5550  X 244
+ 
+----------------End Source ---------------------------------:: 
+

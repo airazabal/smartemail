@@ -1,0 +1,311 @@
+Email ID: 1550 
+----------------Begin Cleansed ---------------------------------: 
+Subject: URGENT Simple Grass COI Request (Policy WEGKO2501) Good Morning, Please send me an Easy Grass COI for the following Certificate Holder: City of of Key Biscayne 99 E Macintosh Street Key Biscayne, FL 33149  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate Holder City of of Key Biscayne 99 E Macintosh Street Key Biscayne FL 33149 ",
+    "dataString": "COI_FormType_COI: Certificate Holder =>\nCompany_Name: City of of Key Biscayne =>\nAddress_StreetNumber: 99 E Macintosh Street =>\nAddress_City: Key Biscayne =>\nAddress_State: FL =>\nAddress_ZIP: 33149 =>\n",
+    "elements": [
+      {
+        "text": "Certificate Holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "City of of Key Biscayne",
+        "type": "Company_Name"
+      },
+      {
+        "text": "99 E Macintosh Street",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Key Biscayne",
+        "type": "Address_City"
+      },
+      {
+        "text": "FL",
+        "type": "Address_State"
+      },
+      {
+        "text": "33149",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Simple Grass ",
+    "dataString": "Company_Name: Simple Grass =>\n",
+    "elements": [
+      {
+        "text": "Simple Grass",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Easy Grass ",
+    "dataString": "Company_Name: Easy Grass =>\n",
+    "elements": [
+      {
+        "text": "Easy Grass",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "City of of Key Biscayne 99 E Macintosh Street Key Biscayne FL 33149 ",
+    "dataString": "Company_Name: City of of Key Biscayne =>\nAddress_StreetNumber: 99 E Macintosh Street =>\nAddress_City: Key Biscayne =>\nAddress_State: FL =>\nAddress_ZIP: 33149 =>\n",
+    "elements": [
+      {
+        "text": "City of of Key Biscayne",
+        "type": "Company_Name"
+      },
+      {
+        "text": "99 E Macintosh Street",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Key Biscayne",
+        "type": "Address_City"
+      },
+      {
+        "text": "FL",
+        "type": "Address_State"
+      },
+      {
+        "text": "33149",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "99 E Macintosh Street Key Biscayne FL 33149 ",
+    "dataString": "Address_StreetNumber: 99 E Macintosh Street =>\nAddress_City: Key Biscayne =>\nAddress_State: FL =>\nAddress_ZIP: 33149 =>\n",
+    "elements": [
+      {
+        "text": "99 E Macintosh Street",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Key Biscayne",
+        "type": "Address_City"
+      },
+      {
+        "text": "FL",
+        "type": "Address_State"
+      },
+      {
+        "text": "33149",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "Simple Grass"
+  },
+  "1": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "2": {
+    "type": "Address_ZIP",
+    "text": "33149",
+    "visited_as_target": true
+  },
+  "3": {
+    "type": "Policy_Number",
+    "text": "WEGKO2501"
+  },
+  "4": {
+    "type": "Company_Name",
+    "text": "Easy Grass"
+  },
+  "5": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "6": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Holder"
+  },
+  "7": {
+    "type": "Company_Name",
+    "text": "City of of Key Biscayne",
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_StreetNumber",
+    "text": "99 E Macintosh Street",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_City",
+    "text": "Key Biscayne",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_State",
+    "text": "FL",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "6",
+      "type": "COI_FormType_COI",
+      "text": "Certificate Holder"
+    },
+    "target": {
+      "id": "7",
+      "type": "Company_Name",
+      "text": "City of of Key Biscayne",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Company_Name",
+      "text": "City of of Key Biscayne",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_StreetNumber",
+      "text": "99 E Macintosh Street",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Address_StreetNumber",
+      "text": "99 E Macintosh Street",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_City",
+      "text": "Key Biscayne",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Address_City",
+      "text": "Key Biscayne",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_State",
+      "text": "FL",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_State",
+      "text": "FL",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_ZIP",
+      "text": "33149",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Rose Gomes [mailto:rgomes@simplegrass.net]
+Sent: Tuesday, August 08, 2017 10:59 AM
+To: agency.service@thehartford.com
+Subject: URGENT Simple Grass COI Request (Policy WEGKO2501)
+Importance: High
+
+Good Morning,
+
+Please send me an Easy Grass COI for the following Certificate Holder:
+
+City of of Key Biscayne
+99 E Macintosh Street
+Key Biscayne, FL 33149
+
+Thank you,
+Rosa Gomes
+Administrative Assistant
+Notary Public
+
+28212 NE 133rd Street
+Miami, FL 33186
+Tel 305 234-1088 | Fax 305 234-8801
+Toll Free 800.988.1212
+www.simplegrass.net
+
+""artificial grass never looked more natural""
+
+
+
+Follow us on:
+
+Please consider the environment and do not print this e-mail unless you really need to.
+This e-mail may contain confidential and/or privileged information. If you are not the intended recipient (or have received this e-mail in error) please notify the sender immediately and destroy this e-mail. Any unauthorized copying, disclosure or distribution of the material in this e-mail is strictly forbidden.
+ 
+----------------End Source ---------------------------------:: 
+

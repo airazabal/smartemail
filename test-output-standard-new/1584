@@ -1,0 +1,434 @@
+Email ID: 1584 
+----------------Begin Cleansed ---------------------------------: 
+Subject: RUSH- Cert request via email Good afternoon, I hope that this email finds you well I am requesting the following insurance certificate: NCCI Company # 10448 Policy # 76 WEG LU 2012 Housing Code 76 Name insured: Coget Design, Inc Workmenäó»s comp: workmen's comp to full compliance of federal and state laws covering all of the exhibitor's employees for any work done on the exhibitor's behalf Additional Insured: 2017 SAMS 34 North High Street Ste 200 Columbus, OH 43215 Meeting Name: 2017 SAMS Meeting Dates: November 2-5, 2017 Malea Watson t Software 6401 Tower Pkwy Nw, Suite 1240 Atlanta, GA 30339-3206 office: +1 770.627.5052 mwats@tOrtho.com tOrtho | tMate | tEcho tortho.com  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Cert ",
+    "dataString": "COI_FormType_COI: Cert =>\n",
+    "elements": [
+      {
+        "text": "Cert",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "insurance certificate NCCI Company ",
+    "dataString": "COI_FormType_COI: insurance certificate =>\nCompany_Name: NCCI Company =>\n",
+    "elements": [
+      {
+        "text": "insurance certificate",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "NCCI Company",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Malea Watson t Software 6401 Tower Pkwy Nw, Suite 1240 Atlanta GA 30339-3206 ",
+    "dataString": "Company_Name: Malea Watson t Software =>\nAddress_StreetNumber: 6401 Tower Pkwy Nw, Suite 1240 =>\nAddress_City: Atlanta =>\nAddress_State: GA =>\nAddress_ZIP: 30339-3206 =>\n",
+    "elements": [
+      {
+        "text": "Malea Watson t Software",
+        "type": "Company_Name"
+      },
+      {
+        "text": "6401 Tower Pkwy Nw, Suite 1240",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Atlanta",
+        "type": "Address_City"
+      },
+      {
+        "text": "GA",
+        "type": "Address_State"
+      },
+      {
+        "text": "30339-3206",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "NCCI Company ",
+    "dataString": "Company_Name: NCCI Company =>\n",
+    "elements": [
+      {
+        "text": "NCCI Company",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Coget Design, Inc ",
+    "dataString": "Company_Name: Coget Design, Inc =>\n",
+    "elements": [
+      {
+        "text": "Coget Design, Inc",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "2017 SAMS 34 North High Street Ste 200 Columbus OH 43215 ",
+    "dataString": "Company_Name: 2017 SAMS =>\nAddress_StreetNumber: 34 North High Street Ste 200 =>\nAddress_City: Columbus =>\nAddress_State: OH =>\nAddress_ZIP: 43215 =>\n",
+    "elements": [
+      {
+        "text": "2017 SAMS",
+        "type": "Company_Name"
+      },
+      {
+        "text": "34 North High Street Ste 200",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Columbus",
+        "type": "Address_City"
+      },
+      {
+        "text": "OH",
+        "type": "Address_State"
+      },
+      {
+        "text": "43215",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "6401 Tower Pkwy Nw, Suite 1240 Atlanta GA 30339-3206 ",
+    "dataString": "Address_StreetNumber: 6401 Tower Pkwy Nw, Suite 1240 =>\nAddress_City: Atlanta =>\nAddress_State: GA =>\nAddress_ZIP: 30339-3206 =>\n",
+    "elements": [
+      {
+        "text": "6401 Tower Pkwy Nw, Suite 1240",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Atlanta",
+        "type": "Address_City"
+      },
+      {
+        "text": "GA",
+        "type": "Address_State"
+      },
+      {
+        "text": "30339-3206",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "34 North High Street Ste 200 Columbus OH 43215 ",
+    "dataString": "Address_StreetNumber: 34 North High Street Ste 200 =>\nAddress_City: Columbus =>\nAddress_State: OH =>\nAddress_ZIP: 43215 =>\n",
+    "elements": [
+      {
+        "text": "34 North High Street Ste 200",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Columbus",
+        "type": "Address_City"
+      },
+      {
+        "text": "OH",
+        "type": "Address_State"
+      },
+      {
+        "text": "43215",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "Cert"
+  },
+  "1": {
+    "type": "Delivery_Method",
+    "text": "email"
+  },
+  "2": {
+    "type": "Address_State",
+    "text": "OH",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_ZIP",
+    "text": "43215",
+    "visited_as_target": true
+  },
+  "4": {
+    "type": "Company_Name",
+    "text": "Malea Watson t Software",
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_StreetNumber",
+    "text": "6401 Tower Pkwy Nw, Suite 1240",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_City",
+    "text": "Atlanta",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_State",
+    "text": "GA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_ZIP",
+    "text": "30339-3206",
+    "visited_as_target": true
+  },
+  "9": {
+    "type": "Phone_Number",
+    "text": "770.627.5052"
+  },
+  "10": {
+    "type": "Email",
+    "text": "mwats@tOrtho.com"
+  },
+  "11": {
+    "type": "COI_FormType_COI",
+    "text": "insurance certificate"
+  },
+  "12": {
+    "type": "Company_Name",
+    "text": "NCCI Company"
+  },
+  "13": {
+    "type": "Policy_Number",
+    "text": "76 WEG LU 2012"
+  },
+  "14": {
+    "type": "Company_Name",
+    "text": "Coget Design, Inc"
+  },
+  "15": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "Additional Insured"
+  },
+  "16": {
+    "type": "Company_Name",
+    "text": "2017 SAMS",
+    "visited_as_source": true
+  },
+  "17": {
+    "type": "Address_StreetNumber",
+    "text": "34 North High Street Ste 200",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "18": {
+    "type": "Address_City",
+    "text": "Columbus",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "OH",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_ZIP",
+      "text": "43215",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Company_Name",
+      "text": "Malea Watson t Software",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_StreetNumber",
+      "text": "6401 Tower Pkwy Nw, Suite 1240",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_StreetNumber",
+      "text": "6401 Tower Pkwy Nw, Suite 1240",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_City",
+      "text": "Atlanta",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_City",
+      "text": "Atlanta",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_State",
+      "text": "GA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Address_State",
+      "text": "GA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_ZIP",
+      "text": "30339-3206",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "11",
+      "type": "COI_FormType_COI",
+      "text": "insurance certificate"
+    },
+    "target": {
+      "id": "12",
+      "type": "Company_Name",
+      "text": "NCCI Company"
+    }
+  },
+  {
+    "source": {
+      "id": "16",
+      "type": "Company_Name",
+      "text": "2017 SAMS",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "17",
+      "type": "Address_StreetNumber",
+      "text": "34 North High Street Ste 200",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "17",
+      "type": "Address_StreetNumber",
+      "text": "34 North High Street Ste 200",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "18",
+      "type": "Address_City",
+      "text": "Columbus",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "18",
+      "type": "Address_City",
+      "text": "Columbus",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "OH",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Malea Wats [mailto:mwats@tortho.com] 
+Sent: Tuesday, August 08, 2017 12:00 PM
+To: agency.services@thehartford.com
+Subject: RUSH- Cert request via email
+
+Good afternoon,
+
+
+ I hope that this email finds you well!
+
+I am requesting the following insurance certificate:
+NCCI Company # 10448
+Policy # 76 WEG LU 2012
+Housing Code 76
+Name insured: Coget Design, Inc.
+Workmenäó»s comp: workmen's comp to full compliance of federal and state laws covering all of the exhibitor's employees for any work done on the exhibitor's behalf
+Additional Insured: 2017  SAMS
+34 North High Street
+Ste 200
+Columbus, OH 43215
+         Meeting Name:  2017 SAMS
+         Meeting Dates: November 2-5, 2017
+Malea Watson
+t Software
+6401 Tower Pkwy Nw, Suite 1240
+Atlanta, GA  30339-3206
+
+office: +1 770.627.5052
+mwats@tOrtho.com
+
+
+tOrtho | tMate | tEcho
+tortho.com
+ 
+----------------End Source ---------------------------------:: 
+

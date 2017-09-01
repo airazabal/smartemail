@@ -1,0 +1,277 @@
+Email ID: 1612 
+----------------Begin Cleansed ---------------------------------: 
+Subject: **RUSH Request for Today** - Hause GFX - #72SBAAI4587 REQUEST FOR A CERTIFICATE – Please Issue a Certificate for Additional Insured—Manager/Lessor on the above-mentioned policy to: Nico Alo 6008 Maplewood Ave Manhattan Beach, CA 90266 If you would be able to issue this Certificate this afternoon and email it to me so I can forward it to our Insured kaihop@pu.com  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Certificate ",
+    "dataString": "COI_FormType_COI: Certificate =>\n",
+    "elements": [
+      {
+        "text": "Certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "CERTIFICATE ",
+    "dataString": "COI_FormType_COI: CERTIFICATE =>\n",
+    "elements": [
+      {
+        "text": "CERTIFICATE",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate ",
+    "dataString": "COI_FormType_COI: Certificate =>\n",
+    "elements": [
+      {
+        "text": "Certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Hause GFX ",
+    "dataString": "Company_Name: Hause GFX =>\n",
+    "elements": [
+      {
+        "text": "Hause GFX",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Nico Alo 6008 Maplewood Ave Manhattan Beach CA 90266 ",
+    "dataString": "Company_Name: Nico Alo =>\nAddress_StreetNumber: 6008 Maplewood Ave =>\nAddress_City: Manhattan Beach =>\nAddress_State: CA =>\nAddress_ZIP: 90266 =>\n",
+    "elements": [
+      {
+        "text": "Nico Alo",
+        "type": "Company_Name"
+      },
+      {
+        "text": "6008 Maplewood Ave",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Manhattan Beach",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "90266",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "6008 Maplewood Ave Manhattan Beach CA 90266 ",
+    "dataString": "Address_StreetNumber: 6008 Maplewood Ave =>\nAddress_City: Manhattan Beach =>\nAddress_State: CA =>\nAddress_ZIP: 90266 =>\n",
+    "elements": [
+      {
+        "text": "6008 Maplewood Ave",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Manhattan Beach",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "90266",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "Hause GFX"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "#72SBAAI4587"
+  },
+  "2": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate"
+  },
+  "3": {
+    "type": "Delivery_Method",
+    "text": "email"
+  },
+  "4": {
+    "type": "Delivery_Method",
+    "text": "forward"
+  },
+  "5": {
+    "type": "Email",
+    "text": "kaihop@pu.com"
+  },
+  "6": {
+    "type": "COI_FormType_COI",
+    "text": "CERTIFICATE"
+  },
+  "7": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate"
+  },
+  "8": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "Additional Insured"
+  },
+  "9": {
+    "type": "Company_Name",
+    "text": "Nico Alo",
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_StreetNumber",
+    "text": "6008 Maplewood Ave",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "11": {
+    "type": "Address_City",
+    "text": "Manhattan Beach",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "12": {
+    "type": "Address_State",
+    "text": "CA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "13": {
+    "type": "Address_ZIP",
+    "text": "90266",
+    "visited_as_target": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "9",
+      "type": "Company_Name",
+      "text": "Nico Alo",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_StreetNumber",
+      "text": "6008 Maplewood Ave",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_StreetNumber",
+      "text": "6008 Maplewood Ave",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "11",
+      "type": "Address_City",
+      "text": "Manhattan Beach",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "11",
+      "type": "Address_City",
+      "text": "Manhattan Beach",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "12",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "12",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "13",
+      "type": "Address_ZIP",
+      "text": "90266",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Kai hop [mailto:kaihop@pu.com] 
+Sent: Friday, August 18, 2017 5:57 PM
+To: agency.services@thehartford.com
+Subject: **RUSH Request for Today** - Hause GFX - #72SBAAI4587
+
+REQUEST FOR A CERTIFICATE –
+
+Please Issue a Certificate for Additional Insured—Manager/Lessor on the above-mentioned policy to:
+
+
+                Nico Alo
+                6008 Maplewood Ave.
+                Manhattan Beach, CA  90266
+
+
+
+If you would be able to issue this Certificate this afternoon and email it to me so I can forward it to our Insured.
+kaihop@pu.com
+
+
+
+Thanks.
+
+
+Thank you,
+
+Kai hop
+Account Manager
+
+PU Insurance    7500 Hawk Blvd. Ste 100, Lawndale, CA 90260    Ph #310-370-9999 Ext 6018    Fx #310-370-9090    License #0B2457
+ 
+----------------End Source ---------------------------------:: 
+

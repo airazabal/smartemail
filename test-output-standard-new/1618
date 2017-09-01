@@ -1,0 +1,293 @@
+Email ID: 1618 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Dad's Electric 43WBCDW6543 **RUSH** Please send a COI for the insured above to the following: Rooms for Rent 7887 Hwy 66 Geismar, LA 70734 Email: jd@roomsforrent.com Also send a copy to the insured @ dad_electric@yahoo.com If you have any questions or need additional information please contact the insured at dad_electric@yahoo.com, 225-667-1436 or 225-603-6341  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI Rooms for Rent 7887 Hwy 66 Geismar LA 70734 ",
+    "dataString": "COI_FormType_COI: COI =>\nCompany_Name: Rooms for Rent =>\nAddress_StreetNumber: 7887 Hwy 66 =>\nAddress_City: Geismar =>\nAddress_State: LA =>\nAddress_ZIP: 70734 =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Rooms for Rent",
+        "type": "Company_Name"
+      },
+      {
+        "text": "7887 Hwy 66",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Geismar",
+        "type": "Address_City"
+      },
+      {
+        "text": "LA",
+        "type": "Address_State"
+      },
+      {
+        "text": "70734",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Rooms for Rent 7887 Hwy 66 Geismar LA 70734 ",
+    "dataString": "Company_Name: Rooms for Rent =>\nAddress_StreetNumber: 7887 Hwy 66 =>\nAddress_City: Geismar =>\nAddress_State: LA =>\nAddress_ZIP: 70734 =>\n",
+    "elements": [
+      {
+        "text": "Rooms for Rent",
+        "type": "Company_Name"
+      },
+      {
+        "text": "7887 Hwy 66",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Geismar",
+        "type": "Address_City"
+      },
+      {
+        "text": "LA",
+        "type": "Address_State"
+      },
+      {
+        "text": "70734",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "7887 Hwy 66 Geismar LA 70734 ",
+    "dataString": "Address_StreetNumber: 7887 Hwy 66 =>\nAddress_City: Geismar =>\nAddress_State: LA =>\nAddress_ZIP: 70734 =>\n",
+    "elements": [
+      {
+        "text": "7887 Hwy 66",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Geismar",
+        "type": "Address_City"
+      },
+      {
+        "text": "LA",
+        "type": "Address_State"
+      },
+      {
+        "text": "70734",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Delivery_Method",
+    "text": "send"
+  },
+  "1": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "2": {
+    "type": "Email",
+    "text": "dad_electric@yahoo.com"
+  },
+  "3": {
+    "type": "Email",
+    "text": "dad_electric@yahoo.com"
+  },
+  "4": {
+    "type": "Phone_Number",
+    "text": "225-667-1436"
+  },
+  "5": {
+    "type": "Phone_Number",
+    "text": "225-603-6341"
+  },
+  "6": {
+    "type": "Company_Name",
+    "text": "Rooms for Rent",
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_StreetNumber",
+    "text": "7887 Hwy 66",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_City",
+    "text": "Geismar",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_State",
+    "text": "LA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_ZIP",
+    "text": "70734",
+    "visited_as_target": true
+  },
+  "11": {
+    "type": "Delivery_Method",
+    "text": "Email"
+  },
+  "12": {
+    "type": "Email",
+    "text": "jd@roomsforrent.com"
+  },
+  "13": {
+    "type": "Delivery_Method",
+    "text": "send"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "1",
+      "type": "COI_FormType_COI",
+      "text": "COI"
+    },
+    "target": {
+      "id": "6",
+      "type": "Company_Name",
+      "text": "Rooms for Rent",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Company_Name",
+      "text": "Rooms for Rent",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_StreetNumber",
+      "text": "7887 Hwy 66",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Address_StreetNumber",
+      "text": "7887 Hwy 66",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_City",
+      "text": "Geismar",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Address_City",
+      "text": "Geismar",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_State",
+      "text": "LA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Address_State",
+      "text": "LA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_ZIP",
+      "text": "70734",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Dane Bour [mailto:dane_bour@ayjaygee.com] 
+Sent: Wednesday, August 16, 2017 12:26 PM
+To: 'Agency.Service@thehartford.com' <Agency.Service@thehartford.com>; Agency Services <agencyservices@weareflood.com>
+Subject: Dad's Electric 43WBCDW6543 **RUSH**
+Importance: High
+
+Please send a COI for the insured above to the following:
+
+Rooms for Rent
+7887 Hwy 66
+Geismar, LA 70734
+Email: jd@roomsforrent.com
+
+Also send a copy to the insured @ dad_electric@yahoo.com.
+
+If you have any questions or need additional information please contact the insured at dad_electric@yahoo.com, 225-667-1436 or 225-603-6341.
+
+Thank you,
+
+
+Dane Bour
+ane Bour, CISR
+Client Service Manager
+
+
+
+P.O. Box 100 | Plattenville, LA 70393
+P: 985.513.5046 | F: 866.315.5649
+www.ayjaygee.com | Email: dane_bour@ayjaygee.com
+
+
+     **As a Gee Select client, your savings go beyond an insurance policy. We’ve partnered with some of today’s best
+         companies to provide you discounts on goods and services for your life and your business!  www.geeperks.com
+
+     **Certificate request? Send to certrequests@ajg.com. Turnaround time is 24 Hours from receipt of request. If your request is
+         urgent, please indicate as “Rush” to receive within 1 hour
+
+     **We are making it easier to service your policy when it is convenient for you! Sign up for our self-service client site
+
+
+** Coverage is not considered bound or modified unless confirmed in writing by a representative of our office.**
+
+***I would like to emphasize that the discussion set forth above is only an insurance/risk management perspective and is NOT legal advice.  We do not provide legal advice, as we are not qualified to do so.  I highly recommend that you seek the advice of legal counsel in order to become fully apprised of the legal implications related to these issues.***
+ 
+----------------End Source ---------------------------------:: 
+

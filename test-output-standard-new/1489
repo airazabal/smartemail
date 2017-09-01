@@ -1,0 +1,244 @@
+Email ID: 1489 
+----------------Begin Cleansed ---------------------------------: 
+Subject: COI needed - policy 57SBARI1234 - Trolly West Inc 123 Direct Way Benderson, NV 89002 Hello, I’m in need of a current COI for one of our clients I am attaching their requirements below  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Trolly West Inc 123 Direct Way Benderson NV 89002 ",
+    "dataString": "Company_Name: Trolly West Inc =>\nAddress_StreetNumber: 123 Direct Way =>\nAddress_City: Benderson =>\nAddress_State: NV =>\nAddress_ZIP: 89002 =>\n",
+    "elements": [
+      {
+        "text": "Trolly West Inc",
+        "type": "Company_Name"
+      },
+      {
+        "text": "123 Direct Way",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Benderson",
+        "type": "Address_City"
+      },
+      {
+        "text": "NV",
+        "type": "Address_State"
+      },
+      {
+        "text": "89002",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "123 Direct Way Benderson NV 89002 ",
+    "dataString": "Address_StreetNumber: 123 Direct Way =>\nAddress_City: Benderson =>\nAddress_State: NV =>\nAddress_ZIP: 89002 =>\n",
+    "elements": [
+      {
+        "text": "123 Direct Way",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Benderson",
+        "type": "Address_City"
+      },
+      {
+        "text": "NV",
+        "type": "Address_State"
+      },
+      {
+        "text": "89002",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "57SBARI1234"
+  },
+  "2": {
+    "type": "Company_Name",
+    "text": "Trolly West Inc",
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_StreetNumber",
+    "text": "123 Direct Way",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_City",
+    "text": "Benderson",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_State",
+    "text": "NV",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_ZIP",
+    "text": "89002",
+    "visited_as_target": true
+  },
+  "7": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "Company_Name",
+      "text": "Trolly West Inc",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_StreetNumber",
+      "text": "123 Direct Way",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Address_StreetNumber",
+      "text": "123 Direct Way",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_City",
+      "text": "Benderson",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_City",
+      "text": "Benderson",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_State",
+      "text": "NV",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_State",
+      "text": "NV",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_ZIP",
+      "text": "89002",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Que Tee [mailto:QT@Lasers.com] 
+Sent: Monday, August 07, 2017 12:49 PM
+To: agency.services@thehartford.com
+Cc: Lari Marcel
+Subject: COI needed - policy 57SBARI1234 - Trolly West Inc. 123 Direct Way Benderson, NV 89002
+
+Hello,
+
+            I’m in need of a current COI for one of our clients. I am attaching their requirements below.
+
+Thank you,
+
+
+
+Liability insurance minimum limits
+1.    Commercial General Liability – Single Occurrence      $ 1,000,000.00
+2.    Commercial General Liability – Aggregate              $ 2,000,000.00
+3.    Automobile Liability (Combined Single Limit)          $ 1,000,000.00
+4.    Excess Liability (umbrella)                           $ 0
+
+Worker’s Compensation and Employer’s Liability
+1.    E.L. Each Incident                                    $ 1,000,000
+2.    E.L. Disease - Each Employee                          $ 1,000,000
+
+Certificate Holder Information:
+Trolly-west, Inc.
+123 Direct Way
+Benderson, NV 89002
+
+
+
+
+
+
+Que Tee
+Operations Support
+Lasers Corp
+P 818-772-1234 ext 100
+F 818-349-5678
+QT@Lasers.com
+www.lasers.com
+ 
+----------------End Source ---------------------------------:: 
+

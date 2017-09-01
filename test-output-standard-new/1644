@@ -1,0 +1,238 @@
+Email ID: 1644 
+----------------Begin Cleansed ---------------------------------: 
+Subject: FW: COI-76WEGKZ1245 Hello, Would like to request Indsoft workers comp COI for the below company Weather Point Technologies 8458 E 71st suite 250 Tulsa OK 74137  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "workers comp COI Weather Point Technologies 8458 E 71st suite 250 Tulsa OK 74137 ",
+    "dataString": "COI_FormType_COI: workers comp COI =>\nCompany_Name: Weather Point Technologies =>\nAddress_StreetNumber: 8458 E 71st suite 250 =>\nAddress_City: Tulsa =>\nAddress_State: OK =>\nAddress_ZIP: 74137 =>\n",
+    "elements": [
+      {
+        "text": "workers comp COI",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Weather Point Technologies",
+        "type": "Company_Name"
+      },
+      {
+        "text": "8458 E 71st suite 250",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Tulsa",
+        "type": "Address_City"
+      },
+      {
+        "text": "OK",
+        "type": "Address_State"
+      },
+      {
+        "text": "74137",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Weather Point Technologies 8458 E 71st suite 250 Tulsa OK 74137 ",
+    "dataString": "Company_Name: Weather Point Technologies =>\nAddress_StreetNumber: 8458 E 71st suite 250 =>\nAddress_City: Tulsa =>\nAddress_State: OK =>\nAddress_ZIP: 74137 =>\n",
+    "elements": [
+      {
+        "text": "Weather Point Technologies",
+        "type": "Company_Name"
+      },
+      {
+        "text": "8458 E 71st suite 250",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Tulsa",
+        "type": "Address_City"
+      },
+      {
+        "text": "OK",
+        "type": "Address_State"
+      },
+      {
+        "text": "74137",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "8458 E 71st suite 250 Tulsa OK 74137 ",
+    "dataString": "Address_StreetNumber: 8458 E 71st suite 250 =>\nAddress_City: Tulsa =>\nAddress_State: OK =>\nAddress_ZIP: 74137 =>\n",
+    "elements": [
+      {
+        "text": "8458 E 71st suite 250",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Tulsa",
+        "type": "Address_City"
+      },
+      {
+        "text": "OK",
+        "type": "Address_State"
+      },
+      {
+        "text": "74137",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Policy_Number",
+    "text": "COI-76WEGKZ1245"
+  },
+  "1": {
+    "type": "COI_FormType_COI",
+    "text": "workers comp COI"
+  },
+  "2": {
+    "type": "Company_Name",
+    "text": "Weather Point Technologies",
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_StreetNumber",
+    "text": "8458 E 71st suite 250",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_City",
+    "text": "Tulsa",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_State",
+    "text": "OK",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_ZIP",
+    "text": "74137",
+    "visited_as_target": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "1",
+      "type": "COI_FormType_COI",
+      "text": "workers comp COI"
+    },
+    "target": {
+      "id": "2",
+      "type": "Company_Name",
+      "text": "Weather Point Technologies",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "2",
+      "type": "Company_Name",
+      "text": "Weather Point Technologies",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_StreetNumber",
+      "text": "8458 E 71st suite 250",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Address_StreetNumber",
+      "text": "8458 E 71st suite 250",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_City",
+      "text": "Tulsa",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_City",
+      "text": "Tulsa",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_State",
+      "text": "OK",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_State",
+      "text": "OK",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_ZIP",
+      "text": "74137",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Sonny Bellam [mailto:hr@idsoft.com] 
+Sent: Wednesday, August 16, 2017 11:02 AM
+To: agency.service@thehartford.com
+Subject: FW: COI-76WEGKZ1245
+
+Hello,
+Would like to request Indsoft workers comp COI for the below company.
+
+Weather Point Technologies
+8458 E 71st suite 250
+Tulsa OK 74137
+
+
+
+Thanks,
+sonny
+ 
+----------------End Source ---------------------------------:: 
+

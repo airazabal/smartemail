@@ -1,0 +1,330 @@
+Email ID: 1519 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Req Update Certificate Holder and Additional Insured-Hartford-Yr.17-ComPkg Insured: China INVESTMENT DEVELOPMENT BOARD INC Policy#: 72SBABA7337 Period: 08/07/2017 to 08/07/2018 Good afternoon Hartford Representatives, Per insuredäó»s request please update the informations for the certificate of insurance as the following: CERTIFICATE HOLDER AB/NE 90 N Lake Owner, LLC AND SteelWare, LLC 90 N Water Avenue, Suite 920 Pasadena, CA 91101 Attn: Property Manager If you have questions regarding your policy, please feel free to contact us Thank you very much for your attention  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Certificate Holder ",
+    "dataString": "COI_FormType_COI: Certificate Holder =>\n",
+    "elements": [
+      {
+        "text": "Certificate Holder",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate of insurance ",
+    "dataString": "COI_FormType_COI: certificate of insurance =>\n",
+    "elements": [
+      {
+        "text": "certificate of insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "CERTIFICATE HOLDER AB/NE 90 N Lake Owner, LLC AND SteelWare, LLC 90 N Water Avenue, Suite 920 Pasadena CA 91101 ",
+    "dataString": "COI_FormType_COI: CERTIFICATE HOLDER =>\nCompany_Name: AB/NE 90 N Lake Owner, LLC AND SteelWare, LLC =>\nAddress_StreetNumber: 90 N Water Avenue, Suite 920 =>\nAddress_City: Pasadena =>\nAddress_State: CA =>\nAddress_ZIP: 91101 =>\n",
+    "elements": [
+      {
+        "text": "CERTIFICATE HOLDER",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "AB/NE 90 N Lake Owner, LLC AND SteelWare, LLC",
+        "type": "Company_Name"
+      },
+      {
+        "text": "90 N Water Avenue, Suite 920",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Pasadena",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "91101",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Hartford-Yr.17 ",
+    "dataString": "Company_Name: Hartford-Yr.17 =>\n",
+    "elements": [
+      {
+        "text": "Hartford-Yr.17",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "China INVESTMENT DEVELOPMENT BOARD INC ",
+    "dataString": "Company_Name: China INVESTMENT DEVELOPMENT BOARD INC =>\n",
+    "elements": [
+      {
+        "text": "China INVESTMENT DEVELOPMENT BOARD INC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "AB/NE 90 N Lake Owner, LLC AND SteelWare, LLC 90 N Water Avenue, Suite 920 Pasadena CA 91101 ",
+    "dataString": "Company_Name: AB/NE 90 N Lake Owner, LLC AND SteelWare, LLC =>\nAddress_StreetNumber: 90 N Water Avenue, Suite 920 =>\nAddress_City: Pasadena =>\nAddress_State: CA =>\nAddress_ZIP: 91101 =>\n",
+    "elements": [
+      {
+        "text": "AB/NE 90 N Lake Owner, LLC AND SteelWare, LLC",
+        "type": "Company_Name"
+      },
+      {
+        "text": "90 N Water Avenue, Suite 920",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Pasadena",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "91101",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "90 N Water Avenue, Suite 920 Pasadena CA 91101 ",
+    "dataString": "Address_StreetNumber: 90 N Water Avenue, Suite 920 =>\nAddress_City: Pasadena =>\nAddress_State: CA =>\nAddress_ZIP: 91101 =>\n",
+    "elements": [
+      {
+        "text": "90 N Water Avenue, Suite 920",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Pasadena",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "91101",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Holder"
+  },
+  "1": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "Additional Insured"
+  },
+  "2": {
+    "type": "Address_State",
+    "text": "CA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_ZIP",
+    "text": "91101",
+    "visited_as_target": true
+  },
+  "4": {
+    "type": "Company_Name",
+    "text": "Hartford-Yr.17"
+  },
+  "5": {
+    "type": "Company_Name",
+    "text": "China INVESTMENT DEVELOPMENT BOARD INC"
+  },
+  "6": {
+    "type": "Policy_Number",
+    "text": "72SBABA7337"
+  },
+  "7": {
+    "type": "COI_FormType_COI",
+    "text": "certificate of insurance"
+  },
+  "8": {
+    "type": "COI_FormType_COI",
+    "text": "CERTIFICATE HOLDER"
+  },
+  "9": {
+    "type": "Company_Name",
+    "text": "AB/NE 90 N Lake Owner, LLC AND SteelWare, LLC",
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_StreetNumber",
+    "text": "90 N Water Avenue, Suite 920",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "11": {
+    "type": "Address_City",
+    "text": "Pasadena",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_ZIP",
+      "text": "91101",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "COI_FormType_COI",
+      "text": "CERTIFICATE HOLDER"
+    },
+    "target": {
+      "id": "9",
+      "type": "Company_Name",
+      "text": "AB/NE 90 N Lake Owner, LLC AND SteelWare, LLC",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Company_Name",
+      "text": "AB/NE 90 N Lake Owner, LLC AND SteelWare, LLC",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_StreetNumber",
+      "text": "90 N Water Avenue, Suite 920",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_StreetNumber",
+      "text": "90 N Water Avenue, Suite 920",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "11",
+      "type": "Address_City",
+      "text": "Pasadena",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "11",
+      "type": "Address_City",
+      "text": "Pasadena",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Lee Chen [mailto:lchen@kaycal.net] 
+Sent: Monday, August 07, 2017 7:36 PM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Cc: Vale Liu
+Subject: Req Update Certificate Holder and Additional Insured-Hartford-Yr.17-ComPkg
+
+Insured: China INVESTMENT DEVELOPMENT BOARD INC
+Policy#: 72SBABA7337
+Period: 08/07/2017 to 08/07/2018
+
+Good afternoon Hartford Representatives,
+
+Per insuredäó»s request please update the informations for the certificate of insurance as the following:
+
+
+
+CERTIFICATE HOLDER
+AB/NE 90 N Lake Owner, LLC AND
+SteelWare, LLC
+90 N. Water Avenue, Suite 920
+Pasadena, CA 91101
+Attn: Property Manager
+
+
+
+If you have questions regarding your policy, please feel free to contact us. Thank you very much for your attention.
+
+Sincerely
+
+Lee Chen for Echoing
+KayCAL Insurance Agency ¿šš_Ë__È
+556 N. Home Blvd.
+Hacienda Heights, CA 91745-4240
+CA Lic. #0B02018
+Office: +1 626.855.9999 ext. 250
+Direct: +1 626.820.7777
+Fax:    +1 626.855.5555
+Email: lchen@kaycal.net
+http://www.kaycal.net || http://www.healthy.com
+
+
+====================================================================
+This e-mail communication is confidential and is intended only for the individual(s) or entity named
+above and others who have been specifically authorized to receive it. If you are not the intended
+recipient, please do not read, copy, use or disclose the contents of this communication to others
+. Please notify the sender that you have received this e-mail in error by replying to the e-mail.
+Please then delete the e-mail and any copies of it. Thank you.
+====================================================================
+ 
+----------------End Source ---------------------------------:: 
+

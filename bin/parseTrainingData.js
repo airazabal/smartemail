@@ -40,7 +40,7 @@ const getBody = (text) => {
 const transformEmail = (emailtext) => {
   //console.log('transformEmail', emailtext)
   // Sometimes you have to change these...
-  var modified = emailtext.toString().replace(/\r/g, '\r\n')
+  var modified = emailtext.toString().replace(/\r/g, '\n')
   var email = new Envelope( modified)
 //  console.log('email>>>>', email)
   var body = getBody(email['0'])[0]
@@ -49,7 +49,7 @@ const transformEmail = (emailtext) => {
 }
 
 var output = [];
-var parser = parse({delimiter: ',', rowDelimiter:'\r\n'}, function(err, data) {
+var parser = parse({delimiter: ',', rowDelimiter:'\n'}, function(err, data) {
 //  console.log('DATA!',data)
   data.forEach((line) => {
  //   console.log('line>>>>>>', line)

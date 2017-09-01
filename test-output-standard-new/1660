@@ -1,0 +1,352 @@
+Email ID: 1660 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Request for Attachment: Sky SUPPLY & COMPUTER SERVICES INC- 76WEGGC6446 Good morning, Need COI for Southwest Emotional Health Corporation/Learly Health Therapy Services’ Workers compensation insurance for its employees and agents limit of $500,000 Certificate Holder must be listed as: Southwest Emotional Health Corporation, 398 Daisy Dr, Danvers MA 01923  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI Southwest Emotional Health Corporation 398 Daisy Dr Danvers MA 01923 ",
+    "dataString": "COI_FormType_COI: COI =>\nCompany_Name: Southwest Emotional Health Corporation =>\nAddress_StreetNumber: 398 Daisy Dr =>\nAddress_City: Danvers =>\nAddress_State: MA =>\nAddress_ZIP: 01923 =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Southwest Emotional Health Corporation",
+        "type": "Company_Name"
+      },
+      {
+        "text": "398 Daisy Dr",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Danvers",
+        "type": "Address_City"
+      },
+      {
+        "text": "MA",
+        "type": "Address_State"
+      },
+      {
+        "text": "01923",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "compensation insurance ",
+    "dataString": "COI_FormType_COI: compensation insurance =>\n",
+    "elements": [
+      {
+        "text": "compensation insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate Holder Southwest Emotional Health Corporation 398 Daisy Dr Danvers MA 01923 ",
+    "dataString": "COI_FormType_COI: Certificate Holder =>\nCompany_Name: Southwest Emotional Health Corporation =>\nAddress_StreetNumber: 398 Daisy Dr =>\nAddress_City: Danvers =>\nAddress_State: MA =>\nAddress_ZIP: 01923 =>\n",
+    "elements": [
+      {
+        "text": "Certificate Holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Southwest Emotional Health Corporation",
+        "type": "Company_Name"
+      },
+      {
+        "text": "398 Daisy Dr",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Danvers",
+        "type": "Address_City"
+      },
+      {
+        "text": "MA",
+        "type": "Address_State"
+      },
+      {
+        "text": "01923",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Sky SUPPLY & COMPUTER SERVICES INC ",
+    "dataString": "Company_Name: Sky SUPPLY & COMPUTER SERVICES INC =>\n",
+    "elements": [
+      {
+        "text": "Sky SUPPLY & COMPUTER SERVICES INC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Southwest Emotional Health Corporation 398 Daisy Dr Danvers MA 01923 ",
+    "dataString": "Company_Name: Southwest Emotional Health Corporation =>\nAddress_StreetNumber: 398 Daisy Dr =>\nAddress_City: Danvers =>\nAddress_State: MA =>\nAddress_ZIP: 01923 =>\n",
+    "elements": [
+      {
+        "text": "Southwest Emotional Health Corporation",
+        "type": "Company_Name"
+      },
+      {
+        "text": "398 Daisy Dr",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Danvers",
+        "type": "Address_City"
+      },
+      {
+        "text": "MA",
+        "type": "Address_State"
+      },
+      {
+        "text": "01923",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "Learly Health Therapy Services’ Workers ",
+    "dataString": "Company_Name: Learly Health Therapy Services’ Workers =>\n",
+    "elements": [
+      {
+        "text": "Learly Health Therapy Services’ Workers",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Southwest Emotional Health Corporation ",
+    "dataString": "Company_Name: Southwest Emotional Health Corporation =>\n",
+    "elements": [
+      {
+        "text": "Southwest Emotional Health Corporation",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "398 Daisy Dr Danvers MA 01923 ",
+    "dataString": "Address_StreetNumber: 398 Daisy Dr =>\nAddress_City: Danvers =>\nAddress_State: MA =>\nAddress_ZIP: 01923 =>\n",
+    "elements": [
+      {
+        "text": "398 Daisy Dr",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Danvers",
+        "type": "Address_City"
+      },
+      {
+        "text": "MA",
+        "type": "Address_State"
+      },
+      {
+        "text": "01923",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "Sky SUPPLY & COMPUTER SERVICES INC"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "76WEGGC6446"
+  },
+  "2": {
+    "type": "Address_State",
+    "text": "MA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_ZIP",
+    "text": "01923",
+    "visited_as_target": true
+  },
+  "4": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "5": {
+    "type": "Company_Name",
+    "text": "Southwest Emotional Health Corporation",
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Company_Name",
+    "text": "Learly Health Therapy Services’ Workers"
+  },
+  "7": {
+    "type": "COI_FormType_COI",
+    "text": "compensation insurance"
+  },
+  "8": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Holder"
+  },
+  "9": {
+    "type": "Company_Name",
+    "text": "Southwest Emotional Health Corporation"
+  },
+  "10": {
+    "type": "Address_StreetNumber",
+    "text": "398 Daisy Dr",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "11": {
+    "type": "Address_City",
+    "text": "Danvers",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "MA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_ZIP",
+      "text": "01923",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "COI_FormType_COI",
+      "text": "COI"
+    },
+    "target": {
+      "id": "5",
+      "type": "Company_Name",
+      "text": "Southwest Emotional Health Corporation",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Company_Name",
+      "text": "Southwest Emotional Health Corporation",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_StreetNumber",
+      "text": "398 Daisy Dr",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "COI_FormType_COI",
+      "text": "Certificate Holder"
+    },
+    "target": {
+      "id": "5",
+      "type": "Company_Name",
+      "text": "Southwest Emotional Health Corporation",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_StreetNumber",
+      "text": "398 Daisy Dr",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "11",
+      "type": "Address_City",
+      "text": "Danvers",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "11",
+      "type": "Address_City",
+      "text": "Danvers",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "MA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Sara Trent [mailto:sara@skycomputer.com] 
+Sent: Wednesday, August 23, 2017 9:28 AM
+To: Agency.Services@TheHartford.com
+Subject: Request for Attachment: Sky SUPPLY & COMPUTER SERVICES INC- 76WEGGC6446
+
+Good morning,
+
+Need COI for Southwest Emotional Health Corporation/Learly Health Therapy Services’
+
+Workers compensation insurance for its employees and agents limit of $500,000
+Certificate Holder must be listed as: Southwest Emotional Health Corporation, 398 Daisy Dr., Danvers MA 01923
+
+Thanks,
+Sara Trent
+Sky Computer
+""Your I.T. Solutions Provider""
+42 Flower St. Peabody MA 01960
+T (978) 531-5858 / F (978) 531-2929
+http://www.skycomputer.com
+
+NOTICE OF CONFIDENTIALITY
+This E-mail message and its attachments (if any) are from Land Computer. and are intended solely for the use of the addressee.
+In addition, this message and the attachments (if any) may contain information that is confidential, privileged and exempt from
+disclosure under applicable law. If you are not the intended recipient of this message, you are prohibited from reading, disclosing,
+reproducing, distributing, disseminating or otherwise using this transmission. Delivery of this message to any person other than the
+intended recipient is not intended to waive any right or privilege. If you have received this message in error, please promptly notify
+the sender by reply E-mail and immediately delete this message from your system.
+ 
+----------------End Source ---------------------------------:: 
+

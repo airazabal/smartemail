@@ -1,0 +1,672 @@
+Email ID: 1545 
+----------------Begin Cleansed ---------------------------------: 
+Subject: FW: Reminder: Updated Insurance Documentation Required for Black & Dev, LLC - 21WECAK1234 Dear Insurance Professional, Lanty County Public Schools requires that Black & Dev, LLC submits proof of insurance in compliance with the agreed upon contract requirements To streamline this process, Black & Dev, LLC has partnered with ELLIE Risk Management Services to collect and verify insurance documentation This is the second notice that the insurance information provided for Black & Dev, LLC expired on 07/27/2017 Black & Dev, LLC has identified you as the insurance contact for the following coverage line(s): - Workers Compensation/Employers' Liability The following comments were provided: Please provide a copy of the Worker's Compensation Insurance Certificate for Lanty County Public Schools Please submit proof of insurance via the following link: https://LantySchools.itworks.com/h.asp h=ZYAU0F4 The following should be evidenced on the certificate: General Liability -Insurer AM Best Company Rating of A- and VI or better.-The School Board of Lanty County must be named as Additional Insured -All liability policies must be primary of all other valid and collectable coverage maintained by the School Board of Lanty County, Florida (please place the wording on the certificate) -The School Board of Lanty County must be listed as the Certificate Holder -Is the policy Claims-Made or Occurrence must be equal to Occurrence -General Aggregate Limit must be greater than or equal to $1,000,000 -Products - Completed Operations Aggregate Limit must be greater than or equal to $1,000,000 -Each Occurrence Limit must be greater than or equal to $1,000,000 Automobile Liability -Combined Single Limit must be greater than or equal to $1,000,000.-Insurer AM Best Company Rating must be A- and VI or better -Automobile Liability coverage must include Non-Owned, Hired and All Owned vehicles (OR Any Auto) Workers Compensation/Employers' Liability -Statutory Limit as required by applicable law.-Insurer AM Best Company Rating must be A- and VI or better -Employers Liability - Each Accident Limit must be greater than or equal to $100,000 -Employers Liability Disease - Each Employee Limit must be greater than or equal to $100,000 -Employers Liability - Policy Limit must be greater than or equal to $500,000 Professional Errors and Omissions -Financial Size Category must be greater than or equal to VI-Financial Strength Rating must be greater than or equal to A- -Each Occurrence Limit must be greater than or equal to $1,000,000 Certificate Holder: The School Board of Lanty County c/o ELLIE Risk Management Services P.O Box 1234 - ECM #12345 New York, NY 10163-1234 Please Note: To help address multiple email requests from ELLIE asking for insurance updates: • If you have multiple contracts/projects with a blanket certificate that applies to all contracts/projects - you ONLY need to complete the task once; • If you have multiple contracts/projects that require contract/project-specific certificates, please complete the task for each email received If you have any questions, please contact ELLIE Risk Management Services at support@itworks.zzz.com or (646) 762-1234. 
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "proof of insurance ",
+    "dataString": "COI_FormType_COI: proof of insurance =>\n",
+    "elements": [
+      {
+        "text": "proof of insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate -The School Board of Lanty County School Board of Lanty County, Florida ",
+    "dataString": "COI_FormType_COI: certificate =>\nCompany_Name: -The School Board of Lanty County =>\nCompany_Name: School Board of Lanty County, Florida =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "-The School Board of Lanty County",
+        "type": "Company_Name"
+      },
+      {
+        "text": "School Board of Lanty County, Florida",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate Holder The School Board of Lanty County c/o ELLIE Risk Management Services P.O Box 1234 - ECM #12345 New York NY 10163-1234 -The School Board of Lanty County ",
+    "dataString": "COI_FormType_COI: Certificate Holder =>\nCompany_Name: The School Board of Lanty County c/o ELLIE Risk Management Services =>\nAddress_StreetNumber: P.O Box 1234 - ECM #12345 =>\nAddress_City: New York =>\nAddress_State: NY =>\nAddress_ZIP: 10163-1234 =>\nCompany_Name: -The School Board of Lanty County =>\n",
+    "elements": [
+      {
+        "text": "Certificate Holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "The School Board of Lanty County c/o ELLIE Risk Management Services",
+        "type": "Company_Name"
+      },
+      {
+        "text": "P.O Box 1234 - ECM #12345",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "New York",
+        "type": "Address_City"
+      },
+      {
+        "text": "NY",
+        "type": "Address_State"
+      },
+      {
+        "text": "10163-1234",
+        "type": "Address_ZIP"
+      },
+      {
+        "text": "-The School Board of Lanty County",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate Holder ",
+    "dataString": "COI_FormType_COI: Certificate Holder =>\n",
+    "elements": [
+      {
+        "text": "Certificate Holder",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate ",
+    "dataString": "COI_FormType_COI: certificate =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificates ELLIE Risk Management Services ",
+    "dataString": "COI_FormType_COI: certificates =>\nCompany_Name: ELLIE Risk Management Services =>\n",
+    "elements": [
+      {
+        "text": "certificates",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "ELLIE Risk Management Services",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "proof of insurance ",
+    "dataString": "COI_FormType_COI: proof of insurance =>\n",
+    "elements": [
+      {
+        "text": "proof of insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Worker's Compensation Insurance Certificate Lanty County Public Schools ",
+    "dataString": "COI_FormType_COI: Worker's Compensation Insurance Certificate =>\nCompany_Name: Lanty County Public Schools =>\n",
+    "elements": [
+      {
+        "text": "Worker's Compensation Insurance Certificate",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Lanty County Public Schools",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Black & Dev, LLC ",
+    "dataString": "Company_Name: Black & Dev, LLC =>\n",
+    "elements": [
+      {
+        "text": "Black & Dev, LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Lanty County Public Schools ",
+    "dataString": "Company_Name: Lanty County Public Schools =>\n",
+    "elements": [
+      {
+        "text": "Lanty County Public Schools",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "School Board of Lanty County ",
+    "dataString": "Company_Name: School Board of Lanty County =>\n",
+    "elements": [
+      {
+        "text": "School Board of Lanty County",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "School Board of Lanty County, Florida ",
+    "dataString": "Company_Name: School Board of Lanty County, Florida =>\n",
+    "elements": [
+      {
+        "text": "School Board of Lanty County, Florida",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "-The School Board of Lanty County ",
+    "dataString": "Company_Name: -The School Board of Lanty County =>\n",
+    "elements": [
+      {
+        "text": "-The School Board of Lanty County",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "The School Board of Lanty County c/o ELLIE Risk Management Services P.O Box 1234 - ECM #12345 New York NY 10163-1234 ",
+    "dataString": "Company_Name: The School Board of Lanty County c/o ELLIE Risk Management Services =>\nAddress_StreetNumber: P.O Box 1234 - ECM #12345 =>\nAddress_City: New York =>\nAddress_State: NY =>\nAddress_ZIP: 10163-1234 =>\n",
+    "elements": [
+      {
+        "text": "The School Board of Lanty County c/o ELLIE Risk Management Services",
+        "type": "Company_Name"
+      },
+      {
+        "text": "P.O Box 1234 - ECM #12345",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "New York",
+        "type": "Address_City"
+      },
+      {
+        "text": "NY",
+        "type": "Address_State"
+      },
+      {
+        "text": "10163-1234",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "Lanty County Public Schools ",
+    "dataString": "Company_Name: Lanty County Public Schools =>\n",
+    "elements": [
+      {
+        "text": "Lanty County Public Schools",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "ELLIE ",
+    "dataString": "Company_Name: ELLIE =>\n",
+    "elements": [
+      {
+        "text": "ELLIE",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "ELLIE Risk Management Services ",
+    "dataString": "Company_Name: ELLIE Risk Management Services =>\n",
+    "elements": [
+      {
+        "text": "ELLIE Risk Management Services",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Black & Dev, LLC ",
+    "dataString": "Company_Name: Black & Dev, LLC =>\n",
+    "elements": [
+      {
+        "text": "Black & Dev, LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Black & Dev, LLC ",
+    "dataString": "Company_Name: Black & Dev, LLC =>\n",
+    "elements": [
+      {
+        "text": "Black & Dev, LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "ELLIE Risk Management Services ",
+    "dataString": "Company_Name: ELLIE Risk Management Services =>\n",
+    "elements": [
+      {
+        "text": "ELLIE Risk Management Services",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Black & Dev, LLC ",
+    "dataString": "Company_Name: Black & Dev, LLC =>\n",
+    "elements": [
+      {
+        "text": "Black & Dev, LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Black & Dev, LLC ",
+    "dataString": "Company_Name: Black & Dev, LLC =>\n",
+    "elements": [
+      {
+        "text": "Black & Dev, LLC",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "P.O Box 1234 - ECM #12345 New York NY 10163-1234 ",
+    "dataString": "Address_StreetNumber: P.O Box 1234 - ECM #12345 =>\nAddress_City: New York =>\nAddress_State: NY =>\nAddress_ZIP: 10163-1234 =>\n",
+    "elements": [
+      {
+        "text": "P.O Box 1234 - ECM #12345",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "New York",
+        "type": "Address_City"
+      },
+      {
+        "text": "NY",
+        "type": "Address_State"
+      },
+      {
+        "text": "10163-1234",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "Black & Dev, LLC"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "21WECAK1234"
+  },
+  "2": {
+    "type": "Company_Name",
+    "text": "Lanty County Public Schools"
+  },
+  "3": {
+    "type": "COI_FormType_COI",
+    "text": "proof of insurance"
+  },
+  "4": {
+    "type": "Company_Name",
+    "text": "School Board of Lanty County"
+  },
+  "5": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "Additional Insured"
+  },
+  "6": {
+    "type": "Company_Name",
+    "text": "School Board of Lanty County, Florida"
+  },
+  "7": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "8": {
+    "type": "Company_Name",
+    "text": "-The School Board of Lanty County"
+  },
+  "9": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Holder"
+  },
+  "10": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Holder"
+  },
+  "11": {
+    "type": "Company_Name",
+    "text": "The School Board of Lanty County c/o ELLIE Risk Management Services",
+    "visited_as_source": true
+  },
+  "12": {
+    "type": "Company_Name",
+    "text": "Lanty County Public Schools"
+  },
+  "13": {
+    "type": "Address_StreetNumber",
+    "text": "P.O Box 1234 - ECM #12345",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "14": {
+    "type": "Address_City",
+    "text": "New York",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "15": {
+    "type": "Address_State",
+    "text": "NY",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "16": {
+    "type": "Address_ZIP",
+    "text": "10163-1234",
+    "visited_as_target": true
+  },
+  "17": {
+    "type": "Company_Name",
+    "text": "ELLIE"
+  },
+  "18": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "19": {
+    "type": "COI_FormType_COI",
+    "text": "certificates"
+  },
+  "20": {
+    "type": "Company_Name",
+    "text": "ELLIE Risk Management Services"
+  },
+  "21": {
+    "type": "Email",
+    "text": "support@itworks.zzz.com"
+  },
+  "22": {
+    "type": "Phone_Number",
+    "text": "(646) 762-1234"
+  },
+  "23": {
+    "type": "Company_Name",
+    "text": "Black & Dev, LLC"
+  },
+  "24": {
+    "type": "COI_FormType_COI",
+    "text": "proof of insurance"
+  },
+  "25": {
+    "type": "Company_Name",
+    "text": "Black & Dev, LLC"
+  },
+  "26": {
+    "type": "Company_Name",
+    "text": "ELLIE Risk Management Services"
+  },
+  "27": {
+    "type": "Company_Name",
+    "text": "Black & Dev, LLC"
+  },
+  "28": {
+    "type": "Company_Name",
+    "text": "Black & Dev, LLC"
+  },
+  "29": {
+    "type": "COI_FormType_COI",
+    "text": "Worker's Compensation Insurance Certificate"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "7",
+      "type": "COI_FormType_COI",
+      "text": "certificate"
+    },
+    "target": {
+      "id": "6",
+      "type": "Company_Name",
+      "text": "School Board of Lanty County, Florida"
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "COI_FormType_COI",
+      "text": "certificate"
+    },
+    "target": {
+      "id": "8",
+      "type": "Company_Name",
+      "text": "-The School Board of Lanty County"
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "COI_FormType_COI",
+      "text": "Certificate Holder"
+    },
+    "target": {
+      "id": "8",
+      "type": "Company_Name",
+      "text": "-The School Board of Lanty County"
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "COI_FormType_COI",
+      "text": "Certificate Holder"
+    },
+    "target": {
+      "id": "11",
+      "type": "Company_Name",
+      "text": "The School Board of Lanty County c/o ELLIE Risk Management Services",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "11",
+      "type": "Company_Name",
+      "text": "The School Board of Lanty County c/o ELLIE Risk Management Services",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "13",
+      "type": "Address_StreetNumber",
+      "text": "P.O Box 1234 - ECM #12345",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "13",
+      "type": "Address_StreetNumber",
+      "text": "P.O Box 1234 - ECM #12345",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "14",
+      "type": "Address_City",
+      "text": "New York",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "14",
+      "type": "Address_City",
+      "text": "New York",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "15",
+      "type": "Address_State",
+      "text": "NY",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "15",
+      "type": "Address_State",
+      "text": "NY",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "16",
+      "type": "Address_ZIP",
+      "text": "10163-1234",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "19",
+      "type": "COI_FormType_COI",
+      "text": "certificates"
+    },
+    "target": {
+      "id": "20",
+      "type": "Company_Name",
+      "text": "ELLIE Risk Management Services"
+    }
+  },
+  {
+    "source": {
+      "id": "29",
+      "type": "COI_FormType_COI",
+      "text": "Worker's Compensation Insurance Certificate"
+    },
+    "target": {
+      "id": "2",
+      "type": "Company_Name",
+      "text": "Lanty County Public Schools"
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Carla Optical [mailto:caropt@hillie.com] 
+Sent: Tuesday, August 08, 2017 7:58 AM
+To: agency.services@thehartford.com
+Subject: FW: Reminder: Updated Insurance Documentation Required for Black & Dev, LLC. - 21WECAK1234
+
+
+
+From: ER [mailto:notifications@itworks.com]
+Sent: Tuesday, August 08, 2017 4:02 AM
+To: Carla Optical
+Cc: Mandy Smile
+Subject: Reminder: Updated Insurance Documentation Required for Black & Dev, LLC.
+
+Dear Insurance Professional,
+Lanty County Public Schools requires that Black & Dev, LLC. submits proof of insurance in compliance with the agreed upon contract requirements. To streamline this process, Black & Dev, LLC. has partnered with ELLIE Risk Management Services to collect and verify insurance documentation.
+This is the second notice that the insurance information provided for Black & Dev, LLC. expired on 07/27/2017. Black & Dev, LLC. has identified you as the insurance contact for the following coverage line(s):
+- Workers Compensation/Employers' Liability
+The following comments were provided: Please provide a copy of the Worker's Compensation Insurance Certificate for Lanty County Public Schools.
+Please submit proof of insurance via the following link:
+https://LantySchools.itworks.com/h.asp?h=ZYAU0F4
+The following should be evidenced on the certificate:
+General Liability -Insurer AM Best Company Rating of A- and VI or better.-The School Board of Lanty County must be named as Additional Insured.
+-All liability policies must be primary of all other valid and collectable coverage maintained by the School Board of Lanty County, Florida (please place the wording on the certificate).
+-The School Board of Lanty County must be listed as the Certificate Holder.
+-Is the policy Claims-Made or Occurrence? must be equal to Occurrence
+-General Aggregate Limit must be greater than or equal to $1,000,000
+-Products - Completed Operations Aggregate Limit must be greater than or equal to $1,000,000
+-Each Occurrence Limit must be greater than or equal to $1,000,000
+Automobile Liability -Combined Single Limit must be greater than or equal to $1,000,000.-Insurer AM Best Company Rating must be A- and VI or better.
+-Automobile Liability coverage must include Non-Owned, Hired and All Owned vehicles (OR Any Auto).
+Workers Compensation/Employers' Liability -Statutory Limit as required by applicable law.-Insurer AM Best Company Rating must be A- and VI or better.
+-Employers Liability - Each Accident Limit must be greater than or equal to $100,000.
+-Employers Liability Disease - Each Employee Limit must be greater than or equal to $100,000.
+-Employers Liability - Policy Limit must be greater than or equal to $500,000.
+Professional Errors and Omissions -Financial Size Category must be greater than or equal to VI-Financial Strength Rating must be greater than or equal to A-
+-Each Occurrence Limit must be greater than or equal to $1,000,000
+Certificate Holder:
+The School Board of Lanty County
+c/o ELLIE Risk Management Services
+P.O. Box 1234 - ECM #12345
+New York, NY 10163-1234
+Please Note: To help address multiple email requests from ELLIE asking for insurance updates:
+• If you have multiple contracts/projects with a blanket certificate that applies to all contracts/projects - you ONLY need to complete the task once;
+• If you have multiple contracts/projects that require contract/project-specific certificates, please complete the task for each email received.
+If you have any questions, please contact ELLIE Risk Management Services at support@itworks.zzz.com or (646) 762-1234.
+Thank you in advance for your cooperation with this important matter.
+Sincerely,
+ELLIE Risk Management Services
+On behalf of Lanty County Public Schools
+(646) 762-1234
+support@itworks.zzz.com
+
+Organizational Unit : Lanty County Public Schools -> Purchasing
+Agreement Name : 17-123V Occupational and TRIATHALON Therapy Services
+Agreement Number : 17-123V; Exp. 06/30/2019
+
+
+
+
+Carla Optical
+Account Manager
+Hillie Insurance Group
+
+""The Difference is Service""
+
+Business Insurance / Personal Insurance / Employee Benefits / Payroll / Since 1974!
+
+1234 Rouglas Avenue, Monte Springs, FL 12345
+O:407.389.1234  F:407.389-.5678
+Main Office: 407.869.1234 |  www.hillie.com
+Email: caropt@hillie.com
+
+
+
+
+ Please consider the environment before printing this email message.
+
+This communication, including attachments, is for the exclusive use of addressee and may contain proprietary, confidential or privileged information. If you are not the intended recipient, any use, copying, disclosure, dissemination or distribution is strictly prohibited. If you are not the intended recipient, please notify the sender immediately by return email and delete this communication and destroy all copies.
+ 
+----------------End Source ---------------------------------:: 
+

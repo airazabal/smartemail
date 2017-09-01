@@ -1,0 +1,402 @@
+Email ID: 1620 
+----------------Begin Cleansed ---------------------------------: 
+Subject: COI Please 22SBMVU1278 Insurance Certificate with the following coverages (please be certain that insurance certificate shows proof of coverage for time of service provided): 1 General Liability We must be named as the Certificate Holder All New England Doors & Docks Solutions 600 Center ST Southlake TX 76092 David Muire The Speedy Locksmiths - Central Virginia 201 Alta Ave, Suite 100 Richmond, VA 23230 (804) 833-3570 (m) David.Muire@speedylocksmiths.com www.speedylocksmiths.com DCJS 11-18596  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Insurance Certificate ",
+    "dataString": "COI_FormType_COI: Insurance Certificate =>\n",
+    "elements": [
+      {
+        "text": "Insurance Certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "insurance certificate ",
+    "dataString": "COI_FormType_COI: insurance certificate =>\n",
+    "elements": [
+      {
+        "text": "insurance certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "proof of coverage ",
+    "dataString": "COI_FormType_COI: proof of coverage =>\n",
+    "elements": [
+      {
+        "text": "proof of coverage",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate Holder All New England Doors & Docks Solutions 600 Center ST Southlake TX 76092 ",
+    "dataString": "COI_FormType_COI: Certificate Holder =>\nCompany_Name: All New England Doors & Docks Solutions =>\nAddress_StreetNumber: 600 Center ST =>\nAddress_City: Southlake =>\nAddress_State: TX =>\nAddress_ZIP: 76092 =>\n",
+    "elements": [
+      {
+        "text": "Certificate Holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "All New England Doors & Docks Solutions",
+        "type": "Company_Name"
+      },
+      {
+        "text": "600 Center ST",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Southlake",
+        "type": "Address_City"
+      },
+      {
+        "text": "TX",
+        "type": "Address_State"
+      },
+      {
+        "text": "76092",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "All New England Doors & Docks Solutions 600 Center ST Southlake TX 76092 ",
+    "dataString": "Company_Name: All New England Doors & Docks Solutions =>\nAddress_StreetNumber: 600 Center ST =>\nAddress_City: Southlake =>\nAddress_State: TX =>\nAddress_ZIP: 76092 =>\n",
+    "elements": [
+      {
+        "text": "All New England Doors & Docks Solutions",
+        "type": "Company_Name"
+      },
+      {
+        "text": "600 Center ST",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Southlake",
+        "type": "Address_City"
+      },
+      {
+        "text": "TX",
+        "type": "Address_State"
+      },
+      {
+        "text": "76092",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "201 Alta Ave, Suite 100 Richmond VA 23230 ",
+    "dataString": "Address_StreetNumber: 201 Alta Ave, Suite 100 =>\nAddress_City: Richmond =>\nAddress_State: VA =>\nAddress_ZIP: 23230 =>\n",
+    "elements": [
+      {
+        "text": "201 Alta Ave, Suite 100",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Richmond",
+        "type": "Address_City"
+      },
+      {
+        "text": "VA",
+        "type": "Address_State"
+      },
+      {
+        "text": "23230",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "600 Center ST Southlake TX 76092 ",
+    "dataString": "Address_StreetNumber: 600 Center ST =>\nAddress_City: Southlake =>\nAddress_State: TX =>\nAddress_ZIP: 76092 =>\n",
+    "elements": [
+      {
+        "text": "600 Center ST",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Southlake",
+        "type": "Address_City"
+      },
+      {
+        "text": "TX",
+        "type": "Address_State"
+      },
+      {
+        "text": "76092",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "22SBMVU1278"
+  },
+  "2": {
+    "type": "Address_ZIP",
+    "text": "76092",
+    "visited_as_target": true
+  },
+  "3": {
+    "type": "Address_StreetNumber",
+    "text": "201 Alta Ave, Suite 100",
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_City",
+    "text": "Richmond",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_State",
+    "text": "VA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_ZIP",
+    "text": "23230",
+    "visited_as_target": true
+  },
+  "7": {
+    "type": "Phone_Number",
+    "text": "(804) 833-3570"
+  },
+  "8": {
+    "type": "Email",
+    "text": "David.Muire@speedylocksmiths.com www.speedylocksmiths.com"
+  },
+  "9": {
+    "type": "COI_FormType_COI",
+    "text": "Insurance Certificate"
+  },
+  "10": {
+    "type": "COI_FormType_COI",
+    "text": "insurance certificate"
+  },
+  "11": {
+    "type": "COI_FormType_COI",
+    "text": "proof of coverage"
+  },
+  "12": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Holder"
+  },
+  "13": {
+    "type": "Company_Name",
+    "text": "All New England Doors & Docks Solutions",
+    "visited_as_source": true
+  },
+  "14": {
+    "type": "Address_StreetNumber",
+    "text": "600 Center ST",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "15": {
+    "type": "Address_City",
+    "text": "Southlake",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "16": {
+    "type": "Address_State",
+    "text": "TX",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "3",
+      "type": "Address_StreetNumber",
+      "text": "201 Alta Ave, Suite 100",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_City",
+      "text": "Richmond",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_City",
+      "text": "Richmond",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_State",
+      "text": "VA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_State",
+      "text": "VA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_ZIP",
+      "text": "23230",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "12",
+      "type": "COI_FormType_COI",
+      "text": "Certificate Holder"
+    },
+    "target": {
+      "id": "13",
+      "type": "Company_Name",
+      "text": "All New England Doors & Docks Solutions",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "13",
+      "type": "Company_Name",
+      "text": "All New England Doors & Docks Solutions",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "14",
+      "type": "Address_StreetNumber",
+      "text": "600 Center ST",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "14",
+      "type": "Address_StreetNumber",
+      "text": "600 Center ST",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "15",
+      "type": "Address_City",
+      "text": "Southlake",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "15",
+      "type": "Address_City",
+      "text": "Southlake",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "16",
+      "type": "Address_State",
+      "text": "TX",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "16",
+      "type": "Address_State",
+      "text": "TX",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_ZIP",
+      "text": "76092",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: David Muire [mailto:David.Muire@speedylocksmiths.com] 
+Sent: Wednesday, August 16, 2017 7:34 AM
+To: Services, Agency (Comm Lines, San Antonio/SCIC) <Agency.Service@thehartford.com>; agency.services@thehartford.com
+Subject: COI Please 22SBMVU1278
+
+Insurance Certificate with the following coverages (please be certain that insurance certificate shows proof of coverage for time of service provided):
+1. General Liability
+
+
+
+We must be named as the Certificate Holder
+All New England Doors & Docks Solutions
+600 Center ST
+Southlake TX
+76092
+
+
+
+David Muire
+The Speedy Locksmiths - Central Virginia
+201 Alta Ave, Suite 100
+Richmond, VA 23230
+(804) 833-3570 (m)
+David.Muire@speedylocksmiths.com
+www.speedylocksmiths.com
+DCJS 11-18596
+ 
+----------------End Source ---------------------------------:: 
+

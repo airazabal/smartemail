@@ -1,0 +1,237 @@
+Email ID: 1632 
+----------------Begin Cleansed ---------------------------------: 
+Subject: request to add loss payee to insurance Hello Customer Service, We would like to add WF to our loss payee insurance policy 72-SBAUW1992 as we have a mortgage with them They would like to be added as the following: WF Bank, National Association BBS P.O Box 35000 MAC T7422-012 San Antonio, TX 78265 Loan # 0262551000 Would you also be so kind as to forward me a copy of the certificate of insurance with there name on it so that I can forward this information to WF Thank you for your help -- 
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "certificate of insurance ",
+    "dataString": "COI_FormType_COI: certificate of insurance =>\n",
+    "elements": [
+      {
+        "text": "certificate of insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "WF Bank ",
+    "dataString": "Company_Name: WF Bank =>\n",
+    "elements": [
+      {
+        "text": "WF Bank",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "National Association BBS P.O Box 35000 MAC T7422-012 San Antonio TX 78265 ",
+    "dataString": "Company_Name: National Association BBS =>\nAddress_StreetNumber: P.O Box 35000 MAC T7422-012 =>\nAddress_City: San Antonio =>\nAddress_State: TX =>\nAddress_ZIP: 78265 =>\n",
+    "elements": [
+      {
+        "text": "National Association BBS",
+        "type": "Company_Name"
+      },
+      {
+        "text": "P.O Box 35000 MAC T7422-012",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "San Antonio",
+        "type": "Address_City"
+      },
+      {
+        "text": "TX",
+        "type": "Address_State"
+      },
+      {
+        "text": "78265",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "P.O Box 35000 MAC T7422-012 San Antonio TX 78265 ",
+    "dataString": "Address_StreetNumber: P.O Box 35000 MAC T7422-012 =>\nAddress_City: San Antonio =>\nAddress_State: TX =>\nAddress_ZIP: 78265 =>\n",
+    "elements": [
+      {
+        "text": "P.O Box 35000 MAC T7422-012",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "San Antonio",
+        "type": "Address_City"
+      },
+      {
+        "text": "TX",
+        "type": "Address_State"
+      },
+      {
+        "text": "78265",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Policy_Number",
+    "text": "72-SBAUW1992"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "WF Bank"
+  },
+  "2": {
+    "type": "Company_Name",
+    "text": "National Association BBS",
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_StreetNumber",
+    "text": "P.O Box 35000 MAC T7422-012",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_City",
+    "text": "San Antonio",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_State",
+    "text": "TX",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_ZIP",
+    "text": "78265",
+    "visited_as_target": true
+  },
+  "7": {
+    "type": "Delivery_Method",
+    "text": "forward"
+  },
+  "8": {
+    "type": "COI_FormType_COI",
+    "text": "certificate of insurance"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "Company_Name",
+      "text": "National Association BBS",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_StreetNumber",
+      "text": "P.O Box 35000 MAC T7422-012",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Address_StreetNumber",
+      "text": "P.O Box 35000 MAC T7422-012",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_City",
+      "text": "San Antonio",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_City",
+      "text": "San Antonio",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_State",
+      "text": "TX",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_State",
+      "text": "TX",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_ZIP",
+      "text": "78265",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Jess Charn [mailto:jess.chan@macycool.com] 
+Sent: Tuesday, August 15, 2017 6:09 PM
+To: Services, Agency (Comm Lines, San Antonio/SCIC) <Agency.Service@thehartford.com>
+Subject: request to add loss payee to insurance
+
+Hello Customer Service,
+
+We would like to add WF to our loss payee insurance policy 72-SBAUW1992 as we have a mortgage with them. They would like to be added as the following:
+
+WF Bank, National Association
+BBS
+P.O. Box 35000 MAC T7422-012
+San Antonio, TX 78265
+Loan # 0262551000.
+
+Would you also be so kind as to forward me a copy of the certificate of insurance with there name on it so that I can forward this information to WF. Thank you for your help.
+
+
+
+--
+Regards,
+
+Jess Charn
+
+
+Marcy Cool Co., Inc
+28000 Middle Ave,
+Chino, CA 91710
+T: 818.242.8008
+F:818.247.0099
+ 
+----------------End Source ---------------------------------:: 
+

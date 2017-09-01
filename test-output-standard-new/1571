@@ -1,0 +1,168 @@
+Email ID: 1571 
+----------------Begin Cleansed ---------------------------------: 
+Subject: FW: Endorsements Needed for Days Software Inc Good day; Date: Thu, Aug 3, 2017 at 10:25 AM Hi Anita, Can you please add a worker’s compensation alternate employer endorsement on behalf of BH to your COI This is a requirement in section 12 of the contractor agreement Good Morning; I am not sure what you are looking for, BH is listed on the certificate I be happy to help if you like to explain or contact me with your request, Thank you  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate ",
+    "dataString": "COI_FormType_COI: certificate =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Days Software Inc ",
+    "dataString": "Company_Name: Days Software Inc =>\n",
+    "elements": [
+      {
+        "text": "Days Software Inc",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "Days Software Inc"
+  },
+  "1": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "2": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  }
+}
+
+Relations Found found 
+[] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Essex, Sam [mailto:sessex@paychix.com] 
+Sent: Monday, August 07, 2017 5:31 PM
+To: Agency.Services@thehartford.com
+Subject: FW: Endorsements Needed for Days Software Inc
+
+Hello,
+Please assist Anita.  Contact is anita.days@gmail.com
+Policy # 76WEGZH1452
+Cert Holder:  Beacon Hill, 15 Bow Street Boston MA 02108
+Please advise the client if they have or need to apply for the endorsement.  Thank you!
+
+Sam Essex
+P&C Specialist II
+Paychix Insurance Agency
+300 grass Drive Rochester NY 14620
+Phone: 877-266-0880 Ext. 84500
+Fax: 585-389-8008
+
+From: Anita pachom [mailto:anita.days@gmail.com]
+Sent: Thursday, August 03, 2017 11:33 AM
+To: certs <certs@paychix.com>
+Subject: Fwd: Endorsements Needed for Days Software Inc
+
+Good day;
+
+Thank you for sending the cert for BH.  They are asking for the below to be added, please send me a new cert with below added.  Thank you
+
+
+Best Regards,
+Anita Pachom
+Phone: 609-957-1209
+
+---------- Forwarded message ----------
+From: vendors <vendors@bhstaffing.com>
+Date: Thu, Aug 3, 2017 at 10:25 AM
+Subject: RE: Endorsements Needed for Days Software Inc
+To: Anita pachom <anita.days@gmail.com>, vendors <vendors@bhstaffing.com>
+Hi Anita,
+
+Can you please add a worker’s compensation alternate employer endorsement on behalf of BH to your COI? This is a requirement in section 12 of the contractor agreement.
+
+Thanks,
+_______________________________________________
+BH Staffing Group
+Vendor Support Department
+vendors@bhstaffing.com
+300 Bow Street Boston MA 02108 | www.bhstaffing.com
+
+From: Anita pachom [mailto:anita.days@gmail.com]
+Sent: Thursday, August 03, 2017 7:20 AM
+To: vendors
+Subject: Re: Endorsements Needed for Days Software Inc
+
+Good Morning;
+
+I am not sure what you are looking for, BH is listed on the certificate.  I be happy to help if you like to explain or contact me with your request, Thank you
+
+
+Best Regards,
+Anita Pachom
+Phone: 609-957-1209
+
+On Thu, Aug 3, 2017 at 12:04 AM, <Vendors@bhstaffing.com> wrote:
+
+
+
+
+  Endorsements Needed
+
+
+  Hi Anita Pachom,
+  Your insured, Days Software Inc , has been asked to provide copies of their policy endorsements.
+To view the list of required endorsements and upload the requested documents, please click the button below.
+
+
+Go to Portal
+
+
+
+  Thank you for your assistance,
+BH Staffing Group, LLC | www.bhstaffing.com
+(617) 326-8015
+Vendors@BHStaffing.com
+
+
+
+
+Terms of Use
+| Privacy Policy
+
+
+
+
+
+The information contained in this message may be privileged, confidential and protected from disclosure. If the reader of this message is not the intended recipient, or an employee or agent responsible for delivering this message to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited. If you have received this communication in error, please notify your representative immediately and delete this message from your computer. Thank you.
+ 
+----------------End Source ---------------------------------:: 
+

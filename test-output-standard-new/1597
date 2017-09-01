@@ -1,0 +1,389 @@
+Email ID: 1597 
+----------------Begin Cleansed ---------------------------------: 
+Subject: URGENT COI for TryBerries Photography - 59SBWVO1234 - BYLCE-7 Service Team, Please issue a certificate of insurance for TryBerries Photography with the following details: Certificate Holder HeartMelted Ranch Lin Wigs 1234 Footstop Road Carpricorn, CA 12345 Coverage Type: General Liability Special Requirements: Evidence of Insurance Only Frequency: One Time Only Special Instructions Description of Operations: Those usual to the Insured's Operations Send by email to: berryt@hgf.com Send by email to: ChoiceMan@trildusher.com Send by mail to holder: heartmelted@sephora.com If you have any questions regarding this request please contact the insured directly at berryt@hgf.com 
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Evidence of Insurance ",
+    "dataString": "COI_FormType_COI: Evidence of Insurance =>\n",
+    "elements": [
+      {
+        "text": "Evidence of Insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "holder ",
+    "dataString": "COI_FormType_COI: holder =>\n",
+    "elements": [
+      {
+        "text": "holder",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate of insurance TryBerries Photography ",
+    "dataString": "COI_FormType_COI: certificate of insurance =>\nCompany_Name: TryBerries Photography =>\n",
+    "elements": [
+      {
+        "text": "certificate of insurance",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "TryBerries Photography",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate Holder HeartMelted Ranch Lin Wigs 1234 Footstop Road Carpricorn CA 12345 ",
+    "dataString": "COI_FormType_COI: Certificate Holder =>\nCompany_Name: HeartMelted Ranch Lin Wigs =>\nAddress_StreetNumber: 1234 Footstop Road =>\nAddress_City: Carpricorn =>\nAddress_State: CA =>\nAddress_ZIP: 12345 =>\n",
+    "elements": [
+      {
+        "text": "Certificate Holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "HeartMelted Ranch Lin Wigs",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1234 Footstop Road",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Carpricorn",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "12345",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "TryBerries Photography ",
+    "dataString": "Company_Name: TryBerries Photography =>\n",
+    "elements": [
+      {
+        "text": "TryBerries Photography",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "BYLCE-7 Service Team ",
+    "dataString": "Company_Name: BYLCE-7 Service Team =>\n",
+    "elements": [
+      {
+        "text": "BYLCE-7 Service Team",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "TryBerries Photography ",
+    "dataString": "Company_Name: TryBerries Photography =>\n",
+    "elements": [
+      {
+        "text": "TryBerries Photography",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "HeartMelted Ranch Lin Wigs 1234 Footstop Road Carpricorn CA 12345 ",
+    "dataString": "Company_Name: HeartMelted Ranch Lin Wigs =>\nAddress_StreetNumber: 1234 Footstop Road =>\nAddress_City: Carpricorn =>\nAddress_State: CA =>\nAddress_ZIP: 12345 =>\n",
+    "elements": [
+      {
+        "text": "HeartMelted Ranch Lin Wigs",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1234 Footstop Road",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Carpricorn",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "12345",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "1234 Footstop Road Carpricorn CA 12345 ",
+    "dataString": "Address_StreetNumber: 1234 Footstop Road =>\nAddress_City: Carpricorn =>\nAddress_State: CA =>\nAddress_ZIP: 12345 =>\n",
+    "elements": [
+      {
+        "text": "1234 Footstop Road",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Carpricorn",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "12345",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "TryBerries Photography"
+  },
+  "2": {
+    "type": "Address_State",
+    "text": "CA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_ZIP",
+    "text": "12345",
+    "visited_as_target": true
+  },
+  "4": {
+    "type": "COI_FormType_COI",
+    "text": "Evidence of Insurance"
+  },
+  "5": {
+    "type": "Delivery_Method",
+    "text": "email"
+  },
+  "6": {
+    "type": "Email",
+    "text": "berryt@hgf.com"
+  },
+  "7": {
+    "type": "Delivery_Method",
+    "text": "email"
+  },
+  "8": {
+    "type": "Email",
+    "text": "ChoiceMan@trildusher.com"
+  },
+  "9": {
+    "type": "COI_FormType_COI",
+    "text": "holder"
+  },
+  "10": {
+    "type": "Email",
+    "text": "heartmelted@sephora.com"
+  },
+  "11": {
+    "type": "Email",
+    "text": "berryt@hgf.com"
+  },
+  "12": {
+    "type": "Policy_Number",
+    "text": "59SBWVO1234"
+  },
+  "13": {
+    "type": "Company_Name",
+    "text": "BYLCE-7 Service Team"
+  },
+  "14": {
+    "type": "COI_FormType_COI",
+    "text": "certificate of insurance"
+  },
+  "15": {
+    "type": "Company_Name",
+    "text": "TryBerries Photography"
+  },
+  "16": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Holder"
+  },
+  "17": {
+    "type": "Company_Name",
+    "text": "HeartMelted Ranch Lin Wigs",
+    "visited_as_source": true
+  },
+  "18": {
+    "type": "Address_StreetNumber",
+    "text": "1234 Footstop Road",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "19": {
+    "type": "Address_City",
+    "text": "Carpricorn",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_ZIP",
+      "text": "12345",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "14",
+      "type": "COI_FormType_COI",
+      "text": "certificate of insurance"
+    },
+    "target": {
+      "id": "1",
+      "type": "Company_Name",
+      "text": "TryBerries Photography"
+    }
+  },
+  {
+    "source": {
+      "id": "16",
+      "type": "COI_FormType_COI",
+      "text": "Certificate Holder"
+    },
+    "target": {
+      "id": "17",
+      "type": "Company_Name",
+      "text": "HeartMelted Ranch Lin Wigs",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "17",
+      "type": "Company_Name",
+      "text": "HeartMelted Ranch Lin Wigs",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "18",
+      "type": "Address_StreetNumber",
+      "text": "1234 Footstop Road",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "18",
+      "type": "Address_StreetNumber",
+      "text": "1234 Footstop Road",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "19",
+      "type": "Address_City",
+      "text": "Carpricorn",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "19",
+      "type": "Address_City",
+      "text": "Carpricorn",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: ChoiceMan by Tril & Dusher [mailto:ChoiceMan@trildusher.com] 
+Sent: Friday, August 18, 2017 11:06 AM
+To: Tril and Dusher Photography Certificates (Commercial Market Operations) <TrilandDusherPhotographyCertificates@thehartford.com>
+Subject: URGENT COI for TryBerries Photography - 59SBWVO1234 - BYLCE-7
+
+Service Team,
+Please issue a certificate of insurance for TryBerries Photography with the following details:
+Certificate Holder
+HeartMelted Ranch
+Lin Wigs
+1234 Footstop Road
+Carpricorn, CA 12345
+
+Coverage Type: General Liability
+Special Requirements: Evidence of Insurance Only
+Frequency: One Time Only
+Special Instructions
+Description of Operations:
+Those usual to the Insured's Operations.
+Send by email to: berryt@hgf.com
+Send by email to: ChoiceMan@trildusher.com
+Send by mail to holder: heartmelted@sephora.com
+If you have any questions regarding this request please contact the insured directly at berryt@hgf.com
+Thank you.
+---
+Package Choice Team
+ChoiceMan@trildusher.com
+Phone: 866-977-1234
+Fax: 602-956-5678
+ 
+----------------End Source ---------------------------------:: 
+

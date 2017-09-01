@@ -1,0 +1,337 @@
+Email ID: 1536 
+----------------Begin Cleansed ---------------------------------: 
+Subject: COI for Meriden Communications Group, Inc Meriden Communications Group, Inc PetLife Policy number 47SBWBZ1234 Billing Account number 43375678 Please provide a certificate of insurance for General/Automobile/Umbrella Liability with Cotton Inc as a Certificate Holder and additional insured CottonCandy, Inc 1234 Kanye Parkway Berry, NC 27513  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate of insurance Cotton Inc ",
+    "dataString": "COI_FormType_COI: certificate of insurance =>\nCompany_Name: Cotton Inc =>\n",
+    "elements": [
+      {
+        "text": "certificate of insurance",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Cotton Inc",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate Holder CottonCandy, Inc 1234 Kanye Parkway Berry NC 27513 ",
+    "dataString": "COI_FormType_COI: Certificate Holder =>\nCompany_Name: CottonCandy, Inc =>\nAddress_StreetNumber: 1234 Kanye Parkway =>\nAddress_City: Berry =>\nAddress_State: NC =>\nAddress_ZIP: 27513 =>\n",
+    "elements": [
+      {
+        "text": "Certificate Holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "CottonCandy, Inc",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1234 Kanye Parkway",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Berry",
+        "type": "Address_City"
+      },
+      {
+        "text": "NC",
+        "type": "Address_State"
+      },
+      {
+        "text": "27513",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Meriden Communications Group, Inc ",
+    "dataString": "Company_Name: Meriden Communications Group, Inc =>\n",
+    "elements": [
+      {
+        "text": "Meriden Communications Group, Inc",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Meriden Communications Group, Inc ",
+    "dataString": "Company_Name: Meriden Communications Group, Inc =>\n",
+    "elements": [
+      {
+        "text": "Meriden Communications Group, Inc",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Cotton Inc ",
+    "dataString": "Company_Name: Cotton Inc =>\n",
+    "elements": [
+      {
+        "text": "Cotton Inc",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "CottonCandy, Inc 1234 Kanye Parkway Berry NC 27513 ",
+    "dataString": "Company_Name: CottonCandy, Inc =>\nAddress_StreetNumber: 1234 Kanye Parkway =>\nAddress_City: Berry =>\nAddress_State: NC =>\nAddress_ZIP: 27513 =>\n",
+    "elements": [
+      {
+        "text": "CottonCandy, Inc",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1234 Kanye Parkway",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Berry",
+        "type": "Address_City"
+      },
+      {
+        "text": "NC",
+        "type": "Address_State"
+      },
+      {
+        "text": "27513",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "1234 Kanye Parkway Berry NC 27513 ",
+    "dataString": "Address_StreetNumber: 1234 Kanye Parkway =>\nAddress_City: Berry =>\nAddress_State: NC =>\nAddress_ZIP: 27513 =>\n",
+    "elements": [
+      {
+        "text": "1234 Kanye Parkway",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Berry",
+        "type": "Address_City"
+      },
+      {
+        "text": "NC",
+        "type": "Address_State"
+      },
+      {
+        "text": "27513",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "Meriden Communications Group, Inc"
+  },
+  "2": {
+    "type": "Address_City",
+    "text": "Berry",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_State",
+    "text": "NC",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_ZIP",
+    "text": "27513",
+    "visited_as_target": true
+  },
+  "5": {
+    "type": "Company_Name",
+    "text": "Meriden Communications Group, Inc"
+  },
+  "6": {
+    "type": "Policy_Number",
+    "text": "47SBWBZ1234"
+  },
+  "7": {
+    "type": "COI_FormType_COI",
+    "text": "certificate of insurance"
+  },
+  "8": {
+    "type": "Company_Name",
+    "text": "Cotton Inc"
+  },
+  "9": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Holder"
+  },
+  "10": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "additional insured"
+  },
+  "11": {
+    "type": "Company_Name",
+    "text": "CottonCandy, Inc",
+    "visited_as_source": true
+  },
+  "12": {
+    "type": "Address_StreetNumber",
+    "text": "1234 Kanye Parkway",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_City",
+      "text": "Berry",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_State",
+      "text": "NC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Address_State",
+      "text": "NC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_ZIP",
+      "text": "27513",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "COI_FormType_COI",
+      "text": "certificate of insurance"
+    },
+    "target": {
+      "id": "8",
+      "type": "Company_Name",
+      "text": "Cotton Inc"
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "COI_FormType_COI",
+      "text": "Certificate Holder"
+    },
+    "target": {
+      "id": "11",
+      "type": "Company_Name",
+      "text": "CottonCandy, Inc",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "11",
+      "type": "Company_Name",
+      "text": "CottonCandy, Inc",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "12",
+      "type": "Address_StreetNumber",
+      "text": "1234 Kanye Parkway",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "12",
+      "type": "Address_StreetNumber",
+      "text": "1234 Kanye Parkway",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_City",
+      "text": "Berry",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: GM [mailto:GM@Meriden.com] 
+Sent: Thursday, August 10, 2017 3:07 PM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Subject: COI for Meriden Communications Group, Inc.
+
+Meriden Communications Group, Inc.
+PetLife Policy number 47SBWBZ1234
+Billing Account number 43375678
+
+Please provide a certificate of insurance for General/Automobile/Umbrella Liability with Cotton Inc. as a Certificate Holder and additional insured.
+
+CottonCandy, Inc.
+1234 Kanye Parkway
+Berry, NC  27513
+
+Thanks for your help and have a great day!
+G
+
+GM | Accounting Assistant
+Meriden Group | Gain a sustainable advantage
+Direct: 865.934.1234
+Office: 865.524.5678
+Meridengrp.com | Twitter | Google+ | LinkedIn
+
+Should you talk about climate change to get Americans to save energy? Download our latest report here.
+ 
+----------------End Source ---------------------------------:: 
+

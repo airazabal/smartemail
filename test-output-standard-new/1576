@@ -1,0 +1,377 @@
+Email ID: 1576 
+----------------Begin Cleansed ---------------------------------: 
+Subject: 12WECZY1234 - Forever Couching Co Inc - Insurance Cert LTI corp K, Could you please also send an insurance cert with Certficate Holder as LTI Corporation 7898 Athys Street, Bronx, CA 10462 Description of Operations is West 23rd Street Playground & Central Park West 59th Street Playground  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Insurance Cert LTI corp ",
+    "dataString": "COI_FormType_COI: Insurance Cert =>\nCompany_Name: LTI corp =>\n",
+    "elements": [
+      {
+        "text": "Insurance Cert",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "LTI corp",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "insurance cert LTI Corporation 7898 Athys Street Bronx CA 10462 ",
+    "dataString": "COI_FormType_COI: insurance cert =>\nCompany_Name: LTI Corporation =>\nAddress_StreetNumber: 7898 Athys Street =>\nAddress_City: Bronx =>\nAddress_State: CA =>\nAddress_ZIP: 10462 =>\n",
+    "elements": [
+      {
+        "text": "insurance cert",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "LTI Corporation",
+        "type": "Company_Name"
+      },
+      {
+        "text": "7898 Athys Street",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Bronx",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "10462",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certficate Holder LTI Corporation 7898 Athys Street Bronx CA 10462 ",
+    "dataString": "COI_FormType_COI: Certficate Holder =>\nCompany_Name: LTI Corporation =>\nAddress_StreetNumber: 7898 Athys Street =>\nAddress_City: Bronx =>\nAddress_State: CA =>\nAddress_ZIP: 10462 =>\n",
+    "elements": [
+      {
+        "text": "Certficate Holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "LTI Corporation",
+        "type": "Company_Name"
+      },
+      {
+        "text": "7898 Athys Street",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Bronx",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "10462",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Forever Couching Co Inc ",
+    "dataString": "Company_Name: Forever Couching Co Inc =>\n",
+    "elements": [
+      {
+        "text": "Forever Couching Co Inc",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "LTI corp ",
+    "dataString": "Company_Name: LTI corp =>\n",
+    "elements": [
+      {
+        "text": "LTI corp",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "LTI Corporation 7898 Athys Street Bronx CA 10462 ",
+    "dataString": "Company_Name: LTI Corporation =>\nAddress_StreetNumber: 7898 Athys Street =>\nAddress_City: Bronx =>\nAddress_State: CA =>\nAddress_ZIP: 10462 =>\n",
+    "elements": [
+      {
+        "text": "LTI Corporation",
+        "type": "Company_Name"
+      },
+      {
+        "text": "7898 Athys Street",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Bronx",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "10462",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "7898 Athys Street Bronx CA 10462 ",
+    "dataString": "Address_StreetNumber: 7898 Athys Street =>\nAddress_City: Bronx =>\nAddress_State: CA =>\nAddress_ZIP: 10462 =>\n",
+    "elements": [
+      {
+        "text": "7898 Athys Street",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Bronx",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "10462",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Policy_Number",
+    "text": "12WECZY1234"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "Forever Couching Co Inc"
+  },
+  "2": {
+    "type": "Address_ZIP",
+    "text": "10462",
+    "visited_as_target": true
+  },
+  "3": {
+    "type": "COI_Wording_All_Other",
+    "text": "Description of Operations"
+  },
+  "4": {
+    "type": "COI_FormType_COI",
+    "text": "Insurance Cert"
+  },
+  "5": {
+    "type": "Company_Name",
+    "text": "LTI corp"
+  },
+  "6": {
+    "type": "COI_FormType_COI",
+    "text": "insurance cert"
+  },
+  "7": {
+    "type": "COI_FormType_COI",
+    "text": "Certficate Holder"
+  },
+  "8": {
+    "type": "Company_Name",
+    "text": "LTI Corporation",
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_StreetNumber",
+    "text": "7898 Athys Street",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_City",
+    "text": "Bronx",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "11": {
+    "type": "Address_State",
+    "text": "CA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "4",
+      "type": "COI_FormType_COI",
+      "text": "Insurance Cert"
+    },
+    "target": {
+      "id": "5",
+      "type": "Company_Name",
+      "text": "LTI corp"
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "COI_FormType_COI",
+      "text": "insurance cert"
+    },
+    "target": {
+      "id": "8",
+      "type": "Company_Name",
+      "text": "LTI Corporation",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "COI_FormType_COI",
+      "text": "Certficate Holder"
+    },
+    "target": {
+      "id": "8",
+      "type": "Company_Name",
+      "text": "LTI Corporation",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Company_Name",
+      "text": "LTI Corporation",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_StreetNumber",
+      "text": "7898 Athys Street",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Address_StreetNumber",
+      "text": "7898 Athys Street",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_City",
+      "text": "Bronx",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_City",
+      "text": "Bronx",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "11",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "11",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_ZIP",
+      "text": "10462",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: KS [mailto:ks@rampstars.com] 
+Sent: Thursday, August 10, 2017 3:48 PM
+To: LS Select, Endorsement (Comm Lines, New Hartford/SCIC); Services, Agency (Comm Lines, San Antonio/SCIC)
+Cc: moe@ecouching.com; Tom Lartz; Gal Bulset
+Subject: 12WECZY1234 - Forever Couching Co. Inc. - Insurance Cert LTI corp
+
+Good afternoon,
+
+Can you please email the cert directly to the client and cc me? Please see below and advise. Thank you!
+
+
+________________________________________________________________________________
+
+KS  | Administrative Assistant
+1234 Mars Ave, Suite C898 | Lake Muress, NY 11049
+T. (516) 390-1234 | F. (516) 390-5678
+Dampart Brokerage Corp.
+website | map | email
+Like us on Facebook DAMPART
+Connect With Us
+
+
+
+
+From: moe@ecouching.com [mailto:moe@ecouching.com]
+Sent: Thursday, August 10, 2017 3:33 PM
+To: KS
+Subject: Insurance Cert LTI corp
+
+K,
+
+Could you please also send an insurance cert with Certficate Holder as LTI Corporation 7898 Athys Street, Bronx, CA 10462. Description of Operations is West 23rd Street Playground & Central Park West 59th Street Playground.
+
+Thank you,
+
+Joel Gant
+President,
+Forever Couching Inc.
+Direct 516. 848. 1234
+Email moe@ecouching.com
+
+Please note that additions or changes to coverage, or a first report of a claim, cannot be made via email. You must speak directly with an Account Executive or Claims Department representative.
+DISCLAIMER:
+For your consideration we have made our review and comments in our capacity only as insurance brokers and for the sole purpose of coordinating insurance coverage on your behalf. However, we are not attorneys and any suggested changes in wording should be reviewed and approved by your legal counsel for sufficiency, appropriateness and intent prior to incorporation into any contract or agreement. Moreover, any suggested response to a third party or the implementation of a policy or procedure should similarly be reviewed and approved by your legal counsel for sufficiency, appropriateness and intent prior to release.
+CONFIDENTIALITY NOTICE:
+The information contained in this e-mail communication, together with any attachments or links, is intended for the use of, and to be reviewed by, only the individual or entity named above and contains information that is confidential and/or legally protected. If the reader of this e-mail communication is not the intended recipient or a representative, employee or agent of the intended recipient, you are hereby notified that any review, disclosure, dissemination, distribution, copying or use of this communication or the information contained herein, including in any attachment or link, is prohibited. If you have received this e-mail communication in error, please notify the sender immediately by return e-mail message and delete it, together with any attachments, from your computer system. THANK YOU.
+ 
+----------------End Source ---------------------------------:: 
+

@@ -1,0 +1,314 @@
+Email ID: 1542 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Policy # 41SBARZ1964 Good morning, hope this email finds you well I am writing you to request an updated certificate and if you could please list ""ONE HAVEN LLC c/o Copper Management"" as a certificate holder too since Bank of America is the primary holder If you could mail it to Pat Senesca I will appreciate it Pat Senesca Copper Management 3233 Bright Circle Drive-Suite 2000 Minnetonka, MN 55343  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "certificate ",
+    "dataString": "COI_FormType_COI: certificate =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate holder Bank of America ",
+    "dataString": "COI_FormType_COI: certificate holder =>\nCompany_Name: Bank of America =>\n",
+    "elements": [
+      {
+        "text": "certificate holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Bank of America",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "holder Copper Management 3233 Bright Circle Drive-Suite 2000 Minnetonka MN 55343 ",
+    "dataString": "COI_FormType_COI: holder =>\nCompany_Name: Copper Management =>\nAddress_StreetNumber: 3233 Bright Circle Drive-Suite 2000 =>\nAddress_City: Minnetonka =>\nAddress_State: MN =>\nAddress_ZIP: 55343 =>\n",
+    "elements": [
+      {
+        "text": "holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Copper Management",
+        "type": "Company_Name"
+      },
+      {
+        "text": "3233 Bright Circle Drive-Suite 2000",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Minnetonka",
+        "type": "Address_City"
+      },
+      {
+        "text": "MN",
+        "type": "Address_State"
+      },
+      {
+        "text": "55343",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "ONE HAVEN LLC c/o Copper Management ",
+    "dataString": "Company_Name: ONE HAVEN LLC c/o Copper Management =>\n",
+    "elements": [
+      {
+        "text": "ONE HAVEN LLC c/o Copper Management",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Bank of America ",
+    "dataString": "Company_Name: Bank of America =>\n",
+    "elements": [
+      {
+        "text": "Bank of America",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Copper Management 3233 Bright Circle Drive-Suite 2000 Minnetonka MN 55343 ",
+    "dataString": "Company_Name: Copper Management =>\nAddress_StreetNumber: 3233 Bright Circle Drive-Suite 2000 =>\nAddress_City: Minnetonka =>\nAddress_State: MN =>\nAddress_ZIP: 55343 =>\n",
+    "elements": [
+      {
+        "text": "Copper Management",
+        "type": "Company_Name"
+      },
+      {
+        "text": "3233 Bright Circle Drive-Suite 2000",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Minnetonka",
+        "type": "Address_City"
+      },
+      {
+        "text": "MN",
+        "type": "Address_State"
+      },
+      {
+        "text": "55343",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "3233 Bright Circle Drive-Suite 2000 Minnetonka MN 55343 ",
+    "dataString": "Address_StreetNumber: 3233 Bright Circle Drive-Suite 2000 =>\nAddress_City: Minnetonka =>\nAddress_State: MN =>\nAddress_ZIP: 55343 =>\n",
+    "elements": [
+      {
+        "text": "3233 Bright Circle Drive-Suite 2000",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Minnetonka",
+        "type": "Address_City"
+      },
+      {
+        "text": "MN",
+        "type": "Address_State"
+      },
+      {
+        "text": "55343",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Policy_Number",
+    "text": "41SBARZ1964"
+  },
+  "1": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "2": {
+    "type": "Address_ZIP",
+    "text": "55343",
+    "visited_as_target": true
+  },
+  "3": {
+    "type": "Company_Name",
+    "text": "ONE HAVEN LLC c/o Copper Management"
+  },
+  "4": {
+    "type": "COI_FormType_COI",
+    "text": "certificate holder"
+  },
+  "5": {
+    "type": "Company_Name",
+    "text": "Bank of America"
+  },
+  "6": {
+    "type": "COI_FormType_COI",
+    "text": "holder"
+  },
+  "7": {
+    "type": "Company_Name",
+    "text": "Copper Management",
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_StreetNumber",
+    "text": "3233 Bright Circle Drive-Suite 2000",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_City",
+    "text": "Minnetonka",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_State",
+    "text": "MN",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "4",
+      "type": "COI_FormType_COI",
+      "text": "certificate holder"
+    },
+    "target": {
+      "id": "5",
+      "type": "Company_Name",
+      "text": "Bank of America"
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "COI_FormType_COI",
+      "text": "holder"
+    },
+    "target": {
+      "id": "7",
+      "type": "Company_Name",
+      "text": "Copper Management",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Company_Name",
+      "text": "Copper Management",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_StreetNumber",
+      "text": "3233 Bright Circle Drive-Suite 2000",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Address_StreetNumber",
+      "text": "3233 Bright Circle Drive-Suite 2000",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_City",
+      "text": "Minnetonka",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Address_City",
+      "text": "Minnetonka",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_State",
+      "text": "MN",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_State",
+      "text": "MN",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_ZIP",
+      "text": "55343",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Alfred Monte [mailto:alfmonte02@yahoo.com] 
+Sent: Tuesday, August 08, 2017 9:58 AM
+To: agency.services@thehartford.com
+Subject: Policy # 41SBARZ1964
+
+Good morning, hope this email finds you well.  I am writing you to request an updated certificate and if you could please list ""ONE HAVEN LLC c/o Copper Management"" as a certificate holder  too since Bank of America is the primary holder.  If you could mail it to Pat Senesca I will appreciate it.
+
+Pat Senesca
+Copper Management
+3233 Bright Circle Drive-Suite 2000
+Minnetonka, MN 55343
+
+I thank you for your time and help,
+
+
+Alfred Monte DDS, MS
+Dental Excel, PLLC
+4590 Minne Blvd. Ste.100
+Deephaven, MN 55391
+(952) 473-6000
+ 
+----------------End Source ---------------------------------:: 
+

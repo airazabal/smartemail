@@ -1,0 +1,516 @@
+Email ID: 1573 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Pondroy Consulting Group Inc, 34SBMIW1234 Hello, Please process a new certificate and issue to the holder and insured My customer is requesting an updated copy of the certificate of insurance for Pondroy Consulting Group Inc Could you please email the certificate to cdg@python.com and copy details@teamcdg.com as well This needs to go to the following buyer: Python Company Attn: Ladice Heck 12345 East Monrays Drive Aurora, CT 80671 An ACORD Certificate is preferred and the ""Certificate Holder"" should be addressed as follows: Python Company Intellect, Information and Services 12345 E Clariton Parkway Aurora, CT 80671  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Certificate ",
+    "dataString": "COI_FormType_COI: Certificate =>\n",
+    "elements": [
+      {
+        "text": "Certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate Holder Python Company Intellect, Information and Services 12345 E Clariton Parkway Aurora CT 80671 ",
+    "dataString": "COI_FormType_COI: Certificate Holder =>\nCompany_Name: Python Company Intellect, Information and Services =>\nAddress_StreetNumber: 12345 E Clariton Parkway =>\nAddress_City: Aurora =>\nAddress_State: CT =>\nAddress_ZIP: 80671 =>\n",
+    "elements": [
+      {
+        "text": "Certificate Holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Python Company Intellect, Information and Services",
+        "type": "Company_Name"
+      },
+      {
+        "text": "12345 E Clariton Parkway",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Aurora",
+        "type": "Address_City"
+      },
+      {
+        "text": "CT",
+        "type": "Address_State"
+      },
+      {
+        "text": "80671",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate ",
+    "dataString": "COI_FormType_COI: certificate =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate of insurance Pondroy Consulting Group Inc ",
+    "dataString": "COI_FormType_COI: certificate of insurance =>\nCompany_Name: Pondroy Consulting Group Inc =>\n",
+    "elements": [
+      {
+        "text": "certificate of insurance",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Pondroy Consulting Group Inc",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate ",
+    "dataString": "COI_FormType_COI: certificate =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Pondroy Consulting Group Inc ",
+    "dataString": "Company_Name: Pondroy Consulting Group Inc =>\n",
+    "elements": [
+      {
+        "text": "Pondroy Consulting Group Inc",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Python Company Intellect, Information and Services 12345 E Clariton Parkway Aurora CT 80671 ",
+    "dataString": "Company_Name: Python Company Intellect, Information and Services =>\nAddress_StreetNumber: 12345 E Clariton Parkway =>\nAddress_City: Aurora =>\nAddress_State: CT =>\nAddress_ZIP: 80671 =>\n",
+    "elements": [
+      {
+        "text": "Python Company Intellect, Information and Services",
+        "type": "Company_Name"
+      },
+      {
+        "text": "12345 E Clariton Parkway",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Aurora",
+        "type": "Address_City"
+      },
+      {
+        "text": "CT",
+        "type": "Address_State"
+      },
+      {
+        "text": "80671",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "Pondroy Consulting Group Inc ",
+    "dataString": "Company_Name: Pondroy Consulting Group Inc =>\n",
+    "elements": [
+      {
+        "text": "Pondroy Consulting Group Inc",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Python Company Attn: Ladice Heck 12345 East Monrays Drive Aurora CT 80671 ",
+    "dataString": "Company_Name: Python Company Attn: Ladice Heck =>\nAddress_StreetNumber: 12345 East Monrays Drive =>\nAddress_City: Aurora =>\nAddress_State: CT =>\nAddress_ZIP: 80671 =>\n",
+    "elements": [
+      {
+        "text": "Python Company Attn: Ladice Heck",
+        "type": "Company_Name"
+      },
+      {
+        "text": "12345 East Monrays Drive",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Aurora",
+        "type": "Address_City"
+      },
+      {
+        "text": "CT",
+        "type": "Address_State"
+      },
+      {
+        "text": "80671",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "12345 East Monrays Drive Aurora CT 80671 ",
+    "dataString": "Address_StreetNumber: 12345 East Monrays Drive =>\nAddress_City: Aurora =>\nAddress_State: CT =>\nAddress_ZIP: 80671 =>\n",
+    "elements": [
+      {
+        "text": "12345 East Monrays Drive",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Aurora",
+        "type": "Address_City"
+      },
+      {
+        "text": "CT",
+        "type": "Address_State"
+      },
+      {
+        "text": "80671",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "12345 E Clariton Parkway Aurora CT 80671 ",
+    "dataString": "Address_StreetNumber: 12345 E Clariton Parkway =>\nAddress_City: Aurora =>\nAddress_State: CT =>\nAddress_ZIP: 80671 =>\n",
+    "elements": [
+      {
+        "text": "12345 E Clariton Parkway",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Aurora",
+        "type": "Address_City"
+      },
+      {
+        "text": "CT",
+        "type": "Address_State"
+      },
+      {
+        "text": "80671",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "Pondroy Consulting Group Inc"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "34SBMIW1234"
+  },
+  "2": {
+    "type": "Address_StreetNumber",
+    "text": "12345 East Monrays Drive",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_City",
+    "text": "Aurora",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_State",
+    "text": "CT",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_ZIP",
+    "text": "80671",
+    "visited_as_target": true
+  },
+  "6": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate"
+  },
+  "7": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Holder"
+  },
+  "8": {
+    "type": "Company_Name",
+    "text": "Python Company Intellect, Information and Services",
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_StreetNumber",
+    "text": "12345 E Clariton Parkway",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_City",
+    "text": "Aurora",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "11": {
+    "type": "Address_State",
+    "text": "CT",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "12": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "13": {
+    "type": "Address_ZIP",
+    "text": "80671",
+    "visited_as_target": true
+  },
+  "14": {
+    "type": "COI_FormType_COI",
+    "text": "certificate of insurance"
+  },
+  "15": {
+    "type": "Company_Name",
+    "text": "Pondroy Consulting Group Inc"
+  },
+  "16": {
+    "type": "Delivery_Method",
+    "text": "email"
+  },
+  "17": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "18": {
+    "type": "Email",
+    "text": "cdg@python.com"
+  },
+  "19": {
+    "type": "Email",
+    "text": "details@teamcdg.com"
+  },
+  "20": {
+    "type": "Company_Name",
+    "text": "Python Company Attn: Ladice Heck",
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_StreetNumber",
+      "text": "12345 East Monrays Drive",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_City",
+      "text": "Aurora",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Address_City",
+      "text": "Aurora",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_State",
+      "text": "CT",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_State",
+      "text": "CT",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_ZIP",
+      "text": "80671",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "COI_FormType_COI",
+      "text": "Certificate Holder"
+    },
+    "target": {
+      "id": "8",
+      "type": "Company_Name",
+      "text": "Python Company Intellect, Information and Services",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Company_Name",
+      "text": "Python Company Intellect, Information and Services",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_StreetNumber",
+      "text": "12345 E Clariton Parkway",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Address_StreetNumber",
+      "text": "12345 E Clariton Parkway",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_City",
+      "text": "Aurora",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_City",
+      "text": "Aurora",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "11",
+      "type": "Address_State",
+      "text": "CT",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "11",
+      "type": "Address_State",
+      "text": "CT",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "13",
+      "type": "Address_ZIP",
+      "text": "80671",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "14",
+      "type": "COI_FormType_COI",
+      "text": "certificate of insurance"
+    },
+    "target": {
+      "id": "0",
+      "type": "Company_Name",
+      "text": "Pondroy Consulting Group Inc"
+    }
+  },
+  {
+    "source": {
+      "id": "20",
+      "type": "Company_Name",
+      "text": "Python Company Attn: Ladice Heck",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_StreetNumber",
+      "text": "12345 East Monrays Drive",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Certs [mailto:certs@laggerd.com] 
+Sent: Thursday, August 10, 2017 3:43 PM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Subject: Pondroy Consulting Group Inc., 34SBMIW1234
+
+
+
+Hello,
+
+Please process a new certificate and issue to the holder and insured.
+
+My customer is requesting an updated copy of the certificate of insurance for Pondroy Consulting Group Inc.  Could you please email the certificate to cdg@python.com and copy details@teamcdg.com as well.
+
+This needs to go to the following buyer:
+
+Python Company
+Attn: Ladice Heck
+12345 East Monrays Drive
+Aurora, CT 80671
+
+An ACORD Certificate is preferred and the ""Certificate Holder"" should be addressed as follows:
+
+Python Company
+Intellect, Information and Services
+12345 E. Clariton Parkway
+Aurora, CT 80671
+
+Thanks,
+
+JC
+
+CDG
+Cell: 303-917-1234
+Office: 303-495-5678 ext. 787
+Email: jc@teamcdg.com
+
+Sincerely,
+
+Laggerd Certificate Processing
+certs@laggerd.com
+
+
+COMMERCIAL     |     SMALL BUSINESS     |      WORKERS’ COMPENSATION      |     GROUP BENEFITS      |      PERSONAL LINES
+phone 303.442.1234  |  fax 303.442.5678  |  www.laggerdinsurance.com  |  1234 38th Street, Suite 567, Boulder CT  80987
+ 
+----------------End Source ---------------------------------:: 
+

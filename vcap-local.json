@@ -22,9 +22,9 @@
   "nlu_api": [{
     "credentials": {
       "url": "https://gateway.watsonplatform.net/natural-language-understanding/api",
-      "username": "6339d7c4-4e6b-423e-b7a5-741f9854e1dc",
-      "password": "yWSHygituDs3"
+      "username": "c808dd2b-fa2e-4b17-ba99-2fc8237722e6",
+      "password": "4B1RT82vhRfN"
     },
-    "name": "nlu-hartford-ep"
+    "name": "SmartEmail-NLU"
     }]
 }

@@ -1,0 +1,334 @@
+Email ID: 1502 
+----------------Begin Cleansed ---------------------------------: 
+Subject: COI for renewal policy 76WEGEV1234 Delta Wye no longer exists Please send me a list of certificates that you have and I will tell you which ones we still need Will all of the renewal COIs be sent out automatically If they aren’t usually then I am requesting that they be sent out to everyone for us  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificates ",
+    "dataString": "COI_FormType_COI: certificates =>\n",
+    "elements": [
+      {
+        "text": "certificates",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Delta Wye no longer ",
+    "dataString": "Company_Name: Delta Wye no longer =>\n",
+    "elements": [
+      {
+        "text": "Delta Wye no longer",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "76WEGEV1234"
+  },
+  "2": {
+    "type": "Company_Name",
+    "text": "Delta Wye no longer"
+  },
+  "3": {
+    "type": "Delivery_Method",
+    "text": "send"
+  },
+  "4": {
+    "type": "COI_FormType_COI",
+    "text": "certificates"
+  }
+}
+
+Relations Found found 
+[] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: SB (ES) [mailto:SB@APP.com] 
+Sent: Thursday, August 10, 2017 11:27 AM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Cc: Sally Moore
+Subject: COI for renewal policy 76WEGEV1234
+
+Please provide the renewal policy COIs per client request
+
+SB |  Client Executive
+Licensed Agent in 46 States
+CA License #0H1234
+
+(844)861-1234 office
+(855)556-5678 fax
+SB@APP.com
+
+If I am not available contact the Central Enhanced Service Team
+866-311-1234 phone
+CentralPacific@app.com email
+
+
+Please be advised that calls to and from APP may be monitored or recorded.
+
+
+
+ALASKA ELECTRIC SERVICES LLC Update client profile
+justine@alaskaelectric.com
+1234 S 123th St, Orlando, NE, 80133
+Requested certificates: 25
+•         #
+MATLAS CONSTRUCTION GROUP issued on 04/24/17 09:17 AM
+View all certificates for this holder »
+Address
+1234 Pond Ripple Ave, Ste 355, Indie, IN, 46123
+Policy Info
+The Hartford
+76WEGEV1234
+08/25/16 - 08/25/17
+Other Details
+Job Ref: N/A
+Certificate in Progress » View details »
+Certificate in Progress
+Certificate in Progress » View details »
+Certificate in Progress
+Certificate in Progress » View details »
+Certificate in Progress
+Certificate in Progress » View details »
+Certificate in Progress
+Certificate in Progress » View details »
+Certificate in Progress
+MIAMI DIVISION OF HARD WORKING-CONTRACTOR REGISTRATION issued on 11/21/16 12:27 PM
+View all certificates for this holder »
+Address
+1234 West Grand CITY, Des ToYS, IA, 50319-1234
+Policy Info
+The Hartford
+76WEGEV1234
+08/25/16 - 08/25/17
+Other Details
+Job Ref: N/A
+Certificate in Progress » View details »
+Certificate in Progress
+BLUECOLLAR CONSTRUCTION issued on 07/18/17 02:01 PM
+View all certificates for this holder »
+Address
+Po Box 12345-kn, Helmet, CA, 92546-6789
+Policy Info
+The Hartford
+76WEGEV1234
+08/25/16 - 08/25/17
+Other Details
+Job Ref: N/A
+Certificate in Progress » View details »
+Certificate in Progress
+Certificate in Progress » View details »
+Certificate in Progress
+GENX GENERATION CONSTRUCTION issued on 01/30/17 09:28 AM
+View all certificates for this holder »
+Address
+1234 OLLIE Street, Ste 143, PRESSY, NE, 68599
+Policy Info
+The Hartford
+76WEGEV1234
+08/25/16 - 08/25/17
+Other Details
+Job Ref: N/A
+Certificate in Progress » View details »
+Certificate in Progress
+LPD GROUP INC issued on 02/20/17 12:28 PM
+View all certificates for this holder »
+Address
+1234 OLLIE Street, Ste 143, PRESSY, NE, 68599
+Policy Info
+The Hartford
+76WEGEV1234
+08/25/16 - 08/25/17
+Other Details
+Job Ref: N/A
+Certificate in Progress » View details »
+Certificate in Progress
+NICHOLAS FLARE. LLC. issued on 08/19/14 05:25 PM
+View all certificates for this holder »
+Address
+ANT Enterprises, LLC., P. O. Box 1234, Ohare, NE, 68103-9876
+Policy Info
+The Hartford
+76WEGEV1234
+08/25/14 - 08/25/15
+Other Details
+Job Ref: N/A
+Certificate in Progress » View details »
+Certificate in Progress
+NORTHBRIDE CONSTRUCTION INC issued on 06/26/17 02:04 PM
+View all certificates for this holder »
+Address
+1234 28th St, Ste L, Grand DEJORNE, ND, 12345
+Policy Info
+The Hartford
+76WEGEV1234
+08/25/16 - 08/25/17
+Other Details
+Job Ref: Holiday EXPREss
+Certificate in Progress » View details »
+Certificate in Progress
+OVERhaul CONSTRUCTORS INC issued on 01/19/17 10:36 AM
+View all certificates for this holder »
+Address
+1234 S 124th St, oHARE, NE, 69876
+Policy Info
+The Hartford
+76WEGEV1234
+08/25/16 - 08/25/17
+Other Details
+Job Ref: N/A
+Certificate in Progress » View details »
+Certificate in Progress
+SC BLONDIE COMPANY issued on 08/20/14 08:15 AM
+View all certificates for this holder »
+Address
+1234 West 52nd Street, IINDIE, IN, 46299
+Policy Info
+The Hartford
+76WEGEV1234
+08/25/14 - 08/25/15
+Other Details
+Job Ref: Trail  Topside Apartments Bellvanata, NE
+Certificate in Progress » View details »
+Certificate in Progress
+THE CITY OF IGTOWN CO issued on 01/11/17 01:52 PM
+View all certificates for this holder »
+Address
+1234 West DREARY Ave, BIGTOWN, CO, 12345
+Policy Info
+The Hartford
+76WEGEV1234
+08/25/16 - 08/25/17
+Other Details
+Job Ref: N/A
+
+
+SB |  Client Executive
+Licensed Agent in 46 States
+CA License #0H3560
+
+(844)861-0654 office
+(855)556-5110 fax
+Steve.Branham@adp.com
+
+If I am not available contact the Central Enhanced Service Team
+866-311-9790 phone
+Enhanced_Central@adp.com email
+
+<image001.gif><image002.gif><image003.gif>
+Please be advised that calls to and from ADP may be monitored or recorded.
+
+
+
+From: Sarah Ullsperger [mailto:sarah@nebraskabuildinggroup.com]
+Sent: Thursday, August 10, 2017 9:13 AM
+To: Branham, Steve (ES)
+Subject: Re: COI
+
+Delta Wye no longer exists. Please send me a list of certificates that you have and I will tell you which ones we still need.
+
+Thanks
+
+
+SARAH ULLSPERGER I Office Manager
+NBG Framing, LLC
+5030 South 135th Street
+Omaha, NE 68137
+Office Ph 402.315.4411
+Office Fax 402.332.4412
+Cell 402.301.9823
+sarah@nebraskabuildinggroup.com
+
+NOTICE OF CONFIDENTIALITY: The information transmitted, including attachments, is intended only for the person(s) or entity to which it is addressed and may contain confidential and/or privileged material. Any review, retransmission, dissemination or other use of, or taking of any action in reliance upon this information by persons or entities other than the intended recipient is prohibited. If you received this in error, please contact the sender and destroy copies of this information.
+
+On Aug 10, 2017, at 7:37 AM, Branham, Steve (ES) <Steve.Branham@adp.com> wrote:
+
+No they are not sent out automatically. We need to know which ones are still needed.
+
+Underwriting needs to know if Delta Wye still needs to be listed on the policy and if so, are they doing the same operations as Nebraska Electrical?
+
+
+SB |  Client Executive
+Licensed Agent in 46 States
+CA License #0H1234
+
+(844)861-1234 office
+(855)556-5678 fax
+SB@APP.com
+
+
+
+If I am not available contact the Central Enhanced Service Team
+866-311-1234 phone
+CentralPacific@app.com email
+
+<image001.gif><image002.gif><image003.gif>
+Please be advised that calls to and from ADP may be monitored or recorded.
+
+
+
+From: Suu Luu [mailto:suuluu@Miamibuildings.com]
+Sent: Wednesday, August 09, 2017 3:46 PM
+To: SB (ES)
+Subject: COI
+
+Will all of the renewal COIs be sent out automatically?  If they aren’t usually then I am requesting that they be sent out to everyone for us.
+
+Thanks
+
+
+SUU LUU I Office Manager
+TTD TAMING, LLC
+1234 South 165th Street
+Ohare, NE 68123
+Office Ph 402.315.1234
+Office Fax 402.332.5678
+Cell 402.301.5432
+suuluu@Miamibuildings.com
+
+NOTICE OF CONFIDENTIALITY: The information transmitted, including attachments, is intended only for the person(s) or entity to which it is addressed and may contain confidential and/or privileged material. Any review, retransmission, dissemination or other use of, or taking of any action in reliance upon this information by persons or entities other than the intended recipient is prohibited. If you received this in error, please contact the sender and destroy copies of this information.
+
+________________________________________
+This message and any attachments are intended only for the use of the addressee and may contain information that is privileged and confidential. If the reader of the message is not the intended recipient or an authorized representative of the intended recipient, you are hereby notified that any dissemination of this communication is strictly prohibited. If you have received this communication in error, notify the sender immediately by return email and delete the message and any attachments from your system.
+
+________________________________________
+This message and any attachments are intended only for the use of the addressee and may contain information that is privileged and confidential. If the reader of the message is not the intended recipient or an authorized representative of the intended recipient, you are hereby notified that any dissemination of this communication is strictly prohibited. If you have received this communication in error, notify the sender immediately by return email and delete the message and any attachments from your system.
+
+________________________________________
+This message and any attachments are intended only for the use of the addressee and may contain information that is privileged and confidential. If the reader of the message is not the intended recipient or an authorized representative of the intended recipient, you are hereby notified that any dissemination of this communication is strictly prohibited. If you have received this communication in error, notify the sender immediately by return email and delete the message and any attachments from your system.
+ 
+----------------End Source ---------------------------------:: 
+

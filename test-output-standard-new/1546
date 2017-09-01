@@ -1,0 +1,311 @@
+Email ID: 1546 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Re: Request for Attachment: KAL LANDSCAPES LLC- 76WEGLQ7890 Please send and fax a COI to: Bucking Estates HOA c/o Hay Blackhall Dr Ft Myers, FL 33907 Fax: 239-489-6661 If you have any questions please respond via email or call 239-340-3443 December 1, 2016 Account Name : KAL LANDSCAPES LLC Comments : Per Your Request Please do not reply back to this email You may contact us directly at the phone number or e-mail address noted below  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI Bucking Estates HOA c/o Hay Blackhall Dr Ft Myers FL 33907 ",
+    "dataString": "COI_FormType_COI: COI =>\nCompany_Name: Bucking Estates HOA c/o Hay =>\nAddress_StreetNumber: Blackhall Dr =>\nAddress_City: Ft Myers =>\nAddress_State: FL =>\nAddress_ZIP: 33907 =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Bucking Estates HOA c/o Hay",
+        "type": "Company_Name"
+      },
+      {
+        "text": "Blackhall Dr",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Ft Myers",
+        "type": "Address_City"
+      },
+      {
+        "text": "FL",
+        "type": "Address_State"
+      },
+      {
+        "text": "33907",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "KAL LANDSCAPES LLC ",
+    "dataString": "Company_Name: KAL LANDSCAPES LLC =>\n",
+    "elements": [
+      {
+        "text": "KAL LANDSCAPES LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "KAL LANDSCAPES LLC ",
+    "dataString": "Company_Name: KAL LANDSCAPES LLC =>\n",
+    "elements": [
+      {
+        "text": "KAL LANDSCAPES LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Bucking Estates HOA c/o Hay Blackhall Dr Ft Myers FL 33907 ",
+    "dataString": "Company_Name: Bucking Estates HOA c/o Hay =>\nAddress_StreetNumber: Blackhall Dr =>\nAddress_City: Ft Myers =>\nAddress_State: FL =>\nAddress_ZIP: 33907 =>\n",
+    "elements": [
+      {
+        "text": "Bucking Estates HOA c/o Hay",
+        "type": "Company_Name"
+      },
+      {
+        "text": "Blackhall Dr",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Ft Myers",
+        "type": "Address_City"
+      },
+      {
+        "text": "FL",
+        "type": "Address_State"
+      },
+      {
+        "text": "33907",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "Blackhall Dr Ft Myers FL 33907 ",
+    "dataString": "Address_StreetNumber: Blackhall Dr =>\nAddress_City: Ft Myers =>\nAddress_State: FL =>\nAddress_ZIP: 33907 =>\n",
+    "elements": [
+      {
+        "text": "Blackhall Dr",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Ft Myers",
+        "type": "Address_City"
+      },
+      {
+        "text": "FL",
+        "type": "Address_State"
+      },
+      {
+        "text": "33907",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "KAL LANDSCAPES LLC"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "76WEGLQ7890"
+  },
+  "2": {
+    "type": "Phone_Number",
+    "text": "239-489-6661"
+  },
+  "3": {
+    "type": "Phone_Number",
+    "text": "239-340-3443"
+  },
+  "4": {
+    "type": "Company_Name",
+    "text": "KAL LANDSCAPES LLC"
+  },
+  "5": {
+    "type": "Delivery_Method",
+    "text": "send"
+  },
+  "6": {
+    "type": "Delivery_Method",
+    "text": "fax"
+  },
+  "7": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "8": {
+    "type": "Company_Name",
+    "text": "Bucking Estates HOA c/o Hay",
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_StreetNumber",
+    "text": "Blackhall Dr",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_City",
+    "text": "Ft Myers",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "11": {
+    "type": "Address_State",
+    "text": "FL",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "12": {
+    "type": "Address_ZIP",
+    "text": "33907",
+    "visited_as_target": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "7",
+      "type": "COI_FormType_COI",
+      "text": "COI"
+    },
+    "target": {
+      "id": "8",
+      "type": "Company_Name",
+      "text": "Bucking Estates HOA c/o Hay",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Company_Name",
+      "text": "Bucking Estates HOA c/o Hay",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_StreetNumber",
+      "text": "Blackhall Dr",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Address_StreetNumber",
+      "text": "Blackhall Dr",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_City",
+      "text": "Ft Myers",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_City",
+      "text": "Ft Myers",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "11",
+      "type": "Address_State",
+      "text": "FL",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "11",
+      "type": "Address_State",
+      "text": "FL",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "12",
+      "type": "Address_ZIP",
+      "text": "33907",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Elen Eden [mailto:eden@gmail.com] 
+Sent: Monday, August 07, 2017 10:57 PM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Subject: Re: Request for Attachment: KAL LANDSCAPES LLC- 76WEGLQ7890
+
+Please send and fax a COI to:
+Bucking Estates HOA
+c/o Hay Blackhall Dr.
+Ft. Myers, FL  33907
+Fax:  239-489-6661
+
+If you have any questions please respond via email or call 239-340-3443.
+
+Thank you,
+Elen Eden
+KAL Landscapes
+
+On Thu, Dec 1, 2016 at 4:07 PM, <agency.service@thehartford.com> wrote:
+
+
+
+
+
+December 1, 2016
+
+Account Name : KAL LANDSCAPES LLC
+
+Comments :
+
+Per Your Request.
+
+Please do not reply back to this email. You may contact us directly at the phone number or e-mail address noted below.
+
+Thank you.
+
+Your Hartford Services Team,
+
+(877)853-2582 (Agency Callers)
+(866)467-8730 (Policyholders)
+Agency.Services@TheHartford.com (All Customers)
+
+
+************************************************************
+This communication, including attachments, is for the exclusive use of addressee and may contain proprietary, confidential and/or privileged information.  If you are not the intended recipient, any use, copying, disclosure, dissemination or distribution is strictly prohibited.  If you are not the intended recipient, please notify the sender immediately by return e-mail, delete this communication and destroy all copies.
+************************************************************
+ 
+----------------End Source ---------------------------------:: 
+

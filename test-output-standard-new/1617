@@ -1,0 +1,294 @@
+Email ID: 1617 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Policy# 76 SBW RV3265 & 76 WBG GF9832 Hi Amy/Briane, Can I have the renewed Certificates of General Liability and WC with the below Company as holder, please TIKI Systems One Legal St, Suite# 505 Boston, MA- 02110  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Certificates TIKI Systems One Legal St, Suite# 505 Boston MA- 02110 ",
+    "dataString": "COI_FormType_COI: Certificates =>\nCompany_Name: TIKI Systems One Legal St, Suite# =>\nAddress_StreetNumber: 505 =>\nAddress_City: Boston =>\nAddress_State: MA- =>\nAddress_ZIP: 02110 =>\n",
+    "elements": [
+      {
+        "text": "Certificates",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "TIKI Systems One Legal St, Suite#",
+        "type": "Company_Name"
+      },
+      {
+        "text": "505",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Boston",
+        "type": "Address_City"
+      },
+      {
+        "text": "MA-",
+        "type": "Address_State"
+      },
+      {
+        "text": "02110",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "holder TIKI Systems One Legal St, Suite# 505 Boston MA- 02110 ",
+    "dataString": "COI_FormType_COI: holder =>\nCompany_Name: TIKI Systems One Legal St, Suite# =>\nAddress_StreetNumber: 505 =>\nAddress_City: Boston =>\nAddress_State: MA- =>\nAddress_ZIP: 02110 =>\n",
+    "elements": [
+      {
+        "text": "holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "TIKI Systems One Legal St, Suite#",
+        "type": "Company_Name"
+      },
+      {
+        "text": "505",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Boston",
+        "type": "Address_City"
+      },
+      {
+        "text": "MA-",
+        "type": "Address_State"
+      },
+      {
+        "text": "02110",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "TIKI Systems One Legal St, Suite# 505 Boston MA- 02110 ",
+    "dataString": "Company_Name: TIKI Systems One Legal St, Suite# =>\nAddress_StreetNumber: 505 =>\nAddress_City: Boston =>\nAddress_State: MA- =>\nAddress_ZIP: 02110 =>\n",
+    "elements": [
+      {
+        "text": "TIKI Systems One Legal St, Suite#",
+        "type": "Company_Name"
+      },
+      {
+        "text": "505",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Boston",
+        "type": "Address_City"
+      },
+      {
+        "text": "MA-",
+        "type": "Address_State"
+      },
+      {
+        "text": "02110",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "505 Boston MA- 02110 ",
+    "dataString": "Address_StreetNumber: 505 =>\nAddress_City: Boston =>\nAddress_State: MA- =>\nAddress_ZIP: 02110 =>\n",
+    "elements": [
+      {
+        "text": "505",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Boston",
+        "type": "Address_City"
+      },
+      {
+        "text": "MA-",
+        "type": "Address_State"
+      },
+      {
+        "text": "02110",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Policy_Number",
+    "text": "76 SBW RV3265"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "76 WBG GF9832"
+  },
+  "2": {
+    "type": "COI_FormType_COI",
+    "text": "Certificates"
+  },
+  "3": {
+    "type": "COI_FormType_COI",
+    "text": "holder"
+  },
+  "4": {
+    "type": "Company_Name",
+    "text": "TIKI Systems One Legal St, Suite#",
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_StreetNumber",
+    "text": "505",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_City",
+    "text": "Boston",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_State",
+    "text": "MA-",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_ZIP",
+    "text": "02110",
+    "visited_as_target": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "COI_FormType_COI",
+      "text": "Certificates"
+    },
+    "target": {
+      "id": "4",
+      "type": "Company_Name",
+      "text": "TIKI Systems One Legal St, Suite#",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "COI_FormType_COI",
+      "text": "holder"
+    },
+    "target": {
+      "id": "4",
+      "type": "Company_Name",
+      "text": "TIKI Systems One Legal St, Suite#",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Company_Name",
+      "text": "TIKI Systems One Legal St, Suite#",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_StreetNumber",
+      "text": "505",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_StreetNumber",
+      "text": "505",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_City",
+      "text": "Boston",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_City",
+      "text": "Boston",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_State",
+      "text": "MA-",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Address_State",
+      "text": "MA-",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_ZIP",
+      "text": "02110",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Diane Naak [mailto:diane@tv-ish.com] 
+Sent: Wednesday, August 16, 2017 11:26 AM
+To: 'Services, Agency (Comm Lines, San Antonio/SCIC)' <Agency.Service@thehartford.com>
+Cc: account@tv-ish.com; briane.tebae@adp.com; 'naresha' <naresha.e@tv-ish.com>
+Subject: Policy# 76 SBW RV3265 & 76 WBG GF9832
+
+Hi Amy/Briane,
+
+Can I have the renewed Certificates of General Liability and WC with the below Company as holder, please?
+
+TIKI Systems
+One Legal St, Suite# 505
+Boston, MA- 02110
+
+Thanks.
+
+Regards,
+Diane
+Manager- Finance & Accounts
+Tv-ish Technologies Inc.
+   (732) 218 5559 * 887
+ 
+----------------End Source ---------------------------------:: 
+

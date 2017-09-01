@@ -1,0 +1,274 @@
+Email ID: 9911 
+----------------Begin Cleansed ---------------------------------: 
+Subject: liability certificate 75 WEC RR7895 I need a certificate for an upcoming contract It is for: HighSky Parks 784 Robin Road, Greensboro NC 15071 MarcQ@HighSky.com My info is: Greg Rain DBA Mo's Landscaping Policy # 75 WEC RR7895  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "certificate HighSky Parks 784 Robin Road Greensboro NC 15071 ",
+    "dataString": "COI_FormType_COI: certificate =>\nCompany_Name: HighSky Parks =>\nAddress_StreetNumber: 784 Robin Road =>\nAddress_City: Greensboro =>\nAddress_State: NC =>\nAddress_ZIP: 15071 =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "HighSky Parks",
+        "type": "Company_Name"
+      },
+      {
+        "text": "784 Robin Road",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Greensboro",
+        "type": "Address_City"
+      },
+      {
+        "text": "NC",
+        "type": "Address_State"
+      },
+      {
+        "text": "15071",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate ",
+    "dataString": "COI_FormType_COI: certificate =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "HighSky Parks 784 Robin Road Greensboro NC 15071 ",
+    "dataString": "Company_Name: HighSky Parks =>\nAddress_StreetNumber: 784 Robin Road =>\nAddress_City: Greensboro =>\nAddress_State: NC =>\nAddress_ZIP: 15071 =>\n",
+    "elements": [
+      {
+        "text": "HighSky Parks",
+        "type": "Company_Name"
+      },
+      {
+        "text": "784 Robin Road",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Greensboro",
+        "type": "Address_City"
+      },
+      {
+        "text": "NC",
+        "type": "Address_State"
+      },
+      {
+        "text": "15071",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "Greg Rain DBA Mo's Landscaping ",
+    "dataString": "Company_Name: Greg Rain DBA Mo's Landscaping =>\n",
+    "elements": [
+      {
+        "text": "Greg Rain DBA Mo's Landscaping",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "784 Robin Road Greensboro NC 15071 ",
+    "dataString": "Address_StreetNumber: 784 Robin Road =>\nAddress_City: Greensboro =>\nAddress_State: NC =>\nAddress_ZIP: 15071 =>\n",
+    "elements": [
+      {
+        "text": "784 Robin Road",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Greensboro",
+        "type": "Address_City"
+      },
+      {
+        "text": "NC",
+        "type": "Address_State"
+      },
+      {
+        "text": "15071",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "75 WEC RR7895"
+  },
+  "2": {
+    "type": "Policy_Number",
+    "text": "75 WEC RR7895"
+  },
+  "3": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "4": {
+    "type": "Company_Name",
+    "text": "HighSky Parks",
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_StreetNumber",
+    "text": "784 Robin Road",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_City",
+    "text": "Greensboro",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_State",
+    "text": "NC",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_ZIP",
+    "text": "15071",
+    "visited_as_target": true
+  },
+  "9": {
+    "type": "Email",
+    "text": "MarcQ@HighSky.com"
+  },
+  "10": {
+    "type": "Company_Name",
+    "text": "Greg Rain DBA Mo's Landscaping"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "0",
+      "type": "COI_FormType_COI",
+      "text": "certificate"
+    },
+    "target": {
+      "id": "4",
+      "type": "Company_Name",
+      "text": "HighSky Parks",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Company_Name",
+      "text": "HighSky Parks",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_StreetNumber",
+      "text": "784 Robin Road",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_StreetNumber",
+      "text": "784 Robin Road",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_City",
+      "text": "Greensboro",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_City",
+      "text": "Greensboro",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_State",
+      "text": "NC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Address_State",
+      "text": "NC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_ZIP",
+      "text": "15071",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Greg Rain [mailto:g.rain@yahoo.com]
+Sent: Wednesday, August 16, 2017 4:49 PM
+To: Agency.Services <Agency.Service@thehartford.com>
+Subject: liability certificate 75 WEC RR7895
+
+ I need a certificate for an upcoming contract. It is for: HighSky Parks 784 Robin Road, Greensboro NC 15071
+
+MarcQ@HighSky.com
+
+ My info is:
+Greg Rain DBA Mo's Landscaping
+ Policy #  75 WEC RR7895
+
+
+ Thank you
+ Greg Rain
+ 
+----------------End Source ---------------------------------:: 
+

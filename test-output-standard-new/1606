@@ -1,0 +1,253 @@
+Email ID: 1606 
+----------------Begin Cleansed ---------------------------------: 
+Subject: RE: Certificate for EXPERT SIGNS & GRAPHICS, INC [CONFIDENTIAL] I need another one with the same cert holder but the job location: Woods Apartments 1050 well Road, North Reading, MA 01864 Hello, It was a pleasure speaking with you today Attached you will find the certificate you requested If you have any questions or need further assistance, please feel free to call or email us Thank you for being a loyal Hartford customer I hope you have a wonderful day  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Certificate EXPERT SIGNS & GRAPHICS, INC ",
+    "dataString": "COI_FormType_COI: Certificate =>\nCompany_Name: EXPERT SIGNS & GRAPHICS, INC =>\n",
+    "elements": [
+      {
+        "text": "Certificate",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "EXPERT SIGNS & GRAPHICS, INC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "cert holder ",
+    "dataString": "COI_FormType_COI: cert holder =>\n",
+    "elements": [
+      {
+        "text": "cert holder",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate ",
+    "dataString": "COI_FormType_COI: certificate =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "EXPERT SIGNS & GRAPHICS, INC ",
+    "dataString": "Company_Name: EXPERT SIGNS & GRAPHICS, INC =>\n",
+    "elements": [
+      {
+        "text": "EXPERT SIGNS & GRAPHICS, INC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Hartford ",
+    "dataString": "Company_Name: Hartford =>\n",
+    "elements": [
+      {
+        "text": "Hartford",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "Road North Reading MA 01864 ",
+    "dataString": "Address_StreetNumber: Road =>\nAddress_City: North Reading =>\nAddress_State: MA =>\nAddress_ZIP: 01864 =>\n",
+    "elements": [
+      {
+        "text": "Road",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "North Reading",
+        "type": "Address_City"
+      },
+      {
+        "text": "MA",
+        "type": "Address_State"
+      },
+      {
+        "text": "01864",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "EXPERT SIGNS & GRAPHICS, INC"
+  },
+  "2": {
+    "type": "COI_FormType_COI",
+    "text": "cert holder"
+  },
+  "3": {
+    "type": "Address_StreetNumber",
+    "text": "Road",
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_City",
+    "text": "North Reading",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_State",
+    "text": "MA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_ZIP",
+    "text": "01864",
+    "visited_as_target": true
+  },
+  "7": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "8": {
+    "type": "Company_Name",
+    "text": "Hartford"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "0",
+      "type": "COI_FormType_COI",
+      "text": "Certificate"
+    },
+    "target": {
+      "id": "1",
+      "type": "Company_Name",
+      "text": "EXPERT SIGNS & GRAPHICS, INC"
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Address_StreetNumber",
+      "text": "Road",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_City",
+      "text": "North Reading",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_City",
+      "text": "North Reading",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_State",
+      "text": "MA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_State",
+      "text": "MA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_ZIP",
+      "text": "01864",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Marj Curley [mailto:marj@expertsigns.net] 
+Sent: Monday, August 21, 2017 11:24 AM
+To: 'Services, Agency (Comm Lines, San Antonio/SCIC)' <Agency.Service@thehartford.com>
+Subject: RE: Certificate for EXPERT SIGNS & GRAPHICS, INC [CONFIDENTIAL]
+
+I need another one with the same cert holder but the job location:
+
+Woods Apartments
+1050 well Road, North Reading, MA 01864
+
+Thanks,
+Marjg
+Marj Curley
+  Office Manager
+
+
+
+13 Plane Road • Hopedale, MA 01747
+Ph 508.381.1017 | Fx 508.381.7101
+www.expertsigns.net
+
+
+
+
+From: Services, Agency (Comm Lines, San Antonio/SCIC) [mailto:Agency.Service@thehartford.com]
+Sent: Friday, August 18, 2017 5:13 PM
+To: marj@expertsigns.net
+Subject: Certificate for EXPERT SIGNS & GRAPHICS, INC [CONFIDENTIAL]
+
+Hello,
+
+It was a pleasure speaking with you today. Attached you will find the certificate you requested. If you have any questions or need further assistance, please feel free to call or email us. Thank you for being a loyal Hartford customer. I hope you have a wonderful day!
+
+Thank You,
+
+
+Rome Geer
+The Hartford's Payroll Billing Support Team
+Phone: 1-877-903-4883
+Email: agency.services@thehartford.com
+
+************************************************************
+This communication, including attachments, is for the exclusive use of addressee and may contain proprietary, confidential and/or privileged information.  If you are not the intended recipient, any use, copying, disclosure, dissemination or distribution is strictly prohibited.  If you are not the intended recipient, please notify the sender immediately by return e-mail, delete this communication and destroy all copies.
+************************************************************
+ 
+----------------End Source ---------------------------------:: 
+

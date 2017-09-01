@@ -1,0 +1,259 @@
+Email ID: 1607 
+----------------Begin Cleansed ---------------------------------: 
+Subject: RE: Request for Attachment: HAYDEN'S Co - 22SBAUK8528 Hello and Good Morning We are Party event 400 Mountain Road Stokesdale NC 27357 Our account is being audited and we find that we need another certificate for the 5/6/16 - 5/6/17 policy period Could you please email us a copy Thank you Erin Party planner Events 336.644.1358 August 15, 2017 Account Name : HAYDEN'S Co Comments : Per Your Request Please do not reply back to this email You may contact us directly at the phone number or e-mail address noted below  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "certificate ",
+    "dataString": "COI_FormType_COI: certificate =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "HAYDEN'S Co 400 Mountain Road Stokesdale NC 27357 ",
+    "dataString": "Company_Name: HAYDEN'S Co =>\nAddress_StreetNumber: 400 Mountain Road =>\nAddress_City: Stokesdale =>\nAddress_State: NC =>\nAddress_ZIP: 27357 =>\n",
+    "elements": [
+      {
+        "text": "HAYDEN'S Co",
+        "type": "Company_Name"
+      },
+      {
+        "text": "400 Mountain Road",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Stokesdale",
+        "type": "Address_City"
+      },
+      {
+        "text": "NC",
+        "type": "Address_State"
+      },
+      {
+        "text": "27357",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "HAYDEN'S Co ",
+    "dataString": "Company_Name: HAYDEN'S Co =>\n",
+    "elements": [
+      {
+        "text": "HAYDEN'S Co",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "400 Mountain Road Stokesdale NC 27357 ",
+    "dataString": "Address_StreetNumber: 400 Mountain Road =>\nAddress_City: Stokesdale =>\nAddress_State: NC =>\nAddress_ZIP: 27357 =>\n",
+    "elements": [
+      {
+        "text": "400 Mountain Road",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Stokesdale",
+        "type": "Address_City"
+      },
+      {
+        "text": "NC",
+        "type": "Address_State"
+      },
+      {
+        "text": "27357",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "HAYDEN'S Co",
+    "visited_as_source": true
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "22SBAUK8528"
+  },
+  "2": {
+    "type": "Address_StreetNumber",
+    "text": "400 Mountain Road",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_City",
+    "text": "Stokesdale",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_State",
+    "text": "NC",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_ZIP",
+    "text": "27357",
+    "visited_as_target": true
+  },
+  "6": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "7": {
+    "type": "Delivery_Method",
+    "text": "email"
+  },
+  "8": {
+    "type": "Company_Name",
+    "text": "HAYDEN'S Co"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "0",
+      "type": "Company_Name",
+      "text": "HAYDEN'S Co",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_StreetNumber",
+      "text": "400 Mountain Road",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_StreetNumber",
+      "text": "400 Mountain Road",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_City",
+      "text": "Stokesdale",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Address_City",
+      "text": "Stokesdale",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_State",
+      "text": "NC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_State",
+      "text": "NC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_ZIP",
+      "text": "27357",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Administration [mailto:admin@bellacollinaevents.com] 
+Sent: Friday, August 18, 2017 9:09 AM
+To: agency.services@thehartford.com
+Subject: RE: Request for Attachment: HAYDEN'S Co. - 22SBAUK8528
+
+Hello and Good Morning!
+
+We are Party event 400 Mountain Road Stokesdale NC  27357.  Our account is being audited and we find that we need another certificate for the 5/6/16 - 5/6/17 policy period.  Could you please email us a copy? Thank you!
+
+Erin
+Party planner Events
+336.644.1358
+
+
+From: The Party event Mansion [mailto:jane@partyeventamansion.com]
+Sent: Wednesday, August 16, 2017 8:31 AM
+To: Sales@partyeventmansion.com
+Subject: FW: Request for Attachment: HAYD Co.- 22SBAUK8528
+
+
+
+From: agency.service@thehartford.com [mailto:agency.service@thehartford.com]
+Sent: Tuesday, August 15, 2017 7:09 PM
+To: WBLACK@HAYZENSPRODUCTIONS.COM; JOE@BELLACOLLINAMANSION.COM; ADMIN@BELLACOLLINAEVENTS.COM
+Subject: Request for Attachment: HAYD Co.- 22SBAUK8528
+
+
+
+
+
+August 15, 2017
+
+Account Name : HAYDEN'S Co.
+
+Comments :
+
+Per Your Request.
+
+Please do not reply back to this email. You may contact us directly at the phone number or e-mail address noted below.
+
+Thank you.
+
+Your Hartford Services Team,
+
+(877)853-2582 (Agency Callers)
+(866)467-8730 (Policyholders)
+Agency.Services@TheHartford.com (All Customers)
+
+
+************************************************************
+This communication, including attachments, is for the exclusive use of addressee and may contain proprietary, confidential and/or privileged information.  If you are not the intended recipient, any use, copying, disclosure, dissemination or distribution is strictly prohibited.  If you are not the intended recipient, please notify the sender immediately by return e-mail, delete this communication and destroy all copies.
+************************************************************
+ 
+----------------End Source ---------------------------------:: 
+

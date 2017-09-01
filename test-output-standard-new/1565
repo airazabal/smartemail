@@ -1,0 +1,257 @@
+Email ID: 1565 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Certificate Request-01WBCGE1234 SITE TELE 1234 BROOKPIERCE BLVD STE B GREENSBORO, NC 28155 Anna Figgy licensed sales producer T: 704-394-1234 F: 704-394-5678 9988 Steadfast Blvd Charlotte, SC 98765  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Certificate Request ",
+    "dataString": "COI_FormType_COI: Certificate Request =>\n",
+    "elements": [
+      {
+        "text": "Certificate Request",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "1234 BROOKPIERCE BLVD STE B GREENSBORO NC 28155 ",
+    "dataString": "Address_StreetNumber: 1234 BROOKPIERCE BLVD STE B =>\nAddress_City: GREENSBORO =>\nAddress_State: NC =>\nAddress_ZIP: 28155 =>\n",
+    "elements": [
+      {
+        "text": "1234 BROOKPIERCE BLVD STE B",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "GREENSBORO",
+        "type": "Address_City"
+      },
+      {
+        "text": "NC",
+        "type": "Address_State"
+      },
+      {
+        "text": "28155",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "9988 Steadfast Blvd Charlotte SC 98765 ",
+    "dataString": "Address_StreetNumber: 9988 Steadfast Blvd =>\nAddress_City: Charlotte =>\nAddress_State: SC =>\nAddress_ZIP: 98765 =>\n",
+    "elements": [
+      {
+        "text": "9988 Steadfast Blvd",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Charlotte",
+        "type": "Address_City"
+      },
+      {
+        "text": "SC",
+        "type": "Address_State"
+      },
+      {
+        "text": "98765",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Request"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "01WBCGE1234"
+  },
+  "2": {
+    "type": "Address_State",
+    "text": "SC",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_ZIP",
+    "text": "98765",
+    "visited_as_target": true
+  },
+  "4": {
+    "type": "Address_StreetNumber",
+    "text": "1234 BROOKPIERCE BLVD STE B",
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_City",
+    "text": "GREENSBORO",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_State",
+    "text": "NC",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_ZIP",
+    "text": "28155",
+    "visited_as_target": true
+  },
+  "8": {
+    "type": "Phone_Number",
+    "text": "704-394-1234"
+  },
+  "9": {
+    "type": "Phone_Number",
+    "text": "704-394-5678"
+  },
+  "10": {
+    "type": "Address_StreetNumber",
+    "text": "9988 Steadfast Blvd",
+    "visited_as_source": true
+  },
+  "11": {
+    "type": "Address_City",
+    "text": "Charlotte",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "SC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_ZIP",
+      "text": "98765",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_StreetNumber",
+      "text": "1234 BROOKPIERCE BLVD STE B",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_City",
+      "text": "GREENSBORO",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_City",
+      "text": "GREENSBORO",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_State",
+      "text": "NC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_State",
+      "text": "NC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_ZIP",
+      "text": "28155",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_StreetNumber",
+      "text": "9988 Steadfast Blvd",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "11",
+      "type": "Address_City",
+      "text": "Charlotte",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "11",
+      "type": "Address_City",
+      "text": "Charlotte",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "SC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: FIGGY, ANNA [mailto:AF@mallslate.com] 
+Sent: Tuesday, August 08, 2017 9:22 AM
+To: agency.services@thehartford.com
+Subject: Certificate Request-01WBCGE1234
+
+SITE TELE
+1234 BROOKPIERCE BLVD
+STE B
+GREENSBORO, NC 28155
+
+
+
+
+
+
+
+
+
+Anna Figgy licensed sales producer T: 704-394-1234 F: 704-394-5678 9988 Steadfast Blvd Charlotte, SC 98765
+ 
+----------------End Source ---------------------------------:: 
+

@@ -1,0 +1,325 @@
+Email ID: 1510 
+----------------Begin Cleansed ---------------------------------: 
+Subject: FW: RE: Yuka Inc #1494561 SW Email WC cert to yukabuffet123@gmail.com Cert holder: City of Vera 852 Bray Vera, MA 02150  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "WC cert ",
+    "dataString": "COI_FormType_COI: WC cert =>\n",
+    "elements": [
+      {
+        "text": "WC cert",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Cert holder City of Vera 852 Bray Vera MA 02150 ",
+    "dataString": "COI_FormType_COI: Cert holder =>\nCompany_Name: City of Vera =>\nAddress_StreetNumber: 852 Bray =>\nAddress_City: Vera =>\nAddress_State: MA =>\nAddress_ZIP: 02150 =>\n",
+    "elements": [
+      {
+        "text": "Cert holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "City of Vera",
+        "type": "Company_Name"
+      },
+      {
+        "text": "852 Bray",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Vera",
+        "type": "Address_City"
+      },
+      {
+        "text": "MA",
+        "type": "Address_State"
+      },
+      {
+        "text": "02150",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Yuka Inc #1494561 SW ",
+    "dataString": "Company_Name: Yuka Inc =>\nAddress_StreetNumber: #1494561 SW =>\n",
+    "elements": [
+      {
+        "text": "Yuka Inc",
+        "type": "Company_Name"
+      },
+      {
+        "text": "#1494561 SW",
+        "type": "Address_StreetNumber"
+      }
+    ]
+  },
+  {
+    "simpleString": "City of Vera 852 Bray Vera MA 02150 ",
+    "dataString": "Company_Name: City of Vera =>\nAddress_StreetNumber: 852 Bray =>\nAddress_City: Vera =>\nAddress_State: MA =>\nAddress_ZIP: 02150 =>\n",
+    "elements": [
+      {
+        "text": "City of Vera",
+        "type": "Company_Name"
+      },
+      {
+        "text": "852 Bray",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Vera",
+        "type": "Address_City"
+      },
+      {
+        "text": "MA",
+        "type": "Address_State"
+      },
+      {
+        "text": "02150",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "#1494561 SW ",
+    "dataString": "Address_StreetNumber: #1494561 SW =>\n",
+    "elements": [
+      {
+        "text": "#1494561 SW",
+        "type": "Address_StreetNumber"
+      }
+    ]
+  },
+  {
+    "simpleString": "852 Bray Vera MA 02150 ",
+    "dataString": "Address_StreetNumber: 852 Bray =>\nAddress_City: Vera =>\nAddress_State: MA =>\nAddress_ZIP: 02150 =>\n",
+    "elements": [
+      {
+        "text": "852 Bray",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Vera",
+        "type": "Address_City"
+      },
+      {
+        "text": "MA",
+        "type": "Address_State"
+      },
+      {
+        "text": "02150",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "Yuka Inc",
+    "visited_as_source": true
+  },
+  "1": {
+    "type": "Address_StreetNumber",
+    "text": "#1494561 SW",
+    "visited_as_target": true
+  },
+  "2": {
+    "type": "Address_ZIP",
+    "text": "02150",
+    "visited_as_target": true
+  },
+  "3": {
+    "type": "Delivery_Method",
+    "text": "Email"
+  },
+  "4": {
+    "type": "COI_FormType_COI",
+    "text": "WC cert"
+  },
+  "5": {
+    "type": "Email",
+    "text": "yukabuffet123@gmail.com"
+  },
+  "6": {
+    "type": "COI_FormType_COI",
+    "text": "Cert holder"
+  },
+  "7": {
+    "type": "Company_Name",
+    "text": "City of Vera",
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_StreetNumber",
+    "text": "852 Bray",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_City",
+    "text": "Vera",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_State",
+    "text": "MA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "0",
+      "type": "Company_Name",
+      "text": "Yuka Inc",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "1",
+      "type": "Address_StreetNumber",
+      "text": "#1494561 SW",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "COI_FormType_COI",
+      "text": "Cert holder"
+    },
+    "target": {
+      "id": "7",
+      "type": "Company_Name",
+      "text": "City of Vera",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Company_Name",
+      "text": "City of Vera",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_StreetNumber",
+      "text": "852 Bray",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Address_StreetNumber",
+      "text": "852 Bray",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_City",
+      "text": "Vera",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Address_City",
+      "text": "Vera",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_State",
+      "text": "MA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_State",
+      "text": "MA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_ZIP",
+      "text": "02150",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Services, Agency (Comm Lines, San Antonio/SCIC)
+Sent: Thursday, August 10, 2017 12:45 PM
+To: Stock, Corinne L (CTO Technology) <Corinne.Stock@thehartford.com>
+Subject: FW: RE: Yuka Inc #1494561
+
+
+From: Gill, Rosie [mailto:RGill@Westerninsurance.com]
+Sent: Thursday, August 10, 2017 12:38 PM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Subject: FW: Yuka Inc #1494561
+
+COI request policy #08WECCQ7894
+
+From: Schrein, Eve
+Sent: Thursday, August 10, 2017 12:34 PM
+To: Select_Work_DL
+Subject: RE: Yuka Inc #1494561
+
+SW
+Email WC cert to yukabuffet123@gmail.com
+Cert holder:
+City of Vera
+852 Bray
+Vera, MA 02150
+
+Thanks
+
+Eve
+
+Eve Schrein
+CL Account Manager I
+Western Insurance Group LLC
+559 East Street
+Natick, MA 01760
+
+Tel. 508-620-8523
+FAX. 781-586-3258
+ 
+----------------End Source ---------------------------------:: 
+

@@ -1,0 +1,122 @@
+Email ID: 1585 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Piano Certificate of Insurnce request The Hartford Insurance Company, My name is Bill Gulio from Piano, Inc and I need to request another Certificate of Insurance for our customer Tracking Technologies Tracking Technologies address is 1234 BM Dr, Quakerville, PA 18951 You can send the Certificate of Insurance to Ashley at accounting@TrackingTechnologies.com , can you also copy RB@piano.com in on the email correspondence Thank you for your help if you have any questions or concerns please let me know  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+{
+  "strings": [
+    "Certificate of The Hartford Insurance Company ",
+    "Certificate of Insurance Tracking Technologies Tracking Technologies ",
+    "Certificate of Insurance "
+  ],
+  "data": [
+    "COI_FormType_COI: Certificate of =>\nCompany_Name: The Hartford Insurance Company =>\n",
+    "COI_FormType_COI: Certificate of Insurance =>\nCompany_Name: Tracking Technologies Tracking Technologies =>\n",
+    "COI_FormType_COI: Certificate of Insurance =>\n"
+  ]
+}
+
+Relations chains starting from Company_Name 
+{
+  "strings": [
+    "The Hartford Insurance Company ",
+    "Tracking Technologies Tracking Technologies "
+  ],
+  "data": [
+    "Company_Name: The Hartford Insurance Company =>\n",
+    "Company_Name: Tracking Technologies Tracking Technologies =>\n"
+  ]
+}
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate of"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "The Hartford Insurance Company"
+  },
+  "2": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate of Insurance"
+  },
+  "3": {
+    "type": "Company_Name",
+    "text": "Tracking Technologies Tracking Technologies"
+  },
+  "4": {
+    "type": "Address_StreetNumber",
+    "text": "1234 BM Dr"
+  },
+  "5": {
+    "type": "Address_City",
+    "text": "Quakerville"
+  },
+  "6": {
+    "type": "Address_State",
+    "text": "PA"
+  },
+  "7": {
+    "type": "Address_ZIP",
+    "text": "18951"
+  },
+  "8": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate of Insurance"
+  },
+  "9": {
+    "type": "Email",
+    "text": "@TrackingTechnologies.com"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": "0",
+    "target": "1"
+  },
+  {
+    "source": "2",
+    "target": "3"
+  },
+  {
+    "source": "4",
+    "target": "5"
+  },
+  {
+    "source": "5",
+    "target": "6"
+  },
+  {
+    "source": "6",
+    "target": "7"
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Bill Gulio [mailto:bgulio@piano.com]
+Sent: Thursday, August 10, 2017 4:06 PM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Subject: Piano Certificate of Insurnce request.
+
+The Hartford Insurance Company,
+My name is Bill Gulio from Piano, Inc. and I need to request another Certificate of Insurance for our customer Tracking Technologies.  Tracking Technologies address is 1234 BM Dr., Quakerville, PA 18951.  You can send the Certificate of Insurance to Ashley at accounting@TrackingTechnologies.com , can you also copy RB@piano.com in on the email correspondence.  Thank you for your help if you have any questions or concerns please let me know.
+
+Thank You,
+Bill Gulio
+Piano, Inc.
+(P)215-679-1234
+(F) 215-679-5678
+www.piano.com
+bgulio@piano.com
+ 
+----------------End Source ---------------------------------:: 
+

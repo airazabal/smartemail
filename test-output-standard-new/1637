@@ -1,0 +1,378 @@
+Email ID: 1637 
+----------------Begin Cleansed ---------------------------------: 
+Subject: URGENT COI for KD Photography - 59SBWIS1234 - KHJKP-1 Service Team, Please issue a certificate of insurance for KD Photography with the following details: Certificate Holder Merwood Country Club Merwood Country Club 123 W LAfford Road Hundred Oaks, CA 12345 Coverage Type: General Liability Special Requirements: Additional Insured Frequency: One Time Only Special Instructions Description of Operations: Those usual to the Insured's Operations Send by email to: Good@kdphotography.com Send by email to: MerryBoce@chillymusher.com Send by mail to holder: DD@heaven.com If you have any questions regarding this request please contact the insured directly at Good@kdphotography.com 
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "holder ",
+    "dataString": "COI_FormType_COI: holder =>\n",
+    "elements": [
+      {
+        "text": "holder",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate of insurance KD Photography ",
+    "dataString": "COI_FormType_COI: certificate of insurance =>\nCompany_Name: KD Photography =>\n",
+    "elements": [
+      {
+        "text": "certificate of insurance",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "KD Photography",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate Holder Merwood Country Club Merwood Country Club 123 W LAfford Road Hundred Oaks CA 12345 ",
+    "dataString": "COI_FormType_COI: Certificate Holder =>\nCompany_Name: Merwood Country Club Merwood Country Club =>\nAddress_StreetNumber: 123 W LAfford Road =>\nAddress_City: Hundred Oaks =>\nAddress_State: CA =>\nAddress_ZIP: 12345 =>\n",
+    "elements": [
+      {
+        "text": "Certificate Holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Merwood Country Club Merwood Country Club",
+        "type": "Company_Name"
+      },
+      {
+        "text": "123 W LAfford Road",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Hundred Oaks",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "12345",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "KD Photography ",
+    "dataString": "Company_Name: KD Photography =>\n",
+    "elements": [
+      {
+        "text": "KD Photography",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "KHJKP-1 Service Team ",
+    "dataString": "Company_Name: KHJKP-1 Service Team =>\n",
+    "elements": [
+      {
+        "text": "KHJKP-1 Service Team",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "KD Photography ",
+    "dataString": "Company_Name: KD Photography =>\n",
+    "elements": [
+      {
+        "text": "KD Photography",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Merwood Country Club Merwood Country Club 123 W LAfford Road Hundred Oaks CA 12345 ",
+    "dataString": "Company_Name: Merwood Country Club Merwood Country Club =>\nAddress_StreetNumber: 123 W LAfford Road =>\nAddress_City: Hundred Oaks =>\nAddress_State: CA =>\nAddress_ZIP: 12345 =>\n",
+    "elements": [
+      {
+        "text": "Merwood Country Club Merwood Country Club",
+        "type": "Company_Name"
+      },
+      {
+        "text": "123 W LAfford Road",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Hundred Oaks",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "12345",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "123 W LAfford Road Hundred Oaks CA 12345 ",
+    "dataString": "Address_StreetNumber: 123 W LAfford Road =>\nAddress_City: Hundred Oaks =>\nAddress_State: CA =>\nAddress_ZIP: 12345 =>\n",
+    "elements": [
+      {
+        "text": "123 W LAfford Road",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Hundred Oaks",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "12345",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "KD Photography"
+  },
+  "2": {
+    "type": "Address_State",
+    "text": "CA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_ZIP",
+    "text": "12345",
+    "visited_as_target": true
+  },
+  "4": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "Additional Insured"
+  },
+  "5": {
+    "type": "Delivery_Method",
+    "text": "email"
+  },
+  "6": {
+    "type": "Email",
+    "text": "Good@kdphotography.com"
+  },
+  "7": {
+    "type": "Delivery_Method",
+    "text": "email"
+  },
+  "8": {
+    "type": "Email",
+    "text": "MerryBoce@chillymusher.com"
+  },
+  "9": {
+    "type": "COI_FormType_COI",
+    "text": "holder"
+  },
+  "10": {
+    "type": "Email",
+    "text": "DD@heaven.com"
+  },
+  "11": {
+    "type": "Email",
+    "text": "Good@kdphotography.com"
+  },
+  "12": {
+    "type": "Policy_Number",
+    "text": "59SBWIS1234"
+  },
+  "13": {
+    "type": "Company_Name",
+    "text": "KHJKP-1 Service Team"
+  },
+  "14": {
+    "type": "COI_FormType_COI",
+    "text": "certificate of insurance"
+  },
+  "15": {
+    "type": "Company_Name",
+    "text": "KD Photography"
+  },
+  "16": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Holder"
+  },
+  "17": {
+    "type": "Company_Name",
+    "text": "Merwood Country Club Merwood Country Club",
+    "visited_as_source": true
+  },
+  "18": {
+    "type": "Address_StreetNumber",
+    "text": "123 W LAfford Road",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "19": {
+    "type": "Address_City",
+    "text": "Hundred Oaks",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_ZIP",
+      "text": "12345",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "14",
+      "type": "COI_FormType_COI",
+      "text": "certificate of insurance"
+    },
+    "target": {
+      "id": "1",
+      "type": "Company_Name",
+      "text": "KD Photography"
+    }
+  },
+  {
+    "source": {
+      "id": "16",
+      "type": "COI_FormType_COI",
+      "text": "Certificate Holder"
+    },
+    "target": {
+      "id": "17",
+      "type": "Company_Name",
+      "text": "Merwood Country Club Merwood Country Club",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "17",
+      "type": "Company_Name",
+      "text": "Merwood Country Club Merwood Country Club",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "18",
+      "type": "Address_StreetNumber",
+      "text": "123 W LAfford Road",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "18",
+      "type": "Address_StreetNumber",
+      "text": "123 W LAfford Road",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "19",
+      "type": "Address_City",
+      "text": "Hundred Oaks",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "19",
+      "type": "Address_City",
+      "text": "Hundred Oaks",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: MerryBoce by Chilly & Musher [mailto:MerryBoce@chillymusher.com] 
+Sent: Tuesday, August 15, 2017 4:19 PM
+To: Chilly and Musher Photography Certificates (Commercial Market Operations) <ChillyandMusherPhotographyCertificates@thehartford.com>
+Subject: URGENT COI for KD Photography - 59SBWIS1234 - KHJKP-1
+
+Service Team,
+Please issue a certificate of insurance for KD Photography with the following details:
+Certificate Holder
+Merwood Country Club
+Merwood Country Club 123 W. LAfford Road
+Hundred Oaks, CA 12345
+
+Coverage Type: General Liability
+Special Requirements: Additional Insured
+Frequency: One Time Only
+Special Instructions
+Description of Operations:
+Those usual to the Insured's Operations.
+Send by email to: Good@kdphotography.com
+Send by email to: MerryBoce@chillymusher.com
+Send by mail to holder: DD@heaven.com
+If you have any questions regarding this request please contact the insured directly at Good@kdphotography.com
+Thank you.
+---
+Merry Boce Team
+MerryBoce@chillymusher.com
+Phone: 866-977-1234
+Fax: 602-956-5678
+ 
+----------------End Source ---------------------------------:: 
+

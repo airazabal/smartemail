@@ -1,0 +1,310 @@
+Email ID: 1581 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Certificate Request for Morefloor Hard Flooring Inc, *Policy # 41 WEGCE1234* (Artistically) Please issue a certificate of insurance to our client as follows: Certificate Holder: Dan Pallino & Miracle Glamour 123 Livyoung St, #7D Brooklyn, NC 12356 PLEASE E-MAIL THE CERTIFICATE TO ME AT gcrot@morefloor.com  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Certificate Request ",
+    "dataString": "COI_FormType_COI: Certificate Request =>\n",
+    "elements": [
+      {
+        "text": "Certificate Request",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "CERTIFICATE ",
+    "dataString": "COI_FormType_COI: CERTIFICATE =>\n",
+    "elements": [
+      {
+        "text": "CERTIFICATE",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate of insurance ",
+    "dataString": "COI_FormType_COI: certificate of insurance =>\n",
+    "elements": [
+      {
+        "text": "certificate of insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate Holder Dan Pallino & Miracle Glamour 123 Livyoung St #7D Brooklyn NC 12356 ",
+    "dataString": "COI_FormType_COI: Certificate Holder =>\nCompany_Name: Dan Pallino & Miracle Glamour =>\nAddress_StreetNumber: 123 Livyoung St =>\nAddress_City: #7D Brooklyn =>\nAddress_State: NC =>\nAddress_ZIP: 12356 =>\n",
+    "elements": [
+      {
+        "text": "Certificate Holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Dan Pallino & Miracle Glamour",
+        "type": "Company_Name"
+      },
+      {
+        "text": "123 Livyoung St",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "#7D Brooklyn",
+        "type": "Address_City"
+      },
+      {
+        "text": "NC",
+        "type": "Address_State"
+      },
+      {
+        "text": "12356",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Morefloor Hard Flooring Inc ",
+    "dataString": "Company_Name: Morefloor Hard Flooring Inc =>\n",
+    "elements": [
+      {
+        "text": "Morefloor Hard Flooring Inc",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Dan Pallino & Miracle Glamour 123 Livyoung St #7D Brooklyn NC 12356 ",
+    "dataString": "Company_Name: Dan Pallino & Miracle Glamour =>\nAddress_StreetNumber: 123 Livyoung St =>\nAddress_City: #7D Brooklyn =>\nAddress_State: NC =>\nAddress_ZIP: 12356 =>\n",
+    "elements": [
+      {
+        "text": "Dan Pallino & Miracle Glamour",
+        "type": "Company_Name"
+      },
+      {
+        "text": "123 Livyoung St",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "#7D Brooklyn",
+        "type": "Address_City"
+      },
+      {
+        "text": "NC",
+        "type": "Address_State"
+      },
+      {
+        "text": "12356",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "123 Livyoung St #7D Brooklyn NC 12356 ",
+    "dataString": "Address_StreetNumber: 123 Livyoung St =>\nAddress_City: #7D Brooklyn =>\nAddress_State: NC =>\nAddress_ZIP: 12356 =>\n",
+    "elements": [
+      {
+        "text": "123 Livyoung St",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "#7D Brooklyn",
+        "type": "Address_City"
+      },
+      {
+        "text": "NC",
+        "type": "Address_State"
+      },
+      {
+        "text": "12356",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Request"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "Morefloor Hard Flooring Inc"
+  },
+  "2": {
+    "type": "Delivery_Method",
+    "text": "E-MAIL"
+  },
+  "3": {
+    "type": "COI_FormType_COI",
+    "text": "CERTIFICATE"
+  },
+  "4": {
+    "type": "Email",
+    "text": "gcrot@morefloor.com"
+  },
+  "5": {
+    "type": "Policy_Number",
+    "text": "41 WEGCE1234*"
+  },
+  "6": {
+    "type": "COI_FormType_COI",
+    "text": "certificate of insurance"
+  },
+  "7": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Holder"
+  },
+  "8": {
+    "type": "Company_Name",
+    "text": "Dan Pallino & Miracle Glamour",
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_StreetNumber",
+    "text": "123 Livyoung St",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_City",
+    "text": "#7D Brooklyn",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "11": {
+    "type": "Address_State",
+    "text": "NC",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "12": {
+    "type": "Address_ZIP",
+    "text": "12356",
+    "visited_as_target": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "7",
+      "type": "COI_FormType_COI",
+      "text": "Certificate Holder"
+    },
+    "target": {
+      "id": "8",
+      "type": "Company_Name",
+      "text": "Dan Pallino & Miracle Glamour",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Company_Name",
+      "text": "Dan Pallino & Miracle Glamour",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_StreetNumber",
+      "text": "123 Livyoung St",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Address_StreetNumber",
+      "text": "123 Livyoung St",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_City",
+      "text": "#7D Brooklyn",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_City",
+      "text": "#7D Brooklyn",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "11",
+      "type": "Address_State",
+      "text": "NC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "11",
+      "type": "Address_State",
+      "text": "NC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "12",
+      "type": "Address_ZIP",
+      "text": "12356",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Gill Crot [mailto:gcrot@morefloor.com] 
+Sent: Tuesday, August 08, 2017 11:32 AM
+To: 'Certificate.service@thehartford.com'
+Subject: Certificate Request for Morefloor Hard Flooring Inc., *Policy # 41 WEGCE1234* (Artistically)
+
+Please issue a certificate of insurance to our client as follows:
+
+Certificate Holder:
+Dan Pallino & Miracle Glamour
+123 Livyoung St., #7D
+Brooklyn, NC 12356
+
+PLEASE E-MAIL THE CERTIFICATE TO ME AT gcrot@morefloor.com
+
+Thank you,
+Gill Crot
+Administrative & Customer Services
+VMorefloor Hard Flooring
+PLEASE NOTE OUR NEW ADDRESS:
+1234 2nd Avenue
+Brooklyn, NY 11999
+(718) 820-1234 Direct Line
+(718) 820-5678 Fax
+(718) 369-9988, x. 712  Office
+ 
+----------------End Source ---------------------------------:: 
+

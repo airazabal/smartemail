@@ -1,0 +1,292 @@
+Email ID: 1594 
+----------------Begin Cleansed ---------------------------------: 
+Subject: 16WECFZ1234 - Ketchup Fence - Ins Cert Request Dear Hartford Please issue C105 insurance certificate for: Town of Treepark PO Box 621 TopKnot, NY 12345  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Cert Request ",
+    "dataString": "COI_FormType_COI: Cert Request =>\n",
+    "elements": [
+      {
+        "text": "Cert Request",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "C105 insurance certificate Town of Treepark PO Box 621 TopKnot NY 12345 ",
+    "dataString": "COI_FormType_COI: C105 insurance certificate =>\nCompany_Name: Town of Treepark =>\nAddress_StreetNumber: PO Box 621 =>\nAddress_City: TopKnot =>\nAddress_State: NY =>\nAddress_ZIP: 12345 =>\n",
+    "elements": [
+      {
+        "text": "C105 insurance certificate",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Town of Treepark",
+        "type": "Company_Name"
+      },
+      {
+        "text": "PO Box 621",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "TopKnot",
+        "type": "Address_City"
+      },
+      {
+        "text": "NY",
+        "type": "Address_State"
+      },
+      {
+        "text": "12345",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Ketchup Fence ",
+    "dataString": "Company_Name: Ketchup Fence =>\n",
+    "elements": [
+      {
+        "text": "Ketchup Fence",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Hartford ",
+    "dataString": "Company_Name: Hartford =>\n",
+    "elements": [
+      {
+        "text": "Hartford",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Town of Treepark PO Box 621 TopKnot NY 12345 ",
+    "dataString": "Company_Name: Town of Treepark =>\nAddress_StreetNumber: PO Box 621 =>\nAddress_City: TopKnot =>\nAddress_State: NY =>\nAddress_ZIP: 12345 =>\n",
+    "elements": [
+      {
+        "text": "Town of Treepark",
+        "type": "Company_Name"
+      },
+      {
+        "text": "PO Box 621",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "TopKnot",
+        "type": "Address_City"
+      },
+      {
+        "text": "NY",
+        "type": "Address_State"
+      },
+      {
+        "text": "12345",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "PO Box 621 TopKnot NY 12345 ",
+    "dataString": "Address_StreetNumber: PO Box 621 =>\nAddress_City: TopKnot =>\nAddress_State: NY =>\nAddress_ZIP: 12345 =>\n",
+    "elements": [
+      {
+        "text": "PO Box 621",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "TopKnot",
+        "type": "Address_City"
+      },
+      {
+        "text": "NY",
+        "type": "Address_State"
+      },
+      {
+        "text": "12345",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Policy_Number",
+    "text": "16WECFZ1234"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "Ketchup Fence"
+  },
+  "2": {
+    "type": "COI_FormType_COI",
+    "text": "Cert Request"
+  },
+  "3": {
+    "type": "Company_Name",
+    "text": "Hartford"
+  },
+  "4": {
+    "type": "COI_FormType_COI",
+    "text": "C105 insurance certificate"
+  },
+  "5": {
+    "type": "Company_Name",
+    "text": "Town of Treepark",
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_StreetNumber",
+    "text": "PO Box 621",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_City",
+    "text": "TopKnot",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_State",
+    "text": "NY",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_ZIP",
+    "text": "12345",
+    "visited_as_target": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "4",
+      "type": "COI_FormType_COI",
+      "text": "C105 insurance certificate"
+    },
+    "target": {
+      "id": "5",
+      "type": "Company_Name",
+      "text": "Town of Treepark",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Company_Name",
+      "text": "Town of Treepark",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_StreetNumber",
+      "text": "PO Box 621",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_StreetNumber",
+      "text": "PO Box 621",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_City",
+      "text": "TopKnot",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Address_City",
+      "text": "TopKnot",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_State",
+      "text": "NY",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Address_State",
+      "text": "NY",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_ZIP",
+      "text": "12345",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: LP [mailto:LP@misterlyagency.com] 
+Sent: Monday, August 21, 2017 4:36 PM
+To: 'agency.services@thehartford.com' <agency.services@thehartford.com>
+Subject: 16WECFZ1234 - Ketchup Fence - Ins Cert Request
+
+Dear Hartford
+
+Please issue C105 insurance certificate for:
+
+Town of Treepark
+PO Box 621
+TopKnot, NY 12345
+
+Thank you.
+
+LP  – Extension 1234
+Agency Operations
+The Misterly Agency, Inc.
+P.O. Box 81, 123 Route 33
+Woodshed, NY 12345
+ph. 845-434-1234
+fx. 845-434-5678
+www.misterlyagency.com
+www.misterlybenefits.com
+
+Please be advised that Email is not effective to report a claim or make any policy change until such time as you receive a written confirmation back from us confirming the request has been processed.
+
+This communication, together with any attachments hereto or links contained herein, is intended for the use of the intended recipients only and may contain information that is confidential or legally protected. If you are not the intended recipient, you are hereby notified that any review, disclosure, copying, dissemination, distribution or use of this communication is STRICTLY PROHIBITED. If you have received this communication in error, please notify the sender immediately by return e-mail message and delete all copies of the original communication along with any attachments hereto or links therein, from your system. Thank you.
+ 
+----------------End Source ---------------------------------:: 
+

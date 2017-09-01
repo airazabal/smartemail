@@ -21,7 +21,7 @@ import { DashboardComponent } from './dashboard'
 
 // Tese are the tabs for routing...
 import {
-  SmartEmailDetailsComponent,
+  SmartEmailViewerComponent,
   SmartEmailTestComponent,
   SmartEmailSummaryComponent,
   SmartEmailEntitiesComponent,
@@ -34,7 +34,7 @@ const APP_ROUTES: Routes = [
       { path: 'summary', component: SmartEmailSummaryComponent },
       { path: 'classifications', component: SmartEmailClassificationsComponent},
       { path: 'entities', component: SmartEmailEntitiesComponent},
-      { path: 'details', component: SmartEmailDetailsComponent },
+      { path: 'viewer', component: SmartEmailViewerComponent },
       { path: 'test', component: SmartEmailTestComponent },
       { path: '', redirectTo: 'summary', pathMatch: 'full' },
     ] },

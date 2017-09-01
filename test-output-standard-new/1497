@@ -1,0 +1,280 @@
+Email ID: 1497 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Mary and Mary - 76WEGVK1234 Can you please add the below certificate holder Stacksbrook Center Stacksbrook Shopping Center, LLC 100 stacksbrook Center Lasck, IL 60223 Simul Data Insurance Agency, Inc Lis Fuscol | Licensed Agent in 45 States CA License: #0G312324 Relationship Consultant 973-712-1234 office 973- 712-5678 fax Lis.Fuscol@acc.com Please be advised that calls to and from ACC may be monitored or recorded ________________________________________ This message and any attachments are intended only for the use of the addressee and may contain information that is privileged and confidential If the reader of the message is not the intended recipient or an authorized representative of the intended recipient, you are hereby notified that any dissemination of this communication is strictly prohibited If you have received this communication in error, notify the sender immediately by return email and delete the message and any attachments from your system  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "certificate holder Stacksbrook Center Stacksbrook Shopping Center, LLC 100 stacksbrook Center Lasck IL 60223 ",
+    "dataString": "COI_FormType_COI: certificate holder =>\nCompany_Name: Stacksbrook Center Stacksbrook Shopping Center, LLC =>\nAddress_StreetNumber: 100 stacksbrook Center =>\nAddress_City: Lasck =>\nAddress_State: IL =>\nAddress_ZIP: 60223 =>\n",
+    "elements": [
+      {
+        "text": "certificate holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Stacksbrook Center Stacksbrook Shopping Center, LLC",
+        "type": "Company_Name"
+      },
+      {
+        "text": "100 stacksbrook Center",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Lasck",
+        "type": "Address_City"
+      },
+      {
+        "text": "IL",
+        "type": "Address_State"
+      },
+      {
+        "text": "60223",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Stacksbrook Center Stacksbrook Shopping Center, LLC 100 stacksbrook Center Lasck IL 60223 ",
+    "dataString": "Company_Name: Stacksbrook Center Stacksbrook Shopping Center, LLC =>\nAddress_StreetNumber: 100 stacksbrook Center =>\nAddress_City: Lasck =>\nAddress_State: IL =>\nAddress_ZIP: 60223 =>\n",
+    "elements": [
+      {
+        "text": "Stacksbrook Center Stacksbrook Shopping Center, LLC",
+        "type": "Company_Name"
+      },
+      {
+        "text": "100 stacksbrook Center",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Lasck",
+        "type": "Address_City"
+      },
+      {
+        "text": "IL",
+        "type": "Address_State"
+      },
+      {
+        "text": "60223",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "Simul Data Insurance Agency, Inc ",
+    "dataString": "Company_Name: Simul Data Insurance Agency, Inc =>\n",
+    "elements": [
+      {
+        "text": "Simul Data Insurance Agency, Inc",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "100 stacksbrook Center Lasck IL 60223 ",
+    "dataString": "Address_StreetNumber: 100 stacksbrook Center =>\nAddress_City: Lasck =>\nAddress_State: IL =>\nAddress_ZIP: 60223 =>\n",
+    "elements": [
+      {
+        "text": "100 stacksbrook Center",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Lasck",
+        "type": "Address_City"
+      },
+      {
+        "text": "IL",
+        "type": "Address_State"
+      },
+      {
+        "text": "60223",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Policy_Number",
+    "text": "76WEGVK1234"
+  },
+  "1": {
+    "type": "COI_FormType_COI",
+    "text": "certificate holder"
+  },
+  "2": {
+    "type": "Phone_Number",
+    "text": "973- 712-5678"
+  },
+  "3": {
+    "type": "Email",
+    "text": "Lis.Fuscol@acc.com"
+  },
+  "4": {
+    "type": "Company_Name",
+    "text": "Stacksbrook Center Stacksbrook Shopping Center, LLC",
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_StreetNumber",
+    "text": "100 stacksbrook Center",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_City",
+    "text": "Lasck",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_State",
+    "text": "IL",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_ZIP",
+    "text": "60223",
+    "visited_as_target": true
+  },
+  "9": {
+    "type": "Company_Name",
+    "text": "Simul Data Insurance Agency, Inc"
+  },
+  "10": {
+    "type": "Policy_Number",
+    "text": "#0G312324"
+  },
+  "11": {
+    "type": "Phone_Number",
+    "text": "973-712-1234"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "1",
+      "type": "COI_FormType_COI",
+      "text": "certificate holder"
+    },
+    "target": {
+      "id": "4",
+      "type": "Company_Name",
+      "text": "Stacksbrook Center Stacksbrook Shopping Center, LLC",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Company_Name",
+      "text": "Stacksbrook Center Stacksbrook Shopping Center, LLC",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_StreetNumber",
+      "text": "100 stacksbrook Center",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_StreetNumber",
+      "text": "100 stacksbrook Center",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_City",
+      "text": "Lasck",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_City",
+      "text": "Lasck",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_State",
+      "text": "IL",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Address_State",
+      "text": "IL",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_ZIP",
+      "text": "60223",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Fuscol, Lis (ES) [mailto:Lis.Fuscol@acc.com] 
+Sent: Monday, August 07, 2017 1:10 PM
+To: Agency.services@thehartford.com
+Subject: Mary and Mary - 76WEGVK1234
+
+Can you please add the below certificate holder
+
+
+Stacksbrook Center
+ Stacksbrook Shopping Center, LLC
+100 stacksbrook Center
+Lasck, IL 60223
+
+
+
+Simul Data Insurance Agency, Inc.
+Lis Fuscol | Licensed Agent in 45 States  CA License: #0G312324
+Relationship Consultant
+973-712-1234 office
+973- 712-5678 fax
+Lis.Fuscol@acc.com
+
+
+
+Please be advised that calls to and from ACC may be monitored or recorded.
+
+________________________________________
+This message and any attachments are intended only for the use of the addressee and may contain information that is privileged and confidential. If the reader of the message is not the intended recipient or an authorized representative of the intended recipient, you are hereby notified that any dissemination of this communication is strictly prohibited. If you have received this communication in error, notify the sender immediately by return email and delete the message and any attachments from your system.
+ 
+----------------End Source ---------------------------------:: 
+

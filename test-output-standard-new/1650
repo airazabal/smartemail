@@ -1,0 +1,429 @@
+Email ID: 1650 
+----------------Begin Cleansed ---------------------------------: 
+Subject: CW, Esq - COI request policy #13SBALP1200 Our insured has requested that we forward a certificate of insurance for their copy machine See below: Agreement Number(s) Equipment Value Equipment Description 0610133511550 $11,245.00 COPIERS Evidence of Business Personal Property to include: • Insured name as: CW, Esq - COI request policy #13SBALP1200 • Insurance company name • Insurance company policy number • Policy effective and expiration dates • Property coverage amount • Company (below) listed as Loss Payee: Letters, LLC c/o Insurance Service Center P.O Box 90210 Miami, FL 33197-9220 Gia Rondo Gia Rondo 599 Basket Street, Saddle Brook, NJ 07663 phone 201-794-3000 ext 1112 fax 201-291-4000 (alternate fax 201-291-5000) www.giainsurance.com giar@giainsurance.com We cannot accept unsolicited email or voice mail asking for coverage to be bound This email and any files transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed If you have received this in error please call our office immediately  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate of insurance ",
+    "dataString": "COI_FormType_COI: certificate of insurance =>\n",
+    "elements": [
+      {
+        "text": "certificate of insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Loss Payee Letters, LLC c/o Insurance Service Center P.O Box 90210 Miami FL 33197-9220 ",
+    "dataString": "COI_FormType_COI: Loss Payee =>\nCompany_Name: Letters, LLC c/o Insurance Service Center =>\nAddress_StreetNumber: P.O Box 90210 =>\nAddress_City: Miami =>\nAddress_State: FL =>\nAddress_ZIP: 33197-9220 =>\n",
+    "elements": [
+      {
+        "text": "Loss Payee",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Letters, LLC c/o Insurance Service Center",
+        "type": "Company_Name"
+      },
+      {
+        "text": "P.O Box 90210",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Miami",
+        "type": "Address_City"
+      },
+      {
+        "text": "FL",
+        "type": "Address_State"
+      },
+      {
+        "text": "33197-9220",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "• Insurance ",
+    "dataString": "Company_Name: • Insurance =>\n",
+    "elements": [
+      {
+        "text": "• Insurance",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Letters, LLC c/o Insurance Service Center P.O Box 90210 Miami FL 33197-9220 ",
+    "dataString": "Company_Name: Letters, LLC c/o Insurance Service Center =>\nAddress_StreetNumber: P.O Box 90210 =>\nAddress_City: Miami =>\nAddress_State: FL =>\nAddress_ZIP: 33197-9220 =>\n",
+    "elements": [
+      {
+        "text": "Letters, LLC c/o Insurance Service Center",
+        "type": "Company_Name"
+      },
+      {
+        "text": "P.O Box 90210",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Miami",
+        "type": "Address_City"
+      },
+      {
+        "text": "FL",
+        "type": "Address_State"
+      },
+      {
+        "text": "33197-9220",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "599 Basket Street Saddle Brook NJ 07663 ",
+    "dataString": "Address_StreetNumber: 599 Basket Street =>\nAddress_City: Saddle Brook =>\nAddress_State: NJ =>\nAddress_ZIP: 07663 =>\n",
+    "elements": [
+      {
+        "text": "599 Basket Street",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Saddle Brook",
+        "type": "Address_City"
+      },
+      {
+        "text": "NJ",
+        "type": "Address_State"
+      },
+      {
+        "text": "07663",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "P.O Box 90210 Miami FL 33197-9220 ",
+    "dataString": "Address_StreetNumber: P.O Box 90210 =>\nAddress_City: Miami =>\nAddress_State: FL =>\nAddress_ZIP: 33197-9220 =>\n",
+    "elements": [
+      {
+        "text": "P.O Box 90210",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Miami",
+        "type": "Address_City"
+      },
+      {
+        "text": "FL",
+        "type": "Address_State"
+      },
+      {
+        "text": "33197-9220",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "#13SBALP1200"
+  },
+  "2": {
+    "type": "Address_City",
+    "text": "Miami",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_State",
+    "text": "FL",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_ZIP",
+    "text": "33197-9220",
+    "visited_as_target": true
+  },
+  "5": {
+    "type": "Address_StreetNumber",
+    "text": "599 Basket Street",
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_City",
+    "text": "Saddle Brook",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_State",
+    "text": "NJ",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_ZIP",
+    "text": "07663",
+    "visited_as_target": true
+  },
+  "9": {
+    "type": "Phone_Number",
+    "text": "201-794-3000"
+  },
+  "10": {
+    "type": "Phone_Number",
+    "text": "201-291-5000"
+  },
+  "11": {
+    "type": "Email",
+    "text": "www.giainsurance.com giar@giainsurance.com"
+  },
+  "12": {
+    "type": "Delivery_Method",
+    "text": "forward"
+  },
+  "13": {
+    "type": "COI_FormType_COI",
+    "text": "certificate of insurance"
+  },
+  "14": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "15": {
+    "type": "Policy_Number",
+    "text": "#13SBALP1200 •"
+  },
+  "16": {
+    "type": "Company_Name",
+    "text": "• Insurance"
+  },
+  "17": {
+    "type": "COI_FormType_COI",
+    "text": "Loss Payee"
+  },
+  "18": {
+    "type": "Company_Name",
+    "text": "Letters, LLC c/o Insurance Service Center",
+    "visited_as_source": true
+  },
+  "19": {
+    "type": "Address_StreetNumber",
+    "text": "P.O Box 90210",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_City",
+      "text": "Miami",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_State",
+      "text": "FL",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Address_State",
+      "text": "FL",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_ZIP",
+      "text": "33197-9220",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_StreetNumber",
+      "text": "599 Basket Street",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_City",
+      "text": "Saddle Brook",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_City",
+      "text": "Saddle Brook",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_State",
+      "text": "NJ",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Address_State",
+      "text": "NJ",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_ZIP",
+      "text": "07663",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "17",
+      "type": "COI_FormType_COI",
+      "text": "Loss Payee"
+    },
+    "target": {
+      "id": "18",
+      "type": "Company_Name",
+      "text": "Letters, LLC c/o Insurance Service Center",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "18",
+      "type": "Company_Name",
+      "text": "Letters, LLC c/o Insurance Service Center",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "19",
+      "type": "Address_StreetNumber",
+      "text": "P.O Box 90210",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "19",
+      "type": "Address_StreetNumber",
+      "text": "P.O Box 90210",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_City",
+      "text": "Miami",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Gia Rondo [mailto:giar@giainsurance.com] 
+Sent: Monday, August 14, 2017 4:01 PM
+To: agency.services@thehartford.com
+Subject: CW, Esq - COI request policy #13SBALP1200
+
+Our insured has requested that we forward a certificate of insurance for their copy machine.
+
+See below:
+
+Agreement Number(s)     Equipment Value Equipment Description 0610133511550  $11,245.00 COPIERS
+
+Evidence of Business Personal Property to include:
+
+•             Insured name as: CW, Esq - COI request policy #13SBALP1200
+•             Insurance company name
+•             Insurance company policy number
+•             Policy effective and expiration dates
+•             Property coverage amount
+•             Company (below) listed as Loss Payee:
+
+Letters, LLC
+c/o Insurance Service Center
+P.O. Box 90210
+Miami, FL 33197-9220
+
+Gia Rondo
+
+Gia Rondo
+
+
+
+
+
+599 Basket Street, Saddle Brook, NJ  07663
+phone 201-794-3000 ext. 1112 fax 201-291-4000 (alternate fax 201-291-5000)
+www.giainsurance.com
+giar@giainsurance.com
+
+
+We cannot accept unsolicited email or voice mail asking for coverage to be bound.
+This email and any files transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed.   If you have received this in error please call our office immediately.
+ 
+----------------End Source ---------------------------------:: 
+

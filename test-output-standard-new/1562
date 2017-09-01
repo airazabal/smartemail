@@ -1,0 +1,282 @@
+Email ID: 1562 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Certificate of insurance-12SBMVV1234 Hello, Please issue a certificate of insurance for the following Additional insured they are already listed on the policy and the insured has a contract with them For Certificate: City of East Late Community Development Department 1345 California Street East Late, CA 90280  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Certificate of insurance ",
+    "dataString": "COI_FormType_COI: Certificate of insurance =>\n",
+    "elements": [
+      {
+        "text": "Certificate of insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate of insurance ",
+    "dataString": "COI_FormType_COI: certificate of insurance =>\n",
+    "elements": [
+      {
+        "text": "certificate of insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate City of East Late Community Development Department 1345 California Street East Late CA 90280 ",
+    "dataString": "COI_FormType_COI: Certificate =>\nCompany_Name: City of East Late Community Development Department =>\nAddress_StreetNumber: 1345 California Street =>\nAddress_City: East Late =>\nAddress_State: CA =>\nAddress_ZIP: 90280 =>\n",
+    "elements": [
+      {
+        "text": "Certificate",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "City of East Late Community Development Department",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1345 California Street",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "East Late",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "90280",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "City of East Late Community Development Department 1345 California Street East Late CA 90280 ",
+    "dataString": "Company_Name: City of East Late Community Development Department =>\nAddress_StreetNumber: 1345 California Street =>\nAddress_City: East Late =>\nAddress_State: CA =>\nAddress_ZIP: 90280 =>\n",
+    "elements": [
+      {
+        "text": "City of East Late Community Development Department",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1345 California Street",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "East Late",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "90280",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "1345 California Street East Late CA 90280 ",
+    "dataString": "Address_StreetNumber: 1345 California Street =>\nAddress_City: East Late =>\nAddress_State: CA =>\nAddress_ZIP: 90280 =>\n",
+    "elements": [
+      {
+        "text": "1345 California Street",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "East Late",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "90280",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate of insurance"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "12SBMVV1234"
+  },
+  "2": {
+    "type": "COI_FormType_COI",
+    "text": "certificate of insurance"
+  },
+  "3": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "Additional insured"
+  },
+  "4": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate"
+  },
+  "5": {
+    "type": "Company_Name",
+    "text": "City of East Late Community Development Department",
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_StreetNumber",
+    "text": "1345 California Street",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_City",
+    "text": "East Late",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_State",
+    "text": "CA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_ZIP",
+    "text": "90280",
+    "visited_as_target": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "4",
+      "type": "COI_FormType_COI",
+      "text": "Certificate"
+    },
+    "target": {
+      "id": "5",
+      "type": "Company_Name",
+      "text": "City of East Late Community Development Department",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Company_Name",
+      "text": "City of East Late Community Development Department",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_StreetNumber",
+      "text": "1345 California Street",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_StreetNumber",
+      "text": "1345 California Street",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_City",
+      "text": "East Late",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Address_City",
+      "text": "East Late",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_ZIP",
+      "text": "90280",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Anna Ker[mailto:aker@katdog.com] 
+Sent: Tuesday, August 08, 2017 9:40 AM
+To: agency.services@thehartford.com
+Subject: Certificate of insurance-12SBMVV1234
+
+Hello,
+
+Please issue a certificate of insurance for the following Additional insured . they are already listed on the policy and the insured has a contract with them.
+
+
+
+For Certificate:
+
+City of East Late
+Community Development Department
+1345 California Street
+East Late, CA 90280
+
+
+Thanks
+
+Anna ker
+Katdog Insurance Agency LLC
+123 HHG Plaza
+Unionpaler NY 11512
+aker@katdog.com
+516-794-1234 (PH)-Ext. 789
+516-794-5689(F)
+ 
+----------------End Source ---------------------------------:: 
+

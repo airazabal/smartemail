@@ -1,0 +1,296 @@
+Email ID: 1643 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Tebow & Associates, LLC - 44SBAIT7845, MCN000252749630 Could I please get a certificate of insurance for the insured Tebow & Associates, LLC policy number 44SBAIT7845 and MCN000252749630 The certificate holder is: State Virtual School 2145 Metro Blvd, Suite 1000 Orlando, FL 32835  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "certificate of insurance ",
+    "dataString": "COI_FormType_COI: certificate of insurance =>\n",
+    "elements": [
+      {
+        "text": "certificate of insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate holder State Virtual School 2145 Metro Blvd, Suite 1000 Orlando FL 32835 ",
+    "dataString": "COI_FormType_COI: certificate holder =>\nCompany_Name: State Virtual School =>\nAddress_StreetNumber: 2145 Metro Blvd, Suite 1000 =>\nAddress_City: Orlando =>\nAddress_State: FL =>\nAddress_ZIP: 32835 =>\n",
+    "elements": [
+      {
+        "text": "certificate holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "State Virtual School",
+        "type": "Company_Name"
+      },
+      {
+        "text": "2145 Metro Blvd, Suite 1000",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Orlando",
+        "type": "Address_City"
+      },
+      {
+        "text": "FL",
+        "type": "Address_State"
+      },
+      {
+        "text": "32835",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Tebow & Associates, LLC ",
+    "dataString": "Company_Name: Tebow & Associates, LLC =>\n",
+    "elements": [
+      {
+        "text": "Tebow & Associates, LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Tebow & Associates, LLC ",
+    "dataString": "Company_Name: Tebow & Associates, LLC =>\n",
+    "elements": [
+      {
+        "text": "Tebow & Associates, LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "State Virtual School 2145 Metro Blvd, Suite 1000 Orlando FL 32835 ",
+    "dataString": "Company_Name: State Virtual School =>\nAddress_StreetNumber: 2145 Metro Blvd, Suite 1000 =>\nAddress_City: Orlando =>\nAddress_State: FL =>\nAddress_ZIP: 32835 =>\n",
+    "elements": [
+      {
+        "text": "State Virtual School",
+        "type": "Company_Name"
+      },
+      {
+        "text": "2145 Metro Blvd, Suite 1000",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Orlando",
+        "type": "Address_City"
+      },
+      {
+        "text": "FL",
+        "type": "Address_State"
+      },
+      {
+        "text": "32835",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "2145 Metro Blvd, Suite 1000 Orlando FL 32835 ",
+    "dataString": "Address_StreetNumber: 2145 Metro Blvd, Suite 1000 =>\nAddress_City: Orlando =>\nAddress_State: FL =>\nAddress_ZIP: 32835 =>\n",
+    "elements": [
+      {
+        "text": "2145 Metro Blvd, Suite 1000",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Orlando",
+        "type": "Address_City"
+      },
+      {
+        "text": "FL",
+        "type": "Address_State"
+      },
+      {
+        "text": "32835",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "Tebow & Associates, LLC"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "44SBAIT7845"
+  },
+  "2": {
+    "type": "Address_State",
+    "text": "FL",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_ZIP",
+    "text": "32835",
+    "visited_as_target": true
+  },
+  "4": {
+    "type": "Policy_Number",
+    "text": "MCN000252749630"
+  },
+  "5": {
+    "type": "COI_FormType_COI",
+    "text": "certificate of insurance"
+  },
+  "6": {
+    "type": "Company_Name",
+    "text": "Tebow & Associates, LLC"
+  },
+  "7": {
+    "type": "Policy_Number",
+    "text": "44SBAIT7845"
+  },
+  "8": {
+    "type": "COI_FormType_COI",
+    "text": "certificate holder"
+  },
+  "9": {
+    "type": "Company_Name",
+    "text": "State Virtual School",
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_StreetNumber",
+    "text": "2145 Metro Blvd, Suite 1000",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "11": {
+    "type": "Address_City",
+    "text": "Orlando",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "FL",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_ZIP",
+      "text": "32835",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "COI_FormType_COI",
+      "text": "certificate holder"
+    },
+    "target": {
+      "id": "9",
+      "type": "Company_Name",
+      "text": "State Virtual School",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Company_Name",
+      "text": "State Virtual School",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_StreetNumber",
+      "text": "2145 Metro Blvd, Suite 1000",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_StreetNumber",
+      "text": "2145 Metro Blvd, Suite 1000",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "11",
+      "type": "Address_City",
+      "text": "Orlando",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "11",
+      "type": "Address_City",
+      "text": "Orlando",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "FL",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Tina Ald [mailto:tina@kigy.com] 
+Sent: Wednesday, August 16, 2017 12:25 PM
+To: Agency.Service@thehartford.com
+Subject: Tebow & Associates, LLC - 44SBAIT7845, MCN000252749630
+
+Could I please get a certificate of insurance for the insured Tebow & Associates, LLC policy number 44SBAIT7845 and MCN000252749630.
+
+The certificate holder is:
+State Virtual School
+2145 Metro Blvd, Suite 1000
+Orlando, FL 32835
+
+Thank You
+
+
+Tina Ald
+Commercial Lines Insurance Agent
+Kan & Kule Insurance Group, Inc.
+1710 W. Street
+York, PA 17402
+717-854-5255
+717-854-5525 (fax)
+
+Visit us on the web at www.kigy.com for details on our refer a friend program.
+ 
+----------------End Source ---------------------------------:: 
+

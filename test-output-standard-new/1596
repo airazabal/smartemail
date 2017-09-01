@@ -1,0 +1,284 @@
+Email ID: 1596 
+----------------Begin Cleansed ---------------------------------: 
+Subject: 1234 Children Medicine Group, PLLC - 46SBAVU1234 Hello, Please issue a certificate and an evidence of property for Livington Bank 1234 Highschool Park Drive The Lands, TX 12345 Loan No 8241234  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "certificate Livington Bank 1234 Highschool Park Drive The Lands TX 12345 ",
+    "dataString": "COI_FormType_COI: certificate =>\nCompany_Name: Livington Bank =>\nAddress_StreetNumber: 1234 Highschool Park Drive =>\nAddress_City: The Lands =>\nAddress_State: TX =>\nAddress_ZIP: 12345 =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Livington Bank",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1234 Highschool Park Drive",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "The Lands",
+        "type": "Address_City"
+      },
+      {
+        "text": "TX",
+        "type": "Address_State"
+      },
+      {
+        "text": "12345",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Livington Bank 1234 Highschool Park Drive The Lands TX 12345 ",
+    "dataString": "Company_Name: Livington Bank =>\nAddress_StreetNumber: 1234 Highschool Park Drive =>\nAddress_City: The Lands =>\nAddress_State: TX =>\nAddress_ZIP: 12345 =>\n",
+    "elements": [
+      {
+        "text": "Livington Bank",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1234 Highschool Park Drive",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "The Lands",
+        "type": "Address_City"
+      },
+      {
+        "text": "TX",
+        "type": "Address_State"
+      },
+      {
+        "text": "12345",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "1234 Children Medicine Group ",
+    "dataString": "Address_StreetNumber: 1234 Children Medicine Group =>\n",
+    "elements": [
+      {
+        "text": "1234 Children Medicine Group",
+        "type": "Address_StreetNumber"
+      }
+    ]
+  },
+  {
+    "simpleString": "1234 Highschool Park Drive The Lands TX 12345 ",
+    "dataString": "Address_StreetNumber: 1234 Highschool Park Drive =>\nAddress_City: The Lands =>\nAddress_State: TX =>\nAddress_ZIP: 12345 =>\n",
+    "elements": [
+      {
+        "text": "1234 Highschool Park Drive",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "The Lands",
+        "type": "Address_City"
+      },
+      {
+        "text": "TX",
+        "type": "Address_State"
+      },
+      {
+        "text": "12345",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Address_StreetNumber",
+    "text": "1234 Children Medicine Group"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "46SBAVU1234"
+  },
+  "2": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "3": {
+    "type": "Company_Name",
+    "text": "Livington Bank",
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_StreetNumber",
+    "text": "1234 Highschool Park Drive",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_City",
+    "text": "The Lands",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_State",
+    "text": "TX",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_ZIP",
+    "text": "12345",
+    "visited_as_target": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "COI_FormType_COI",
+      "text": "certificate"
+    },
+    "target": {
+      "id": "3",
+      "type": "Company_Name",
+      "text": "Livington Bank",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Company_Name",
+      "text": "Livington Bank",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_StreetNumber",
+      "text": "1234 Highschool Park Drive",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_StreetNumber",
+      "text": "1234 Highschool Park Drive",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_City",
+      "text": "The Lands",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_City",
+      "text": "The Lands",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_State",
+      "text": "TX",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_State",
+      "text": "TX",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_ZIP",
+      "text": "12345",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Giel Ertson [mailto:Giel.Ertson@moosehead.com] 
+Sent: Thursday, August 17, 2017 5:49 PM
+To: agency.service@thehartford.com
+Subject: 1234 Children Medicine Group, PLLC - 46SBAVU1234
+
+Hello,
+
+Please issue a certificate and an evidence of property for
+
+Livington Bank
+1234 Highschool Park Drive
+The Lands, TX 12345
+Loan No. 8241234
+
+Thank you,
+Giel
+
+You may receive a survey regarding your experience with me. My goal is that you are satisfied with the service I provided and would be very likely to recommend Moosehead to friends and family!
+
+______________________________________________________________________________________________________
+
+GIEL ERTSON  Licensed Service Agent
+_____________________________________________________________________________________________________
+
+214.838.1234 | DIRECT
+800.474.5678 | TOLL-FREE
+866.877.8877 | FAX
+
+1234 ANA BOULEVARD
+BUILDING 46, SUITE 1234
+WESTDATE, TX 12345
+Giel.Ertson@moosehead.com
+
+The greatest compliment you can give me is a referral of my services!
+www.moosehead.com
+
+
+
+
+______________________________________________________________________________________________________
+
+
+
+  Please consider the environment before printing this e-mail
+
+This electronic mail transmission contains confidential information intended only for the person(s) named.
+Any use, distribution, copying or disclosure by any other person is strictly prohibited. If you received this
+transmission in error, please notify the sender by reply e-mail and then destroy the message.
+ 
+----------------End Source ---------------------------------:: 
+

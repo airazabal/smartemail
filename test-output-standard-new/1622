@@ -1,0 +1,394 @@
+Email ID: 1622 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Request for Issuing a COI Naming State Univ as Additional Insured Certificate of Insurance Department E-mail: certificate.service@thehartford.com Phone: 866-467-8730 Fax: 877-538-8526 FROM: fairplay, Inc — c/o Rit David POLICY No.: 57SBAEB8520 RE: Certificate of Insurance Please immediately issue a Certificate of Insurance naming the following as additional insured and e-mail a copy to the contact person named below Please email a copy to: lv1000@sfsu.edu Please also e-mail a copy to me: rit@fairplay.com Name as additional insured: State University 1818 Hollow Avenue San Francisco, CA 94132 E-mail the confirmation to: Attn: Mel Anderos Phone: 415-338-3888 E-mail: lv1000@sfsu.edu Playfair show date(s): January 1 through December 31, 2017 Relationship to AI: Playfair has been formally contracted to provide a New Student Orientation program on one or more dates in 2017 Please also e-mail a copy to: rit@fairplay.com  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate of Insurance ",
+    "dataString": "COI_FormType_COI: Certificate of Insurance =>\n",
+    "elements": [
+      {
+        "text": "Certificate of Insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate of Insurance ",
+    "dataString": "COI_FormType_COI: Certificate of Insurance =>\n",
+    "elements": [
+      {
+        "text": "Certificate of Insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Certificate of Insurance ",
+    "dataString": "COI_FormType_COI: Certificate of Insurance =>\n",
+    "elements": [
+      {
+        "text": "Certificate of Insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "State University 1818 Hollow Avenue San Francisco CA 94132 ",
+    "dataString": "Company_Name: State University =>\nAddress_StreetNumber: 1818 Hollow Avenue =>\nAddress_City: San Francisco =>\nAddress_State: CA =>\nAddress_ZIP: 94132 =>\n",
+    "elements": [
+      {
+        "text": "State University",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1818 Hollow Avenue",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "San Francisco",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "94132",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "Attn: Mel Anderos ",
+    "dataString": "Company_Name: Attn: Mel Anderos =>\n",
+    "elements": [
+      {
+        "text": "Attn: Mel Anderos",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Playfair ",
+    "dataString": "Company_Name: Playfair =>\n",
+    "elements": [
+      {
+        "text": "Playfair",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "fairplay, Inc — c/o Rit David ",
+    "dataString": "Company_Name: fairplay, Inc — c/o Rit David =>\n",
+    "elements": [
+      {
+        "text": "fairplay, Inc — c/o Rit David",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "1818 Hollow Avenue San Francisco CA 94132 ",
+    "dataString": "Address_StreetNumber: 1818 Hollow Avenue =>\nAddress_City: San Francisco =>\nAddress_State: CA =>\nAddress_ZIP: 94132 =>\n",
+    "elements": [
+      {
+        "text": "1818 Hollow Avenue",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "San Francisco",
+        "type": "Address_City"
+      },
+      {
+        "text": "CA",
+        "type": "Address_State"
+      },
+      {
+        "text": "94132",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "1": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "Additional Insured"
+  },
+  "2": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "additional insured"
+  },
+  "3": {
+    "type": "Delivery_Method",
+    "text": "e-mail"
+  },
+  "4": {
+    "type": "Delivery_Method",
+    "text": "email"
+  },
+  "5": {
+    "type": "Email",
+    "text": "lv1000@sfsu.edu"
+  },
+  "6": {
+    "type": "Email",
+    "text": "rit@fairplay.com"
+  },
+  "7": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "additional insured"
+  },
+  "8": {
+    "type": "Company_Name",
+    "text": "State University",
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_StreetNumber",
+    "text": "1818 Hollow Avenue",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_City",
+    "text": "San Francisco",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "11": {
+    "type": "Address_State",
+    "text": "CA",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "12": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate of Insurance"
+  },
+  "13": {
+    "type": "Address_ZIP",
+    "text": "94132",
+    "visited_as_target": true
+  },
+  "14": {
+    "type": "Delivery_Method",
+    "text": "E-mail"
+  },
+  "15": {
+    "type": "Company_Name",
+    "text": "Attn: Mel Anderos"
+  },
+  "16": {
+    "type": "Phone_Number",
+    "text": "415-338-3888"
+  },
+  "17": {
+    "type": "Delivery_Method",
+    "text": "E-mail"
+  },
+  "18": {
+    "type": "Email",
+    "text": "lv1000@sfsu.edu"
+  },
+  "19": {
+    "type": "Company_Name",
+    "text": "Playfair"
+  },
+  "20": {
+    "type": "Email",
+    "text": "rit@fairplay.com"
+  },
+  "21": {
+    "type": "Email",
+    "text": "certificate.service@thehartford.com"
+  },
+  "22": {
+    "type": "Phone_Number",
+    "text": "866-467-8730"
+  },
+  "23": {
+    "type": "Phone_Number",
+    "text": "877-538-8526"
+  },
+  "24": {
+    "type": "Company_Name",
+    "text": "fairplay, Inc — c/o Rit David"
+  },
+  "25": {
+    "type": "Policy_Number",
+    "text": "57SBAEB8520"
+  },
+  "26": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate of Insurance"
+  },
+  "27": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate of Insurance"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "8",
+      "type": "Company_Name",
+      "text": "State University",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_StreetNumber",
+      "text": "1818 Hollow Avenue",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Address_StreetNumber",
+      "text": "1818 Hollow Avenue",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_City",
+      "text": "San Francisco",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_City",
+      "text": "San Francisco",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "11",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "11",
+      "type": "Address_State",
+      "text": "CA",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "13",
+      "type": "Address_ZIP",
+      "text": "94132",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Rit David [mailto:ritdavid@mack.com] 
+Sent: Tuesday, August 15, 2017 3:38 PM
+To: Hartford Insurance <certificate.service@thehartford.com>
+Cc: lv1000@sfsu.edu; Bea Mayer <bea@admireet.com>
+Subject: Request for Issuing a COI Naming State Univ as Additional Insured
+
+To:        Hartford Service Center
+              Certificate of Insurance Department
+
+E-mail:   certificate.service@thehartford.com
+Phone:   866-467-8730
+Fax:        877-538-8526
+
+FROM:             fairplay, Inc. — c/o Rit David
+POLICY No.:    57SBAEB8520
+
+RE:                   Certificate of Insurance
+
+Please immediately issue a Certificate of Insurance naming the following as additional insured
+and e-mail a copy to the contact person named below.
+
+Please email a copy to:   lv1000@sfsu.edu
+
+Please also e-mail a copy to me:  rit@fairplay.com.
+
+Many thanks!
+
+Rit David
+_________________________________________________
+
+Name as additional insured:
+State University
+1818 Hollow Avenue
+San Francisco, CA 94132
+
+E-mail the confirmation to:
+Attn: Mel Anderos
+Phone: 415-338-3888
+
+E-mail: lv1000@sfsu.edu
+
+Playfair show date(s): January 1 through December 31, 2017
+
+Relationship to AI: Playfair has been formally contracted to provide a New Student Orientation program on one or more dates in 2017.
+
+_________________________________________________
+
+Please also e-mail a copy to: rit@fairplay.com.
+
+Thanks!
+
+<<<<<<<<<<<<<<>>>>>>>>>>>>>
+Rit David
+fairplay
+PO Box 6363
+Martinez, CA 94553
+925-372-2050-ph & fax
+510-459-8658-cell
+www.fairplay.com
+See Rit's 15-min. preview Video
+Send a friend a standing ovation!
+ 
+----------------End Source ---------------------------------:: 
+

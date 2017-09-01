@@ -1,0 +1,265 @@
+Email ID: 1659 
+----------------Begin Cleansed ---------------------------------: 
+Subject: Certificate Of Insurance Request for: SC & D Lofts Policy Number: 20 SBA IA1234 One-Time Please do not mail a hard copy of the COI Please create the COI with the coverage we already offer - We are the installers and we will be installing window treatments I need a COI per the attached sample, we do have a contract with the following client: SC & D Lofts 123 Pasta Blvd Apt.: 8-D Jamaica NY 12345 Please call me if you have any questions  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Certificate Of Insurance SC & D Lofts 123 Pasta Blvd Apt ",
+    "dataString": "COI_FormType_COI: Certificate Of Insurance =>\nCompany_Name: SC & D Lofts =>\nAddress_StreetNumber: 123 Pasta Blvd Apt =>\n",
+    "elements": [
+      {
+        "text": "Certificate Of Insurance",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "SC & D Lofts",
+        "type": "Company_Name"
+      },
+      {
+        "text": "123 Pasta Blvd Apt",
+        "type": "Address_StreetNumber"
+      }
+    ]
+  },
+  {
+    "simpleString": "COI SC & D Lofts 123 Pasta Blvd Apt ",
+    "dataString": "COI_FormType_COI: COI =>\nCompany_Name: SC & D Lofts =>\nAddress_StreetNumber: 123 Pasta Blvd Apt =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "SC & D Lofts",
+        "type": "Company_Name"
+      },
+      {
+        "text": "123 Pasta Blvd Apt",
+        "type": "Address_StreetNumber"
+      }
+    ]
+  },
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "COI ",
+    "dataString": "COI_FormType_COI: COI =>\n",
+    "elements": [
+      {
+        "text": "COI",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "SC & D Lofts 123 Pasta Blvd Apt ",
+    "dataString": "Company_Name: SC & D Lofts =>\nAddress_StreetNumber: 123 Pasta Blvd Apt =>\n",
+    "elements": [
+      {
+        "text": "SC & D Lofts",
+        "type": "Company_Name"
+      },
+      {
+        "text": "123 Pasta Blvd Apt",
+        "type": "Address_StreetNumber"
+      }
+    ]
+  },
+  {
+    "simpleString": "SC & D Lofts ",
+    "dataString": "Company_Name: SC & D Lofts =>\n",
+    "elements": [
+      {
+        "text": "SC & D Lofts",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "8-D Jamaica ",
+    "dataString": "Company_Name: 8-D Jamaica =>\n",
+    "elements": [
+      {
+        "text": "8-D Jamaica",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "123 Pasta Blvd Apt ",
+    "dataString": "Address_StreetNumber: 123 Pasta Blvd Apt =>\n",
+    "elements": [
+      {
+        "text": "123 Pasta Blvd Apt",
+        "type": "Address_StreetNumber"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Of Insurance"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "SC & D Lofts",
+    "visited_as_source": true
+  },
+  "2": {
+    "type": "Address_ZIP",
+    "text": "12345",
+    "visited_as_target": true
+  },
+  "3": {
+    "type": "Policy_Number",
+    "text": "20 SBA IA1234"
+  },
+  "4": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "5": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "6": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "7": {
+    "type": "Company_Name",
+    "text": "SC & D Lofts"
+  },
+  "8": {
+    "type": "Address_StreetNumber",
+    "text": "123 Pasta Blvd Apt",
+    "visited_as_target": true
+  },
+  "9": {
+    "type": "Company_Name",
+    "text": "8-D Jamaica"
+  },
+  "10": {
+    "type": "Address_State",
+    "text": "NY",
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "0",
+      "type": "COI_FormType_COI",
+      "text": "Certificate Of Insurance"
+    },
+    "target": {
+      "id": "1",
+      "type": "Company_Name",
+      "text": "SC & D Lofts",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "1",
+      "type": "Company_Name",
+      "text": "SC & D Lofts",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_StreetNumber",
+      "text": "123 Pasta Blvd Apt",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "COI_FormType_COI",
+      "text": "COI"
+    },
+    "target": {
+      "id": "1",
+      "type": "Company_Name",
+      "text": "SC & D Lofts",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_State",
+      "text": "NY",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_ZIP",
+      "text": "12345",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Rolex [mailto:rolex@stopmail.com] 
+Sent: Wednesday, August 23, 2017 10:01 AM
+To: AGENCY.SERVICES@thehartford.com
+Subject: Certificate Of Insurance Request for: SC & D Lofts
+
+Policy Number:  20 SBA IA1234
+One-Time
+Please do not mail a hard copy of the COI
+
+Please create the COI with the coverage we already offer - We are the installers and we will be installing window treatments.
+
+I need a COI per the attached sample, we do have a contract with the following client:
+
+SC & D Lofts
+123 Pasta Blvd
+Apt.: 8-D
+Jamaica NY 12345
+
+Please call me if you have any questions.
+
+
+Thank you,
+
+JM
+
+Rolex
+12 Liners Plz. Suite 123
+Fort Morris, NJ 12345
+Phone: 201-226-1234
+Fax: 201-226-5678
+ 
+----------------End Source ---------------------------------:: 
+

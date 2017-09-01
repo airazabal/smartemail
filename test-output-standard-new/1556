@@ -1,0 +1,339 @@
+Email ID: 1556 
+----------------Begin Cleansed ---------------------------------: 
+Subject: LTFD, Inc dba Domain Eight - 45SBAAI1234 - FW: Certificate of Liability Insurance This message was sent securely using MixCorp Please issue a certificate per the certificate holder below and send to June at LTFD Good morning Mary Please provide us with a certificate for the following: L.D.P Industries 22 Commerce Road Raspberry, NH 08123 
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Certificate of Liability Insurance ",
+    "dataString": "COI_FormType_COI: Certificate of Liability Insurance =>\n",
+    "elements": [
+      {
+        "text": "Certificate of Liability Insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate L.D.P Industries 22 Commerce Road Raspberry NH 08123 ",
+    "dataString": "COI_FormType_COI: certificate =>\nCompany_Name: L.D.P Industries =>\nAddress_StreetNumber: 22 Commerce Road =>\nAddress_City: Raspberry =>\nAddress_State: NH =>\nAddress_ZIP: 08123 =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "L.D.P Industries",
+        "type": "Company_Name"
+      },
+      {
+        "text": "22 Commerce Road",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Raspberry",
+        "type": "Address_City"
+      },
+      {
+        "text": "NH",
+        "type": "Address_State"
+      },
+      {
+        "text": "08123",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate holder ",
+    "dataString": "COI_FormType_COI: certificate holder =>\n",
+    "elements": [
+      {
+        "text": "certificate holder",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate ",
+    "dataString": "COI_FormType_COI: certificate =>\n",
+    "elements": [
+      {
+        "text": "certificate",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "LTFD, Inc dba Domain Eight ",
+    "dataString": "Company_Name: LTFD, Inc dba Domain Eight =>\n",
+    "elements": [
+      {
+        "text": "LTFD, Inc dba Domain Eight",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "L.D.P Industries 22 Commerce Road Raspberry NH 08123 ",
+    "dataString": "Company_Name: L.D.P Industries =>\nAddress_StreetNumber: 22 Commerce Road =>\nAddress_City: Raspberry =>\nAddress_State: NH =>\nAddress_ZIP: 08123 =>\n",
+    "elements": [
+      {
+        "text": "L.D.P Industries",
+        "type": "Company_Name"
+      },
+      {
+        "text": "22 Commerce Road",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Raspberry",
+        "type": "Address_City"
+      },
+      {
+        "text": "NH",
+        "type": "Address_State"
+      },
+      {
+        "text": "08123",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "22 Commerce Road Raspberry NH 08123 ",
+    "dataString": "Address_StreetNumber: 22 Commerce Road =>\nAddress_City: Raspberry =>\nAddress_State: NH =>\nAddress_ZIP: 08123 =>\n",
+    "elements": [
+      {
+        "text": "22 Commerce Road",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Raspberry",
+        "type": "Address_City"
+      },
+      {
+        "text": "NH",
+        "type": "Address_State"
+      },
+      {
+        "text": "08123",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "Company_Name",
+    "text": "LTFD, Inc dba Domain Eight"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "45SBAAI1234"
+  },
+  "2": {
+    "type": "Address_State",
+    "text": "NH",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "3": {
+    "type": "Address_ZIP",
+    "text": "08123",
+    "visited_as_target": true
+  },
+  "4": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate of Liability Insurance"
+  },
+  "5": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "6": {
+    "type": "COI_FormType_COI",
+    "text": "certificate holder"
+  },
+  "7": {
+    "type": "Delivery_Method",
+    "text": "send"
+  },
+  "8": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "9": {
+    "type": "Company_Name",
+    "text": "L.D.P Industries",
+    "visited_as_source": true
+  },
+  "10": {
+    "type": "Address_StreetNumber",
+    "text": "22 Commerce Road",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "11": {
+    "type": "Address_City",
+    "text": "Raspberry",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "NH",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "3",
+      "type": "Address_ZIP",
+      "text": "08123",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "COI_FormType_COI",
+      "text": "certificate"
+    },
+    "target": {
+      "id": "9",
+      "type": "Company_Name",
+      "text": "L.D.P Industries",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "9",
+      "type": "Company_Name",
+      "text": "L.D.P Industries",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "10",
+      "type": "Address_StreetNumber",
+      "text": "22 Commerce Road",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "10",
+      "type": "Address_StreetNumber",
+      "text": "22 Commerce Road",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "11",
+      "type": "Address_City",
+      "text": "Raspberry",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "11",
+      "type": "Address_City",
+      "text": "Raspberry",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_State",
+      "text": "NH",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Mary Maclare [mailto:MM@bizarrecompanies.com] 
+Sent: Thursday, August 10, 2017 3:08 PM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Subject: LTFD, Inc. dba Domain Eight - 45SBAAI1234 - FW: Certificate of Liability Insurance
+Importance: High
+
+This message was sent securely using MixCorp.
+
+
+Please issue a certificate per the certificate holder below and send to June at LTFD.
+
+Thank you,
+Mary
+
+
+Mary Maclare
+Client Manager
+
+Bizarre Companies
+1234 Exterior Avenue, Suite 9876
+Clev, IL  44556
+Direct 440.549.1234
+Fax 216.241.5678
+MM@bizarrecompanies.com
+www.bizarrecompanies.com
+
+Use Bizarre's RMIS, OnSlack to more effectively manage your company’s risk.  Click here to learn more
+
+From: April Meadow [mailto:AM@Domain8.com]
+Sent: Thursday, August 10, 2017 10:22 AM
+To: Mary Maclare [mailto:MM@bizarrecompanies.com]
+Subject: Certificate of Liability Insurance
+
+Good morning  Mary.
+Please provide us with a certificate for the following:
+                L.D.P. Industries
+                22 Commerce Road
+                Raspberry, NH  08123
+Thank you.
+
+April Meadow
+LTFD Incorporated dba DomainEight
+Providing Excellent Solutions For Over 25 Years
+800-333-1234 X 1123  fax 888-900-5678
+Direct Line  216-220-2233
+www.Domain8.com  *  AM@Domain8
+
+
+
+PLEASE NOTE: Coverage cannot be placed, bound or altered without confirmation from a representative of our company. Please be advised that any and all reviews, recommendations, suggestions, discussions, emails or any other types of correspondence are done so for insurance purposes only. No communication between us should ever be interpreted to be legal advice or a substitute for consultation with your legal counsel.
+
+CONFIDENTIALITY NOTICE: The information in this e-mail message, and any attachment, is intended for the sole use of the individual and entity to whom it was addressed. This information is privileged, confidential and protected from disclosure. If you are not the intended recipient you are hereby notified that you have received this communication in error and any review, disclosure, dissemination, distribution or copying of it, or its contents is strictly prohibited. If you think you have received this message in error, please e-mail the sender and destroy all copies of this communication and any attachments. Thank you.
+
+
+
+-------------------------------------------------------------------------
+This message was secured by MixCorp(R).
+ 
+----------------End Source ---------------------------------:: 
+

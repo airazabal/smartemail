@@ -1,0 +1,117 @@
+Email ID: 1569 
+----------------Begin Cleansed ---------------------------------: 
+Subject: COI for Yustin Dep Hello, I need a new COI made for a new one time client The Job is August 18th-19th 2017 SLow Nation Nationwide inc 1234 Bitym Center Dr Beverly Mountain, CA 90210 Yustin Dep Director/Producer www.YustinDep.com  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+{
+  "strings": [
+    "COI Nationwide inc 1234 Bitym Center Dr Beverly Mountain CA 90210 ",
+    "COI "
+  ],
+  "data": [
+    "COI_FormType_COI: COI =>\nCompany_Name: Nationwide inc =>\nAddress_StreetNumber: 1234 Bitym Center Dr =>\nAddress_City: Beverly Mountain =>\nAddress_State: CA =>\nAddress_ZIP: 90210 =>\n",
+    "COI_FormType_COI: COI =>\n"
+  ]
+}
+
+Relations chains starting from Company_Name 
+{
+  "strings": [
+    "Yustin Dep ",
+    "Nationwide inc 1234 Bitym Center Dr Beverly Mountain CA 90210 "
+  ],
+  "data": [
+    "Company_Name: Yustin Dep =>\n",
+    "Company_Name: Nationwide inc =>\nAddress_StreetNumber: 1234 Bitym Center Dr =>\nAddress_City: Beverly Mountain =>\nAddress_State: CA =>\nAddress_ZIP: 90210 =>\n"
+  ]
+}
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "Yustin Dep"
+  },
+  "2": {
+    "type": "COI_FormType_COI",
+    "text": "COI"
+  },
+  "3": {
+    "type": "Company_Name",
+    "text": "Nationwide inc"
+  },
+  "4": {
+    "type": "Address_StreetNumber",
+    "text": "1234 Bitym Center Dr"
+  },
+  "5": {
+    "type": "Address_City",
+    "text": "Beverly Mountain"
+  },
+  "6": {
+    "type": "Address_State",
+    "text": "CA"
+  },
+  "7": {
+    "type": "Address_ZIP",
+    "text": "90210"
+  },
+  "8": {
+    "type": "Email",
+    "text": "www.YustinDep.com"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": "0",
+    "target": "3"
+  },
+  {
+    "source": "3",
+    "target": "4"
+  },
+  {
+    "source": "4",
+    "target": "5"
+  },
+  {
+    "source": "5",
+    "target": "6"
+  },
+  {
+    "source": "6",
+    "target": "7"
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Yustin Dep [mailto:YD@deedee.com]
+Sent: Thursday, August 10, 2017 2:01 PM
+To: Services, Agency (Comm Lines, San Antonio/SCIC)
+Subject: COI for Yustin Dep
+
+Hello,
+
+I need a new COI made for a new one time client.  The Job is August 18th-19th 2017.
+SLow Nation Nationwide inc.
+1234 Bitym Center Dr.
+Beverly Mountain, CA 90210
+
+
+Yustin Dep
+Director/Producer
+www.YustinDep.com
+ 
+----------------End Source ---------------------------------:: 
+

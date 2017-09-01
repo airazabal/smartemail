@@ -1,0 +1,154 @@
+Email ID: 1557 
+----------------Begin Cleansed ---------------------------------: 
+Subject: CERT REQUEST 76WEGLN1234 MattPro Inc Hello Please issue a certificate with the following certificate holder: Rockcliff Management Attn: Toni Peddleman 123 High Street Boston, CA 02110 Please send to the client at sc@mattpro.com  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+{
+  "strings": [
+    "CERT ",
+    "certificate ",
+    "certificate holder Rockcliff Management Attn: Toni Peddleman 123 High Street Boston CA 02110 "
+  ],
+  "data": [
+    "COI_FormType_COI: CERT =>\n",
+    "COI_FormType_COI: certificate =>\n",
+    "COI_FormType_COI: certificate holder =>\nCompany_Name: Rockcliff Management Attn: Toni Peddleman =>\nAddress_StreetNumber: 123 High Street =>\nAddress_City: Boston =>\nAddress_State: CA =>\nAddress_ZIP: 02110 =>\n"
+  ]
+}
+
+Relations chains starting from Company_Name 
+{
+  "strings": [
+    "MattPro Inc ",
+    "Rockcliff Management Attn: Toni Peddleman 123 High Street Boston CA 02110 "
+  ],
+  "data": [
+    "Company_Name: MattPro Inc =>\n",
+    "Company_Name: Rockcliff Management Attn: Toni Peddleman =>\nAddress_StreetNumber: 123 High Street =>\nAddress_City: Boston =>\nAddress_State: CA =>\nAddress_ZIP: 02110 =>\n"
+  ]
+}
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "CERT"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "76WEGLN1234"
+  },
+  "2": {
+    "type": "Delivery_Method",
+    "text": "send"
+  },
+  "3": {
+    "type": "Email",
+    "text": "sc@mattpro.com"
+  },
+  "4": {
+    "type": "Company_Name",
+    "text": "MattPro Inc"
+  },
+  "5": {
+    "type": "COI_FormType_COI",
+    "text": "certificate"
+  },
+  "6": {
+    "type": "COI_FormType_COI",
+    "text": "certificate holder"
+  },
+  "7": {
+    "type": "Company_Name",
+    "text": "Rockcliff Management Attn: Toni Peddleman"
+  },
+  "8": {
+    "type": "Address_StreetNumber",
+    "text": "123 High Street"
+  },
+  "9": {
+    "type": "Address_City",
+    "text": "Boston"
+  },
+  "10": {
+    "type": "Address_State",
+    "text": "CA"
+  },
+  "11": {
+    "type": "Address_ZIP",
+    "text": "02110"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": "3",
+    "target": "2"
+  },
+  {
+    "source": "6",
+    "target": "7"
+  },
+  {
+    "source": "7",
+    "target": "8"
+  },
+  {
+    "source": "8",
+    "target": "9"
+  },
+  {
+    "source": "9",
+    "target": "10"
+  },
+  {
+    "source": "10",
+    "target": "11"
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Tilly, Mar [mailto:MT@payless.com]
+Sent: Tuesday, August 08, 2017 10:41 AM
+To: agency.services@thehartford.com
+Subject: CERT REQUEST 76WEGLN1234 MattPro Inc
+
+Hello!
+Please issue a certificate with the following certificate holder:
+
+Rockcliff Management
+Attn: Toni Peddleman
+123 High Street
+Boston, CA 02110
+
+Please send to the client at sc@mattpro.com
+
+Thank you!
+__________________________
+Tilly, Mar
+Payless Insurance Agency
+P&C Agency Specialist II
+121 Sawlester Drive
+Rochester, N.Y. 78978
+Phone: 877-266-1234
+Fax: 585-389-5678 Attn: Mar
+
+How are we doing?  Let my manager know!
+P&C Service Supervisor: gar Dulli / 877-266-1234, ext. 5295678/ gdull@payless.com
+
+DID YOU KNOW?
+•   For Certificates of Insurance requests, we are now online!  Follow the link https://www.paylessinsurance.com/secure/certificate.aspx
+•   Reach us via email for questions regarding Property and Casualty Insurance with Payless Ins. Agency.  Please email pippen_customerservice@payless.com.  Response time is 24 hours.
+
+
+
+The information contained in this message may be privileged, confidential and protected from disclosure. If the reader of this message is not the intended recipient, or an employee or agent responsible for delivering this message to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited. If you have received this communication in error, please notify your representative immediately and delete this message from your computer. Thank you.
+ 
+----------------End Source ---------------------------------:: 
+

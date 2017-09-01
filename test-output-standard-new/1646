@@ -1,0 +1,685 @@
+Email ID: 1646 
+----------------Begin Cleansed ---------------------------------: 
+Subject: RUSH Certificate Request - A.F Box Corp - 16SBMVT4564 Hi Mr Fleis, I just reviewed your account and I see that you actually have VIP access to request this directly from the carrier, with increased response and turnaround times I am looping the carrier in to assist us Hartford – please let our insured know if you need anything else to provide this certificate Holder Information: Holder: RYE Co, Inc 1619 4th Avenue New York, NY 10128 Description of Opertations: Re: 2020 4th Avenue, Suite 202, New York, NY 10128 Additional insured manager/lessor of premises: RYE Co, Inc, Knicks Plaza LLC, Knicks Plaza Associates, LP and Fredy Man ISAOA ATIMA Mr Fleis, please feel free to reach out directly to the Hartford/Gee service center for any future changes, billing questions, certificates needed on your policy Please find all of their contact info below When you reach out, please be sure to reference your account details: A Fleisig Paper Box Corp - 16SBMVT8636 Hartford Phone #: 888-920-6259 Email: agencey.services@thehartford.com Hours of Operation: 8a-8p EST Days: Mon-Fri Should you run into any issues, please do not hesitate to give me a call Hi Shan, Client is requesting renewal certificate of insurance for the landlord Please email to Mr Fleis and mail to the holder The information is in CSR24  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "Certificate Request A.F Box Corp ",
+    "dataString": "COI_FormType_COI: Certificate Request =>\nCompany_Name: A.F Box Corp =>\n",
+    "elements": [
+      {
+        "text": "Certificate Request",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "A.F Box Corp",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificates Fleisig Paper Box Corp ",
+    "dataString": "COI_FormType_COI: certificates =>\nCompany_Name: Fleisig Paper Box Corp =>\n",
+    "elements": [
+      {
+        "text": "certificates",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Fleisig Paper Box Corp",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate of insurance ",
+    "dataString": "COI_FormType_COI: certificate of insurance =>\n",
+    "elements": [
+      {
+        "text": "certificate of insurance",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "holder ",
+    "dataString": "COI_FormType_COI: holder =>\n",
+    "elements": [
+      {
+        "text": "holder",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "certificate Holder ",
+    "dataString": "COI_FormType_COI: certificate Holder =>\n",
+    "elements": [
+      {
+        "text": "certificate Holder",
+        "type": "COI_FormType_COI"
+      }
+    ]
+  },
+  {
+    "simpleString": "Holder RYE Co, Inc 1619 4th Avenue New York NY 10128 ",
+    "dataString": "COI_FormType_COI: Holder =>\nCompany_Name: RYE Co, Inc =>\nAddress_StreetNumber: 1619 4th Avenue =>\nAddress_City: New York =>\nAddress_State: NY =>\nAddress_ZIP: 10128 =>\n",
+    "elements": [
+      {
+        "text": "Holder",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "RYE Co, Inc",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1619 4th Avenue",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "New York",
+        "type": "Address_City"
+      },
+      {
+        "text": "NY",
+        "type": "Address_State"
+      },
+      {
+        "text": "10128",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "A.F Box Corp ",
+    "dataString": "Company_Name: A.F Box Corp =>\n",
+    "elements": [
+      {
+        "text": "A.F Box Corp",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "RYE Co, Inc 1619 4th Avenue New York NY 10128 ",
+    "dataString": "Company_Name: RYE Co, Inc =>\nAddress_StreetNumber: 1619 4th Avenue =>\nAddress_City: New York =>\nAddress_State: NY =>\nAddress_ZIP: 10128 =>\n",
+    "elements": [
+      {
+        "text": "RYE Co, Inc",
+        "type": "Company_Name"
+      },
+      {
+        "text": "1619 4th Avenue",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "New York",
+        "type": "Address_City"
+      },
+      {
+        "text": "NY",
+        "type": "Address_State"
+      },
+      {
+        "text": "10128",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "Knicks Plaza LLC ",
+    "dataString": "Company_Name: Knicks Plaza LLC =>\n",
+    "elements": [
+      {
+        "text": "Knicks Plaza LLC",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Knicks Plaza Associates ",
+    "dataString": "Company_Name: Knicks Plaza Associates =>\n",
+    "elements": [
+      {
+        "text": "Knicks Plaza Associates",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "LP and Fredy Man ISAOA ATIMA Mr Fleis ",
+    "dataString": "Company_Name: LP and Fredy Man ISAOA ATIMA Mr Fleis =>\n",
+    "elements": [
+      {
+        "text": "LP and Fredy Man ISAOA ATIMA Mr Fleis",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "the Hartford ",
+    "dataString": "Company_Name: the Hartford =>\n",
+    "elements": [
+      {
+        "text": "the Hartford",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Gee service center ",
+    "dataString": "Company_Name: Gee service center =>\n",
+    "elements": [
+      {
+        "text": "Gee service center",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Fleisig Paper Box Corp ",
+    "dataString": "Company_Name: Fleisig Paper Box Corp =>\n",
+    "elements": [
+      {
+        "text": "Fleisig Paper Box Corp",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Hartford ",
+    "dataString": "Company_Name: Hartford =>\n",
+    "elements": [
+      {
+        "text": "Hartford",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Mon-Fri Should ",
+    "dataString": "Company_Name: Mon-Fri Should =>\n",
+    "elements": [
+      {
+        "text": "Mon-Fri Should",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Hartford ",
+    "dataString": "Company_Name: Hartford =>\n",
+    "elements": [
+      {
+        "text": "Hartford",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "Mr Fleis and ",
+    "dataString": "Company_Name: Mr Fleis and =>\n",
+    "elements": [
+      {
+        "text": "Mr Fleis and",
+        "type": "Company_Name"
+      }
+    ]
+  },
+  {
+    "simpleString": "RYE Co, Inc ",
+    "dataString": "Company_Name: RYE Co, Inc =>\n",
+    "elements": [
+      {
+        "text": "RYE Co, Inc",
+        "type": "Company_Name"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "2020 4th Avenue, Suite 202 New York NY 10128 ",
+    "dataString": "Address_StreetNumber: 2020 4th Avenue, Suite 202 =>\nAddress_City: New York =>\nAddress_State: NY =>\nAddress_ZIP: 10128 =>\n",
+    "elements": [
+      {
+        "text": "2020 4th Avenue, Suite 202",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "New York",
+        "type": "Address_City"
+      },
+      {
+        "text": "NY",
+        "type": "Address_State"
+      },
+      {
+        "text": "10128",
+        "type": "Address_ZIP"
+      }
+    ]
+  },
+  {
+    "simpleString": "1619 4th Avenue New York NY 10128 ",
+    "dataString": "Address_StreetNumber: 1619 4th Avenue =>\nAddress_City: New York =>\nAddress_State: NY =>\nAddress_ZIP: 10128 =>\n",
+    "elements": [
+      {
+        "text": "1619 4th Avenue",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "New York",
+        "type": "Address_City"
+      },
+      {
+        "text": "NY",
+        "type": "Address_State"
+      },
+      {
+        "text": "10128",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "Certificate Request"
+  },
+  "1": {
+    "type": "Company_Name",
+    "text": "A.F Box Corp"
+  },
+  "2": {
+    "type": "Address_ZIP",
+    "text": "10128",
+    "visited_as_target": true
+  },
+  "3": {
+    "type": "Address_StreetNumber",
+    "text": "2020 4th Avenue, Suite 202",
+    "visited_as_source": true
+  },
+  "4": {
+    "type": "Address_City",
+    "text": "New York",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "5": {
+    "type": "Address_State",
+    "text": "NY",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_ZIP",
+    "text": "10128",
+    "visited_as_target": true
+  },
+  "7": {
+    "type": "COI_Wording_Additional_Insured",
+    "text": "Additional insured"
+  },
+  "8": {
+    "type": "Company_Name",
+    "text": "RYE Co, Inc",
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Company_Name",
+    "text": "Knicks Plaza LLC"
+  },
+  "10": {
+    "type": "Company_Name",
+    "text": "Knicks Plaza Associates"
+  },
+  "11": {
+    "type": "Company_Name",
+    "text": "LP and Fredy Man ISAOA ATIMA Mr Fleis"
+  },
+  "12": {
+    "type": "Policy_Number",
+    "text": "16SBMVT4564"
+  },
+  "13": {
+    "type": "Company_Name",
+    "text": "the Hartford"
+  },
+  "14": {
+    "type": "Company_Name",
+    "text": "Gee service center"
+  },
+  "15": {
+    "type": "COI_FormType_COI",
+    "text": "certificates"
+  },
+  "16": {
+    "type": "Company_Name",
+    "text": "Fleisig Paper Box Corp"
+  },
+  "17": {
+    "type": "Policy_Number",
+    "text": "16SBMVT8636"
+  },
+  "18": {
+    "type": "Company_Name",
+    "text": "Hartford"
+  },
+  "19": {
+    "type": "Email",
+    "text": "agencey.services@thehartford.com"
+  },
+  "20": {
+    "type": "Phone_Number",
+    "text": "8a-8p"
+  },
+  "21": {
+    "type": "Company_Name",
+    "text": "Mon-Fri Should"
+  },
+  "22": {
+    "type": "COI_FormType_COI",
+    "text": "certificate of insurance"
+  },
+  "23": {
+    "type": "Company_Name",
+    "text": "Hartford"
+  },
+  "24": {
+    "type": "Delivery_Method",
+    "text": "email"
+  },
+  "25": {
+    "type": "Company_Name",
+    "text": "Mr Fleis and"
+  },
+  "26": {
+    "type": "Delivery_Method",
+    "text": "mail"
+  },
+  "27": {
+    "type": "COI_FormType_COI",
+    "text": "holder"
+  },
+  "28": {
+    "type": "COI_FormType_COI",
+    "text": "certificate Holder"
+  },
+  "29": {
+    "type": "COI_FormType_COI",
+    "text": "Holder"
+  },
+  "30": {
+    "type": "Company_Name",
+    "text": "RYE Co, Inc"
+  },
+  "31": {
+    "type": "Address_StreetNumber",
+    "text": "1619 4th Avenue",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "32": {
+    "type": "Address_City",
+    "text": "New York",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "33": {
+    "type": "Address_State",
+    "text": "NY",
+    "visited_as_target": true,
+    "visited_as_source": true
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "0",
+      "type": "COI_FormType_COI",
+      "text": "Certificate Request"
+    },
+    "target": {
+      "id": "1",
+      "type": "Company_Name",
+      "text": "A.F Box Corp"
+    }
+  },
+  {
+    "source": {
+      "id": "3",
+      "type": "Address_StreetNumber",
+      "text": "2020 4th Avenue, Suite 202",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "32",
+      "type": "Address_City",
+      "text": "New York",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "4",
+      "type": "Address_City",
+      "text": "New York",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "5",
+      "type": "Address_State",
+      "text": "NY",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Address_State",
+      "text": "NY",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "2",
+      "type": "Address_ZIP",
+      "text": "10128",
+      "visited_as_target": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Company_Name",
+      "text": "RYE Co, Inc",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "31",
+      "type": "Address_StreetNumber",
+      "text": "1619 4th Avenue",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "15",
+      "type": "COI_FormType_COI",
+      "text": "certificates"
+    },
+    "target": {
+      "id": "16",
+      "type": "Company_Name",
+      "text": "Fleisig Paper Box Corp"
+    }
+  },
+  {
+    "source": {
+      "id": "29",
+      "type": "COI_FormType_COI",
+      "text": "Holder"
+    },
+    "target": {
+      "id": "8",
+      "type": "Company_Name",
+      "text": "RYE Co, Inc",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "31",
+      "type": "Address_StreetNumber",
+      "text": "1619 4th Avenue",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "4",
+      "type": "Address_City",
+      "text": "New York",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "32",
+      "type": "Address_City",
+      "text": "New York",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "33",
+      "type": "Address_State",
+      "text": "NY",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "33",
+      "type": "Address_State",
+      "text": "NY",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_ZIP",
+      "text": "10128",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Shan Scan [mailto:Shan_Scan@ayjaygee.com]
+Sent: Tuesday, August 15, 2017 11:56 AM
+To: Agency.Services@thehartford.com
+Cc: afbox@ispring.com
+Subject: RUSH Certificate Request - A.F Box Corp. - 16SBMVT4564
+
+Hi Mr. Fleis,
+
+I just reviewed your account and I see that you actually have VIP access to request this directly from the carrier, with increased response and turnaround times.  I am looping the carrier in to assist us.
+
+Hartford – please let our insured know if you need anything else to provide this certificate. Holder Information:
+
+Holder:
+RYE Co., Inc.
+1619 4th Avenue
+New York, NY 10128
+
+Description of Opertations: Re: 2020 4th Avenue, Suite 202, New York, NY 10128  Additional insured manager/lessor of premises: RYE Co., Inc., Knicks Plaza LLC, Knicks Plaza Associates, LP and Fredy Man ISAOA ATIMA
+
+Mr. Fleis, please feel free to reach out directly to the Hartford/Gee service center for any future changes, billing questions, certificates needed on your policy.  Please find all of their contact info below. When you reach out, please be sure to reference your account details: A. Fleisig Paper Box Corp. - 16SBMVT8636
+
+Hartford
+Phone #: 888-920-6259
+Email: agencey.services@thehartford.com
+Hours of Operation: 8a-8p EST
+Days: Mon-Fri
+
+Should you run into any issues, please do not hesitate to give me a call.
+
+Many thanks,
+Shan Scan, SBCS
+CSM – Client Service Manager, Select Business Center
+
+
+Ay Jay Gee & Co.
+4000 Atlantic Drive, Suite 100| Mt. Laurel, NJ 08054
+O856-866-4545| f856-273-5000
+www.ayjaygee.com
+
+ As a Gee Select client, your savings go beyond an insurance policy. We’ve partnered with some of today’s best companies to provide you discounts on goods and services for your life and your business!  www.geeperks.com
+
+ Certificate request? Send to certrequests@ayjaygee.com . Turnaround time is 24 Hours from receipt of request. If your request is urgent, please indicate as “Rush” to receive within 1 hour
+
+ We are making it easier to service your policy when it is convenient for you! Sign up for our self-service client site at:  https://serviceportal.ayjaygee.com /mvc/400
+
+Between Memorial and Labor Day our office closes at 3:30pm every Friday.
+
+Please Note: Insurance coverage cannot be bound or altered until confirmation is received from a Gee representative. This message may contain confidential information. If you are not the addressee or authorized to receive this for the addressee, you should not use, copy, disclose, or take any action based on this message or any information herein. If you have received this message in error, please advise the sender immediately by reply e-mail and delete this message. Thank you for your cooperation.
+
+I would like to emphasize that the discussion set forth above is only an insurance/risk management perspective and is NOT legal advice. We do not provide legal advice and I highly recommend that you seek the advice of legal counsel in order to become fully apprised of the legal implications related to these issues
+
+Communications concerning this matter, including this email and any attachments, are provided for purposes of insurance/risk management consulting.  Opinions and advice provided by ay jay gee & Co. is not intended to be, and should not be construed to be, legal advice.  Please direct any request for legal advice to your attorney.
+
+From: Marc Squill
+Sent: Thursday, August 10, 2017 10:26 AM
+To: Shan Scan
+Cc: afbox@ispring.com
+Subject: Re: RUSH Certificate Request - A.F Box Corp. - 16SBMVT4564
+
+Hi Shan,
+
+Client is requesting renewal certificate of insurance for the landlord. Please email to Mr. Fleis and mail to the holder.
+The information is in CSR24.
+
+Thank you
+Marc Squill
+Client Service Manager
+
+Ay Jay Gee
+25 West Park Drive, 3rd Fl.
+White Plains, NY 10604-3404
+P: 914-697-1920  | F: 914-323-2019
+marc_squill@ayjaygee.com
+www.ayjaygeerms.com
+Ay Jay Gee Risk Management Services, Inc.
+
+I would like to emphasize that the discussion set forth above is only an insurance/risk management perspective and is NOT legal advice. We do not provide legal advice and I highly recommend that you seek the advice of legal counsel in order to become fully apprised of the legal implications related to these issues.
+
+CONFIDENTIALITY NOTE: This e-mail message from Ay Jay Gee and is for the sole use of the intended recipient(s) and may contain confidential and privileged information. Any unauthorized review, use, disclosure, distribution or other dissemination of this e-mail message and/or the information contained therein is strictly prohibited. If you are not the intended recipient, please contact the sender by reply e-mail and destroy all copies of the original message.
+ 
+----------------End Source ---------------------------------:: 
+

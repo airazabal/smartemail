@@ -1,0 +1,269 @@
+Email ID: 1494 
+----------------Begin Cleansed ---------------------------------: 
+Subject: certificate request please issue 2016 to present 22SBAKL1234 97TYPHODDE 2016 to present: Cracked Shades PO Box 31122 Orangeville, SC 29608 Email: TL@gmail.com & FF@landsdown.com Fax: 8648341234  
+----------------End Cleansed ---------------------------------:: 
+
+----------------Begin Relation Info ---------------------------------: 
+
+
+Relations chains starting from COI_FormType_COI 
+[
+  {
+    "simpleString": "certificate request Cracked Shades PO Box 31122 Orangeville SC 29608 ",
+    "dataString": "COI_FormType_COI: certificate request =>\nCompany_Name: Cracked Shades =>\nAddress_StreetNumber: PO Box 31122 =>\nAddress_City: Orangeville =>\nAddress_State: SC =>\nAddress_ZIP: 29608 =>\n",
+    "elements": [
+      {
+        "text": "certificate request",
+        "type": "COI_FormType_COI"
+      },
+      {
+        "text": "Cracked Shades",
+        "type": "Company_Name"
+      },
+      {
+        "text": "PO Box 31122",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Orangeville",
+        "type": "Address_City"
+      },
+      {
+        "text": "SC",
+        "type": "Address_State"
+      },
+      {
+        "text": "29608",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Company_Name 
+[
+  {
+    "simpleString": "Cracked Shades PO Box 31122 Orangeville SC 29608 ",
+    "dataString": "Company_Name: Cracked Shades =>\nAddress_StreetNumber: PO Box 31122 =>\nAddress_City: Orangeville =>\nAddress_State: SC =>\nAddress_ZIP: 29608 =>\n",
+    "elements": [
+      {
+        "text": "Cracked Shades",
+        "type": "Company_Name"
+      },
+      {
+        "text": "PO Box 31122",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Orangeville",
+        "type": "Address_City"
+      },
+      {
+        "text": "SC",
+        "type": "Address_State"
+      },
+      {
+        "text": "29608",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Relations chains starting from Street Address 
+[
+  {
+    "simpleString": "PO Box 31122 Orangeville SC 29608 ",
+    "dataString": "Address_StreetNumber: PO Box 31122 =>\nAddress_City: Orangeville =>\nAddress_State: SC =>\nAddress_ZIP: 29608 =>\n",
+    "elements": [
+      {
+        "text": "PO Box 31122",
+        "type": "Address_StreetNumber"
+      },
+      {
+        "text": "Orangeville",
+        "type": "Address_City"
+      },
+      {
+        "text": "SC",
+        "type": "Address_State"
+      },
+      {
+        "text": "29608",
+        "type": "Address_ZIP"
+      }
+    ]
+  }
+]
+
+Entities found 
+{
+  "0": {
+    "type": "COI_FormType_COI",
+    "text": "certificate request"
+  },
+  "1": {
+    "type": "Policy_Number",
+    "text": "22SBAKL1234"
+  },
+  "2": {
+    "type": "Email",
+    "text": "FF@landsdown.com"
+  },
+  "3": {
+    "type": "Phone_Number",
+    "text": "8648341234"
+  },
+  "4": {
+    "type": "Policy_Number",
+    "text": "97TYPHODDE"
+  },
+  "5": {
+    "type": "Company_Name",
+    "text": "Cracked Shades",
+    "visited_as_source": true
+  },
+  "6": {
+    "type": "Address_StreetNumber",
+    "text": "PO Box 31122",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "7": {
+    "type": "Address_City",
+    "text": "Orangeville",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "8": {
+    "type": "Address_State",
+    "text": "SC",
+    "visited_as_target": true,
+    "visited_as_source": true
+  },
+  "9": {
+    "type": "Address_ZIP",
+    "text": "29608",
+    "visited_as_target": true
+  },
+  "10": {
+    "type": "Delivery_Method",
+    "text": "Email"
+  },
+  "11": {
+    "type": "Email",
+    "text": "TL@gmail.com"
+  }
+}
+
+Relations Found found 
+[
+  {
+    "source": {
+      "id": "0",
+      "type": "COI_FormType_COI",
+      "text": "certificate request"
+    },
+    "target": {
+      "id": "5",
+      "type": "Company_Name",
+      "text": "Cracked Shades",
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "5",
+      "type": "Company_Name",
+      "text": "Cracked Shades",
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "6",
+      "type": "Address_StreetNumber",
+      "text": "PO Box 31122",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "6",
+      "type": "Address_StreetNumber",
+      "text": "PO Box 31122",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "7",
+      "type": "Address_City",
+      "text": "Orangeville",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "7",
+      "type": "Address_City",
+      "text": "Orangeville",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "8",
+      "type": "Address_State",
+      "text": "SC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    }
+  },
+  {
+    "source": {
+      "id": "8",
+      "type": "Address_State",
+      "text": "SC",
+      "visited_as_target": true,
+      "visited_as_source": true
+    },
+    "target": {
+      "id": "9",
+      "type": "Address_ZIP",
+      "text": "29608",
+      "visited_as_target": true
+    }
+  }
+] 
+----------------End Relation Info ---------------------------------:: 
+
+----------------Begin Source ---------------------------------: 
+From: Ferry,Fran [mailto:FF@landsdown.com] 
+Sent: Monday, August 07, 2017 1:03 PM
+To: agency.services@thehartford.com
+Subject: certificate request please issue 2016 to present 22SBAKL1234 97TYPHODDE
+
+2016 to present:
+
+Cracked Shades
+PO Box 31122
+Orangeville, SC  29608
+
+Email: TL@gmail.com & FF@landsdown.com
+Fax: 8648341234
+
+All Best,
+
+Fran Ferry, CISR | Commercial Account Manager II| Landsdown Insurance Services
+884 Gilmore Milk Road, Ste. F | Purplesboro, NC 27496 | P: 888.743.1234 | F: 888.827.5678
+Email: FF@landsdown.com  Mailcode:  534.01.01.88
+
+**for faster turnaround please email all future requests to: commercialclientcenter@landsdown.com
+
+
+
+
+
+The information in this transmission may contain proprietary and non-public information of Landsdown or its affiliates and may be subject to protection under the law. The message is intended for the sole use of the individual or entity to which it is addressed. If you are not the intended recipient, you are notified that any use, distribution or copying of the message is strictly prohibited. If you received this message in error, please delete the material from your system without reading the content and notify the sender immediately of the inadvertent transmission.
+ 
+----------------End Source ---------------------------------:: 
+
