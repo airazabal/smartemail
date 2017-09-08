@@ -57,6 +57,7 @@ export class EmailVizComponent implements OnChanges, OnInit {
     if (this.emailId) {
       // We are looking up an email id
       console.log('this.emailId is: ', this.emailId)
+      console.log('this.emailId type: ', typeof this.emailId)
       this.smartEmailSvc.getDoc(this.emailId)
         .subscribe(result => {
           // This is an array.  Wee need JUST THE first one...

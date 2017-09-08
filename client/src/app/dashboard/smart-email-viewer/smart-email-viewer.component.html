@@ -1,5 +1,26 @@
 <div role="tabpanel" class="tab-pane active ibm-tabs__content-panel ibm-tabs__content-panel--active" id="forum-channels">
-  <div *ngFor="let email of emails">
-    <p> {{email.source_id}} </p>
-  </div>
+  <div class="row .ibm-text--base">
+    <p> Selected Email Id = {{selectedEmailId}} </p>
+    <div class="col-md-2 col-sm-2">
+      <input #searchBox (keyup)="search(searchBox.value)"placeholder="Search by email id"/>
+      <ul class="emailList">
+        <li *ngFor="let emailId of filteredEmailIds"
+          [class.selected]="emailId === selectedEmailId"
+          (click)="updateSelected(emailId)">
+          {{emailId}}
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-4">
+      <div *ngIf="selectedEmailId">
+        <app-email-viz [docToViz]="selectedEmail"></app-email-viz>
+        <!-- <p> {{selectedEmail.source_email.body}} </p> -->
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <div *ngIf="selectedEmailId">
+        <smart-email-graph [emailToGraph]="selectedEmail"> </smart-email-graph>
+      </div>
+    </div>
+  <div>
 </div>

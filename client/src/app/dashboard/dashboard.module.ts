@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'ng2-bootstrap/dropdown';
 import { ModalModule } from 'ng2-bootstrap/modal';
 
+import { SmartEmailGraphComponent } from "./smart-email-viewer/smart-email-graph/smart-email-graph.component"
 import { SmartEmailViewerComponent } from './smart-email-viewer/smart-email-viewer.component';
 import { SmartEmailTestComponent } from './smart-email-test/smart-email-test.component';
 import { SmartEmailSummaryComponent} from './smart-email-summary/smart-email-summary.component';
@@ -59,8 +60,10 @@ import { MvpCalcComponent } from './shared/mvp-calc/mvp-calc.component';
     TableOfConfusionComponent,
     HelpComponent,
     ConfusionMatrixComponent,
-    MvpCalcComponent
+    MvpCalcComponent,
+    SmartEmailGraphComponent
   ],
+  exports: [ SmartEmailGraphComponent ],
   providers: [
     ConfusionMatrixService,
     DashboardCtxService ]
