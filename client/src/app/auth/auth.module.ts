@@ -14,12 +14,14 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { LoopbackLoginComponent } from './loopback/lb-login.component';
 import { LoopbackLoginService } from './loopback/lb-login.service';
 
 @NgModule({
-  imports:      [ CommonModule, HttpModule, ReactiveFormsModule ],
+  imports:      [ CommonModule, HttpModule, ReactiveFormsModule, BrowserModule, BrowserAnimationsModule ],
   declarations: [ LoopbackLoginComponent ],
   providers:    [ LoopbackLoginService ],
   exports:      [ LoopbackLoginComponent ]

@@ -1,5 +1,5 @@
-<div class="panel panel-default ibm-panel">
-  <div class="panel-heading ibm-panel__heading">
+<md-card>
+  <md-card-content>
     <div class="row">
       <div class="col-sm-11">
         <h3>Table of Confusion</h3>
@@ -11,8 +11,9 @@
         </div>
       </div>
     </div>
-  </div>
-    <div class="panel-body ibm-panel__body">
+    <div #chartdiv class="ibm-text--small graph-chart-div">
       <div id="table-of-confusion-chart"></div>
+      <div class="grouped-bar-chart-tooltip-container"></div>
     </div>
-  </div>
+  </md-card-content>
+</md-card>

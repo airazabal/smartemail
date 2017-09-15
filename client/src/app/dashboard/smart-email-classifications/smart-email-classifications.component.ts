@@ -5,8 +5,8 @@ import { DashboardCtxService } from '../shared/dashboard-ctx.service'
 import { SmartEmailService } from '../../shared/wsl-email/smart-email.service'
 import { ConfusionMatrix } from '../shared/confusion-matrix/ConfusionMatrix'
 import { ConfusionMatrixService } from '../shared/confusion-matrix/confusion-matrix.service'
-import { ModalDirective } from 'ng2-bootstrap/modal'
-declare var c3: any
+import { ModalDirective } from 'ngx-bootstrap/modal'
+import { routerTransition } from '../../shared/utils/router-animations';
 
 @Component({
   selector: 'smart-email-classifications',
@@ -98,7 +98,7 @@ export class SmartEmailClassificationsComponent implements OnInit {
   ngOnChanges(changes: { [propKey: string]: SimpleChange }) {
     console.log('smartEmailSummary ngOnChanges --', changes)
   }
-  showDetails(doc) {
+  showDetails(doc, content) {
     console.log('showDetails:', doc)
     this.emailToViz = doc
     this.emailToVizId = doc.id

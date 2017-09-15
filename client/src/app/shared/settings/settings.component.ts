@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
 import { SettingsService } from '../../core/settings.service'
-import { ModalDirective } from 'ng2-bootstrap/modal';
+import { ModalDirective } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-settings',
-  templateUrl: './settings.component.html'
+  templateUrl: './settings.component.html',
+  styleUrls: ['./settings.component.scss']
 })
 
 export class SettingsComponent implements OnInit {

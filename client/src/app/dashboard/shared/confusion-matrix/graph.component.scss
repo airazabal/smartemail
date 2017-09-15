@@ -1,0 +1,14 @@
+.graph-chart-div {
+	min-height: 320px;
+	.bottom-title {
+		margin-top: 0.5rem;
+	}
+}
+
+::ng-deep {
+    #table-of-confusion-chart {
+        .bar {
+            cursor: pointer;
+        }
+    }
+}

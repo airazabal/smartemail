@@ -10,40 +10,39 @@
   </div>
   <div *ngIf="!loading">
     <div class="row ibm-text--small">
-      <div class="col-md-6 col-sm-6">
+      <div class="col-sm-6">
         <app-confusion-matrix [confusion]="confusionMatrix" (selected)="filterTransactions($event)"></app-confusion-matrix>
-        <app-f1-graph [confusion]="confusionMatrix"></app-f1-graph>
       </div>
-      <div class="col-md-6 col-sm-6">
-        <div class="panel panel-default ibm-panel">
-          <div class="panel-heading ibm-panel__heading">
+      <div class="col-sm-6">
+          <app-f1-graph [confusion]="confusionMatrix"></app-f1-graph>
+      </div>
+    </div>
+    <div class="row ibm-text--small" style="margin-top: 1rem;">
+      <div class="col-sm">
+        <md-card>
+          <md-card-content>
             <h3>Email Display</h3>
             <p class="ibm-text--small">{{filterMessage}}</p>
-          </div>
-          <div class="panel-body ibm-panel__body">
-            <div class="ibm-text--small pre-scrollable">
-              <div *ngFor="let email of emails">
-                <div class="row">
-                  <app-email-summary [email]="email" (emailSelected)="showDetails($event)"></app-email-summary>
-                </div>
-              </div>
+            <div class="ibm-text--small">
+              <app-email-summary [emails]="emails" (emailSelected)="showDetails($event, content)"></app-email-summary>
             </div>
-          </div>
-        </div>
+          </md-card-content>
+        </md-card>
       </div>
     </div>
   </div>
 </div>
 
 
-<div bsModal #detailsModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div bsModal #detailsModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title pull-left">Details modal -- {{emailToVizId}}</h4>
         <button type="button" class="close pull-right" aria-label="Close" (click)="detailsModal.hide()">
-          <span aria-hidden="true">&times;</span>
-        </button>
+            <span aria-hidden="true">&times;</span>
+          </button>
       </div>
       <div class="modal-body">
         <app-email-viz [emailId]="emailToVizId"></app-email-viz>

@@ -5,11 +5,11 @@ import { emailResults } from '../test/email-discovery-1-data'
 @Component({
   selector: 'app-email-input',
   templateUrl: './email-input.component.html',
-  styleUrls: ['./email-input.component.css']
+  styleUrls: ['./email-input.component.scss']
 })
 export class EmailInputComponent implements OnInit {
 
-  public inputText: string =`Enter an email here...`
+  public inputText: string ='';
 
   // This is a big json object from Discovery...
   @Output() analyzeStatus = new EventEmitter<any>();

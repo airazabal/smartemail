@@ -16,9 +16,13 @@ import { BackendService } from '../../core/backend.service'
 @Injectable()
 export class SmartEmailService {
 
+  public getAllDocsObs: Observable<any>;
+
   private _transactions: any[] = []
 
-  constructor(private backend: BackendService) { }
+  constructor(private backend: BackendService) { 
+    this.getAllDocs(); // kick off the getAllDocs now
+  }
 
   public categorize(message): Observable<any> {
     let url = `/api/SmartEmails/categorize`
@@ -38,14 +42,19 @@ export class SmartEmailService {
   public getAllDocs(): Observable<any> {
     let url = `/api/SmartEmails`
     console.log('getAllDocs() calling: ' + url)
-    return this.backend.get(url)
-      .map((res: Response) => {
-        // res is an Observable response...
-        // Add Res to the rawEntityResults
-        console.log('getAllDocs(): -------- Backend Response -------')
-        console.log('getAllDocs(): result:', res.json());
-        return res.json()
-      })
+    if (this.getAllDocsObs) {
+      return this.getAllDocsObs
+    } else {
+      this.getAllDocsObs = this.backend.get(url)
+        .map((res: Response) => {
+          // res is an Observable response...
+          // Add Res to the rawEntityResults
+          console.log('getAllDocs(): -------- Backend Response -------')
+          console.log('getAllDocs(): result:', res.json());
+          return res.json()
+        })
+      return this.getAllDocsObs;
+    }
   }
   public getDoc(id: string): Observable<any> {
     let url = `/api/SmartEmails/${id}`
@@ -93,13 +102,13 @@ export class SmartEmailService {
   public recategorizeAll() {
     console.log('recategorizeAll (service) called')
     return this.getAllDocs()
-     .flatMap((docs) => {
+      .flatMap((docs) => {
         return Observable.create(observer => {
-          docs.forEach((doc)=> {
+          docs.forEach((doc) => {
             console.log('adding doc... ', doc.source_id)
             observer.next(doc)
-         })
+          })
         })
-     })
+      })
   }
 }

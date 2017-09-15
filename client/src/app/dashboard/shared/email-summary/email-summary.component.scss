@@ -1,4 +1,14 @@
 
+:host {
+  display: block;
+  position: relative;
+}
+
+:host ::ng-deep .mat-form-field {
+  flex-grow: 1;
+  margin-left: 50%;
+}
+
 *, *:before, *:after {
 box-sizing: inherit; }
 
@@ -69,4 +79,10 @@ overflow: hidden; }
 .entity.false_negative {
   background-color: #cdf3d1;
   color:black;
+}
+
+.search-container {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
 }

@@ -1,11 +1,13 @@
 import { Component, Input, OnInit, OnChanges, SimpleChange } from '@angular/core';
 import { SmartEmail } from '../classes/SmartEmail'
 import { SmartEmailService} from '../smart-email.service'
+import { fade, shrink } from '../../utils/animations';
 
 @Component({
   selector: 'app-email-viz',
   templateUrl: './email-viz.component.html',
-  styleUrls: ['./email-viz.component.css']
+  animations: [fade(), shrink()],
+  styleUrls: ['./email-viz.component.scss']
 })
 
 export class EmailVizComponent implements OnChanges, OnInit {

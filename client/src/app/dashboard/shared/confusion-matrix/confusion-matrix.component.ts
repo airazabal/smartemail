@@ -12,7 +12,7 @@ import { TableData } from './TableData'
 @Component({
   selector: 'app-confusion-matrix',
   templateUrl: './confusion-matrix.component.html',
-  styleUrls: ['./confusion-matrix.component.css']
+  styleUrls: ['./confusion-matrix.component.scss']
 })
 
 export class ConfusionMatrixComponent implements OnInit {
@@ -22,6 +22,7 @@ export class ConfusionMatrixComponent implements OnInit {
   public confusionArray: any[] = []
   public confusionStatistics: any[] = []
   public confusionTable: TableData
+  public confusionDataTable: { keys: string[], rows: any[] } = { keys: [], rows: []}
   public helpContent: any = {
   'title': 'Confusion Matrix Help',
   'content': 'In this Confusion Matrix, the Rows are the <em>Actual/Human</em> \
@@ -83,12 +84,25 @@ You can read more about this at: <a target="_blank" href="https://en.wikipedia.o
   }
 
   calculateConfusionKeys() {
-    console.log('Calculating Confusion info...')
+    console.log('Calculating Confusion info...', this.confusion, this.confusion.toTableData())
     this.confusionKeys = this.confusion.keys()
     this.confusionStatistics = this.confusion.statistics()
     this.confusionTable = new TableData(this.confusion.toTableData())
 
-    this.confusionArray = this.confusionTable.array()
-    console.log('ConfusionArray ', this.confusionArray)
+    const tableData = this.confusion.toTableData()
+    let keys = tableData.map((o) => o.column)
+    keys = Array.from(new Set(keys)) // remove duplicates
+    keys.unshift('') // add an empty string to create a blank first cell
+    let rows = [];
+    tableData.forEach((c) => {
+      let r = rows.find((r) => r.find((v) => v.row === c.row))
+      if (!r) {
+        // first column is the row name
+        r = [{row: c.row, value: c.row, label: true}]
+        rows.push(r)
+      }
+      r.push(c) 
+    })
+    this.confusionDataTable = { keys: keys, rows: rows}
   }
 }

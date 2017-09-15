@@ -3,6 +3,6 @@
 
 declare var System: any;
 
-interface JQuery {
-  highcharts(options?:any):JQuery;
-}
+// interface JQuery {
+//   highcharts(options?:any):JQuery;
+// }

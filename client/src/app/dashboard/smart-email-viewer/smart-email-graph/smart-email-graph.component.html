@@ -1,4 +1,7 @@
-<div>
-  <p> {{emailToGraph.id}}</p>
-  <div id="email-graph"></div>
+<div #graphdiv class="graph-container">
+  <div [@itemFadeAnimation] class="no-data-div" *ngIf="!emailToGraph.relation_data">{{id}} has no relation data!</div>
+  <div *ngIf="emailToGraph.relation_data" [@itemFadeAnimation] style="height: 100%; width: 100%">
+      <div #legendDiv class="legend-div"></div>
+      <div id="email-graph"></div>
+  </div>
 </div>

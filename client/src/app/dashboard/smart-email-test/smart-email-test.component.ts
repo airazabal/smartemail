@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FromComponentService } from '../../shared/utils/from-component.service'
 import { DashboardCtxService } from '../shared/dashboard-ctx.service'
+import { routerTransition } from '../../shared/utils/router-animations';
 
 @Component({
   selector: 'app-email-test',

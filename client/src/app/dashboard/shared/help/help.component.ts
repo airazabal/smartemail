@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ViewChild} from '@angular/core';
-import { ModalDirective } from 'ng2-bootstrap/modal';
+import { ModalDirective } from 'ngx-bootstrap/modal';
 
 
 @Component({
@@ -14,6 +14,8 @@ export class HelpComponent implements OnInit {
     'title': 'Help',
     'content': 'Fill in your help content here.  Use HTML?'
   }
+
+  @Input() modalSize: string = 'sm'; // sm, md, lg
 
   @ViewChild('helpModal') public helpModal: ModalDirective;
 

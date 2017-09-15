@@ -1,48 +1,70 @@
-<div class="panel panel-default ibm-panel">
-  <div class="panel-heading ibm-panel__heading">
+<md-card>
+  <md-card-content>
     <div class="row">
       <div class="col-sm-11">
-      <h3>Confusion Matrix</h3>
-      <p class="ibm-text--small">Select a number to filter to that cell</p>
+        <h3>Confusion Matrix</h3>
+        <p class="ibm-text--small">Select a number to filter to that cell</p>
       </div>
       <div class="col-sm-1">
         <div class="ibm-icon" style="color:black">
-          <app-help [helpContent]="helpContent"></app-help>
+          <app-help [modalSize]="'modal-md'" [helpContent]="helpContent"></app-help>
         </div>
       </div>
     </div>
-  </div>
-  <div class="panel-body ibm-panel__body">
     <!--
-    <table class="table table-bordered">
-      <thead>
-        <td *ngFor="let header of confusionTable.headers">
-          {{header}}
+        <table class="table table-bordered">
+          <thead>
+            <td *ngFor="let header of confusionTable.headers">
+              {{header}}
+            </td>
+          </thead>
+          <tbody>
+            <tr *ngFor="let key of confusionKeys">
+              <td *ngFor="let value of confusionTable[key]; let idx = index">
+                <span *ngIf="idx >= 1">
+                  {{value | number:'1.0-2'}}
+                </span>
+                <span *ngIf="idx<1">
+                  {{value}}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      -->
+
+    <table class="table table-bordered ibm-text--small">
+      <caption class="ibm-test-small">Actual(rows) vs. Predicted(cols)</caption>
+      <thead class="ibm-text--strong">
+        <td *ngFor="let column of confusionDataTable.keys" [title]="column">
+          {{column}}
         </td>
       </thead>
-      <tbody>
-        <tr *ngFor="let key of confusionKeys">
-          <td *ngFor="let value of confusionTable[key]; let idx = index">
-            <span *ngIf="idx >= 1">
-              {{value | number:'1.0-2'}}
-            </span>
-            <span *ngIf="idx<1">
-              {{value}}
-            </span>
+      <tbody class="table-body">
+        <tr *ngFor="let row of confusionDataTable.rows">
+          <td [ngClass]="getStyle(obj)" *ngFor="let obj of row">
+            <div *ngIf="obj.label" class="ibm-text--strong" [title]="obj.row">
+              {{obj.row}}
+            </div>
+            <div *ngIf="!obj.label && pipeToNumber(obj)">
+              {{obj.value | number:'1.0-2'}}
+            </div>
+            <div *ngIf="!obj.label && !pipeToNumber(obj)" (click)="confusionSelected(obj)">
+              {{obj.value}}
+            </div>
           </td>
         </tr>
       </tbody>
     </table>
-  -->
-    <table class="table table-bordered">
-      <caption>Actual(rows) vs. Predicted(cols)</caption>
+    <!-- <table class="table table-bordered ibm-text--small">
+      <caption class="ibm-test-small">Actual(rows) vs. Predicted(cols)</caption>
       <ng-container *ngFor="let row of confusionArray; let header=first">
         <thead *ngIf="header" class="ibm-text--strong">
           <td *ngFor="let column of row">
             {{column}}
           </td>
         </thead>
-        <tbody *ngIf="!header">
+        <tbody *ngIf="!header" class="table-body">
           <tr>
             <td *ngFor="let obj of row; let label=first" [ngClass]="getStyle(obj)">
               <div *ngIf="label" class="ibm-text--strong">
@@ -54,10 +76,11 @@
               <div *ngIf="!pipeToNumber(obj)" (click)="confusionSelected(obj)">
                 {{obj.value}}
               </div>
-          </td>
-        </tr>
-      </tbody>
-    </ng-container>
-    </table>
-  </div>
-</div>
+            </td>
+          </tr>
+        </tbody>
+      </ng-container>
+    </table> -->
+
+  </md-card-content>
+</md-card>

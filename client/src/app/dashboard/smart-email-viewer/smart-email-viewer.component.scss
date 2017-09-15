@@ -1,0 +1,39 @@
+.form-field {
+  width: 75%;
+}
+.selected-email-title {
+  margin: 1rem 1rem 1.5rem;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 500px;
+  .side-div {
+    width: 45%;
+    flex: 1;
+  }
+  .graph-div {
+    flex: 1;
+    position: relative;
+  }
+  .toggle-email-div {
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    button {
+      cursor: pointer;
+      .fa {
+        transition: 500ms ease-in-out;
+        &.right {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

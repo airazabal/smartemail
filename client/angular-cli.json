@@ -13,24 +13,24 @@
       ],
       "index": "index.html",
       "main": "main.ts",
+      "polyfills": "polyfills.ts",
       "test": "test.ts",
-      "tsconfig": "tsconfig.json",
+      "tsconfig": "tsconfig.app.json",
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css",
-        "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "../node_modules/font-awesome/css/font-awesome.css",
+        "assets/styles/styles.scss",
+        "../node_modules/britecharts/dist/css/britecharts.min.css",
+        "../node_modules/bootstrap/scss/bootstrap.scss",
+        "../node_modules/font-awesome/css/font-awesome.min.css",
         "assets/css/ibm-colors.css",
         "assets/css/ibm-elements.css",
         "assets/css/ibm-fonts.css",
-        "assets/css/ibm-patterns.css",
-        "../node_modules/c3/c3.css"
+        "assets/css/ibm-patterns.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
-        "../node_modules/c3/c3.js",
-        "../node_modules/d3/d3.js",
+        "../node_modules/britecharts/dist/bundled/britecharts.min.js",
         "../node_modules/moment/moment.js"
       ],
       "environmentSource": "environments/environment.ts",
@@ -55,7 +55,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "prefixInterfaces": false,
     "inline": {
       "style": false,

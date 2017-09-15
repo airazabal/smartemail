@@ -7,17 +7,23 @@
   <div class="loader"></div>
   <div class="ibm-tabs">
     <!-- Nav tabs -->
-    <ul class="ibm-tabs__tabs" role="tablist">
+    <!-- <ul class="ibm-tabs__tabs" role="tablist">
       <li role="presentation" class="ibm-tabs__tab" routerLinkActive="ibm-tabs__tab--active"><a routerLink="/home/dashboard/summary" aria-controls="summary" role="tab" data-toggle="tab">Summary</a></li>
       <li role="presentation" class="ibm-tabs__tab" routerLinkActive="ibm-tabs__tab--active"><a routerLink="/home/dashboard/classifications" aria-controls="smart-email-classifications" role="tab" data-toggle="tab">Classifications</a></li>
       <li role="presentation" class="ibm-tabs__tab" routerLinkActive="ibm-tabs__tab--active"><a routerLink="/home/dashboard/entities" aria-controls="smart-email-entities" role="tab" data-toggle="tab">Entities</a></li>
       <li role="presentation" class="ibm-tabs__tab" routerLinkActive="ibm-tabs__tab--active"><a routerLink="/home/dashboard/test" aria-controls="smart-email-test" role="tab" data-toggle="tab">Smart Email Test</a></li>
       <li role="presentation" class="ibm-tabs__tab" routerLinkActive="ibm-tabs__tab--active"><a routerLink="/home/dashboard/viewer" aria-controls="smart-email-viewer" role="tab" data-toggle="tab">Smart Email Viewer</a></li>
 
-    </ul>
+    </ul> -->
+    <nav md-tab-nav-bar aria-label="navigation links">
+        <a md-tab-link *ngFor="let link of navLinks" 
+        [ngClass]="{'active-link': rla.isActive}"
+        [routerLinkActiveOptions]="{exact: true}" routerLinkActive #rla="routerLinkActive" 
+        [active]="rla.isActive" [routerLink]="link.link" >{{link.label}}</a>
+    </nav>
     <!-- Tab panes -->
-    <div class="tab-content ibm-tabs__content">
-      <router-outlet></router-outlet>
+    <div [@routerTransition]="getState(route)" class="tab-content ibm-tabs__content">
+      <router-outlet #route="outlet"></router-outlet>
     </div>
   </div>
 </div>

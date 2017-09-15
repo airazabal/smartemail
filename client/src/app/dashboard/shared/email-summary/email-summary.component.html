@@ -1,7 +1,49 @@
-<div class="col-sm-1 center">
-   <a class="ibm-link" (click)="selectEmail($event)">{{sourceId}}</a>
+<div class="no-data-div" [@itemFadeAnimation] *ngIf="emailDatabase.data.length == 0">
+
 </div>
-<!-- Display the Transaction Types -->
+<div>
+  <div class="search-container">
+    <md-form-field floatPlaceholder="never">
+      <i mdPrefix class="fa fa-search" style="color: rgba(0, 0, 0, 0.54); padding-right: 0.6rem;" aria-hidden="true"></i>
+      <input mdInput #filter placeholder="Search">
+    </md-form-field>
+  </div>
+
+  <md-table #table [dataSource]="dataSource" mdSort>
+    <ng-container mdColumnDef="id">
+      <md-header-cell *mdHeaderCellDef md-sort-header>ID</md-header-cell>
+      <md-cell *mdCellDef="let email"> <a class="ibm-link" tabindex="1" (click)="selectEmail(email)">{{email.id}} </a></md-cell>
+    </ng-container>
+    <ng-container mdColumnDef="topTransactionActual">
+      <md-header-cell *mdHeaderCellDef md-sort-header>Top Transaction Actual</md-header-cell>
+      <md-cell *mdCellDef="let email"><span [ngClass]="email.transactionClass">{{email.topTransactionActual}}</span></md-cell>
+    </ng-container>
+    <ng-container mdColumnDef="topTransactionPredicted">
+      <md-header-cell *mdHeaderCellDef md-sort-header>Top Transaction Predicted</md-header-cell>
+      <md-cell *mdCellDef="let email"><span [ngClass]="email.transactionClass">{{email.topTransactionPredicted}}</span></md-cell>
+    </ng-container>
+    <ng-container mdColumnDef="toc">
+      <md-header-cell *mdHeaderCellDef md-sort-header>TOC Type</md-header-cell>
+      <md-cell *mdCellDef="let email">
+        <span *ngFor="let toc of email.toc">
+                <div class="col-sm-1 entity" [ngClass]="toc.toc_type">
+                  {{toc.type}}
+                </div>
+            </span>
+      </md-cell>
+    </ng-container>
+    <md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>
+    <md-row *mdRowDef="let row; columns: displayedColumns;"></md-row>
+  </md-table>
+  <md-paginator #paginator [length]="emailDatabase.data.length" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+  </md-paginator>
+</div>
+
+<!-- 
+<div class="col-sm-1 center">
+  <a class="ibm-link" (click)="selectEmail($event)">{{sourceId}}</a>
+</div>
+
 <div class="col-sm-1" [ngClass]="transactionClass">
   {{email.topTransactionActual}}
 </div>
@@ -12,11 +54,11 @@
   <div class="col-sm-1 entity" [ngClass]="toc.toc_type">
     {{toc.type}}
   </div>
-</div>
+</div> -->
 
 
 
-  <!--
+<!--
   <ng-template #elseBlock>
     <div class="col-md-1">
       Not Found
@@ -32,7 +74,7 @@
     {{t.transaction_type}}({{t.confidence_level | percent}})
   </div>
 -->
-  <!--
+<!--
   <ng-template #elseBlock>
     <div class="col-md-1">
       Not Found

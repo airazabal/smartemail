@@ -1,3 +1,4 @@
+@import './custom-theme';
 body {
   padding-top: 55px;
 }
@@ -329,3 +330,38 @@ to {
   transform: rotate(1320deg); }
 to {
   transform: rotate(2100deg); } }
+
+.mat-tab-link {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+md-card-title {
+  h3 {
+    font-size: 1rem;
+  }
+  .ibm-icon {
+    font-size: 0.8em;
+  }
+}
+
+.ibm-tabs__content {
+  border-top: 0;
+}
+
+.no-data-div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 1000;
+  font-size: 1rem;
+}
+
+a.mat-tab-link {
+  color: initial !important;
+  &.active-link {
+    color: #00338D !important;
+  }
+}

@@ -1,15 +1,50 @@
-import { Component, OnInit, Input/*, OnChanges*/ } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, ViewChild } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/interval'; 
+import 'rxjs/add/operator/takeWhile';
 
-declare var d3: any
+import { fade } from '../../../shared/utils/animations';
+
+import * as d3Selection from 'd3-selection';
+import * as d3Scale from 'd3-scale';
+import * as d3 from 'd3';
+
 @Component({
   selector: 'smart-email-graph',
+  animations: [fade()],
   templateUrl: './smart-email-graph.component.html',
-  styleUrls: ['./smart-email-graph.component.css']
+  styleUrls: ['./smart-email-graph.component.scss']
 })
 
-export class SmartEmailGraphComponent implements OnInit/*, OnChanges */{
-  @Input() emailToGraph
-  constructor() {}
+export class SmartEmailGraphComponent implements OnInit, OnDestroy {
+  private emailToGraph: any;
+  private simulation: any;
+  private resizeEvent: any;
+  public id: string;
+
+  @ViewChild('legendDiv') legendDiv;
+  @ViewChild('graphdiv') graphDiv;
+
+  @Input('resizeNow')
+  set inputResize(resize) {
+    Observable.timer(600)
+    .subscribe(() => {
+      this.resize();
+    });
+  }
+
+  @Input('emailToGraph')
+  set inputData(email) {
+    this.emailToGraph = email;
+    if (email) {
+      this.id = email.id;
+    }
+    setTimeout(() => {
+      this.createGraph(email);
+    }, 500);
+  }
+
+  constructor() { }
   ngOnInit() {
     if (this.emailToGraph) {
       console.log("ngOnInit for smart-email-graph")
@@ -17,143 +52,197 @@ export class SmartEmailGraphComponent implements OnInit/*, OnChanges */{
     } else {
       console.log("ngOnInit for smart-email-graph but nothing to graph")
     }
+    let obs;
+    let stop = false;
+    this.resizeEvent = () => {
+      if (obs) {
+        stop = true;
+      }
+      obs = Observable.timer(500)
+      .takeWhile(() => stop)
+      .subscribe(() => {
+        obs = null;
+        this.resize();
+      });
+      
+    }
+    window.addEventListener('resize', this.resizeEvent);
+  }
+
+  resize() {
+    if (this.simulation) {
+      const containerNode = <HTMLElement>this.graphDiv.nativeElement;
+      let width = containerNode.getBoundingClientRect().width;
+      let height = containerNode.getBoundingClientRect().height + 200;
+      this.simulation.force('center', d3.forceCenter(width / 2, height / 2))
+        .alphaTarget(0.1).restart()
+    }
   }
 
   createGraph(email) {
+    // clean up svg
+    d3Selection.select("#email-graph").select('svg').remove();
+    if (!email.relation_data) {
+      return;
+    }
     let entities = email.relation_data.entities
     let keys = Object.keys(entities);
     let sortedInts = keys.map((x) => parseInt(x)).sort()
     let nodes = []
-    for (let key of keys) {
-      nodes.push({text: entities[key.toString()].text})
-    }
-    var colors = d3.scale.category10();
+    keys.forEach((k, index) => {
+      const entity = entities[k.toString()];
+      nodes.push({ name: entity.text, id: '' + index, type: entity.type });
+    })
+    let legendTypes = nodes.map((o) => o.type);
+    legendTypes = Array.from(new Set(legendTypes)) // make the array with unique legend types
 
-    let edges = email.relation_data.relations;
-    let w = 600;
-    let h = 600;
+    const colors = d3Scale.scaleOrdinal(d3Scale.schemeCategory10);
+
+    const links_raw = email.relation_data.relations;
+    let links = [];
+    links_raw.forEach((l) => {
+      links.push({
+        source: l.source.id,
+        target: l.target.id,
+        srcData: l.source,
+        targetData: l.target
+      });
+    });
+    console.log('Email graph edges and nodes:', email, links, nodes, legendTypes);
+
+    const containerNode = <HTMLElement>this.graphDiv.nativeElement;
+    let width = containerNode.getBoundingClientRect().width;
+    let height = containerNode.getBoundingClientRect().height;
+    console.log('width:' + width + ' height:' + height);
     let linkDistance = 200;
-    var svg = d3.select("email-graph").append("svg").attr({"width":w,"height":h});
-    var force = d3.layout.force()
-        .nodes(nodes)
-        .links(edges)
-        .size([w,h])
-        .linkDistance([linkDistance])
-        .charge([-500])
-        .theta(0.1)
-        .gravity(0.05)
-        .start();
+    const svg = d3Selection.select("#email-graph").append("svg").attr('width', '100%').attr('height', '100%');
 
-        edges = svg.selectAll("line")
-          .data(edges)
-          .enter()
-          .append("line")
-          .attr("id",function(d,i) {return 'edge'+i})
-          .attr('marker-end','url(#arrowhead)')
-          .style("stroke","#ccc")
-          .style("pointer-events", "none");
+    // Arrow head def
+    svg.append('defs').append('marker')
+      .attr('id', 'arrowhead')
+      .attr('viewBox', '-0 -5 10 10')
+      .attr('refX', 25)
+      .attr('refY', 0)
+      .attr('orient', 'auto')
+      .attr('markerWidth', 5)
+      .attr('markerHeight', 5)
+      .attr('xoverflow', 'visible')
+      .append('svg:path')
+      .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
+      .attr('fill', '#999')
+      .attr('stroke', '#999');
 
-        nodes = svg.selectAll("circle")
-          .data(nodes)
-          .enter()
-          .append("circle")
-          .attr({"r":15})
-          .style("fill",function(d,i){return colors(i);})
-          .call(force.drag)
+    this.simulation = d3.forceSimulation()
+      .force('link', d3.forceLink().id((d: any) => { return d.id; }))
+      .force('charge', d3.forceManyBody().strength(-1800).distanceMin(200).distanceMax(800).theta(0.1))
+      .force('center', d3.forceCenter(width / 2, height / 2))
+      .force("y", d3.forceY(0.001))
+      .force("x", d3.forceX(0.001))
 
+    this.simulation
+      .nodes(nodes)
+      .on('tick', ticked);
 
-        let nodelabels = svg.selectAll(".nodelabel")
-           .data(nodes)
-           .enter()
-           .append("text")
-           .attr({"x":function(d){return d.x;},
-                  "y":function(d){return d.y;},
-                  "class":"nodelabel",
-                  "stroke":"black"})
-           .text(function(d){return d.name;});
+    this.simulation.force('link').links(links);
 
-        let edgepaths = svg.selectAll(".edgepath")
-            .data(edges)
-            .enter()
-            .append('path')
-            .attr({'d': function(d) {return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y},
-                   'class':'edgepath',
-                   'fill-opacity':0,
-                   'stroke-opacity':0,
-                   'fill':'blue',
-                   'stroke':'red',
-                   'id':function(d,i) {return 'edgepath'+i}})
-            .style("pointer-events", "none");
+    const link = svg.append('g')
+      .attr('class', 'links')
+      .selectAll('line')
+      .data(links)
+      .enter().append('line')
+      .attr('stroke-width', (d: any) => { return 1; })
+      .attr('id', (d, i) => { return 'edge' + i })
+      .attr('marker-end', 'url(#arrowhead)')
+      .style('stroke', '#ccc')
+      .style('pointer-events', 'none');
 
-        let edgelabels = svg.selectAll(".edgelabel")
-            .data(edges)
-            .enter()
-            .append('text')
-            .style("pointer-events", "none")
-            .attr({'class':'edgelabel',
-                   'id':function(d,i){return 'edgelabel'+i},
-                   'dx':80,
-                   'dy':0,
-                   'font-size':10,
-                   'fill':'#aaa'});
+    const node = svg.selectAll('.node')
+      .data(nodes)
+      .enter().append('g')
+      .attr('class', 'node')
+      .call(d3.drag()
+        .on('start', (d) => this.dragstarted(d))
+        .on('drag', (d) => this.dragged(d))
+        .on('end', (d) => this.dragended(d)));
 
-        edgelabels.append('textPath')
-            .attr('xlink:href',function(d,i) {return '#edgepath'+i})
-            .style("pointer-events", "none")
-            .text(function(d,i){return 'label '+i});
+    const radius = 12;
+    node.append('circle')
+      .attr('r', radius)
+      .attr('fill', (d: any) => { return colors(d.type) });
 
+    node.append('text')
+      .attr("dx", radius)
+      .attr("dy", 5)
+      .attr('class', 'nodelabel')
+      .attr('stroke', 'black')
+      .text(function (d) { return d.name; });
 
-        svg.append('defs').append('marker')
-            .attr({'id':'arrowhead',
-                   'viewBox':'-0 -5 10 10',
-                   'refX':25,
-                   'refY':0,
-                   //'markerUnits':'strokeWidth',
-                   'orient':'auto',
-                   'markerWidth':10,
-                   'markerHeight':10,
-                   'xoverflow':'visible'})
-            .append('svg:path')
-                .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
-                .attr('fill', '#ccc')
-                .attr('stroke','#ccc');
+    node.append('title')
+      .text(function (d) { return d.name; });
 
+    const edge = svg.append('g')
+      .attr('class', 'edges')
+      .selectAll('path')
+      .data(links)
+      .enter().append('path')
+      .attr('class', 'edgepath')
+      .attr('fill-opacity', 0)
+      .attr('stroke-opacity', 0)
+      .attr('fill', 'blue')
+      .attr('stroke', 'red')
+      .attr('id', (d, i) => { return 'edgepath' + i })
+      .style("pointer-events", "none");
 
-        force.on("tick", function(){
+    function ticked() {
+      link
+        .attr('x1', function (d: any) { return d.source.x; })
+        .attr('y1', function (d: any) { return d.source.y; })
+        .attr('x2', function (d: any) { return d.target.x; })
+        .attr('y2', function (d: any) { return d.target.y; });
 
-            edges.attr({"x1": function(d){return d.source.x;},
-                        "y1": function(d){return d.source.y;},
-                        "x2": function(d){return d.target.x;},
-                        "y2": function(d){return d.target.y;}
-            });
+      node
+        .attr('transform', (d) => 'translate(' + d.x + ',' + d.y + ')');
+      edge
+        .attr('d', (d: any) => { return 'M ' + d.source.x + ' ' + d.source.y + ' L ' + d.target.x + ' ' + d.target.y })
+    }
 
-            // nodes.attr({"cx":function(d){return d.x;},
-            //             "cy":function(d){return d.y;}
-            // });
+    // creates legend
+    const legend = d3Selection.select(this.legendDiv.nativeElement);
+    legend.selectAll('*').remove();
+    const legendDivs = legend
+      .selectAll('.legend')
+      .data(legendTypes)
+      .enter()
+      .append('div');
 
-            nodelabels.attr("x", function(d) { return d.x; })
-                      .attr("y", function(d) { return d.y; });
+    legendDivs.attr('class', 'legend')
+      .append('i').attr('class', 'fa fa-circle')
+      .style('color', (d) => colors(d))
+    legendDivs.append('span').html((d) => d);
 
-            edgepaths.attr('d', function(d) { var path='M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y;
-                                               //console.log(d)
-                                               return path});
-
-            edgelabels.attr('transform',function(d,i){
-                if (d.target.x<d.source.x){
-                    let bbox = this.getBBox();
-                    let rx = bbox.x+bbox.width/2;
-                    let ry = bbox.y+bbox.height/2;
-                    return 'rotate(180 '+rx+' '+ry+')';
-                    }
-                else {
-                    return 'rotate(0)';
-                    }
-            });
-        });
+    legendDivs.transition().duration(500).style('opacity', 1);
   }
 
-/*
-  ngOnChanges (changes: { [propKey: string]: SimpleChange }) {
+  dragstarted(d) {
+    if (!d3.event.active) this.simulation.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
 
-  }*/
+  dragged(d) {
+    d.fx = d3.event.x;
+    d.fy = d3.event.y;
+  }
+
+  dragended(d) {
+    if (!d3.event.active) this.simulation.alphaTarget(0.1);
+    d.fx = null;
+    d.fy = null;
+  }
+
+  ngOnDestroy() {
+    if (this.resizeEvent) {
+      window.removeEventListener('resize', this.resizeEvent);
+    }
+  }
 }

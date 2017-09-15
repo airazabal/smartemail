@@ -28,3 +28,13 @@
   textarea:disabled, .base--textarea:disabled {
     background-color: #c7c7c7;
   }
+
+  :host ::ng-deep .mat-form-field {
+    width: 100%;
+    .mat-form-field-placeholder {
+      padding: 0.5rem 1rem;
+    }
+    .mat-form-field-underline {
+      display: none;
+    }
+  }

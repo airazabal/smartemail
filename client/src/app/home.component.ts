@@ -17,12 +17,16 @@ import { LoopbackLoginService } from './auth/loopback';
 
 import { NavbarComponent } from './shared'
 import { DashboardComponent } from './dashboard'
+import { routerTransition } from './shared/utils/router-animations';
 
 @Component({
   selector: 'app-home',
+  animations: [ routerTransition()],
   template: `
     <app-navbar></app-navbar>
-    <router-outlet></router-outlet>
+    <div [@routerTransition]="getState(route)">
+    <router-outlet #route="outlet"></router-outlet>
+    </div>
   `,
 })
 export class HomeComponent {
@@ -43,6 +47,10 @@ export class HomeComponent {
 
   submitLogout() {
     this.authService.logout().subscribe();
+  }
+
+  getState(outlet) {
+    return outlet.activatedRouteData.state;
   }
 
   ngOnDestroy() {

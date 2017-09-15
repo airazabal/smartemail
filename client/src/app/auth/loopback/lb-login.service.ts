@@ -73,7 +73,7 @@ export class LoopbackLoginService {
           console.log('isAuthenticated try 2: is false...');
           console.log('Response status ',error )
           this.destroyToken();
-          return Observable.create(observer => {
+          return <Observable<boolean>>Observable.create(observer => {
             observer.next(false)
             observer.complete()
           });

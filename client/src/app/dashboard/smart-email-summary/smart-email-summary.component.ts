@@ -6,6 +6,8 @@ import { SmartEmailService } from '../../shared/wsl-email/smart-email.service'
 import { ConfusionMatrixService } from '../shared/confusion-matrix/confusion-matrix.service'
 import { ConfusionMatrix} from '../shared/confusion-matrix/ConfusionMatrix'
 
+import { fade } from '../../shared/utils/animations'
+
 @Component({
   selector: 'app-smart-email-summary',
   templateUrl: './smart-email-summary.component.html'

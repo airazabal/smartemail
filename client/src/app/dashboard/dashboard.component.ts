@@ -3,11 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { DashboardCtxService } from './shared/dashboard-ctx.service'
+import { routerTransition } from '../shared/utils/router-animations';
 
-declare var moment:any
+declare var moment: any
 
 @Component({
   selector: 'app-dashboard',
+  animations: [ routerTransition()],
   templateUrl: './dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
@@ -15,6 +17,13 @@ export class DashboardComponent implements OnInit {
   private titleSubject
   private title
   private lastUpdated = ''
+  public navLinks = [
+    { link: '/home/dashboard/summary', label: 'Summary' },
+    { link: '/home/dashboard/classifications', label: 'Classifications' },
+    { link: '/home/dashboard/entities', label: 'Entities' },
+    { link: '/home/dashboard/test', label: 'Smart Email Test' },
+    { link: '/home/dashboard/viewer', label: 'Smart Email Viewer' }
+  ]
 
   constructor(private router: Router, private dashboardCtxService: DashboardCtxService) { }
 
@@ -23,7 +32,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.lastUpdated = moment().format('MM Do, YYYY')
+    this.lastUpdated = moment().format('MMM Do, YYYY')
   }
 
   routeToTab(tab) {
@@ -51,6 +60,10 @@ export class DashboardComponent implements OnInit {
         //this.router.navigate(['home/dashboard/chats'])
         break
     }
+  }
+
+  getState(outlet) {
+    return outlet.activatedRouteData.state;
   }
 
   ngOnDestroy() {

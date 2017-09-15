@@ -1,0 +1,100 @@
+@import '~@angular/material/theming';
+
+// blue
+$blue-50: #E7ECF4;
+$blue-100: #BAC7E0;
+$blue-200: #8DA2CB;
+$blue-300: #5E7DB6;
+$blue-400: #3258A2;
+$blue-500: #00338D;
+$blue-600: #072974;
+$blue-700: #05215B;
+$blue-800: #021741;
+$blue-900: #010D27;
+
+$mat-ibm-blue: (
+	50: $blue-50,
+	100: $blue-100,
+	200: $blue-200,
+	300: $blue-300,
+	400: $blue-400,
+	500: $blue-500,
+	600: $blue-600,
+	700: $blue-700,
+	800: $blue-800,
+	900: $blue-900,
+	A100: #82b1ff,
+	A200: #0091DA,
+	A400: #005EB8,
+	A700: $blue-500,
+	contrast: (
+	  50: $black-87-opacity,
+	  100: $black-87-opacity,
+	  200: $black-87-opacity,
+	  300: $black-87-opacity,
+	  400: $black-87-opacity,
+	  500: white,
+	  600: white,
+	  700: white,
+	  800: $white-87-opacity,
+	  900: $white-87-opacity,
+	  A100: $black-87-opacity,
+	  A200: white,
+	  A400: white,
+	  A700: white,
+	)
+  );
+
+  // purple
+$purple-500: #6D2077;
+$purple-700: #470A68;
+$purple-900: #483698;
+$mat-ibm-purple: (
+  50: #f3e5f5,
+  100: #e1bee7,
+  200: #ce93d8,
+  300: #ba68c8,
+  400: #ab47bc,
+  500: $purple-500,
+  600: #8e24aa,
+  700: $purple-700,
+  800: #6a1b9a,
+  900: $purple-900,
+  A100: #ea80fc,
+  A200: #e040fb,
+  A400: #d500f9,
+  A700: #aa00ff,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: white,
+    400: white,
+    500: $white-87-opacity,
+    600: $white-87-opacity,
+    700: $white-87-opacity,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+// Plus imports for other components in your app.
+// Include the base styles for Angular Material core. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+@include mat-core();
+
+// Define a theme.
+$primary: mat-palette($mat-ibm-blue, A400, A200, A700);
+$accent:  mat-palette($mat-ibm-purple, 700, 500, 900);
+
+
+$theme: mat-light-theme($primary, $accent);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($theme);

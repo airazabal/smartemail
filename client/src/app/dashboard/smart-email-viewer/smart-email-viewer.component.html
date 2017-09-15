@@ -1,26 +1,47 @@
 <div role="tabpanel" class="tab-pane active ibm-tabs__content-panel ibm-tabs__content-panel--active" id="forum-channels">
-  <div class="row .ibm-text--base">
-    <p> Selected Email Id = {{selectedEmailId}} </p>
-    <div class="col-md-2 col-sm-2">
-      <input #searchBox (keyup)="search(searchBox.value)"placeholder="Search by email id"/>
-      <ul class="emailList">
-        <li *ngFor="let emailId of filteredEmailIds"
-          [class.selected]="emailId === selectedEmailId"
-          (click)="updateSelected(emailId)">
-          {{emailId}}
-        </li>
-      </ul>
+  <div class="row">
+    <div class="col">
+      <form class="search-form">
+        <md-form-field class="form-field" floatPlaceholder="never">
+          <i mdPrefix class="fa fa-search" style="color: rgba(0, 0, 0, 0.54); padding-right: 0.6rem;" aria-hidden="true"></i>
+          <input #searchInput [value]="searchEmailVal" type="text" [(ngModel)]="searchEmailVal" (change)="updateSelected($event)" placeholder="Select An Email Or Search For An Email To View"
+            aria-label="Email" mdInput [formControl]="formControl" [mdAutocomplete]="auto">
+          <md-autocomplete (optionSelected)="updateSelected($event)" #auto="mdAutocomplete">
+            <md-option *ngFor="let email of filteredEmailsInput | async" [value]="email.id">
+              {{ email.id }} {{ email.source_email.subject }}
+            </md-option>
+          </md-autocomplete>
+        </md-form-field>
+      </form>
     </div>
-    <div class="col-md-4 col-sm-4">
-      <div *ngIf="selectedEmailId">
-        <app-email-viz [docToViz]="selectedEmail"></app-email-viz>
-        <!-- <p> {{selectedEmail.source_email.body}} </p> -->
+  </div>
+
+  <div class="selected-email-title" [@itemFadeAnimation] *ngIf="selectedEmailId">
+    <h3>{{selectedEmailId}} {{selectedEmail.source_email.subject}}</h3>
+  </div>
+
+  <div class="content-container" [@itemFadeAnimation] *ngIf="selectedEmailId">
+    <div class="side-div" *ngIf="toggleEmail" [@sideWipe]>
+      <app-email-viz [docToViz]="selectedEmail"></app-email-viz>
+    </div>
+    <div class="graph-div">
+      <div class="toggle-email-div"><button md-mini-fab (click)="toggleEmail=!toggleEmail"><i class="fa fa-chevron-left" aria-hidden="true" [ngClass]="{'right': !toggleEmail}"></i></button></div>
+      <div style="width: 100%; height: 100%; position: relative;">
+        <smart-email-graph [resizeNow]="toggleEmail" [emailToGraph]="selectedEmail"> </smart-email-graph>
       </div>
     </div>
-    <div class="col-md-6 col-sm-6">
+  </div>
+
+  <!-- <div class="row .ibm-text--base">
+    <div class="col-md-5 col-sm-5">
       <div *ngIf="selectedEmailId">
+        <app-email-viz [docToViz]="selectedEmail"></app-email-viz>
+      </div>
+    </div>
+    <div class="col-md-7 col-sm-7">
+      <div style="width: 100%; height: 100%; position: relative;" *ngIf="selectedEmailId">
         <smart-email-graph [emailToGraph]="selectedEmail"> </smart-email-graph>
       </div>
     </div>
-  <div>
+  </div> -->
 </div>

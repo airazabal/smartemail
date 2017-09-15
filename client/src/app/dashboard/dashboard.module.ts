@@ -13,10 +13,13 @@
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '@angular/material';
 
-import { DropdownModule } from 'ng2-bootstrap/dropdown';
-import { ModalModule } from 'ng2-bootstrap/modal';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { SmartEmailGraphComponent } from "./smart-email-viewer/smart-email-graph/smart-email-graph.component"
 import { SmartEmailViewerComponent } from './smart-email-viewer/smart-email-viewer.component';
@@ -45,7 +48,11 @@ import { MvpCalcComponent } from './shared/mvp-calc/mvp-calc.component';
     FormsModule,
     RouterModule,
     WslEmailModule,
-    DropdownModule.forRoot(),
+    BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    BsDropdownModule.forRoot(),
     ModalModule.forRoot() ],
   declarations: [
     SmartEmailTestComponent,
