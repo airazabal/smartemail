@@ -15,9 +15,20 @@
 		}
 		.nodelabel {
 			font-size: 1rem;
+			&.small {
+				font-size: 0.7rem;
+			}
 		}
 		.legend {
 			opacity: 0;
+			transition: 200ms ease-in-out;
+			&.blur {
+				opacity: 0.5 !important;
+			}
+			&.selected {
+				font-weight: 600;
+				font-size: 1.1rem;
+			}
 			span {
 				margin-left: 0.5rem;
 			}

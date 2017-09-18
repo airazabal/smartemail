@@ -10,6 +10,7 @@ import { routerTransition } from '../../shared/utils/router-animations';
 
 @Component({
   selector: 'smart-email-entities',
+  styleUrls: ['./smart-email-entities.component.scss'],
   templateUrl: './smart-email-entities.component.html'
 })
 export class SmartEmailEntitiesComponent implements OnInit {

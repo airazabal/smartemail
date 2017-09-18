@@ -64,3 +64,11 @@ to {
   transform: rotate(1320deg); }
 to {
   transform: rotate(2100deg); } }
+
+:host ::ng-deep {
+  .email-display-div {
+    .mat-card {
+      height: 100%;
+    }
+  }
+}

@@ -86,3 +86,17 @@ overflow: hidden; }
   display: flex;
   align-items: center;
 }
+
+:host ::ng-deep {
+  .toc-cell {
+    min-width: 150px;
+  }
+}
+
+.toc-div {
+  div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

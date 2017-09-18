@@ -10,7 +10,8 @@ declare var britecharts: any
 
 @Component({
   selector: 'app-table-of-confusion',
-  templateUrl: './table-of-confusion.component.html'
+  templateUrl: './table-of-confusion.component.html',
+  styleUrls: ['./graph.component.scss']
 })
 
 export class TableOfConfusionComponent implements OnInit, OnDestroy {
@@ -18,6 +19,11 @@ export class TableOfConfusionComponent implements OnInit, OnDestroy {
   @ViewChild('chartdiv') chartDiv
   @Input() confusion: ConfusionMatrix
   @Output() selected = new EventEmitter()
+
+  public colors = [
+    {label: 'True Positives', color: '#116639'}, {label: 'False Positives', color: '#57d785'}, 
+    {label: 'False Negatives', color: '#cef3d1'}
+  ]
 
   private stats: any[]
   private graphData: any[]
@@ -45,7 +51,7 @@ export class TableOfConfusionComponent implements OnInit, OnDestroy {
     'Recall': 0
   }
 
-  private groupedBar: any;
+  private stackedBar: any;
   private resizeEvt: any;
 
   constructor() { }
@@ -89,9 +95,9 @@ export class TableOfConfusionComponent implements OnInit, OnDestroy {
       categories.push(actual)
     })
     this.graphData = [categories, tp, fp, fn]
-    console.log('graphData', this.graphData)
+    console.log('table of confusion graphData', this.graphData)
 
-    // Build Britechart groupedBar chart data
+    // Build Britechart stackedBar chart data
     this.briteGraphData = { data: [] };
     Object.keys(toc).forEach((actual) => {
       this.briteGraphData.data.push({
@@ -164,31 +170,34 @@ export class TableOfConfusionComponent implements OnInit, OnDestroy {
     //   }
     // });
 
+    const colorsB = this.colors.map((o) => o.color)
     const divContainer = d3Selection.select(this.chartDiv.nativeElement)
     const container = d3Selection.select('#table-of-confusion-chart')
     const chartTooltip = britecharts.tooltip()
-    this.groupedBar = britecharts.groupedBar();
+    this.stackedBar = britecharts.stackedBar();
     const containerWidth = (<HTMLElement>divContainer.node()).getBoundingClientRect().width
     const containerHeight = (<HTMLElement>divContainer.node()).getBoundingClientRect().height || 320
 
-    this.groupedBar.tooltipThreshold(400)
+    this.stackedBar.tooltipThreshold(600)
       .width(containerWidth)
       .height(containerHeight == 0 ? 320 : containerHeight)
       .isHorizontal(true)
       .isAnimated(true)
-      .groupLabel('group')
+      .stackLabel('group')
       .nameLabel('name')
       .valueLabel('value')
+      .colorSchema(colorsB)
       .margin({
         left: 225,
         top: 0,
         right: 0,
-        bottom: 20
+        bottom: 30
       })
       .on('customMouseOver', () => {
         chartTooltip.show();
       })
       .on('customMouseMove', (dataPoint, topicColorMap, x, y) => {
+        chartTooltip.title(dataPoint.key);
         chartTooltip.update(dataPoint, topicColorMap, x, y);
       })
       .on('customMouseOut', () => {
@@ -196,7 +205,7 @@ export class TableOfConfusionComponent implements OnInit, OnDestroy {
       });
 
 
-    container.datum(this.briteGraphData.data).call(this.groupedBar);
+    container.datum(this.briteGraphData.data).call(this.stackedBar);
 
     // Tooltip Setup and start
     chartTooltip
@@ -212,9 +221,10 @@ export class TableOfConfusionComponent implements OnInit, OnDestroy {
 
     // Add click event
     container.selectAll('.bar')
-      .on('click', (d: any) => {
-        console.log('click', d)
-        let event = { entity_type: d.name, toc_type: d.group };
+      .on('click', (d: any, i) => {
+        console.log('click '+i, d)
+        const data = d.data.values.find((o) => o.value === d[0])
+        let event = { entity_type: data.name, toc_type: data.group };
         console.log('chart.onclick() emitting event: ', event)
         this.selected.emit(event);
       })
@@ -240,11 +250,15 @@ export class TableOfConfusionComponent implements OnInit, OnDestroy {
     const newContainerHeight = (<HTMLElement>divContainer.node()).getBoundingClientRect().height || 320;
 
     // Setting the new width and height on the chart
-    this.groupedBar.width(newContainerWidth);
-    this.groupedBar.height(newContainerHeight);
+    this.stackedBar.width(newContainerWidth);
+    this.stackedBar.height(newContainerHeight);
 
     // Rendering the chart again
-    container.datum(this.briteGraphData.data).call(this.groupedBar);
+    container.datum(this.briteGraphData.data).call(this.stackedBar);
+  }
+
+  mouseoverLegend(c) {
+    
   }
 
   ngOnDestroy() {

@@ -43,6 +43,6 @@
   }
 }
 
-::ng-deep .mat-card {
+:host ::ng-deep .mat-card {
   height: 100%;
 }

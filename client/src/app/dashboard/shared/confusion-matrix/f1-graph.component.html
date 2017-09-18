@@ -13,6 +13,12 @@
     </div>
     <div #chartdiv class="graph-chart-div panel-body ibm-panel__body">
       <div id="f1-graph-chart"></div>
+      <div #legendDiv class="legend-div">
+        <div *ngFor="let c of colors" class="legend-block" (mouseover)="mouseOverLegend(c)">
+          <div class="square-div" [style.backgroundColor]="c.color"></div>
+          <div class="legend-text">{{c.label}}</div>
+        </div>
+      </div>
       <div class="bottom-title" *ngIf="summary">
         Overall F1 Score (Precision/Recall) {{summary.F1|number:'1.0-2'}} ({{summary.Precision|number:'1.0-2'}}/{{summary.Recall|number:'1.0-2'}})
       </div>

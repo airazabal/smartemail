@@ -25,3 +25,7 @@ env-vars.json
 *.spec*
 test-output
 test-output-standard-new
+
+.vscode/angulardoc.json
+
+.angulardoc.json

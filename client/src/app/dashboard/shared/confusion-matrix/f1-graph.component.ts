@@ -18,6 +18,10 @@ export class F1GraphComponent implements OnInit, OnDestroy {
   @ViewChild('chartdiv') chartDiv
   @Input() confusion: ConfusionMatrix
 
+  public colors = [
+    {label: 'f1', color: '#188291'}, {label: 'precision', color: '#00b6cb'}, 
+    {label: 'recall', color: '#a0e3f0'}
+  ]
   private stats: any[]
   private graphData: any[]
   private briteGraphData: any
@@ -115,9 +119,9 @@ export class F1GraphComponent implements OnInit, OnDestroy {
 
   buildChart() {
     let pattern = []
-    let colors = {
-      f1: '#188291', precision: '#00b6cb', recall: '#a0e3f0'
-    }
+    
+    let colorsB = this.colors.map((o) => o.color)
+
     // var chart = c3.generate({
     //   bindto: '#f1-graph-chart',
     //   data: {
@@ -161,13 +165,14 @@ export class F1GraphComponent implements OnInit, OnDestroy {
       .margin({
         left: 40,
         top: 0,
-        right: 0,
+        right: 20,
         bottom: 80
       })
       .isAnimated(true)
       .groupLabel('group')
       .nameLabel('name')
       .valueLabel('value')
+      .colorSchema(colorsB)
       .on('customMouseOver', function () {
         chartTooltip.show();
       }) 
@@ -259,6 +264,10 @@ export class F1GraphComponent implements OnInit, OnDestroy {
     setTimeout(() => {
       container.select('.x.axis').selectAll(".tick text").call(this.wrap, xScale.bandwidth());
     }, 1000);
+  }
+
+  mouseOverLegend(c) {
+
   }
 
   ngOnDestroy() {

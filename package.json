@@ -5,7 +5,8 @@
   "scripts": {
     "build": "gulp build",
     "start": "node ./dist/server/server.js",
-    "develop": "gulp develop"
+    "develop": "gulp develop",
+    "develop-server": "gulp develop-server"
   },
   "dependencies": {
     "@angular/core": "*",
@@ -64,5 +65,5 @@
     "url": ""
   },
   "license": "Apache-2.0",
-  "description": "wsl-lb-ng2-bootstrap-starter-app"
+  "description": "wsl-lb-ngx-bootstrap-starter-app"
 }

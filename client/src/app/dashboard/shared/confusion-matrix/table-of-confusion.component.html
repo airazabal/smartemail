@@ -13,7 +13,12 @@
     </div>
     <div #chartdiv class="ibm-text--small graph-chart-div">
       <div id="table-of-confusion-chart"></div>
-      <div class="grouped-bar-chart-tooltip-container"></div>
+      <div #legendDiv class="legend-div">
+        <div *ngFor="let c of colors" class="legend-block" (mouseover)="mouseOverLegend(c)">
+          <div class="square-div" [style.backgroundColor]="c.color"></div>
+          <div class="legend-text">{{c.label}}</div>
+        </div>
+      </div>
     </div>
   </md-card-content>
 </md-card>

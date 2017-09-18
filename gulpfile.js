@@ -81,6 +81,12 @@ gulp.task('develop', ['build:all', 'start'], function () {
   gulp.watch(config.paths.directories.client, ['build:all', 'start'])
 })
 
+gulp.task('develop-server', ['build:all', 'start'], function () {
+  console.log('ENTERING DEVELOPMENT MODE FOR SERVER. APP WILL REBUILD ON CHANGES')
+  gulp.watch(config.paths.directories.server, ['build:all', 'start'])
+  gulp.watch(config.paths.directories.common, ['build:all', 'start'])
+})
+
 gulp.task('develop:server', ['build:common', 'build:server', 'start:server'], function () {
   console.log('ENTERING DEVELOPMENT MODE. APP WILL REBUILD ON CHANGES')
   gulp.watch(config.paths.directories.server, ['build:common', 'build:server', 'start:server'])

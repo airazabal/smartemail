@@ -24,12 +24,12 @@
     </ng-container>
     <ng-container mdColumnDef="toc">
       <md-header-cell *mdHeaderCellDef md-sort-header>TOC Type</md-header-cell>
-      <md-cell *mdCellDef="let email">
-        <span *ngFor="let toc of email.toc">
-                <div class="col-sm-1 entity" [ngClass]="toc.toc_type">
-                  {{toc.type}}
-                </div>
-            </span>
+      <md-cell *mdCellDef="let email" class="toc-cell">
+        <div *ngFor="let toc of email.toc" class="toc-div">
+          <div class="entity" [ngClass]="toc.toc_type">
+            {{toc.type}}
+          </div>
+        </div>
       </md-cell>
     </ng-container>
     <md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>

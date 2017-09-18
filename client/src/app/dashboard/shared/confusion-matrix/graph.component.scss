@@ -1,8 +1,25 @@
 .graph-chart-div {
-	min-height: 320px;
-	.bottom-title {
-		margin-top: 0.5rem;
-	}
+    min-height: 320px;
+    .bottom-title {
+        margin-top: 0.5rem;
+    }
+    .legend-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div {
+            margin-right: 1rem;
+            display: flex;
+            .square-div {
+                width: 15px;
+                height: 15px;
+            }
+            .legend-text {
+                font-size: 0.8rem;
+                margin-left: 0.3rem;
+            }
+        }
+    }
 }
 
 ::ng-deep {

@@ -29,7 +29,6 @@
         "assets/css/ibm-patterns.css"
       ],
       "scripts": [
-        "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/britecharts/dist/bundled/britecharts.min.js",
         "../node_modules/moment/moment.js"
       ],

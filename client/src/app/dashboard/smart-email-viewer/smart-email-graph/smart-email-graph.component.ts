@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, Input, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/interval'; 
+import 'rxjs/add/observable/interval';
 import 'rxjs/add/operator/takeWhile';
 
 import { fade } from '../../../shared/utils/animations';
@@ -28,9 +28,9 @@ export class SmartEmailGraphComponent implements OnInit, OnDestroy {
   @Input('resizeNow')
   set inputResize(resize) {
     Observable.timer(600)
-    .subscribe(() => {
-      this.resize();
-    });
+      .subscribe(() => {
+        this.resize();
+      });
   }
 
   @Input('emailToGraph')
@@ -59,12 +59,12 @@ export class SmartEmailGraphComponent implements OnInit, OnDestroy {
         stop = true;
       }
       obs = Observable.timer(500)
-      .takeWhile(() => stop)
-      .subscribe(() => {
-        obs = null;
-        this.resize();
-      });
-      
+        .takeWhile(() => stop)
+        .subscribe(() => {
+          obs = null;
+          this.resize();
+        });
+
     }
     window.addEventListener('resize', this.resizeEvent);
   }
@@ -134,7 +134,7 @@ export class SmartEmailGraphComponent implements OnInit, OnDestroy {
 
     this.simulation = d3.forceSimulation()
       .force('link', d3.forceLink().id((d: any) => { return d.id; }))
-      .force('charge', d3.forceManyBody().strength(-1800).distanceMin(200).distanceMax(800).theta(0.1))
+      .force('charge', d3.forceManyBody().strength(-1600).distanceMin(200).distanceMax(600).theta(0.1))
       .force('center', d3.forceCenter(width / 2, height / 2))
       .force("y", d3.forceY(0.001))
       .force("x", d3.forceX(0.001))
@@ -159,7 +159,32 @@ export class SmartEmailGraphComponent implements OnInit, OnDestroy {
     const node = svg.selectAll('.node')
       .data(nodes)
       .enter().append('g')
-      .attr('class', 'node')
+      .attr('class', (d) => 'node' )
+      .on('mouseover', (d, i, g) => {
+        d3Selection.select(this.legendDiv.nativeElement)
+          .selectAll('.legend')
+          .classed('blur', (l) => {
+            if (l !== d.type) {
+              return true
+            } else {
+              return false
+            }
+          })
+          .classed('selected', (l) => {
+            if (l === d.type) {
+              return true
+            } else {
+              return false
+            }
+          })
+          
+      })
+      .on('mouseout', (d, i, g) => {
+        d3Selection.select(this.legendDiv.nativeElement)
+          .selectAll('.legend')
+          .classed('blur', false)
+          .classed('selected', false)
+      })
       .call(d3.drag()
         .on('start', (d) => this.dragstarted(d))
         .on('drag', (d) => this.dragged(d))
@@ -171,11 +196,18 @@ export class SmartEmailGraphComponent implements OnInit, OnDestroy {
       .attr('fill', (d: any) => { return colors(d.type) });
 
     node.append('text')
-      .attr("dx", radius)
+      .attr("dx", radius+1)
       .attr("dy", 5)
       .attr('class', 'nodelabel')
-      .attr('stroke', 'black')
+      .attr('stroke', '#555')
       .text(function (d) { return d.name; });
+
+      node.append('text')
+      .attr("dx", radius+1)
+      .attr("dy", 20)
+      .attr('class', 'nodelabel small')
+      .attr('stroke', '#999')
+      .text(function (d) { return d.type; });
 
     node.append('title')
       .text(function (d) { return d.name; });
@@ -213,9 +245,40 @@ export class SmartEmailGraphComponent implements OnInit, OnDestroy {
       .selectAll('.legend')
       .data(legendTypes)
       .enter()
-      .append('div');
+      .append('div')
+      .on('mouseover', (l, i, divs: any[]) => {
+        svg.selectAll('.node')
+        .transition().duration(200)
+        .attr('opacity', (d: any) => {
+          divs.forEach((div, index) => {
+            if (index === i) {
+              d3Selection.select(div).classed('selected', true)
+            } else {
+              d3Selection.select(div).classed('blur', true)
+            }
+          })
+          if (d.type === l) {
+            return 1;
+          } else {
+            return 0.5;
+          }
+          
+        })
+      })
+      .on('mouseout', (l, i, divs) => {
+        legend
+        .selectAll('.legend')
+        .classed('selected', false)
+        .classed('blur', false);
+        svg.selectAll('.node')
+        .transition().duration(200)
+        .attr('opacity', (d: any) => {
+          return 1
+        })
+      });
 
     legendDivs.attr('class', 'legend')
+      .attr('id', (d) => 'rel-legend-' + d)
       .append('i').attr('class', 'fa fa-circle')
       .style('color', (d) => colors(d))
     legendDivs.append('span').html((d) => d);
