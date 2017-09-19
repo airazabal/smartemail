@@ -247,7 +247,7 @@ export class ConfusionMatrix {
   }
 
   _calculatePrecision(classification: string): number {
-    console.log('Calculating Precision ---------', classification)
+    // console.log('Calculating Precision ---------', classification)
     const truePositives = this.matrix[classification][classification]
 
     /*
@@ -257,9 +257,9 @@ export class ConfusionMatrix {
     }, 0)
     */
     const allPositives = this.matrix[classification].actual
-    console.log('truePositives:',truePositives)
-    console.log('Actual? :',this.matrix[classification].actual)
-    console.log('allPositives:',allPositives)
+    // console.log('truePositives:',truePositives)
+    // console.log('Actual? :',this.matrix[classification].actual)
+    // console.log('allPositives:',allPositives)
     return (truePositives / allPositives)
   }
 

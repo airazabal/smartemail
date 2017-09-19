@@ -3,6 +3,7 @@ import { Component, OnInit, OnDestroy, Input, Output, ViewChild,
 import { ConfusionMatrix } from './ConfusionMatrix'
 import * as d3Selection from 'd3-selection';
 import * as d3Scale from 'd3-scale';
+import * as d3Color from 'd3-color';
 
 declare var c3: any
 declare var britecharts: any
@@ -106,7 +107,7 @@ export class F1GraphComponent implements OnInit, OnDestroy {
         value: isNaN(classObj.recall) ? 0 : Math.round(classObj.recall * 100) / 100
       });
     });
-    console.log('graphData', this.graphData)
+    console.log('graphData', this.briteGraphData)
   }
 
   ngOnChanges(changes: { [propKey: string]: SimpleChange }) {
@@ -158,7 +159,7 @@ export class F1GraphComponent implements OnInit, OnDestroy {
     const containerWidth = (<HTMLElement>divContainer.node()).getBoundingClientRect().width 
     const containerHeight = ((<HTMLElement>divContainer.node()).getBoundingClientRect().height | 320) - 15;
     this.groupedBar
-      .tooltipThreshold(400)
+      .tooltipThreshold(350)
       .width(containerWidth)
       .height(containerHeight)
       .grid('horizontal')
@@ -218,6 +219,7 @@ export class F1GraphComponent implements OnInit, OnDestroy {
       }, 200)
     }
     window.addEventListener('resize', this.resizeEvt);
+    container.on('mouseout', this.mouseOutLegend.bind(this))
   }
 
   wrap(text, width) {
@@ -267,8 +269,28 @@ export class F1GraphComponent implements OnInit, OnDestroy {
     }, 1000);
   }
 
-  mouseOverLegend(c) {
+  mouseOverLegend(col) {
+    const bars = d3Selection.select('#f1-graph-chart')
+      .selectAll('.bar');
+    bars.each((d, i, g) => {
+      const el = d3Selection.select(g[i]);
+      if (el.attr('fill') !== col.color) {
+        el.transition().duration(100).style('opacity', 0.2);
+      } else {
+        el.transition().duration(100).attr('fill', d3Color.color(col.color).darker(0.1).toString());
+      }
+    });
+  }
 
+  mouseOutLegend(c) {
+    const bars = d3Selection.select('#f1-graph-chart')
+      .selectAll('.bar')
+    bars.each((d:any, i, g) => {
+      const el = d3Selection.select(g[i]);
+      const col = this.colors.find((o) => o.label === d.group)
+      col.color = d3Color.color(col.color).toString();
+      el.attr('fill', d3Color.color(col.color).toString()).style('opacity', null);
+    })
   }
 
   ngOnDestroy() {

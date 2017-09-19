@@ -48,6 +48,7 @@ export class SmartEmailClassificationsComponent implements OnInit {
 //        this.summary = this.summarize(response)
         this.confusionMatrix = this.confusionMatrixService.generate('classification', this.transactions)
         this.loading = false
+        console.log('========confusionMatrix:', this.confusionMatrix)
       })
     /*
     this.smartEmailService.getAllDocs()
