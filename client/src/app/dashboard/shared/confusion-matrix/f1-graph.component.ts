@@ -177,6 +177,7 @@ export class F1GraphComponent implements OnInit, OnDestroy {
         chartTooltip.show();
       }) 
       .on('customMouseMove', function (dataPoint, topicColorMap, x, y) {
+        chartTooltip.title(dataPoint.key);
         chartTooltip.update(dataPoint, topicColorMap, x, y);
       })
       .on('customMouseOut', function () {

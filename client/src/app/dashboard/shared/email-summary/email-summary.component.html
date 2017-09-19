@@ -11,8 +11,8 @@
 
   <md-table #table [dataSource]="dataSource" mdSort>
     <ng-container mdColumnDef="id">
-      <md-header-cell *mdHeaderCellDef md-sort-header>ID</md-header-cell>
-      <md-cell *mdCellDef="let email"> <a class="ibm-link" tabindex="1" (click)="selectEmail(email)">{{email.id}} </a></md-cell>
+      <md-header-cell *mdHeaderCellDef md-sort-header class="id-cell">ID</md-header-cell>
+      <md-cell *mdCellDef="let email" class="id-cell"> <a class="ibm-link" tabindex="1" (click)="selectEmail(email)">{{email.id}} </a></md-cell>
     </ng-container>
     <ng-container mdColumnDef="topTransactionActual">
       <md-header-cell *mdHeaderCellDef md-sort-header>Top Transaction Actual</md-header-cell>

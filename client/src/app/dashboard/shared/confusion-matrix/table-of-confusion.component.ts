@@ -4,6 +4,7 @@ import {
 } from '@angular/core';
 import { ConfusionMatrix } from './ConfusionMatrix'
 import * as d3Selection from 'd3-selection';
+import * as d3 from 'd3';
 
 declare var c3: any
 declare var britecharts: any
@@ -21,8 +22,8 @@ export class TableOfConfusionComponent implements OnInit, OnDestroy {
   @Output() selected = new EventEmitter()
 
   public colors = [
-    {label: 'True Positives', color: '#116639'}, {label: 'False Positives', color: '#57d785'}, 
-    {label: 'False Negatives', color: '#cef3d1'}
+    {label: 'False Negatives', color: '#cef3d1'}, {label: 'False Positives', color: '#57d785'}, 
+    {label: 'True Positives', color: '#116639'} 
   ]
 
   private stats: any[]
@@ -116,6 +117,7 @@ export class TableOfConfusionComponent implements OnInit, OnDestroy {
         value: toc[actual].false_negatives
       });
     });
+    this.briteGraphData.data.reverse();
     console.log('=========>Table of Confusion:', this.briteGraphData);
   }
 
@@ -176,11 +178,12 @@ export class TableOfConfusionComponent implements OnInit, OnDestroy {
     const chartTooltip = britecharts.tooltip()
     this.stackedBar = britecharts.stackedBar();
     const containerWidth = (<HTMLElement>divContainer.node()).getBoundingClientRect().width
-    const containerHeight = (<HTMLElement>divContainer.node()).getBoundingClientRect().height || 320
+    const containerHeight = (<HTMLElement>divContainer.node()).getBoundingClientRect().height || 350
 
     this.stackedBar.tooltipThreshold(600)
       .width(containerWidth)
-      .height(containerHeight == 0 ? 320 : containerHeight)
+      .height(containerHeight)
+      .grid('vertical')
       .isHorizontal(true)
       .isAnimated(true)
       .stackLabel('group')
@@ -218,16 +221,33 @@ export class TableOfConfusionComponent implements OnInit, OnDestroy {
     // this container won't exist, and the tooltip won't show up
     const tooltipContainer = container.select('.metadata-group');
     tooltipContainer.datum([]).call(chartTooltip);
+    this.stackedBar.margin({
+      left: 225,
+      top: 0,
+      right: 0,
+      bottom: 0
+    })
 
     // Add click event
-    container.selectAll('.bar')
+    container.selectAll('rect')
       .on('click', (d: any, i) => {
         console.log('click '+i, d)
-        const data = d.data.values.find((o) => o.value === d[0])
+        const data = d.data.values.find((o) => o.value === (d[1]-d[0]))
         let event = { entity_type: data.name, toc_type: data.group };
         console.log('chart.onclick() emitting event: ', event)
         this.selected.emit(event);
       })
+      // .on('mouseover', () => {
+      //   chartTooltip.show();
+      // })
+      // .on('mousemove', (dataPoint: any, i, g) => {
+      //   chartTooltip.title(dataPoint.key);
+      //   console.log('***topicColorMap', dataPoint, d3.event);
+      //   chartTooltip.update(dataPoint, this.colors, d3.event.x, d3.event.y);
+      // })
+      // .on('mouseout', () => {
+      //   chartTooltip.hide();
+      // });
 
     // Listen to window resize event
     let timeoutWait;

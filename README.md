@@ -156,7 +156,7 @@ This file must be updated with your service credentials before the application c
 ```
 
 8. Once all the credentials are in place, the application can be starter with ```gulp develop```.
-### *Note* For UI Development, run ```gulp develop-server``` to run only the server and in client directory, run ```npm start``` to run the UI server. The UI will be available at http://localhost:4200. All the REST requests from the UI will be proxied to localhost:3000. This is configured in client/proxy-config.json.
+### Note For UI Development, run ```gulp develop-server``` to run only the server and in client directory, run ```npm start``` to run the UI server. The UI will be available at http://localhost:4200. All the REST requests from the UI will be proxied to localhost:3000. This is configured in client/proxy-config.json.
 
 ## Posting data to the application
 
