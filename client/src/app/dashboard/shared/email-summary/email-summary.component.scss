@@ -1,6 +1,10 @@
 :host {
     display: block;
     position: relative;
+    .summary-table {
+      max-height: 380px;
+      overflow: auto;
+    }
 }
 
 :host ::ng-deep {

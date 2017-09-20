@@ -7,6 +7,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/map';
+import * as lodash from 'lodash'; 
 
 import { fade } from '../../../shared/utils/animations';
 
@@ -80,7 +81,6 @@ export class EmailSummaryComponent implements OnInit {
   }
 
   selectEmail(email: EmailData) {
-    console.log('******Select Email', this.dataSource, email);
     this.emailSelected.emit(email.rawData)
   }
 }
@@ -141,7 +141,8 @@ export class EmailDataSource extends DataSource<any> {
 
     return Observable.merge(...displayDataChanges).map(() => {
       let data = this._emailDatabase.data.slice().filter((item: EmailData) => {
-        let searchStr = (item.id + item.topTransactionActual + item.topTransactionPredicted).toLowerCase();
+        const tocKeys: string[] = item.toc.map((o) => o.type)
+        let searchStr = (item.id + item.topTransactionActual + item.topTransactionPredicted + lodash.join(tocKeys, ',')).toLowerCase();
         return searchStr.indexOf(this.filter.toLowerCase()) != -1;
       });
       data = this.getSortedData(data);

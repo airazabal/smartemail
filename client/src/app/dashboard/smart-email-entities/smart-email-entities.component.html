@@ -22,8 +22,12 @@
         <md-card>
           <md-card-content>
             <h3>Email Display</h3>
-            <div class="ibm-text--small">{{filterMessage}}</div>
-            <div class="ibm-text--small" style="overflow: auto; max-height: 378px;">
+            <p [@itemFadeAnimation] *ngIf="!currentSelector" class="ibm-text--small">{{filterMessage}}</p>
+            <div *ngIf="currentSelector" [@itemFadeAnimation] class="filter-div">
+              <div class="filter-param margin-right"><strong>Entity Type: </strong>{{currentSelector.entity_type}}</div>
+              <div class="filter-param"><strong>TOC Type: </strong>{{currentSelector.tocDisplayName}}</div>
+            </div>
+            <div class="ibm-text--small">
                 <app-email-summary [emails]="emails" (emailSelected)="showDetails($event, content)"></app-email-summary>
             </div>
           </md-card-content>

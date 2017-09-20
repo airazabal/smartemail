@@ -6,11 +6,12 @@ import { SmartEmailService } from '../../shared/wsl-email/smart-email.service'
 import { ConfusionMatrix } from '../shared/confusion-matrix/ConfusionMatrix'
 import { ConfusionMatrixService } from '../shared/confusion-matrix/confusion-matrix.service'
 import { ModalDirective } from 'ngx-bootstrap/modal'
-import { routerTransition } from '../../shared/utils/router-animations';
+import { fade } from '../../shared/utils/animations';
 
 @Component({
   selector: 'smart-email-entities',
   styleUrls: ['./smart-email-entities.component.scss'],
+  animations: [fade()],
   templateUrl: './smart-email-entities.component.html'
 })
 export class SmartEmailEntitiesComponent implements OnInit {
@@ -22,6 +23,7 @@ export class SmartEmailEntitiesComponent implements OnInit {
   public confusionMatrix: ConfusionMatrix
   public loading: boolean = false
   public selected: string = 'right'
+  public currentSelector: any
 
   // Map to search for matches for entities.
   public entityMap: any = {
@@ -99,10 +101,11 @@ export class SmartEmailEntitiesComponent implements OnInit {
       'False Positives': 'false_positive',
       'False Negatives': 'false_negative'
     }
-
+    this.currentSelector = selector
     console.log('SmartEmailEntity.filterTransactions', selector)
     // selector.entityType that is 'false_positive'
     const tocType:string = tocMap[selector.toc_type];
+    this.currentSelector.tocDisplayName = tocType;
 
     this.emails = this.transactions.filter((email) => {
       console.log('EMAIL: ', email)

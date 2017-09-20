@@ -6,11 +6,12 @@ import { SmartEmailService } from '../../shared/wsl-email/smart-email.service'
 import { ConfusionMatrix } from '../shared/confusion-matrix/ConfusionMatrix'
 import { ConfusionMatrixService } from '../shared/confusion-matrix/confusion-matrix.service'
 import { ModalDirective } from 'ngx-bootstrap/modal'
-import { routerTransition } from '../../shared/utils/router-animations';
+import { fade } from '../../shared/utils/animations';
 
 @Component({
   selector: 'smart-email-classifications',
   styleUrls: ['./smart-email-classifications.component.scss'],
+  animations: [fade()],
   templateUrl: './smart-email-classifications.component.html'
 })
 export class SmartEmailClassificationsComponent implements OnInit {
@@ -27,6 +28,7 @@ export class SmartEmailClassificationsComponent implements OnInit {
     wrong: [],
     missing: []
   }
+  public currentSelector: any
 
   @ViewChild('detailsModal') public detailsModal:ModalDirective;
 
@@ -74,6 +76,7 @@ export class SmartEmailClassificationsComponent implements OnInit {
   filterTransactions(selector: any) {
     // Filtering transactions...
     console.log('SmartEmailSummary.filterTransactions', selector)
+    this.currentSelector = selector
     this.emails = this.transactions.filter((email) => {
 //      console.log(`Searching ${email.topTransactionActual} & ${email.topTransactionPredicted}`)
       return (

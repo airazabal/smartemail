@@ -17,7 +17,11 @@
         <md-card class="full-height">
           <md-card-content>
             <h3>Email Display</h3>
-            <p class="ibm-text--small">{{filterMessage}}</p>
+            <p [@itemFadeAnimation] *ngIf="!currentSelector" class="ibm-text--small">{{filterMessage}}</p>
+            <div *ngIf="currentSelector" [@itemFadeAnimation] class="filter-div">
+              <div class="filter-param margin-right"><strong>Actual: </strong>{{currentSelector.actual}}</div>
+              <div class="filter-param"><strong>Predicted: </strong>{{currentSelector.predicted}}</div>
+            </div>
             <div class="ibm-text--small">
               <app-email-summary [emails]="emails" (emailSelected)="showDetails($event, content)"></app-email-summary>
             </div>
