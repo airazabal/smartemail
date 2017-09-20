@@ -25,7 +25,7 @@ export class F1GraphComponent implements OnInit, OnDestroy {
   ]
   private stats: any[]
   private graphData: any[]
-  private briteGraphData: any
+  private briteGraphData: any = { data: []}
   private categories: any[]
   private groupedBar: any;
   private resizeEvt: any;
@@ -61,32 +61,33 @@ export class F1GraphComponent implements OnInit, OnDestroy {
       negative: '#dc267f', positive: '#008949', neutral: '#dddee1'
     }
 
+    this.briteGraphData.data = [];
     if (!this.confusion) {
       return
 
     }
 
     this.stats = this.confusion.statistics()
-    console.log(this.confusion)
-    console.log(this.stats)
-    let f1: any[] = ['f1'];
-    let precision: any[] = ['precision'];
-    let recall: any[] = ['recall']
-    // Used to create X Axis categories
-    let categories = ['x']
-    this.stats.forEach((classObj) => {
-      // each class has obj has f1/p/r
-      f1.push(Math.round(classObj.f1 * 100) / 100)
-      precision.push(Math.round(classObj.precision * 100) / 100)
-      recall.push(Math.round(classObj.recall * 100) / 100)
-      categories.push(classObj.class)
-    })
+    // console.log(this.confusion)
+    // console.log(this.stats)
+    // let f1: any[] = ['f1'];
+    // let precision: any[] = ['precision'];
+    // let recall: any[] = ['recall']
+    // // Used to create X Axis categories
+    // let categories = ['x']
+    // this.stats.forEach((classObj) => {
+    //   // each class has obj has f1/p/r
+    //   f1.push(Math.round(classObj.f1 * 100) / 100)
+    //   precision.push(Math.round(classObj.precision * 100) / 100)
+    //   recall.push(Math.round(classObj.recall * 100) / 100)
+    //   categories.push(classObj.class)
+    // })
 
-    this.summary.F1 = this.averageNonZero(f1.slice(1))
-    this.summary.Precision = this.averageNonZero(precision.slice(1))
-    this.summary.Recall = this.averageNonZero(recall.slice(1))
+    // this.summary.F1 = this.averageNonZero(f1.slice(1))
+    // this.summary.Precision = this.averageNonZero(precision.slice(1))
+    // this.summary.Recall = this.averageNonZero(recall.slice(1))
 
-    this.graphData = [categories, f1, precision, recall]
+    // this.graphData = [categories, f1, precision, recall]
 
     // Build Britechart groupedBar chart data
     this.briteGraphData = { data: [] };
@@ -179,7 +180,12 @@ export class F1GraphComponent implements OnInit, OnDestroy {
       }) 
       .on('customMouseMove', function (dataPoint, topicColorMap, x, y) {
         chartTooltip.title(dataPoint.key);
+        y = Math.max(y, 64); 
+        const tooltipContainer = container.select('.metadata-group');
+
         chartTooltip.update(dataPoint, topicColorMap, x, y);
+        // Readjust position so that tooltip doesn't go to far up and clipped.
+        tooltipContainer.attr('transform', 'translate(' + x + ',' + y + ')') 
       })
       .on('customMouseOut', function () {
         chartTooltip.hide();
@@ -200,12 +206,13 @@ export class F1GraphComponent implements OnInit, OnDestroy {
     const tooltipContainer = container.select('.metadata-group');
     tooltipContainer.datum([]).call(chartTooltip);
     
+    // text wrap for x-axis labels
     let xScale = d3Scale.scaleBand()
     .domain(this.briteGraphData.data.map((o) => o.name))
     .rangeRound([0, <number>containerWidth])
     .paddingInner(0);
     setTimeout(() => {
-      container.select('.x.axis').selectAll(".tick text").call(this.wrap, xScale.bandwidth());
+      container.select('.x.axis').selectAll(".tick text").call(this.wrap, xScale.bandwidth()-8);
     }, 1000);
     
     let timeoutWait;
@@ -230,9 +237,9 @@ export class F1GraphComponent implements OnInit, OnDestroy {
           line = [],
           lineNumber = 0,
           lineHeight = 1.1, // ems
-          y = text.attr("y"),
-          dy = parseFloat(text.attr("dy")),
-          tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+          y = text.attr('y'),
+          dy = parseFloat(text.attr('dy')),
+          tspan = text.text(null).append('tspan').attr('x', 0).attr('y', y).attr('dy', dy + 'em');
           
       while (word = words.pop()) {
         line.push(word);
@@ -241,7 +248,7 @@ export class F1GraphComponent implements OnInit, OnDestroy {
           line.pop();
           tspan.text(line.join(''));
           line = [word];
-          tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+          tspan = text.append('tspan').attr('x', 0).attr('y', y).attr('dy', ++lineNumber * lineHeight + dy + 'em').text(word);
         }
       }
     });
@@ -265,7 +272,7 @@ export class F1GraphComponent implements OnInit, OnDestroy {
     .rangeRound([0, <number>newContainerWidth])
     .paddingInner(0);
     setTimeout(() => {
-      container.select('.x.axis').selectAll(".tick text").call(this.wrap, xScale.bandwidth());
+      container.select('.x.axis').selectAll('.tick text').call(this.wrap, xScale.bandwidth());
     }, 1000);
   }
 

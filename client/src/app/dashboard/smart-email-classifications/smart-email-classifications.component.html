@@ -14,12 +14,7 @@
         <app-confusion-matrix [confusion]="confusionMatrix" (selected)="filterTransactions($event)"></app-confusion-matrix>
       </div>
       <div class="col-sm-6">
-          <app-f1-graph [confusion]="confusionMatrix"></app-f1-graph>
-      </div>
-    </div>
-    <div class="row ibm-text--small" style="margin-top: 1rem;">
-      <div class="col-sm">
-        <md-card>
+        <md-card class="full-height">
           <md-card-content>
             <h3>Email Display</h3>
             <p class="ibm-text--small">{{filterMessage}}</p>
@@ -28,6 +23,11 @@
             </div>
           </md-card-content>
         </md-card>
+      </div>
+    </div>
+    <div class="row ibm-text--small" style="margin-top: 1.5rem;">
+      <div class="col-sm">
+        <app-f1-graph [confusion]="confusionMatrix"></app-f1-graph>
       </div>
     </div>
   </div>

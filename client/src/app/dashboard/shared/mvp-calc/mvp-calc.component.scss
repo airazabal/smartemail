@@ -1,8 +1,36 @@
 :host {
-	position: relative;
-	width: 100%;
-	height: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
-.graph-chart {
-	min-height: 320px;
+
+:host ::ng-deep {
+    .mat-card {
+        height: 100%;
+	}
+	.tick text {
+        font-size: 0.9rem;
+    }
+}
+
+.graph-chart-div {
+    min-height: 350px;
+    .legend-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        div {
+            margin-right: 1rem;
+            display: flex;
+            .square-div {
+                width: 15px;
+                height: 15px;
+            }
+            .legend-text {
+                font-size: 0.8rem;
+                margin-left: 0.3rem;
+            }
+        }
+    }
 }

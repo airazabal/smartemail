@@ -10,6 +10,7 @@ import { routerTransition } from '../../shared/utils/router-animations';
 
 @Component({
   selector: 'smart-email-classifications',
+  styleUrls: ['./smart-email-classifications.component.scss'],
   templateUrl: './smart-email-classifications.component.html'
 })
 export class SmartEmailClassificationsComponent implements OnInit {

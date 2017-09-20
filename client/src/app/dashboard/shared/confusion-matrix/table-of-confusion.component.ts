@@ -207,6 +207,7 @@ export class TableOfConfusionComponent implements OnInit, OnDestroy {
         const tooltipContainer = container.select('.metadata-group');
 
         chartTooltip.update(dataPoint, topicColorMap, x, y);
+        // Readjust position so that tooltip doesn't go to far up and clipped.
         tooltipContainer.attr('transform', 'translate(' + x + ',' + y + ')')
       })
       .on('customMouseOut', () => {
@@ -290,10 +291,8 @@ export class TableOfConfusionComponent implements OnInit, OnDestroy {
     // Add click event
     container.selectAll('rect')
       .on('click', (d: any, i) => {
-        console.log('click ' + i, d)
         const data = d.data.values.find((o) => o.value === (d[1] - d[0]))
         let event = { entity_type: data.name, toc_type: data.stack };
-        console.log('chart.onclick() emitting event: ', event)
         this.selected.emit(event);
       })
 

@@ -1,5 +1,14 @@
 <md-card>
   <md-card-content>
-      <div id="mvp-calc-chart" class="graph-chart"></div>
+    <div #chartdiv class="graph-chart-div">
+      <div id="mvp-calc-chart">
+      </div>
+      <div #legendDiv class="legend-div">
+        <div *ngFor="let c of colors" class="legend-block" (mouseover)="mouseOverLegend(c)" (mouseout)="mouseOutLegend(c)">
+          <div class="square-div" [style.backgroundColor]="c.color"></div>
+          <div class="legend-text">{{c.label}}</div>
+        </div>
+      </div>
+    </div>
   </md-card-content>
 </md-card>
