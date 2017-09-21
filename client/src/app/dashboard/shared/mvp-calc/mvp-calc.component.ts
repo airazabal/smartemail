@@ -33,7 +33,7 @@ export class MvpCalcComponent implements OnInit, OnDestroy {
   private chartMargin = {
     left: 80,
     top: 0,
-    right: 0,
+    right: 10,
     bottom: 30
   }
 
