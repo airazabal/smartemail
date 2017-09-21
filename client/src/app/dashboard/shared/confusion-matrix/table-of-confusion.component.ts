@@ -273,7 +273,7 @@ export class TableOfConfusionComponent implements OnInit, OnDestroy {
           node.style('opacity', j(t));
         };
       }).on('end', () => {
-        this.stackedBar.margin(lodash.merge(this.chartMargin, { bottom: 0 })) //set bottom margin to 0 for tooltip to work correctly          
+        this.stackedBar.margin(lodash.merge(lodash.clone(this.chartMargin), { bottom: 0 })) //set bottom margin to 0 for tooltip to work correctly          
       });
 
     // Tooltip Setup and start
@@ -324,7 +324,7 @@ export class TableOfConfusionComponent implements OnInit, OnDestroy {
     // Rendering the chart again
     this.stackedBar.margin(this.chartMargin) // set the chart margin again
     container.datum(this.briteGraphData.data).call(this.stackedBar);
-    this.stackedBar.margin(lodash.merge(this.chartMargin, { bottom: 0 })) //set bottom margin to 0 for tooltip to work correctly          
+    this.stackedBar.margin(lodash.merge(lodash.clone(this.chartMargin), { bottom: 0 })) //set bottom margin to 0 for tooltip to work correctly          
   }
 
   mouseOverLegend(col) {

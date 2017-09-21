@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
 
   private titleSubject
   private title
-  private lastUpdated = ''
+  private lastUpdated = moment().format('MMM Do, YYYY')
   public navLinks = [
     { link: '/home/dashboard/summary', label: 'Summary' },
     { link: '/home/dashboard/classifications', label: 'Classifications' },
@@ -32,7 +32,6 @@ export class DashboardComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.lastUpdated = moment().format('MMM Do, YYYY')
   }
 
   routeToTab(tab) {

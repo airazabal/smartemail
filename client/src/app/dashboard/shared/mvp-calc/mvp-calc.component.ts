@@ -3,6 +3,7 @@ import { Component, OnInit, Input, ViewChild, OnDestroy, OnChanges, SimpleChange
 import * as d3Selection from 'd3-selection';
 import * as d3Color from 'd3-color';
 import * as d3Scale from 'd3-scale';
+import * as lodash from 'lodash';
 
 declare var c3: any
 declare var britecharts: any
@@ -18,17 +19,23 @@ export class MvpCalcComponent implements OnInit, OnDestroy {
   @ViewChild('chartdiv') chartDiv
 
   public colors = [
-    {label: 'True Positives', color: '#116639'}, 
-    {label: 'Missed Policy Number', color: '#57d785'}, 
-    {label: 'Missed', color: '#cef3d1'}
+    { label: 'True Positives', color: '#116639' },
+    { label: 'Missed Policy Number', color: '#57d785' },
+    { label: 'Missed', color: '#cef3d1' }
   ]
 
   private actuals: any = {}
   private mvpList: any = {}
   private graphData: any[] = []
   private briteGraphData: any = {}
-  private groupedBar: any;
+  private stackedBar: any;
   private resizeEvt: any;
+  private chartMargin = {
+    left: 80,
+    top: 0,
+    right: 0,
+    bottom: 30
+  }
 
   constructor() { }
 
@@ -87,41 +94,44 @@ export class MvpCalcComponent implements OnInit, OnDestroy {
       let tp_pn_count = 0;
       let missed_pn = 0;
       this.mvpList[classification].forEach((email) => {
-        this.mvpList[classification].forEach((email) => {
-          if (email.toc) {
-            let tp_pn = email.toc.filter((entity) => {
-              return (entity.type === 'Policy_Number' && entity.toc_type === 'true_positive')
-            })
-            if (tp_pn.length > 0) {
-              tp_pn_count++
-            } else {
-              missed_pn++
-            }
+
+        if (email.toc) {
+          let tp_pn = email.toc.filter((entity) => {
+            return (entity.type === 'Policy_Number' && entity.toc_type === 'true_positive')
+          })
+          if (tp_pn.length > 0) {
+            tp_pn_count++
           } else {
             missed_pn++
           }
-        })
+        } else {
+          missed_pn++
+        }
       });
+      const actualsNum = this.actuals[classification]
+      let missed_count = actualsNum - tp_pn_count - missed_pn
+      classification = (classification === '') ? 'N/A' : '';
+      console.log('******actuals=' + actualsNum + ' tp:' + tp_pn_count + ' missed_pn:' + missed_pn, this.actuals)
       this.briteGraphData.data.push({
-        name: 'tp',
+        name: classification,
         group: 'True Positives',
-        value: tp_pn_count
+        value: isNaN(tp_pn_count) ? 0 : tp_pn_count / actualsNum * 100
       });
       this.briteGraphData.data.push({
-        name: 'm_pn',
+        name: classification,
         group: 'Missed Policy Number',
-        value: m_pn
+        value: isNaN(missed_pn) ? 0 : missed_pn / actualsNum * 100
       });
       this.briteGraphData.data.push({
-        name: 'missed',
+        name: classification,
         group: 'Missed',
-        value: missed
+        value: isNaN(missed_count) ? 0 : missed_count / actualsNum * 100
       });
     });
   }
 
   ngOnChanges(changes: { [propKey: string]: SimpleChange }) {
-    console.log('TransactionCount - ngOnChanges --', changes)
+    console.log('TransactionCount - ngOnChanges --', changes, this.transactions)
     if (this.transactions) {
       this.actuals = {}
       // Reset actuals...
@@ -183,23 +193,19 @@ export class MvpCalcComponent implements OnInit, OnDestroy {
     const divContainer = d3Selection.select(this.chartDiv.nativeElement)
     const container = d3Selection.select('#mvp-calc-chart')
     const chartTooltip = britecharts.tooltip()
-    this.groupedBar = britecharts.groupedBar();
+    this.stackedBar = britecharts.stackedBar();
     const containerWidth = (<HTMLElement>divContainer.node()).getBoundingClientRect().width
     const containerHeight = ((<HTMLElement>divContainer.node()).getBoundingClientRect().height | 350)
-    this.groupedBar
+    this.stackedBar
       .tooltipThreshold(300)
       .width(containerWidth)
       .height(containerHeight)
-      .grid('horizontal')
+      .isHorizontal(true)
+      .grid('vertical')
       .isAnimated(true)
+      .margin(this.chartMargin)
       .colorSchema(colorsB)
-      .margin({
-        left: 40,
-        top: 0,
-        right: 20,
-        bottom: 40
-      })
-      .groupLabel('group')
+      .stackLabel('group')
       .nameLabel('name')
       .valueLabel('value')
       .on('customMouseOver', function () {
@@ -207,26 +213,27 @@ export class MvpCalcComponent implements OnInit, OnDestroy {
       })
       .on('customMouseMove', function (dataPoint, topicColorMap, x, y) {
         chartTooltip.title(dataPoint.key);
-        y = Math.max(y, 64); 
+        y = Math.max(y, 64);
         const tooltipContainer = container.select('.metadata-group');
 
         chartTooltip.update(dataPoint, topicColorMap, x, y);
         // Readjust position so that tooltip doesn't go to far up and clipped.
-        tooltipContainer.attr('transform', 'translate(' + x + ',' + y + ')') 
+        tooltipContainer.attr('transform', 'translate(' + x + ',' + y + ')')
       })
       .on('customMouseOut', function () {
         chartTooltip.hide();
       });
 
 
-    container.datum(this.briteGraphData.data).call(this.groupedBar);
+    container.datum(this.briteGraphData.data).call(this.stackedBar);
+    this.stackedBar.margin(lodash.merge(lodash.clone(this.chartMargin), { bottom: 0 })) //set bottom margin to 0 for tooltip to work correctly          
 
     // Tooltip Setup and start
     chartTooltip
-    .topicLabel('values')
-    .nameLabel('group')
-    .title('')
-    .shouldShowDateInTitle(false);
+      .topicLabel('values')
+      .nameLabel('group')
+      .title('')
+      .shouldShowDateInTitle(false);
 
     // Note that if the viewport width is less than the tooltipThreshold value,
     // this container won't exist, and the tooltip won't show up
@@ -248,31 +255,6 @@ export class MvpCalcComponent implements OnInit, OnDestroy {
     container.on('mouseout', this.mouseOutLegend.bind(this))
   }
 
-  wrap(text, width) {
-    text.nodes().forEach((t) => {
-      let text = d3Selection.select(t),
-          words = text.text().match(/.{1,3}/g).reverse(),
-          word,
-          line = [],
-          lineNumber = 0,
-          lineHeight = 1.1, // ems
-          y = text.attr('y'),
-          dy = parseFloat(text.attr('dy')),
-          tspan = text.text(null).append('tspan').attr('x', 0).attr('y', y).attr('dy', dy + 'em');
-          
-      while (word = words.pop()) {
-        line.push(word);
-        tspan.text(line.join(''));
-        if ((<SVGTextElement> tspan.node()).getComputedTextLength() > width) {
-          line.pop();
-          tspan.text(line.join(''));
-          line = [word];
-          tspan = text.append('tspan').attr('x', 0).attr('y', y).attr('dy', ++lineNumber * lineHeight + dy + 'em').text(word);
-        }
-      }
-    });
-  }
-
   redrawChart = () => {
     const divContainer = d3Selection.select(this.chartDiv.nativeElement)
     const container = d3Selection.select('#mvp-calc-chart');
@@ -280,25 +262,19 @@ export class MvpCalcComponent implements OnInit, OnDestroy {
     const newContainerHeight = ((<HTMLElement>divContainer.node()).getBoundingClientRect().height || 320) - 15;
 
     // Setting the new width and height on the chart
-    this.groupedBar.width(newContainerWidth);
-    //this.groupedBar.height(newContainerHeight);
+    this.stackedBar.width(newContainerWidth);
+    //this.stackedBar.height(newContainerHeight);
 
     // Rendering the chart again
-    container.datum(this.briteGraphData.data).call(this.groupedBar);
-
-    let xScale = d3Scale.scaleBand()
-    .domain(this.briteGraphData.data.map((o) => o.name))
-    .rangeRound([0, <number>newContainerWidth])
-    .paddingInner(0);
-    setTimeout(() => {
-      container.select('.x.axis').selectAll('.tick text').call(this.wrap, xScale.bandwidth());
-    }, 1000);
+    this.stackedBar.margin(this.chartMargin); // set the original margin again before redrawing
+    container.datum(this.briteGraphData.data).call(this.stackedBar);
+    this.stackedBar.margin(lodash.merge(lodash.clone(this.chartMargin), { bottom: 0 })) //set bottom margin to 0 for tooltip to work correctly          
   }
 
   mouseOverLegend(col) {
-    const bars = d3Selection.select('#mvp-calc-chart')
-      .selectAll('.bar');
-    bars.each((d, i, g) => {
+    const layers = d3Selection.select('#mvp-calc-chart')
+      .selectAll('.layer');
+    layers.each((d, i, g) => {
       const el = d3Selection.select(g[i]);
       if (el.attr('fill') !== col.color) {
         el.transition().duration(100).style('opacity', 0.2);
@@ -309,11 +285,11 @@ export class MvpCalcComponent implements OnInit, OnDestroy {
   }
 
   mouseOutLegend(c) {
-    const bars = d3Selection.select('#mvp-calc-chart')
-      .selectAll('.bar')
-    bars.each((d:any, i, g) => {
+    const layers = d3Selection.select('#mvp-calc-chart')
+      .selectAll('.layer')
+    layers.each((d: any, i, g) => {
       const el = d3Selection.select(g[i]);
-      const col = this.colors.find((o) => o.label === d.group)
+      const col = this.colors.find((o) => o.label === d.key);
       col.color = d3Color.color(col.color).toString();
       el.attr('fill', d3Color.color(col.color).toString()).style('opacity', null);
     })
