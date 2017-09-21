@@ -1,0 +1,30 @@
+{
+  "cloudantNoSQLDB": [{
+    "credentials": {
+      "username": "<YOUR_CLOUDANT_USERNAME>",
+      "password": "<YOUR_CLOUDANT_PASSWORD>",
+      "host": "<YOUR_CLOUDANT_HOST>",
+      "port": 443,
+      "url": "<YOUR_CLOUDANT_URL>"
+    },
+    "syslog_drain_url": null,
+    "label": "cloudantNoSQLDB",
+    "provider": null,
+    "plan": "Lite",
+    "name": "cloudant",
+    "tags": [
+      "data_management",
+      "ibm_created",
+      "lite",
+      "ibm_dedicated_public"
+    ]
+  }],
+  "nlu_api": [{
+    "credentials": {
+      "url": "https://gateway.watsonplatform.net/natural-language-understanding/api",
+      "username": "<YOUR_NLU_USERNAME>",
+      "password": "<YOUR_NLU_PASSWORD>"
+    },
+    "name": "natural-language-understanding"
+    }]
+}

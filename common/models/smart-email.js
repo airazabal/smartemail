@@ -195,7 +195,7 @@ module.exports = function(Smartemail) {
     newMessage.start_date_time = Date.now()
 
     // TODO: put _categorize back in. not necessary now bc only using COI
-    Promise.all([_enrichWithNLU(text)/*,_categorize(msg)*/ ])
+    Promise.all([_enrichWithNLU(text), _categorize(msg) ])
       .then(responses => {
         console.log('SmartEmail.categorize() NLU and _categorize completed ' + newMessage.id)
         // Set the end_date_time

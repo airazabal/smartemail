@@ -39,8 +39,10 @@ export class EmailInputComponent implements OnInit {
     return {
       id: 'temporary_999',
       source_email: {
-        body: doc
-//    body: JSON.stringify(doc),
+        body: doc,
+        cleansed: doc,
+        trimmed: doc,
+        subject: "Subject: <no subject>"
       }
     }
   }

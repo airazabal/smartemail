@@ -1,0 +1,8 @@
+{
+  "CLOUDANT_CONNECTION_URL": {"expr": "cloudant.*", "field": "credentials.url"},
+  "CLOUDANT_DB_NAME": "your-cloudant-database-name.*",
+  "NLU_API_USER": {"expr": "natural-language-understanding.*", "field": "credentials.username"},
+  "NLU_API_PASSWORD": {"expr": "natural-language-understanding.*", "field": "credentials.password"},
+  "NLU_API_URL": { "expr": "natural-language-understanding.*", "field": "credentials.url"},
+  "MSG_CLASSIFIER_URL": "http://localhost:5001/api/classify"
+}
