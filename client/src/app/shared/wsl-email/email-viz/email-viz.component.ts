@@ -29,6 +29,7 @@ export class EmailVizComponent implements OnChanges, OnInit {
   public isCollapsed:boolean = false;
   public isEntitiesCollapsed:boolean = false;
   public isEmailCollapsed:boolean = true;
+  public currentIntents:any;
 
   public transactionClass:any = {
     'true_positive': false,

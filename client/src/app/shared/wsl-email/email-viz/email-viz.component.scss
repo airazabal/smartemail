@@ -288,9 +288,60 @@ input[type="radio"]:checked+label::before,
     }
 }
 
+::ng-deep {
+    .popover {
+        max-width: 380px;
+        .popover-content-div {
+            width: 350px;
+            .row {
+                border-bottom: 1px solid #c7c7c7;
+                margin: 0 0.5rem;
+                padding: 0.5rem;
+                &:first-child {
+                    padding-top: 0;
+                }
+                &:last-child {
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                }
+                .col-md-9 {
+                    padding-left: 0;
+                }
+                .col-md-3 {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
 :host ::ng-deep {
   .mat-expansion-panel-header, .mat-expansion-panel-header.mat-expanded:focus {
     background-color: #f7f7f7;
     font-weight: 600;
+  }
+
+  .mat-expansion-panel-body {
+      margin-top: 1rem;
+  }
+
+  .input-text-div {
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      font-weight: 600;
+      font-size: 1rem;
+  }
+  .info-span {
+      color: #4178BE;
+  }
+  .intent-content-div {
+      font-size: 0.9rem;
+  }
+  .intent-row-div {
+      margin-bottom: 1rem;
+      &:last-child {
+          margin-bottom: 0;
+      }
   }
 }

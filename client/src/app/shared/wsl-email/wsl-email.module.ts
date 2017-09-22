@@ -8,7 +8,8 @@ import { BackendService} from '../../core/backend.service';
 import { SmartEmailService } from './smart-email.service';
 import { UtilService } from './util.service';
 
-import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { PopoverModule } from 'ngx-bootstrap/popover';
+import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 
 import { EmailVizComponent } from './email-viz/email-viz.component';
 import { EmailInputComponent } from './email-input/email-input.component';
@@ -19,7 +20,8 @@ import { EmailInputComponent } from './email-input/email-input.component';
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
-    CollapseModule.forRoot()
+    PopoverModule.forRoot(),
+    ProgressbarModule.forRoot()
   ],
   declarations: [EmailVizComponent, EmailInputComponent],
   exports:[EmailVizComponent, EmailInputComponent],

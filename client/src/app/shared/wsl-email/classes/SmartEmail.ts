@@ -67,7 +67,7 @@ const mergeGroundTruthTransactions = (gt, tr) => {
     gt.forEach((_gt) => {
       //console.log(`Looking for ${_gt.transaction_type}`)
       if (_tr.transaction_type.trim() === GTTransactionMap[_gt.transaction_type.trim()]) {
-      //console.log(`Found  ${_gt.transaction_type}`)
+        //console.log(`Found  ${_gt.transaction_type}`)
         // we found one, merge and push
         _tr.ground_truth = _gt
         _tr.found = true
@@ -75,7 +75,7 @@ const mergeGroundTruthTransactions = (gt, tr) => {
     })
     mergedArray.push(_tr)
   })
-//  console.log('MergdArray: ', mergedArray)
+  //  console.log('MergdArray: ', mergedArray)
   // Now make srue all of the Ground Truth's made it in
   gt.forEach((_gt) => {
     _gt.is_ground_truth = true
@@ -94,7 +94,7 @@ const mergeGroundTruthTransactions = (gt, tr) => {
   })
 }
 
-const getTocType = (type:string) => {
+const getTocType = (type: string) => {
   if (type === this.topTransactionActual && type === this.topTransactionPredicted) {
     return 'true_positive'
   }
@@ -117,21 +117,34 @@ export class SmartEmail {
   public expanded = {
     emailSrc: false,
     transaction: true,
-    entities: true
+    entities: true,
+    intent: true
   }
 
   constructor(private _email: any) {
     // _email is my default object and will get saved as _email
+
+    // sort the intents by confidence
+    if (_email.intent_debugging_info) {
+      _email.intent_debugging_info = _email.intent_debugging_info.map((o) => {
+        let res = o;
+        if (o.intents && o.intents.length > 0) {
+          res.highestConf = o.intents[0].confidence; // first element is the highest.
+        }
+        return res;
+      })
+      _email.intent_debugging_info = lodash.orderBy(_email.intent_debugging_info, ['highestConf'], ['desc'])
+    }
   }
 
   get toc(): any {
     return this._email.toc
   }
-  get topTransactionActual() : any {
+  get topTransactionActual(): any {
     return this._email.topTransactionActual
   }
 
-  get topTransactionPredicted() : any {
+  get topTransactionPredicted(): any {
     return this._email.topTransactionPredicted
   }
 
@@ -149,7 +162,7 @@ export class SmartEmail {
 
   get entities(): any {
     // Discovery way
-//    return this._email.enriched_text.entities
+    //    return this._email.enriched_text.entities
     return this._email.entities_extracted
   }
 
@@ -158,6 +171,10 @@ export class SmartEmail {
   }
   get source_id(): string {
     return this._email.source_id
+  }
+
+  get intent_debugging_info(): any {
+    return this._email.intent_debugging_info
   }
 
   hasGroundTruthTransactions(): boolean {

@@ -10,7 +10,7 @@
       </div>
     </div>
   </div>
-  <div *ngIf="!loading" [@itemFadeAnimation]>
+  <div *ngIf="!loading && visualizationSource" [@itemFadeAnimation]>
     <md-accordion multi="true">
       <md-expansion-panel [expanded]="visualizationSource.expanded.emailSrc">
         <md-expansion-panel-header>
@@ -23,7 +23,7 @@
 
       <md-expansion-panel [expanded]="visualizationSource.expanded.transaction">
         <md-expansion-panel-header>
-          Transaction &nbsp;<span *ngIf="visualizationSource">Found[{{visualizationSource.transactionPercentage|percent}}]</span>
+          Transaction<span *ngIf="visualizationSource">({{visualizationSource.transactionPercentage|percent: '1.0-2'}})</span>
         </md-expansion-panel-header>
         <div *ngIf="visualizationSource">
           <div class="row">
@@ -32,7 +32,7 @@
                 {{transaction.transaction_type}}
               </div>
               <div class="col-md-6">
-                {{transaction.confidence_level | percent}}
+                {{transaction.confidence_level | percent: '1.0-2'}}
               </div>
             </div>
           </div>
@@ -42,7 +42,7 @@
       <md-expansion-panel [expanded]="visualizationSource.expanded.entities">
         <md-expansion-panel-header>
           Entities
-          <span *ngIf="visualizationSource && visualizationSource.hasGroundTruthEntities()">Found[{{visualizationSource.entityPercentage|percent}}]</span>
+          <span *ngIf="visualizationSource && visualizationSource.hasGroundTruthEntities()">({{visualizationSource.entityPercentage|percent: '1.0-2'}})</span>
         </md-expansion-panel-header>
         <div class="row ibm-text--small ibm-text--dark">
           <div class="col-md-4">
@@ -79,97 +79,41 @@
           </div>
         </div>
       </md-expansion-panel>
+      <md-expansion-panel [expanded]="visualizationSource.expanded.intent">
+        <md-expansion-panel-header>
+          Intent Debugging Info
+          <span *ngIf="visualizationSource && visualizationSource.intent_debugging_info">({{visualizationSource.intent_debugging_info.length}})</span>
+        </md-expansion-panel-header>
+        <div class="intent-row-div ibm-text--dark" *ngFor="let row of visualizationSource.intent_debugging_info">
+          <div class="input-text-div" [title]="row.input_text">
+            {{row.input_text}}
+          </div>
+          <div class="row intent-content-div">
+            <div class="col-md-10">
+              <div *ngIf="!row.intents || row.intents.length ==0">
+                No Intents
+              </div>
+              <div *ngIf="row.intents && row.intents.length > 0">
+                {{row.intents[0].intent}}
+              </div>
+            </div>
+            <div class="col-md-2">
+                {{row.intents[0].confidence | percent: '1.0-2'}} 
+              <span class="info-span" containerClass="intent-popover" placement="right" container="body" (mouseover)="currentIntents=row.intents" triggers="mouseover:mouseout" [popover]="intentsTemplate"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+            </div>
+          </div>
+        </div>
+      </md-expansion-panel>
     </md-accordion>
-    <!-- <div class="row">
-      <div class="ibm-wrapper--gray10">
-        Source Email
-        <a type="button" class="pull-right" (click)="isEmailCollapsed=!isEmailCollapsed">
-            <i class="fa fa-chevron-down" [ngClass]="{'collapse': isEmailCollapsed}" aria-hidden="true"></i>
-          <span class="sr-only">Toggle Dropdown</span>
-        </a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 entity-viz" [@shrinkOut] *ngIf="!isEmailCollapsed">
-        <div *ngIf="visualizationSource">
-          <pre>
-        {{visualizationSource.source_email.body}}
-        </pre>
+    <ng-template #intentsTemplate>
+      <div *ngIf="currentIntents" class="popover-content-div">
+        <div *ngFor="let intent of currentIntents" class="row">
+          <div class="col-md-9">{{intent.intent}}</div>
+          <div class="col-md-3">{{intent.confidence | percent: '1.0-2'}}</div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="ibm-wrapper--gray10">
-        Transaction <span *ngIf="visualizationSource">Found[{{visualizationSource.transactionPercentage|percent}}]</span>
-        <a type="button" class="pull-right" (click)="isCollapsed=!isCollapsed">
-            <i class="fa fa-chevron-down" [ngClass]="{'collapse': isCollapsed}" aria-hidden="true"></i>
-          <span class="sr-only">Toggle Dropdown</span>
-        </a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 entity-viz" [@shrinkOut] *ngIf="!isCollapsed">
-        <div *ngIf="visualizationSource">
-          <div class="row">
-            <div class="transaction" [ngClass]="transaction.toc_type" *ngFor="let transaction of transactions">
-              <div class="col-md-6">
-                {{transaction.transaction_type}}
-              </div>
-              <div class="col-md-6">
-                {{transaction.confidence_level | percent}}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="ibm-wrapper--gray10">
-        Entities
-        <span *ngIf="visualizationSource && visualizationSource.hasGroundTruthEntities()">Found[{{visualizationSource.entityPercentage|percent}}]</span>
-        <a type="button" class="pull-right" (click)="isEntitiesCollapsed=!isEntitiesCollapsed">
-            <i class="fa fa-chevron-down" [ngClass]="{'collapse': isEntitiesCollapsed}" aria-hidden="true"></i>
-          <span class="sr-only">Toggle Dropdown</span>
-        </a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 entity-viz" [@shrinkOut] *ngIf="!isEntitiesCollapsed">
-        <div class="row ibm-text--small ibm-text--dark">
-          <div class="col-md-4">
-            <h3>
-            Predicted Text
-          </h3>
-          </div>
-          <div class="col-md-2">
-            <h3>Predicted Type</h3>
-          </div>
-          <div class="col-md-2">
-            <h3> Result</h3>
-          </div>
-          <div class="col-md-4">
-              <h3>Actual Text</h3>
-          </div>
-        </div>
-        <div *ngFor="let entity of entities" class="ibm-text--small">
-          <div class="row entity" [ngClass]="entity.toc_type">
-            <div class="col-md-4">
-              <span>{{entity.text}}</span>
-            </div>
-            <div class="col-md-2">
-              <span>{{entity.type}}</span>
-            </div>
-            <div class="col-md-2">
-              {{entity.toc_type}}
-            </div>
-            <div class="col-md-4">
-              <div *ngIf="entity.actual">
-                {{entity.actual.text}}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
+    </ng-template>
+    
   </div>
   <div [@itemFadeAnimation] *ngIf="hasExceptions" class="row ibm-text--error">
     <div class="ibm-wrapper">
