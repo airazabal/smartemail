@@ -12,18 +12,16 @@
   </div>
   <div *ngIf="!loading" [@itemFadeAnimation]>
     <md-accordion multi="true">
-      <md-expansion-panel>
+      <md-expansion-panel [expanded]="visualizationSource.expanded.emailSrc">
         <md-expansion-panel-header>
           Source Email
         </md-expansion-panel-header>
         <div *ngIf="visualizationSource">
-          <pre>
-          {{visualizationSource.source_email.body}}
-          </pre>
+          <pre>{{visualizationSource.source_email.body}}</pre>
         </div>
       </md-expansion-panel>
 
-      <md-expansion-panel expanded="true">
+      <md-expansion-panel [expanded]="visualizationSource.expanded.transaction">
         <md-expansion-panel-header>
           Transaction &nbsp;<span *ngIf="visualizationSource">Found[{{visualizationSource.transactionPercentage|percent}}]</span>
         </md-expansion-panel-header>
@@ -41,7 +39,7 @@
         </div>
       </md-expansion-panel>
 
-      <md-expansion-panel expanded="true">
+      <md-expansion-panel [expanded]="visualizationSource.expanded.entities">
         <md-expansion-panel-header>
           Entities
           <span *ngIf="visualizationSource && visualizationSource.hasGroundTruthEntities()">Found[{{visualizationSource.entityPercentage|percent}}]</span>

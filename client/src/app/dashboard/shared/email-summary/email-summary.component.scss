@@ -1,3 +1,4 @@
+import 
 :host {
     display: block;
     position: relative;
@@ -20,6 +21,29 @@
     }
     .mat-cell {
       font-size: 0.84rem;
+    }
+    .toc-node-div {
+      .toc-type-title {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        .toc-label {
+          font-weight: 600;
+        }
+        .fa {
+          &.up {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .toc-content {
+        margin-left: 1rem;
+        .has-text-span {
+          font-weight: 600;
+          margin-left: 0.3rem;
+          color: #4178BE;
+        }
+      }
     }
 }
 
@@ -88,16 +112,28 @@ svg:not(:root) {
 .entity.true_positive {
     background-color: #116639;
     color: white;
+    &.fa {
+      color: #116639;
+      background-color: #fff;
+    }
 }
 
 .entity.false_positive {
     background-color: #57d785;
     color: black;
+    &.fa {
+      color: #57d785;
+      background-color: #fff;
+    }
 }
 
 .entity.false_negative {
     background-color: #cdf3d1;
     color: black;
+    &.fa {
+      color: #cdf3d1;
+      background-color: #fff;
+    }
 }
 
 .search-container {

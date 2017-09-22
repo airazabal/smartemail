@@ -16,20 +16,31 @@
     </ng-container>
     <ng-container mdColumnDef="topTransactionActual">
       <md-header-cell *mdHeaderCellDef md-sort-header>Top Transaction Actual</md-header-cell>
-      <md-cell *mdCellDef="let email"><span [ngClass]="email.transactionClass">{{email.topTransactionActual}}</span></md-cell>
+      <md-cell *mdCellDef="let email"><span >{{email.topTransactionActual}}</span></md-cell>
     </ng-container>
     <ng-container mdColumnDef="topTransactionPredicted">
       <md-header-cell *mdHeaderCellDef md-sort-header>Top Transaction Predicted</md-header-cell>
-      <md-cell *mdCellDef="let email"><span [ngClass]="email.transactionClass">{{email.topTransactionPredicted}}</span></md-cell>
+      <md-cell *mdCellDef="let email"><span >{{email.topTransactionPredicted}}</span></md-cell>
     </ng-container>
     <ng-container mdColumnDef="toc">
       <md-header-cell *mdHeaderCellDef md-sort-header>TOC Type</md-header-cell>
       <md-cell *mdCellDef="let email" class="toc-cell">
-        <div *ngFor="let toc of email.toc" class="toc-div">
+        <div class="toc-node-div" *ngFor="let toc of email.tocByType">
+          <div class="toc-type-title" (click)="toc.collapse=!toc.collapse">
+            <div class="toc-label"><i class="entity fa fa-circle" aria-hidden="true" [ngClass]="toc.toc_type"></i> {{toc.label}} ({{toc.rows.length}})</div>
+            <div><i class="fa fa-angle-down" [ngClass]="{'up': !toc.collapse}" aria-hidden="true"></i></div>
+          </div>
+          <div class="toc-content" [@shrinkOut] *ngIf="!toc.collapse">
+            <div *ngFor="let r of toc.rows">
+              {{r.type || 'N/A'}} <span [mdTooltip]="r.text" class="has-text-span" *ngIf="r.text"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+            </div>
+          </div>
+        </div>
+        <!-- <div *ngFor="let toc of email.toc" class="toc-div">
           <div class="entity" [ngClass]="toc.toc_type">
             {{toc.type}}
           </div>
-        </div>
+        </div> -->
       </md-cell>
     </ng-container>
     <md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>

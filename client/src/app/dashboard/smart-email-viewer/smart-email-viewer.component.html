@@ -21,13 +21,17 @@
   </div>
 
   <div class="content-container" [@itemFadeAnimation] *ngIf="selectedEmailId">
-    <div class="side-div" *ngIf="toggleEmail" [@sideWipe]>
+    <div class="side-div" [hidden]="!toggleEmail" [@sideWipe]>
       <app-email-viz [docToViz]="selectedEmail"></app-email-viz>
     </div>
     <div class="graph-div">
       <div class="toggle-email-div"><button md-mini-fab (click)="toggleEmail=!toggleEmail"><i class="fa fa-chevron-left" aria-hidden="true" [ngClass]="{'right': !toggleEmail}"></i></button></div>
       <div style="width: 100%; height: 100%; position: relative;">
-        <smart-email-graph [resizeNow]="toggleEmail" [emailToGraph]="selectedEmail"> </smart-email-graph>
+        <md-card>
+          <md-card-content>
+              <smart-email-graph [resizeNow]="toggleEmail" [emailToGraph]="selectedEmail"> </smart-email-graph>
+          </md-card-content>
+        </md-card>
       </div>
     </div>
   </div>

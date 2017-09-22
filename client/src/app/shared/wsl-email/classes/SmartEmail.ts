@@ -1,3 +1,4 @@
+import * as lodash from 'lodash';
 
 // Take a ground truth and see if we found and entities...
 const checkGroundtruth = (gt, en) => {
@@ -113,6 +114,11 @@ export class SmartEmail {
 
   public entityPercentage: number = 0;
   public transactionPercentage: number = 0;
+  public expanded = {
+    emailSrc: false,
+    transaction: true,
+    entities: true
+  }
 
   constructor(private _email: any) {
     // _email is my default object and will get saved as _email

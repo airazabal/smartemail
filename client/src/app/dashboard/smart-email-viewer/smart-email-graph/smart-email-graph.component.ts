@@ -73,7 +73,9 @@ export class SmartEmailGraphComponent implements OnInit, OnDestroy {
     if (this.simulation) {
       const containerNode = <HTMLElement>this.graphDiv.nativeElement;
       let width = containerNode.getBoundingClientRect().width;
-      let height = containerNode.getBoundingClientRect().height + 200;
+      let height = containerNode.getBoundingClientRect().height;
+      d3Selection.select("#email-graph").select("svg").attr('height', height);
+      height = height + 200; // to align better vertically
       this.simulation.force('center', d3.forceCenter(width / 2, height / 2))
         .alphaTarget(0.1).restart()
     }
@@ -115,7 +117,7 @@ export class SmartEmailGraphComponent implements OnInit, OnDestroy {
     let height = containerNode.getBoundingClientRect().height;
     console.log('width:' + width + ' height:' + height);
     let linkDistance = 200;
-    const svg = d3Selection.select("#email-graph").append("svg").attr('width', '100%').attr('height', '100%');
+    const svg = d3Selection.select("#email-graph").append("svg").attr('width', '100%').attr('height', height+'px');
 
     // Arrow head def
     svg.append('defs').append('marker')

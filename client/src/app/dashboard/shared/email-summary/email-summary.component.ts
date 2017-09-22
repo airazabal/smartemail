@@ -9,13 +9,14 @@ import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/map';
 import * as lodash from 'lodash'; 
 
-import { fade } from '../../../shared/utils/animations';
+import { fade, shrink } from '../../../shared/utils/animations';
 
 export interface EmailData {
   id: string;
   topTransactionActual: string;
   topTransactionPredicted: string;
   toc: any;
+  tocByType: any;
   transactionClass: any;
   rawData: any;
 }
@@ -23,7 +24,7 @@ export interface EmailData {
 @Component({
   selector: 'app-email-summary',
   templateUrl: './email-summary.component.html',
-  animations: [fade()],
+  animations: [fade(), shrink()],
   styleUrls: ['./email-summary.component.scss']
 })
 export class EmailSummaryComponent implements OnInit {
@@ -53,7 +54,6 @@ export class EmailSummaryComponent implements OnInit {
     'false_positive': false,
     'false_negative': false
   }
-
 
   constructor() { }
 
@@ -86,6 +86,11 @@ export class EmailSummaryComponent implements OnInit {
 }
 
 export class EmailDatabase {
+  private transactionMap = {
+    'true_positive': 'True Positive',
+    'false_positive': 'False Positive',
+    'false_negative': 'False Negative'
+  }
   /** Stream that emits whenever the data has been modified. */
   dataChange: BehaviorSubject<EmailData[]> = new BehaviorSubject<EmailData[]>([]);
   get data(): EmailData[] { return this.dataChange.value; }
@@ -96,9 +101,24 @@ export class EmailDatabase {
       topTransactionActual: email.topTransactionActual || 'N/A',
       topTransactionPredicted: email.topTransactionPredicted || 'N/A',
       toc: email.toc,
+      tocByType: [],
       transactionClass: {},
       rawData: email
     }
+
+    // Group the toc type 
+    data.toc.forEach((toc) => {
+      toc.tocTypeLabel = this.transactionMap[toc.toc_type]
+    })
+    let tmp = lodash.groupBy(data.toc, (o: any) => o.tocTypeLabel)
+    lodash.forEach(tmp, (val: any, key) => {
+      let d = {label: key, rows: val, collapse: true, toc_type: ''}
+      if (val && val.length > 0) {
+        d.toc_type = val[0].toc_type
+      }
+      data.tocByType.push(d)
+    })
+    data.tocByType = lodash.orderBy(data.tocByType, 'toc_type')
 
     if (email.topTransactionPredicted) {
       if (email.topTransactionPredicted === email.topTransactionActual) {
