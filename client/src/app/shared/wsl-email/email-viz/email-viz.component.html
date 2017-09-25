@@ -29,7 +29,8 @@
               </md-radio-group>
             </div>
           </div>
-          <pre>{{emailText}}</pre>
+          <p *ngIf="emailSource === 'cleansed'">{{emailText}}</p>
+          <pre *ngIf="emailSource !== 'cleansed'">{{emailText}}</pre>
         </div>
       </md-expansion-panel>
 
