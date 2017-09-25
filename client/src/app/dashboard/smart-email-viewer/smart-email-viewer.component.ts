@@ -9,12 +9,12 @@ import { DashboardCtxService } from '../shared/dashboard-ctx.service'
 import { SmartEmailService } from '../../shared/wsl-email/smart-email.service'
 import { EmailVizComponent } from '../../shared/wsl-email/email-viz/email-viz.component'
 import { SmartEmailGraphComponent } from "./smart-email-graph/smart-email-graph.component"
-import { fade, sideWipe, slideToLeft } from '../../shared/utils/animations';
+import { fade, sideWipe, slideToLeft, slideToRight } from '../../shared/utils/animations';
 
 @Component({
   selector: 'app-email-viewer',
   templateUrl: './smart-email-viewer.component.html',
-  animations: [fade(), sideWipe(), slideToLeft()],
+  animations: [fade(), sideWipe(), slideToLeft(), slideToRight()],
   styleUrls: ['./smart-email-viewer.component.scss']
 })
 

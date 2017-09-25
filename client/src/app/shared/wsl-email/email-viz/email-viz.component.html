@@ -35,7 +35,7 @@
 
       <md-expansion-panel [expanded]="visualizationSource.expanded.transaction">
         <md-expansion-panel-header>
-          Transaction<span *ngIf="visualizationSource">({{visualizationSource.transactionPercentage|percent: '1.0-2'}})</span>
+          Transaction<span *ngIf="visualizationSource.transactionPercentage">({{visualizationSource.transactionPercentage|percent: '1.0-2'}})</span>
         </md-expansion-panel-header>
         <div *ngIf="visualizationSource">
           <div class="row">

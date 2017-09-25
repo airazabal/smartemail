@@ -13,7 +13,7 @@
   <div class="row">
     <div class="col">
       <form class="search-form">
-        <div class="search-input-div" [@slideToLeft] *ngIf="!toggleEmailText">
+        <div class="search-input-div" [@slideToRight] *ngIf="!toggleEmailText">
           <md-form-field class="form-field" floatPlaceholder="never">
             <i mdPrefix class="fa fa-search" style="color: rgba(0, 0, 0, 0.54); padding-right: 0.6rem;" aria-hidden="true"></i>
             <input #searchInput [value]="searchEmailVal" type="text" [(ngModel)]="searchEmailVal" (change)="updateSelected($event)" placeholder="Select An Email Or Search For An Email To View"
