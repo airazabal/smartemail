@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
     { link: '/home/dashboard/summary', label: 'Summary' },
     { link: '/home/dashboard/classifications', label: 'Classifications' },
     { link: '/home/dashboard/entities', label: 'Entities' },
-    { link: '/home/dashboard/test', label: 'Smart Email Test' },
+   // { link: '/home/dashboard/test', label: 'Smart Email Test' },
     { link: '/home/dashboard/viewer', label: 'Smart Email Viewer' }
   ]
 

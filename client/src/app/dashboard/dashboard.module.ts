@@ -24,6 +24,7 @@ import { MdPaginatorModule } from '@angular/material/paginator';
 import { MdTooltipModule } from '@angular/material/tooltip';
 import { MdInputModule } from '@angular/material/input';
 import { MdCardModule } from '@angular/material/card';
+import { MdButtonModule } from '@angular/material/button';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -64,6 +65,7 @@ import { MvpCalcComponent } from './shared/mvp-calc/mvp-calc.component';
     MdCardModule,
     MdPaginatorModule,
     MdTooltipModule,
+    MdButtonModule,
     MdInputModule,
     ReactiveFormsModule,
     BsDropdownModule.forRoot(),

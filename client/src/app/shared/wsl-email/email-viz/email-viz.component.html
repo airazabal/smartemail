@@ -23,9 +23,9 @@
                   <label>Email Format: </label>
               </div>
               <md-radio-group [(ngModel)]="emailSource">
-                <md-radio-button value="body">Body</md-radio-button>
-                <md-radio-button value="trimmed">Trimmed</md-radio-button>
-                <md-radio-button value="cleansed">Cleansed</md-radio-button>
+                <md-radio-button [disabled]="!visualizationSource.source_email.body" value="body">Body</md-radio-button>
+                <md-radio-button [disabled]="!visualizationSource.source_email.trimmed" value="trimmed">Trimmed</md-radio-button>
+                <md-radio-button [disabled]="!visualizationSource.source_email.cleansed" value="cleansed">Cleansed</md-radio-button>
               </md-radio-group>
             </div>
           </div>

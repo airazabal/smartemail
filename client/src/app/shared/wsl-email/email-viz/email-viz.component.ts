@@ -1,12 +1,12 @@
 import { Component, Input, OnInit, OnChanges, SimpleChange } from '@angular/core';
 import { SmartEmail } from '../classes/SmartEmail'
 import { SmartEmailService} from '../smart-email.service'
-import { fade, shrink } from '../../utils/animations';
+import { fade, shrink, slideToLeft, slideToRight } from '../../utils/animations';
 
 @Component({
   selector: 'app-email-viz',
   templateUrl: './email-viz.component.html',
-  animations: [fade(), shrink()],
+  animations: [fade(), shrink(), slideToLeft(), slideToRight()],
   styleUrls: ['./email-viz.component.scss']
 })
 
@@ -59,8 +59,10 @@ export class EmailVizComponent implements OnChanges, OnInit {
           // This is an array.  Wee need JUST THE first one...
           console.log('email-viz components initiated: ', result);
           this.setVisualizationSource(result)
+          this.loading=false
         }, err => {
           console.log(err)
+          this.loading=false
         })
     } else if (this.docToViz) {
       // Should just be a doc to viz...

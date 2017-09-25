@@ -5,6 +5,13 @@
   margin: 1rem 1rem 1.5rem;
 }
 
+.loading-div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
 .content-container {
   display: flex;
   flex-direction: row;

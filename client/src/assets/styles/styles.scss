@@ -332,7 +332,7 @@ to {
   transform: rotate(2100deg); } }
 
 .mat-tab-link {
-  &:hover {
+  &.active-link:hover {
     text-decoration: none;
   }
 }
