@@ -30,6 +30,7 @@ export class EmailVizComponent implements OnChanges, OnInit {
   public isEntitiesCollapsed:boolean = false;
   public isEmailCollapsed:boolean = true;
   public currentIntents:any;
+  public emailSource: string = 'body'; // default to body
 
   public transactionClass:any = {
     'true_positive': false,
@@ -39,14 +40,6 @@ export class EmailVizComponent implements OnChanges, OnInit {
 
   constructor(private smartEmailSvc : SmartEmailService) {
 
-  }
-
-  public collapsed(event:any):void {
-  //  console.log(event)
-  }
-
-  public expanded(event:any):void {
-  //  console.log(event)
   }
 
   ngOnInit() {
@@ -107,10 +100,16 @@ export class EmailVizComponent implements OnChanges, OnInit {
     this.transactions = this.visualizationSource.transactionsVsGroundTruth()
     if (this.visualizationSource.exception.length > 0) {
       this.hasExceptions = true
+    } else {
+      this.hasExceptions = false
     }
     this.loading = false
     console.log('setVisualizationSource - ', this.entities)
     console.log('setVisualizationSource - ', this.transactions)
+  }
+
+  get emailText():string {
+    return this.visualizationSource.source_email[this.emailSource]
   }
 
 }

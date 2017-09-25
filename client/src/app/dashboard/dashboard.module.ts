@@ -16,7 +16,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from '@angular/material';
+import { MdTabsModule } from '@angular/material/tabs';
+import { MdAutocompleteModule } from '@angular/material/autocomplete';
+import { MdTableModule } from '@angular/material/table';
+import { MdSortModule } from '@angular/material/sort';
+import { MdPaginatorModule } from '@angular/material/paginator';
+import { MdTooltipModule } from '@angular/material/tooltip';
+import { MdInputModule } from '@angular/material/input';
+import { MdCardModule } from '@angular/material/card';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -50,7 +57,14 @@ import { MvpCalcComponent } from './shared/mvp-calc/mvp-calc.component';
     WslEmailModule,
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule,
+    MdTabsModule,
+    MdAutocompleteModule,
+    MdTableModule,
+    MdSortModule,
+    MdCardModule,
+    MdPaginatorModule,
+    MdTooltipModule,
+    MdInputModule,
     ReactiveFormsModule,
     BsDropdownModule.forRoot(),
     ModalModule.forRoot() ],

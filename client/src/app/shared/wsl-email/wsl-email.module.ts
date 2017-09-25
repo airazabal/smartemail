@@ -2,7 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from '@angular/material';
+import { MdTableModule } from '@angular/material/table';
+import { MdSortModule } from '@angular/material/sort';
+import { MdPaginatorModule } from '@angular/material/paginator';
+import { MdExpansionModule } from '@angular/material/expansion';
+import { MdRadioModule } from '@angular/material/radio';
+import { MdInputModule } from '@angular/material/input';
+import { MdCardModule } from '@angular/material/card';
+
 //import { DiscoveryQueryService } from './discovery-query.service'; -> might no longer be needed
 import { BackendService} from '../../core/backend.service';
 import { SmartEmailService } from './smart-email.service';
@@ -19,7 +26,13 @@ import { EmailInputComponent } from './email-input/email-input.component';
     CommonModule,
     FormsModule,
     BrowserAnimationsModule,
-    MaterialModule,
+    MdTableModule,
+    MdSortModule,
+    MdPaginatorModule,
+    MdExpansionModule,
+    MdRadioModule,
+    MdInputModule,
+    MdCardModule,
     PopoverModule.forRoot(),
     ProgressbarModule.forRoot()
   ],

@@ -125,16 +125,17 @@ export class SmartEmail {
     // _email is my default object and will get saved as _email
 
     // sort the intents by confidence
-    if (_email.intent_debugging_info) {
-      _email.intent_debugging_info = _email.intent_debugging_info.map((o) => {
-        let res = o;
-        if (o.intents && o.intents.length > 0) {
-          res.highestConf = o.intents[0].confidence; // first element is the highest.
-        }
-        return res;
-      })
-      _email.intent_debugging_info = lodash.orderBy(_email.intent_debugging_info, ['highestConf'], ['desc'])
-    }
+    // Leave the email order as it is for now.
+    // if (_email.intent_debugging_info) {
+    //   _email.intent_debugging_info = _email.intent_debugging_info.map((o) => {
+    //     let res = o;
+    //     if (o.intents && o.intents.length > 0) {
+    //       res.highestConf = o.intents[0].confidence; // first element is the highest.
+    //     }
+    //     return res;
+    //   })
+    //   _email.intent_debugging_info = lodash.orderBy(_email.intent_debugging_info, ['highestConf'], ['desc'])
+    // }
   }
 
   get toc(): any {

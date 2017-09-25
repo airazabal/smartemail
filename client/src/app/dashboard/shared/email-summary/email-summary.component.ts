@@ -154,7 +154,7 @@ export class EmailDataSource extends DataSource<any> {
   connect(): Observable<EmailData[]> {
     const displayDataChanges = [
       this._emailDatabase.dataChange,
-      this._sort.mdSortChange,
+      this._sort.sortChange,
       this._paginator.page,
       this._filterChange
     ];

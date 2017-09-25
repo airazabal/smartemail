@@ -4,7 +4,7 @@ import { PathLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpModule, Http, XHRBackend, RequestOptions } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from '@angular/material';
+import { MdTabsModule } from '@angular/material/tabs';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -38,7 +38,7 @@ import { CoreModule } from './core/core.module';
     FormsModule,
 		ReactiveFormsModule,
     HttpModule,
-    MaterialModule,
+    MdTabsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     AuthModule,

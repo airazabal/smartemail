@@ -17,7 +17,19 @@
           Source Email
         </md-expansion-panel-header>
         <div *ngIf="visualizationSource">
-          <pre>{{visualizationSource.source_email.body}}</pre>
+          <div class="row email-src-radio-div">
+            <div class="col">
+              <div class="radio-label-div">
+                  <label>Email Format: </label>
+              </div>
+              <md-radio-group [(ngModel)]="emailSource">
+                <md-radio-button value="body">Body</md-radio-button>
+                <md-radio-button value="trimmed">Trimmed</md-radio-button>
+                <md-radio-button value="cleansed">Cleansed</md-radio-button>
+              </md-radio-group>
+            </div>
+          </div>
+          <pre>{{emailText}}</pre>
         </div>
       </md-expansion-panel>
 
@@ -98,8 +110,9 @@
               </div>
             </div>
             <div class="col-md-2">
-                {{row.intents[0].confidence | percent: '1.0-2'}} 
-              <span class="info-span" containerClass="intent-popover" placement="right" container="body" (mouseover)="currentIntents=row.intents" triggers="mouseover:mouseout" [popover]="intentsTemplate"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+              {{row.intents[0].confidence | percent: '1.0-2'}}
+              <span class="info-span" containerClass="intent-popover" placement="right" container="body" (mouseover)="currentIntents=row.intents"
+                triggers="mouseover:mouseout" [popover]="intentsTemplate"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
             </div>
           </div>
         </div>
@@ -113,7 +126,7 @@
         </div>
       </div>
     </ng-template>
-    
+
   </div>
   <div [@itemFadeAnimation] *ngIf="hasExceptions" class="row ibm-text--error">
     <div class="ibm-wrapper">

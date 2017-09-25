@@ -1,24 +1,5 @@
 /* from the ui-component watson dev cloud */
 
-.action {
-    background: #Eed2ff
-}
-
-.object {
-    background: #A7fae6
-}
-
-.subject {
-    background: #E0e0e0;
-}
-
-textarea {
-    color: inherit;
-    font: inherit;
-    margin: 0;
-    overflow: auto;
-}
-
 .true_positive {
     background-color: #164D56;
     color: white;
@@ -49,17 +30,6 @@ textarea {
     color: black;
 }
 
-.pill {
-    padding: 0.25em 2em;
-    color: #9855d4;
-    font-weight: 500;
-    background-color: transparent;
-    border: 2px solid #9855d4;
-    border-radius: 10rem;
-    transition: 0.2s;
-    display: inline-block;
-}
-
 .entity-viz {
     font-family: "Helvetica Neue", Helvetica, "Open Sans", Arial, "Lucida Grande", "Roboto", sans-serif;
     padding: 0.6em 1em;
@@ -72,40 +42,6 @@ textarea {
 
 .base--textarea {
     font-family: "Helvetica Neue", Helvetica, "Open Sans", Arial, "Lucida Grande", "Roboto", sans-serif;
-}
-
-textarea,
-.base--textarea {
-    width: 100%;
-    padding: 0.6em 1em;
-    font-size: 1em;
-    font-weight: 300;
-    border: 2px solid #464646;
-    background-color: #fff;
-    height: 20em;
-}
-
-textarea:focus,
-.base--textarea:focus {
-    outline: 3px solid #9855d4;
-    border-color: #9855d4;
-}
-
-textarea:disabled,
-.base--textarea:disabled {
-    background-color: #c7c7c7;
-}
-
-.heading {
-    font-family: "Helvetica Neue", Helvetica, "Open Sans", Arial, "Lucida Grande", "Roboto", sans-serif;
-    font-size: 2rem;
-    font-weight: 200;
-}
-
-.heading-2 {
-    font-family: "Helvetica Neue", Helvetica, "Open Sans", Arial, "Lucida Grande", "Roboto", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 500;
 }
 
 button,
@@ -166,128 +102,6 @@ button[type="submit"]:active,
     transform: translateY(2px);
 }
 
-div::after,
-div::before {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
-
-/* loader size */
-
-.loader-container {
-    display: inline-block;
-    width: 5.625rem;
-    height: 5.625rem;
-}
-
-.loader-container_small {
-    width: 2.8125rem;
-    height: 2.8125rem;
-}
-
-svg:not(:root) {
-    overflow: hidden;
-}
-
-html {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-
-.loader {
-    height: 100%;
-    width: 100%;
-    transform: translateZ(0) rotate(300deg);
-    transform-origin: 25px 25px;
-    transform-origin: center center;
-    animation: b 4s ease-out infinite;
-}
-
-.loader--path {
-    stroke-dasharray: 125px;
-    stroke-dashoffset: 9.7px;
-    r: 20px;
-    cx: 50px;
-    cy: 50px;
-    fill: transparent;
-    stroke: #9855d4;
-    stroke-width: 4.65116px;
-    stroke-linecap: butt;
-    transition: stroke-dashoffset 1s cubic-bezier(0.5, 0.08, 0, 1);
-    animation: a 4s ease-out infinite;
-}
-
-@keyframes a {
-    0% {
-        stroke-dashoffset: 9.7px;
-    }
-    60% {
-        stroke-dashoffset: 113.52px;
-    }
-    to {
-        stroke-dashoffset: 9.7px;
-    }
-}
-
-@keyframes b {
-    0% {
-        transform: rotate(300deg);
-    }
-    60% {
-        transform: rotate(1320deg);
-    }
-    to {
-        transform: rotate(2100deg);
-    }
-}
-
-.base--inline-label {
-    display: inline;
-}
-
-input[type="radio"],
-.base--radio {
-    display: none;
-}
-
-input[type="radio"]+label,
-.base--radio+label {
-    position: relative;
-}
-
-input[type="radio"]+label::before,
-.base--radio+label::before {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    margin-right: 1rem;
-    vertical-align: middle;
-    border: 2px solid #aeaeae;
-    border-radius: 50%;
-    content: '';
-    transform: translateY(-0.125em);
-}
-
-input[type="radio"]:checked+label::before,
-.base--radio:checked+label::before {
-    background: radial-gradient(#323232 40%, transparent 40%);
-}
-
-.fa {
-    transition: 500ms 100ms ease-in-out;
-    &.collapse {
-        transform: rotate(-90deg);
-    }
-}
-
 ::ng-deep {
     .popover {
         max-width: 380px;
@@ -314,34 +128,51 @@ input[type="radio"]:checked+label::before,
         }
     }
 }
+
 :host ::ng-deep {
-  .mat-expansion-panel-header, .mat-expansion-panel-header.mat-expanded:focus {
-    background-color: #f7f7f7;
-    font-weight: 600;
-  }
-
-  .mat-expansion-panel-body {
-      margin-top: 1rem;
-  }
-
-  .input-text-div {
-      width: 100%;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      font-weight: 600;
-      font-size: 1rem;
-  }
-  .info-span {
-      color: #4178BE;
-  }
-  .intent-content-div {
-      font-size: 0.9rem;
-  }
-  .intent-row-div {
-      margin-bottom: 1rem;
-      &:last-child {
-          margin-bottom: 0;
-      }
-  }
+    .mat-radio-label-content {
+        padding-right: 1rem;
+    }
+    .mat-expansion-panel-header,
+    .mat-expansion-panel-header.mat-expanded:focus {
+        background-color: #f7f7f7;
+        font-weight: 600;
+    }
+    .mat-expansion-panel-body {
+        margin-top: 1rem;
+    }
+    .input-text-div {
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    .info-span {
+        color: #4178BE;
+    }
+    .intent-content-div {
+        font-size: 0.9rem;
+    }
+    .intent-row-div {
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #c7c7c7;
+        &:last-child {
+            margin-bottom: 0;
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+    .email-src-radio-div {
+        margin-bottom: 1rem;
+        .radio-label-div {
+            display: inline-block;
+            position: relative;
+            bottom: 2px;
+            margin-right: 0.5rem;
+            font-weight: 600;
+        }
+    }
 }
