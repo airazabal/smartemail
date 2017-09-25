@@ -102,6 +102,7 @@ export class SmartEmailViewerComponent implements OnInit {
        this.loading = false;
        if (status.result) {
          this.selectedEmail = status.result
+         this.selectedEmailId = this.selectedEmail.id
        }
     }
     if (status.status === 'failed') {
