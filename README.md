@@ -24,10 +24,10 @@ like to run the code locally, there will be one more step to configure the crede
 ## Prerequisites
 The application requires the following applications
 
-1. Node (6.9+) Application runtime environment
-2. NPM (3.10+) Server side dependency management
+1. Node (8.4+) Application runtime environment
+2. NPM (5.4+) Server side dependency management
 3. Gulp (3.9+) `npm install -g gulp`
-4. Angular CLI (1.0.0+) `npm install -g @angular/cli`
+4. Angular CLI (1.4.2+) `npm install -g @angular/cli`
 
 Note: Please read the upgrade instructions for Angular CLI when you upgrade or install the component.
 
@@ -38,12 +38,18 @@ Note: Please read the upgrade instructions for Angular CLI when you upgrade or i
   git clone git@git.ng.bluemix.net:hig/smart-email.git
   `
 2. `cd` into this newly created directory
+3. (Optional) It is very helpful to use Github Desktop to manage this repository. Once you clone the repository, you can `add` it to your github desktop to manage it there.
 
 ### Configuration files
 
 There are 2 configuration files that are required by the application.
 
-The `env-vars.json` and  `vcap-local.json`. These file contains your service credentials required to run the application locally.  If the app is run on Bluemix, the app will use the VCAP service information on Bluemix. They are setup to use the services defined in Smart Email/SmartEmailDev in Bluemix.
+The files `env-vars.json` and  `vcap-local.json` must be created because they contain your service credentials required to run the application locally. You will find examples files as `env-vars-example.json` and `vcap-local-example.json`. You must replace all values such as `<YOUR USERNAME HERE>` in these files with the appropriate values. This requires setting up three items:
+1. Natural Language Understanding service
+2. Cloudant Database Service (each developer should create a new database and point at that for their purposes)
+3. Message Classifier Service (defaults to `localhost:5001` if being run locally). Code can be found in the sibling repository to this one
+
+If the app is run on Bluemix, the app will use the VCAP service information on Bluemix. They are setup to use the services defined in Smart Email/SmartEmailDev in Bluemix.
 
 ## Deploying the application to Bluemix
 
@@ -118,7 +124,7 @@ npm install
 
 The vcap-local.json file consist of your Bluemix service credentials when you run the application locally.
 
-This file must be updated with your service credentials before the application can be executed.
+This file must be created with your service credentials before the application can be executed.
 
 1. On the Bluemix Application page, select the Connections option on the left.
 2. Select each of the services you provisioned earlier and view the credentials.
@@ -139,7 +145,7 @@ This file must be updated with your service credentials before the application c
       "label": "cloudantNoSQLDB",
       "provider": null,
       "plan": "Lite",
-      "name": "Cloudant NoSQL DB-ss",
+      "name": "cloudant",
       "tags": [
         "data_management",
         "ibm_created",
@@ -167,6 +173,9 @@ In order to _Process_ an email, you need to convert the Email to a JSON object i
 { "id": "someemailid",
   "source_email" : {
       "body": "Complete email"
+      "trimmed": "Email without headers, footers, signatures"
+      "cleansed": "trimmed, but without newlines and problematic punctuation"
+      "subject": "<optional, but nice to have>"
   }
 }
 `
