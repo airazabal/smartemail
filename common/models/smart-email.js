@@ -248,12 +248,12 @@ module.exports = function(Smartemail) {
 
           testOutputString += "----------------Begin Source ---------------------------------: \n" + newMessage.source_email.body + " \n----------------End Source ---------------------------------:: \n\n";
 
-          fs.writeFile("./test-output-standard-new/"+newMessage.id, testOutputString, function(err) {
+          fs.writeFile("./output/"+newMessage.id, testOutputString, function(err) {
               if(err) {
                   return console.log(err);
               }
 
-              console.log("Saved file to " + "./test-output-standard-new/"+newMessage.id);
+              console.log("Saved file to " + "./output/"+newMessage.id);
           });
         }
         newMessage.end_date_time = Date.now()
@@ -699,7 +699,7 @@ module.exports = function(Smartemail) {
             }
             // console.log("CERTHOLDER COMPANIES ARE: \n")
             // console.log(certholder_companies)
-              // now, we need to find company-address chains of length 5
+            // now, we need to find company-address chains of length 5, that also have the same company name as the potential pair from above
             if (strings.length == 0) {
               if (certholder_companies.length > 0 && relation_data && relation_data.hasOwnProperty('companies_dfs')) {
                 // console.log("now going to search for a compatible company chain")
@@ -728,12 +728,12 @@ module.exports = function(Smartemail) {
               }
             }
           }
-          // still no string - going to go for greedy approach
+          // still no string - remaining company as certholder
           if (strings.length == 0) {
             if (relation_data && relation_data.hasOwnProperty('companies_dfs')) {
               for (let company_dfs_element of relation_data['companies_dfs']) {
                 if (company_dfs_element['elements'].length == 5) {
-                  // console.log("greedy method - assuming a company with full address is the certholder")
+                  // console.log("final method - assuming remaining company with full address is the certholder")
                   // console.log(found_email.source_id + ": "+ company_dfs_element['simpleString'])
                   strings.push(company_dfs_element['simpleString'])
                 }

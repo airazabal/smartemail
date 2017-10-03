@@ -24,7 +24,10 @@ vcap-local.json
 env-vars.json
 *.spec*
 test-output
-test-output-standard-new
+/output/*
+!/output/.gitkeep
+.found.json
+
 
 .vscode/angulardoc.json
 
