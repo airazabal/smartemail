@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: smart-email
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: smart-email
+        track: dev
+    spec:
+      containers:
+        - name: smart-email
+          image: "registry.ng.bluemix.net/ewpeters/smart-email:0.0.1"
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 3000
