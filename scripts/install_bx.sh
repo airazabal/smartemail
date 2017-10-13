@@ -36,3 +36,4 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 eval "$exp"
+echo -e `kubectl get pods --all-namespaces`
