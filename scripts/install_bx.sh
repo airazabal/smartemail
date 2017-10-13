@@ -35,6 +35,6 @@ if [ $? -ne 0 ]; then
   echo "Cluster $CLUSTER_NAME not created or not ready."
   exit 1
 fi
-echo "$exp"
+echo "EXP: $exp"
 eval "$exp"
-echo -e `kubectl get pods --all-namespaces -o json`
+echo -e `/tmp/Bluemix_CLI/bin/kubectl get pods --all-namespaces -o json`
