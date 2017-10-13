@@ -40,7 +40,7 @@ stages:
     type: secure
     value: ${API_KEY}
   jobs:
-  - name: Deploy
+  - name: Deploy ISTIO
     type: deployer
     target:
       region_id: ${PROD_REGION_ID}
@@ -49,7 +49,10 @@ stages:
       application: Pipeline
     script: |
       #!/bin/bash
-      
+      curl -SL https://github.com/istio/istio/releases/download/0.1.6/istio-0.1.6-linux.tar.gz | tar xzf -
+      mv istio-0.1.6 istio
+      kubectl apply -f istio/install/kubernetes/istio-rbac-alpha.yaml
+      kubectl apply -f istio/install/kubernetes/istio.yaml
 hooks:
 - enabled: true
   label: null
