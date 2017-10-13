@@ -37,4 +37,3 @@ if [ $? -ne 0 ]; then
 fi
 echo "EXP: $exp"
 eval "$exp"
-echo -e `/tmp/Bluemix_CLI/bin/kubectl get pods --all-namespaces -o json`
