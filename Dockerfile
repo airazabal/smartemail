@@ -17,6 +17,7 @@ EXPOSE 3000
 
 #install client dependencies
 WORKDIR "/app/client"
+
 RUN npm install
 # ensure sass recognizes the environment properly
 RUN npm rebuild node-sass --force
