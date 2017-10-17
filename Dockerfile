@@ -3,7 +3,6 @@ FROM node:latest
 #install server dependencies first to take advantage of docker cacheing
 COPY package.json /app/package.json
 WORKDIR "/app"
-RUN docker --version
 RUN npm install typescript@'>=2.1.0 <2.4.0'
 RUN npm install
 RUN npm install -g gulp
